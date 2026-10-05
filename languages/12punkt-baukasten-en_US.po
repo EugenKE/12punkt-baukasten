@@ -11,7 +11,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Domain: 12punkt-baukasten\n"
 
-#: 12punkt-baukasten.php:25
+#: 12punkt-baukasten.php:27
 msgid "ACF Pro muss installiert und aktiviert sein."
 msgstr "ACF Pro must be installed and activated."
 
@@ -23,15 +23,26 @@ msgstr "Open on load"
 msgid "Bootstrap .accordion-flush"
 msgstr "Bootstrap .accordion-flush"
 
-#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_button.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_column.json acf-json/group_zpt_block_gallery.json acf-json/group_zpt_block_headline.json acf-json/group_zpt_block_icon.json acf-json/group_zpt_block_image.json acf-json/group_zpt_block_navigation.json acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_row.json acf-json/group_zpt_block_text.json acf-json/group_zpt_block_video.json
+#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_button.json
+#: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_column.json acf-json/group_zpt_block_gallery.json
+#: acf-json/group_zpt_block_headline.json acf-json/group_zpt_block_icon.json acf-json/group_zpt_block_image.json
+#: acf-json/group_zpt_block_navigation.json acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_row.json
+#: acf-json/group_zpt_block_text.json acf-json/group_zpt_block_video.json
 msgid "CSS"
 msgstr "CSS"
 
-#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_button.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_column.json acf-json/group_zpt_block_gallery.json acf-json/group_zpt_block_headline.json acf-json/group_zpt_block_icon.json acf-json/group_zpt_block_image.json acf-json/group_zpt_block_navigation.json acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_text.json acf-json/group_zpt_block_video.json
+#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_button.json
+#: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_column.json acf-json/group_zpt_block_gallery.json
+#: acf-json/group_zpt_block_headline.json acf-json/group_zpt_block_icon.json acf-json/group_zpt_block_image.json
+#: acf-json/group_zpt_block_navigation.json acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_text.json
+#: acf-json/group_zpt_block_video.json
 msgid "CSS ID"
 msgstr "CSS ID"
 
-#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_gallery.json acf-json/group_zpt_block_headline.json acf-json/group_zpt_block_icon.json acf-json/group_zpt_block_navigation.json acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_row.json acf-json/group_zpt_block_text.json acf-json/group_zpt_block_video.json
+#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_card.json
+#: acf-json/group_zpt_block_gallery.json acf-json/group_zpt_block_headline.json acf-json/group_zpt_block_icon.json
+#: acf-json/group_zpt_block_navigation.json acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_row.json
+#: acf-json/group_zpt_block_text.json acf-json/group_zpt_block_video.json
 msgid "CSS Klassen"
 msgstr "CSS classes"
 
@@ -43,15 +54,25 @@ msgstr "Add item"
 msgid "Einträge"
 msgstr "Items"
 
-#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_button.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_column.json acf-json/group_zpt_block_gallery.json acf-json/group_zpt_block_headline.json acf-json/group_zpt_block_icon.json acf-json/group_zpt_block_image.json acf-json/group_zpt_block_navigation.json acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_row.json acf-json/group_zpt_block_text.json acf-json/group_zpt_block_video.json acf-json/group_zpt_settings_buttons.json acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_tpl_message.json acf-json/group_zpt_tpl_properties.json
+#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_button.json
+#: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_column.json acf-json/group_zpt_block_gallery.json
+#: acf-json/group_zpt_block_headline.json acf-json/group_zpt_block_icon.json acf-json/group_zpt_block_image.json
+#: acf-json/group_zpt_block_navigation.json acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_row.json
+#: acf-json/group_zpt_block_text.json acf-json/group_zpt_block_video.json acf-json/group_zpt_settings_buttons.json
+#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json
+#: acf-json/group_zpt_tpl_message.json acf-json/group_zpt_tpl_properties.json
 msgid "Hintergrund"
 msgstr "Background"
 
-#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_button.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_gallery.json acf-json/group_zpt_block_headline.json acf-json/group_zpt_block_icon.json acf-json/group_zpt_block_image.json acf-json/group_zpt_block_navigation.json acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_text.json acf-json/group_zpt_block_video.json
+#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_button.json
+#: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_gallery.json acf-json/group_zpt_block_headline.json
+#: acf-json/group_zpt_block_icon.json acf-json/group_zpt_block_image.json acf-json/group_zpt_block_navigation.json
+#: acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_text.json acf-json/group_zpt_block_video.json
 msgid "Inhalt"
 msgstr "Content"
 
-#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_gallery.json acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_video.json
+#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_gallery.json
+#: acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_video.json
 msgid "Ja"
 msgstr "Yes"
 
@@ -59,7 +80,8 @@ msgstr "Yes"
 msgid "Mehrere gleichzeitig offen"
 msgstr "Multiple open at once"
 
-#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_gallery.json acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_video.json
+#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_gallery.json
+#: acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_video.json
 msgid "Nein"
 msgstr "No"
 
@@ -67,7 +89,13 @@ msgstr "No"
 msgid "Ohne Rahmen"
 msgstr "Without border"
 
-#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_column.json acf-json/group_zpt_block_gallery.json acf-json/group_zpt_block_headline.json acf-json/group_zpt_block_icon.json acf-json/group_zpt_block_image.json acf-json/group_zpt_block_navigation.json acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_row.json acf-json/group_zpt_block_text.json acf-json/group_zpt_block_video.json acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_settings_typography.json acf-json/group_zpt_tpl_message.json acf-json/group_zpt_tpl_properties.json
+#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_card.json
+#: acf-json/group_zpt_block_column.json acf-json/group_zpt_block_gallery.json acf-json/group_zpt_block_headline.json
+#: acf-json/group_zpt_block_icon.json acf-json/group_zpt_block_image.json acf-json/group_zpt_block_navigation.json
+#: acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_row.json acf-json/group_zpt_block_text.json
+#: acf-json/group_zpt_block_video.json acf-json/group_zpt_settings_elements.json
+#: acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_settings_typography.json
+#: acf-json/group_zpt_tpl_message.json acf-json/group_zpt_tpl_properties.json
 msgid "Schrift"
 msgstr "Typography"
 
@@ -95,23 +123,28 @@ msgstr "div"
 msgid "erster Eintrag"
 msgstr "first item"
 
-#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_headline.json acf-json/group_zpt_block_posts.json
+#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_headline.json
+#: acf-json/group_zpt_block_posts.json
 msgid "h2"
 msgstr "h2"
 
-#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_headline.json acf-json/group_zpt_block_posts.json
+#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_headline.json
+#: acf-json/group_zpt_block_posts.json
 msgid "h3"
 msgstr "h3"
 
-#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_headline.json acf-json/group_zpt_block_posts.json
+#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_headline.json
+#: acf-json/group_zpt_block_posts.json
 msgid "h4"
 msgstr "h4"
 
-#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_headline.json acf-json/group_zpt_block_posts.json
+#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_headline.json
+#: acf-json/group_zpt_block_posts.json
 msgid "h5"
 msgstr "h5"
 
-#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_headline.json acf-json/group_zpt_block_posts.json
+#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_headline.json
+#: acf-json/group_zpt_block_posts.json
 msgid "h6"
 msgstr "h6"
 
@@ -119,11 +152,19 @@ msgstr "h6"
 msgid "keiner"
 msgstr "none"
 
-#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_button.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_column.json acf-json/group_zpt_block_gallery.json acf-json/group_zpt_block_headline.json acf-json/group_zpt_block_icon.json acf-json/group_zpt_block_image.json acf-json/group_zpt_block_navigation.json acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_row.json acf-json/group_zpt_block_text.json acf-json/group_zpt_block_video.json
+#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_button.json
+#: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_column.json acf-json/group_zpt_block_gallery.json
+#: acf-json/group_zpt_block_headline.json acf-json/group_zpt_block_icon.json acf-json/group_zpt_block_image.json
+#: acf-json/group_zpt_block_navigation.json acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_row.json
+#: acf-json/group_zpt_block_text.json acf-json/group_zpt_block_video.json
 msgid "ohne „#“, ohne Leerzeichen; muss auf der Seite eindeutig sein"
 msgstr "without “#”, no spaces; must be unique on the page"
 
-#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_button.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_gallery.json acf-json/group_zpt_block_headline.json acf-json/group_zpt_block_icon.json acf-json/group_zpt_block_image.json acf-json/group_zpt_block_navigation.json acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_row.json acf-json/group_zpt_block_text.json acf-json/group_zpt_block_video.json acf-json/group_zpt_tpl_column.json acf-json/group_zpt_tpl_image_options.json
+#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_button.json
+#: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_gallery.json acf-json/group_zpt_block_headline.json
+#: acf-json/group_zpt_block_icon.json acf-json/group_zpt_block_image.json acf-json/group_zpt_block_navigation.json
+#: acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_row.json acf-json/group_zpt_block_text.json
+#: acf-json/group_zpt_block_video.json acf-json/group_zpt_tpl_column.json acf-json/group_zpt_tpl_image_options.json
 msgid "ohne „.“, trennen mit Leerzeichen"
 msgstr "without “.”, separate with spaces"
 
@@ -143,7 +184,8 @@ msgstr "While scrolling, the link to the visible section becomes active (as with
 msgid "CSS Links"
 msgstr "CSS links"
 
-#: acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_button.json acf-json/group_zpt_block_navigation.json acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_video.json
+#: acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_button.json acf-json/group_zpt_block_navigation.json
+#: acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_video.json
 msgid "Darstellung"
 msgstr "Appearance"
 
@@ -195,7 +237,8 @@ msgstr "Target = CSS ID of an element on this page (e.g. Row → CSS → CSS ID)
 msgid "horizontal"
 msgstr "horizontal"
 
-#: acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_navigation.json acf-json/group_zpt_tpl_message.json includes/config.php
+#: acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_navigation.json acf-json/group_zpt_tpl_message.json
+#: includes/config.php
 msgid "links"
 msgstr "left"
 
@@ -207,7 +250,8 @@ msgstr "centered"
 msgid "ohne „.“, trennen mit Leerzeichen – an jedem Link"
 msgstr "without “.”, separate with spaces – on every link"
 
-#: acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_button.json acf-json/group_zpt_block_navigation.json acf-json/group_zpt_tpl_message.json includes/config.php
+#: acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_button.json acf-json/group_zpt_block_navigation.json
+#: acf-json/group_zpt_tpl_message.json includes/config.php
 msgid "rechts"
 msgstr "right"
 
@@ -243,7 +287,9 @@ msgstr "CSS classes (button)"
 msgid "CSS Klassen (Wrapper aller Buttons)"
 msgstr "CSS classes (wrapper of all buttons)"
 
-#: acf-json/group_zpt_block_button.json acf-json/group_zpt_block_icon.json acf-json/group_zpt_settings_buttons.json acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_settings_typo_defaults.json
+#: acf-json/group_zpt_block_button.json acf-json/group_zpt_block_icon.json acf-json/group_zpt_settings_buttons.json
+#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json
+#: acf-json/group_zpt_settings_typo_defaults.json
 msgid "Größe"
 msgstr "Size"
 
@@ -255,7 +301,10 @@ msgstr "Icon"
 msgid "Icon-Position"
 msgstr "Icon position"
 
-#: acf-json/group_zpt_block_button.json acf-json/group_zpt_settings_breakpoints.json acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_grid.json acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_settings_nav_toggler.json acf-json/group_zpt_tpl_column.json acf-json/group_zpt_tpl_message.json acf-json/group_zpt_tpl_per_row.json
+#: acf-json/group_zpt_block_button.json acf-json/group_zpt_settings_breakpoints.json
+#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_grid.json
+#: acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_settings_nav_toggler.json
+#: acf-json/group_zpt_tpl_column.json acf-json/group_zpt_tpl_message.json acf-json/group_zpt_tpl_per_row.json
 msgid "LG"
 msgstr "LG"
 
@@ -263,7 +312,10 @@ msgstr "LG"
 msgid "Link"
 msgstr "Link"
 
-#: acf-json/group_zpt_block_button.json acf-json/group_zpt_settings_breakpoints.json acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_grid.json acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_tpl_column.json acf-json/group_zpt_tpl_message.json acf-json/group_zpt_tpl_per_row.json
+#: acf-json/group_zpt_block_button.json acf-json/group_zpt_settings_breakpoints.json
+#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_grid.json
+#: acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_tpl_column.json acf-json/group_zpt_tpl_message.json
+#: acf-json/group_zpt_tpl_per_row.json
 msgid "MD"
 msgstr "MD"
 
@@ -271,7 +323,10 @@ msgstr "MD"
 msgid "Mehrere Buttons stehen nebeneinander. Schrift, Größen und Rahmen: Baukasten → Buttons."
 msgstr "Multiple buttons are placed side by side. Typography, sizes and borders: Baukasten → Buttons."
 
-#: acf-json/group_zpt_block_button.json acf-json/group_zpt_settings_breakpoints.json acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_grid.json acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_tpl_column.json acf-json/group_zpt_tpl_message.json acf-json/group_zpt_tpl_per_row.json acf-json/group_zpt_tpl_properties.json
+#: acf-json/group_zpt_block_button.json acf-json/group_zpt_settings_breakpoints.json
+#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_grid.json
+#: acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_tpl_column.json acf-json/group_zpt_tpl_message.json
+#: acf-json/group_zpt_tpl_per_row.json acf-json/group_zpt_tpl_properties.json
 msgid "SM"
 msgstr "SM"
 
@@ -279,15 +334,22 @@ msgstr "SM"
 msgid "Suche nach Name oder Begriff über alle Icon-Sets aus Baukasten → Icons."
 msgstr "Search by name or term across all icon sets from Baukasten → Icons."
 
-#: acf-json/group_zpt_block_button.json acf-json/group_zpt_settings_breakpoints.json acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_grid.json acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_tpl_column.json acf-json/group_zpt_tpl_message.json acf-json/group_zpt_tpl_per_row.json acf-json/group_zpt_tpl_properties.json
+#: acf-json/group_zpt_block_button.json acf-json/group_zpt_settings_breakpoints.json
+#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_grid.json
+#: acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_tpl_column.json acf-json/group_zpt_tpl_message.json
+#: acf-json/group_zpt_tpl_per_row.json acf-json/group_zpt_tpl_properties.json
 msgid "XL"
 msgstr "XL"
 
-#: acf-json/group_zpt_block_button.json acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_grid.json acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_tpl_message.json acf-json/group_zpt_tpl_per_row.json
+#: acf-json/group_zpt_block_button.json acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_grid.json
+#: acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_tpl_message.json acf-json/group_zpt_tpl_per_row.json
 msgid "XS"
 msgstr "XS"
 
-#: acf-json/group_zpt_block_button.json acf-json/group_zpt_settings_breakpoints.json acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_grid.json acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_tpl_column.json acf-json/group_zpt_tpl_message.json acf-json/group_zpt_tpl_per_row.json acf-json/group_zpt_tpl_properties.json
+#: acf-json/group_zpt_block_button.json acf-json/group_zpt_settings_breakpoints.json
+#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_grid.json
+#: acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_tpl_column.json acf-json/group_zpt_tpl_message.json
+#: acf-json/group_zpt_tpl_per_row.json acf-json/group_zpt_tpl_properties.json
 msgid "XXL"
 msgstr "XXL"
 
@@ -311,6 +373,10 @@ msgstr "before the text"
 msgid "zentriert"
 msgstr "centered"
 
+#: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_image.json acf-json/group_zpt_settings_logo.json
+msgid "Alternativtext"
+msgstr "Alt text"
+
 #: acf-json/group_zpt_block_card.json
 msgid "Anordnung"
 msgstr "Layout"
@@ -326,6 +392,10 @@ msgstr "Post / page"
 #: acf-json/group_zpt_block_card.json
 msgid "Bild oben"
 msgstr "Image on top"
+
+#: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_image.json acf-json/group_zpt_block_row.json
+msgid "Bild wählen …"
+msgstr ""
 
 #: acf-json/group_zpt_block_card.json
 msgid "Bild zuerst"
@@ -355,11 +425,21 @@ msgstr "Button style"
 msgid "CSS Text-Bereich"
 msgstr "CSS text area"
 
+#: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_image.json
+msgid "Leer = aus dem Dateinamen."
+msgstr ""
+
 #: acf-json/group_zpt_block_card.json
 msgid "Link als"
 msgstr "Link as"
 
-#: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_icon.json acf-json/group_zpt_block_video.json
+#: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_image.json acf-json/group_zpt_block_row.json
+#: acf-json/group_zpt_settings_favicon.json
+msgid "Mediathek"
+msgstr ""
+
+#: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_icon.json acf-json/group_zpt_block_image.json
+#: acf-json/group_zpt_block_video.json acf-json/group_zpt_settings_favicon.json
 msgid "Quelle"
 msgstr "Source"
 
@@ -374,6 +454,14 @@ msgstr "Order"
 #: acf-json/group_zpt_block_card.json
 msgid "Text zuerst"
 msgstr "Text first"
+
+#: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_image.json acf-json/group_zpt_block_row.json
+msgid "Theme"
+msgstr ""
+
+#: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_image.json acf-json/group_zpt_block_row.json
+msgid "Theme = Bild aus dem Bilder-Ordner des Themes (Illustrationen, Grafiken, die zum Theme gehören)."
+msgstr ""
 
 #: acf-json/group_zpt_block_card.json
 msgid "ZPT Block: Card"
@@ -515,7 +603,9 @@ msgstr "from the Media Library (formatted)"
 msgid "groß"
 msgstr "large"
 
-#: acf-json/group_zpt_block_gallery.json acf-json/group_zpt_settings_buttons.json acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_favicon.json acf-json/group_zpt_tpl_image_options.json acf-json/group_zpt_tpl_message.json includes/config.php
+#: acf-json/group_zpt_block_gallery.json acf-json/group_zpt_settings_buttons.json
+#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_favicon.json
+#: acf-json/group_zpt_tpl_image_options.json acf-json/group_zpt_tpl_message.json includes/config.php
 msgid "keine"
 msgstr "none"
 
@@ -720,8 +810,12 @@ msgid "Container Klassen"
 msgstr "Container classes"
 
 #: acf-json/group_zpt_block_row.json
-msgid "Die Row bleibt beim Scrollen am oberen Rand stehen (z. B. für eine Sprungmarken-Navigation). Hintergrundfarbe setzen, sonst scheint der Inhalt durch."
-msgstr "The row stays at the top edge while scrolling (e.g. for an anchor link navigation). Set a background color, otherwise the content shows through."
+msgid ""
+"Die Row bleibt beim Scrollen am oberen Rand stehen (z. B. für eine Sprungmarken-Navigation). Hintergrundfarbe setzen, "
+"sonst scheint der Inhalt durch."
+msgstr ""
+"The row stays at the top edge while scrolling (e.g. for an anchor link navigation). Set a background color, otherwise "
+"the content shows through."
 
 #: acf-json/group_zpt_block_row.json acf-json/group_zpt_page.json
 msgid "Fest (zentriert)"
@@ -743,7 +837,8 @@ msgstr "Grid (.grid-row)"
 msgid "Hintergrundbild"
 msgstr "Background image"
 
-#: acf-json/group_zpt_block_row.json acf-json/group_zpt_settings_buttons.json acf-json/group_zpt_tpl_message.json acf-json/group_zpt_tpl_properties.json
+#: acf-json/group_zpt_block_row.json acf-json/group_zpt_settings_buttons.json acf-json/group_zpt_tpl_message.json
+#: acf-json/group_zpt_tpl_properties.json
 msgid "Hintergrundfarbe"
 msgstr "Background color"
 
@@ -758,6 +853,10 @@ msgstr "Inline style (wrapper)"
 #: acf-json/group_zpt_block_row.json
 msgid "Oben anheften"
 msgstr "Stick to top"
+
+#: acf-json/group_zpt_block_row.json
+msgid "Quelle Hintergrundbild"
+msgstr ""
 
 #: acf-json/group_zpt_block_row.json
 msgid "Row Display"
@@ -812,7 +911,8 @@ msgid "Autoplay (stumm, Schleife)"
 msgstr "Autoplay (muted, loop)"
 
 #: acf-json/group_zpt_block_video.json
-msgid "Bei YouTube/Vimeo wird das Video erst nach Klick geladen (Datenschutz) – bis dahin ist das Vorschaubild zu sehen."
+msgid ""
+"Bei YouTube/Vimeo wird das Video erst nach Klick geladen (Datenschutz) – bis dahin ist das Vorschaubild zu sehen."
 msgstr "For YouTube/Vimeo, the video is only loaded after a click (privacy) – until then, the preview image is shown."
 
 #: acf-json/group_zpt_block_video.json
@@ -908,8 +1008,12 @@ msgid "Als Footer verwenden"
 msgstr "Use as footer"
 
 #: acf-json/group_zpt_section.json
-msgid "Diese Sektion als Footer aller Seiten ausgeben (nur eine Sektion; ohne Haken gilt die Sektion mit Slug „footer“). Ein Theme mit eigenem Footer schaltet das ab."
-msgstr "Output this section as the footer of all pages (only one section; if unchecked, the section with the slug “footer” is used). A theme with its own footer disables this."
+msgid ""
+"Diese Sektion als Footer aller Seiten ausgeben (nur eine Sektion; ohne Haken gilt die Sektion mit Slug „footer“). Ein "
+"Theme mit eigenem Footer schaltet das ab."
+msgstr ""
+"Output this section as the footer of all pages (only one section; if unchecked, the section with the slug “footer” is "
+"used). A theme with its own footer disables this."
 
 #: acf-json/group_zpt_settings_breakpoints.json
 msgid "Baukasten: Breakpoints"
@@ -920,8 +1024,14 @@ msgid "Breakpoints"
 msgstr "Breakpoints"
 
 #: acf-json/group_zpt_settings_breakpoints.json
-msgid "Standard: Bootstrap 5.3. „ab Breite“ = Mindestbreite des Breakpoints (Klassen wie .col-md-6, .mt-lg-40, .d-xl-none); „Container“ = maximale Breite von .container ab diesem Breakpoint. XS ist alles unterhalb von SM. Weichen die Werte von Bootstrap ab, erzeugt das Plugin eine angepasste Kopie der CSS (uploads/zpt-baukasten/)."
-msgstr "Default: Bootstrap 5.3. “from width” = minimum width of the breakpoint (classes like .col-md-6, .mt-lg-40, .d-xl-none); “Container” = maximum width of .container from this breakpoint. XS is everything below SM. If the values differ from Bootstrap, the plugin generates a customized copy of the CSS (uploads/zpt-baukasten/)."
+msgid ""
+"Standard: Bootstrap 5.3. „ab Breite“ = Mindestbreite des Breakpoints (Klassen wie .col-md-6, .mt-lg-40, .d-xl-none); "
+"„Container“ = maximale Breite von .container ab diesem Breakpoint. XS ist alles unterhalb von SM. Weichen die Werte "
+"von Bootstrap ab, erzeugt das Plugin eine angepasste Kopie der CSS (uploads/zpt-baukasten/)."
+msgstr ""
+"Default: Bootstrap 5.3. “from width” = minimum width of the breakpoint (classes like .col-md-6, .mt-lg-40, .d-xl-"
+"none); “Container” = maximum width of .container from this breakpoint. XS is everything below SM. If the values "
+"differ from Bootstrap, the plugin generates a customized copy of the CSS (uploads/zpt-baukasten/)."
 
 #: acf-json/group_zpt_settings_breakpoints.json acf-json/group_zpt_settings_grid.json
 msgid "px"
@@ -952,16 +1062,26 @@ msgid "Aus = transparent, beim Hover mit der Rahmenfarbe gefüllt."
 msgstr "Off = transparent, filled with the border color on hover."
 
 #: acf-json/group_zpt_settings_buttons.json
-msgid "Baukasten-Farbe (primary-300), HTML-Farbname oder Hex. Schriftfarbe leer = lesbare Kontrastfarbe, Rahmenfarbe leer = Hintergrundfarbe."
-msgstr "Baukasten color (primary-300), HTML color name or hex. Empty text color = readable contrast color, empty border color = background color."
+msgid ""
+"Baukasten-Farbe (primary-300), HTML-Farbname oder Hex. Schriftfarbe leer = lesbare Kontrastfarbe, Rahmenfarbe leer = "
+"Hintergrundfarbe."
+msgstr ""
+"Baukasten color (primary-300), HTML color name or hex. Empty text color = readable contrast color, empty border color "
+"= background color."
 
 #: acf-json/group_zpt_settings_buttons.json
 msgid "Baukasten: Buttons"
 msgstr "Baukasten: Buttons"
 
 #: acf-json/group_zpt_settings_buttons.json
-msgid "Button-Größen mit Name und CSS-Klasse: „md“ = Standard (.btn ohne Klasse), alle anderen werden zu .btn-{klasse} (z. B. .btn-sm, .btn-xl) und stehen im Button-Block unter „Größe“ zur Auswahl. Schriftgröße, Zeilenhöhe, Laufweite und Innenabstände je Größe: Templates und Varianten."
-msgstr "Button sizes with name and CSS class: “md” = default (.btn without class), all others become .btn-{class} (e.g. .btn-sm, .btn-xl) and are available in the Button block under “Size”. Font size, line height, letter spacing and padding per size: Templates and Variants."
+msgid ""
+"Button-Größen mit Name und CSS-Klasse: „md“ = Standard (.btn ohne Klasse), alle anderen werden zu .btn-{klasse} (z. "
+"B. .btn-sm, .btn-xl) und stehen im Button-Block unter „Größe“ zur Auswahl. Schriftgröße, Zeilenhöhe, Laufweite und "
+"Innenabstände je Größe: Templates und Varianten."
+msgstr ""
+"Button sizes with name and CSS class: “md” = default (.btn without class), all others become .btn-{class} (e.g. .btn-"
+"sm, .btn-xl) and are available in the Button block under “Size”. Font size, line height, letter spacing and padding "
+"per size: Templates and Variants."
 
 #: acf-json/group_zpt_settings_buttons.json
 msgid "CSS-Klasse"
@@ -987,11 +1107,14 @@ msgstr "Colors hover / active"
 msgid "Farben normal"
 msgstr "Colors normal"
 
-#: acf-json/group_zpt_settings_buttons.json acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_settings_typography.json acf-json/group_zpt_tpl_message.json acf-json/group_zpt_tpl_properties.json
+#: acf-json/group_zpt_settings_buttons.json acf-json/group_zpt_settings_elements.json
+#: acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_settings_typography.json
+#: acf-json/group_zpt_tpl_message.json acf-json/group_zpt_tpl_properties.json
 msgid "Gewicht"
 msgstr "Weight"
 
-#: acf-json/group_zpt_settings_buttons.json acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json includes/config.php
+#: acf-json/group_zpt_settings_buttons.json acf-json/group_zpt_settings_elements.json
+#: acf-json/group_zpt_settings_nav_elements.json includes/config.php
 msgid "Großbuchstaben"
 msgstr "Uppercase"
 
@@ -1016,12 +1139,20 @@ msgid "Je Größe. Leer = wie Template."
 msgstr "Per size. Empty = same as template."
 
 #: acf-json/group_zpt_settings_buttons.json
-msgid "Je Größe. Leer: btn default = Bootstrap-Wert der Größe, andere Templates = wie btn default. Schriftgröße auch als Stufe (copy, l …), Abstände ohne Einheit = px."
-msgstr "Per size. Empty: btn default = Bootstrap value of the size, other templates = same as btn default. Font size also as step (copy, l …), spacing without unit = px."
+msgid ""
+"Je Größe. Leer: btn default = Bootstrap-Wert der Größe, andere Templates = wie btn default. Schriftgröße auch als "
+"Stufe (copy, l …), Abstände ohne Einheit = px."
+msgstr ""
+"Per size. Empty: btn default = Bootstrap value of the size, other templates = same as btn default. Font size also as "
+"step (copy, l …), spacing without unit = px."
 
 #: acf-json/group_zpt_settings_buttons.json
-msgid "Je Zeile eine Button-Klasse genauer definieren (überschreibt Templates und Farben aus Baukasten → Farben) oder eine eigene Klasse anlegen. Leere Felder = Template bzw. Bootstrap."
-msgstr "Define one button class in more detail per row (overrides templates and colors from Baukasten → Colors) or create a custom class. Empty fields = template or Bootstrap."
+msgid ""
+"Je Zeile eine Button-Klasse genauer definieren (überschreibt Templates und Farben aus Baukasten → Farben) oder eine "
+"eigene Klasse anlegen. Leere Felder = Template bzw. Bootstrap."
+msgstr ""
+"Define one button class in more detail per row (overrides templates and colors from Baukasten → Colors) or create a "
+"custom class. Empty fields = template or Bootstrap."
 
 #: acf-json/group_zpt_settings_buttons.json
 msgid "Klasse"
@@ -1047,7 +1178,9 @@ msgstr "Letter spacing"
 msgid "Leer = 30 % dunkler als normal, Schriftfarbe = normal bzw. Kontrastfarbe, Rahmenfarbe = Hintergrundfarbe Hover."
 msgstr "Empty = 30 % darker than normal, text color = normal or contrast color, border color = hover background color."
 
-#: acf-json/group_zpt_settings_buttons.json acf-json/group_zpt_settings_icons_svg.json acf-json/group_zpt_settings_logo.json acf-json/group_zpt_settings_style.json acf-json/group_zpt_settings_typo_defaults.json
+#: acf-json/group_zpt_settings_buttons.json acf-json/group_zpt_settings_icons_svg.json
+#: acf-json/group_zpt_settings_logo.json acf-json/group_zpt_settings_style.json
+#: acf-json/group_zpt_settings_typo_defaults.json
 msgid "Name"
 msgstr "Name"
 
@@ -1123,7 +1256,8 @@ msgstr "no"
 msgid "pill"
 msgstr "pill"
 
-#: acf-json/group_zpt_settings_buttons.json acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json
+#: acf-json/group_zpt_settings_buttons.json acf-json/group_zpt_settings_elements.json
+#: acf-json/group_zpt_settings_nav_elements.json
 msgid "xl"
 msgstr "xl"
 
@@ -1136,8 +1270,16 @@ msgid "z. B. 6px, 50rem = Pill."
 msgstr "e.g. 6px, 50rem = Pill."
 
 #: acf-json/group_zpt_settings_buttons.json
-msgid "„btn default“ gilt für alle Buttons (.btn) und kann nicht gelöscht werden. Weitere Templates werden zur Klasse .btn-{kürzel} (z. B. .btn-pill), lassen sich mit jeder Farbe kombinieren und stehen im Button-Block unter „Template“. Leere Felder: btn default = Bootstrap-Standard, andere Templates = wie btn default. Schriftgröße, Zeilenhöhe, Laufweite und Innenabstände je Größe. Längen ohne Einheit = px."
-msgstr "“btn default” applies to all buttons (.btn) and cannot be deleted. Additional templates become the class .btn-{slug} (e.g. .btn-pill), can be combined with any color and are available in the Button block under “Template”. Empty fields: btn default = Bootstrap default, other templates = same as btn default. Font size, line height, letter spacing and padding per size. Lengths without unit = px."
+msgid ""
+"„btn default“ gilt für alle Buttons (.btn) und kann nicht gelöscht werden. Weitere Templates werden zur Klasse .btn-"
+"{kürzel} (z. B. .btn-pill), lassen sich mit jeder Farbe kombinieren und stehen im Button-Block unter „Template“. "
+"Leere Felder: btn default = Bootstrap-Standard, andere Templates = wie btn default. Schriftgröße, Zeilenhöhe, "
+"Laufweite und Innenabstände je Größe. Längen ohne Einheit = px."
+msgstr ""
+"“btn default” applies to all buttons (.btn) and cannot be deleted. Additional templates become the class .btn-{slug} "
+"(e.g. .btn-pill), can be combined with any color and are available in the Button block under “Template”. Empty "
+"fields: btn default = Bootstrap default, other templates = same as btn default. Font size, line height, letter "
+"spacing and padding per size. Lengths without unit = px."
 
 #: acf-json/group_zpt_settings_elements.json includes/config.php
 msgid "01. Zahl mit Null"
@@ -1147,39 +1289,48 @@ msgstr "01. Number with leading zero"
 msgid "1. Zahl"
 msgstr "1. Number"
 
-#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_settings_typography.json
+#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json
+#: acf-json/group_zpt_settings_typography.json
 msgid "100 Thin"
 msgstr "100 Thin"
 
-#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_settings_typography.json
+#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json
+#: acf-json/group_zpt_settings_typography.json
 msgid "200 ExtraLight"
 msgstr "200 ExtraLight"
 
-#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_settings_typography.json
+#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json
+#: acf-json/group_zpt_settings_typography.json
 msgid "300 Light"
 msgstr "300 Light"
 
-#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_settings_typography.json
+#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json
+#: acf-json/group_zpt_settings_typography.json
 msgid "400 Regular"
 msgstr "400 Regular"
 
-#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_settings_typography.json
+#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json
+#: acf-json/group_zpt_settings_typography.json
 msgid "500 Medium"
 msgstr "500 Medium"
 
-#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_settings_typography.json
+#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json
+#: acf-json/group_zpt_settings_typography.json
 msgid "600 SemiBold"
 msgstr "600 SemiBold"
 
-#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_settings_typography.json
+#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json
+#: acf-json/group_zpt_settings_typography.json
 msgid "700 Bold"
 msgstr "700 Bold"
 
-#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_settings_typography.json
+#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json
+#: acf-json/group_zpt_settings_typography.json
 msgid "800 ExtraBold"
 msgstr "800 ExtraBold"
 
-#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_settings_typography.json
+#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json
+#: acf-json/group_zpt_settings_typography.json
 msgid "900 Black"
 msgstr "900 Black"
 
@@ -1228,8 +1379,14 @@ msgid "Einleitung (.lead)"
 msgstr "Lead (.lead)"
 
 #: acf-json/group_zpt_settings_elements.json
-msgid "Einstellungen je HTML-Element. Leer = wie umgebend bzw. wie der nächstkleinere Breakpoint (XS = alle Breiten, SM … XXL = ab diesem Breakpoint, siehe Baukasten → Breakpoints). Abstände in px (5er-Schritte, Margin auch negativ). Klassen am Element (<code>.mt-20</code>, <code>.font-size-xl</code>, <code>.fw-700</code> …) haben Vorrang."
-msgstr "Settings per HTML element. Empty = inherit or same as the next smaller breakpoint (XS = all widths, SM … XXL = from this breakpoint, see Baukasten → Breakpoints). Spacing in px (steps of 5, margin also negative). Classes on the element (<code>.mt-20</code>, <code>.font-size-xl</code>, <code>.fw-700</code> …) take precedence."
+msgid ""
+"Einstellungen je HTML-Element. Leer = wie umgebend bzw. wie der nächstkleinere Breakpoint (XS = alle Breiten, SM … "
+"XXL = ab diesem Breakpoint, siehe Baukasten → Breakpoints). Abstände in px (5er-Schritte, Margin auch negativ). "
+"Klassen am Element (<code>.mt-20</code>, <code>.font-size-xl</code>, <code>.fw-700</code> …) haben Vorrang."
+msgstr ""
+"Settings per HTML element. Empty = inherit or same as the next smaller breakpoint (XS = all widths, SM … XXL = from "
+"this breakpoint, see Baukasten → Breakpoints). Spacing in px (steps of 5, margin also negative). Classes on the "
+"element (<code>.mt-20</code>, <code>.font-size-xl</code>, <code>.fw-700</code> …) take precedence."
 
 #: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json
 msgid "Farbe Hover"
@@ -1415,7 +1572,8 @@ msgstr "not underlined"
 msgid "sm"
 msgstr "sm"
 
-#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_tpl_message.json
+#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json
+#: acf-json/group_zpt_tpl_message.json
 msgid "wie umgebend"
 msgstr "inherit"
 
@@ -1456,6 +1614,13 @@ msgid "Favicon"
 msgstr "Favicon"
 
 #: acf-json/group_zpt_settings_favicon.json
+msgid ""
+"Fertige Dateien werden direkt verwendet: favicon.ico, favicon.svg, apple-touch-icon.png, icon-192.png, icon-512.png, "
+"site.webmanifest. Fehlende werden aus dem größten PNG/JPG/WebP erzeugt (bevorzugt favicon.png, mind. 512 px) – ein "
+"einzelnes favicon.png reicht. Child-Theme geht vor Eltern-Theme."
+msgstr ""
+
+#: acf-json/group_zpt_settings_favicon.json
 msgid "Färbt in mobilen Browsern die Adressleiste (meta theme-color, Manifest). Leer = keine."
 msgstr "Colors the address bar in mobile browsers (meta theme-color, manifest). Empty = none."
 
@@ -1464,12 +1629,31 @@ msgid "Hintergrund Apple Touch Icon"
 msgstr "Apple Touch Icon background"
 
 #: acf-json/group_zpt_settings_favicon.json
-msgid "Optional. Moderne Browser nehmen es statt favicon.ico – scharf in jeder Größe, im SVG per @media (prefers-color-scheme: dark) auch mit eigenen Farben für den Dark Mode."
-msgstr "Optional. Modern browsers use it instead of favicon.ico – sharp at any size, and in the SVG via @media (prefers-color-scheme: dark) also with custom colors for dark mode."
+msgid ""
+"Mediathek = Bild hochladen und hier verwalten. Ordner im Theme = die Favicons gehören zum Theme und kommen mit ihm "
+"(wie im Baukasten 1)."
+msgstr ""
 
 #: acf-json/group_zpt_settings_favicon.json
-msgid "Quadratisch, mindestens 512 × 512 px (PNG mit Transparenz). Daraus werden beim Speichern favicon.ico, Apple Touch Icon (180 px) und Android-Icons (192/512 px) samt Manifest erzeugt. Ersetzt das Website-Icon aus dem Customizer."
-msgstr "Square, at least 512 × 512 px (PNG with transparency). On saving, favicon.ico, Apple Touch Icon (180 px) and Android icons (192/512 px) including manifest are generated from it. Replaces the site icon from the Customizer."
+msgid ""
+"Optional. Moderne Browser nehmen es statt favicon.ico – scharf in jeder Größe, im SVG per @media (prefers-color-"
+"scheme: dark) auch mit eigenen Farben für den Dark Mode."
+msgstr ""
+"Optional. Modern browsers use it instead of favicon.ico – sharp at any size, and in the SVG via @media (prefers-color-"
+"scheme: dark) also with custom colors for dark mode."
+
+#: acf-json/group_zpt_settings_favicon.json acf-json/group_zpt_settings_icons_svg.json
+#: acf-json/group_zpt_settings_theme_images.json
+msgid "Ordner im Theme"
+msgstr "Folder in theme"
+
+#: acf-json/group_zpt_settings_favicon.json
+msgid ""
+"Quadratisch, mindestens 512 × 512 px (PNG mit Transparenz). Daraus werden beim Speichern favicon.ico, Apple Touch "
+"Icon (180 px) und Android-Icons (192/512 px) samt Manifest erzeugt. Ersetzt das Website-Icon aus dem Customizer."
+msgstr ""
+"Square, at least 512 × 512 px (PNG with transparency). On saving, favicon.ico, Apple Touch Icon (180 px) and Android "
+"icons (192/512 px) including manifest are generated from it. Replaces the site icon from the Customizer."
 
 #: acf-json/group_zpt_settings_favicon.json
 msgid "SVG-Favicon"
@@ -1480,6 +1664,10 @@ msgid "Theme-Farbe"
 msgstr "Theme color"
 
 #: acf-json/group_zpt_settings_favicon.json
+msgid "assets/favicons"
+msgstr ""
+
+#: acf-json/group_zpt_settings_favicon.json
 msgid "iOS füllt transparente Flächen sonst schwarz. Baukasten-Farbe, Farbname oder Hex."
 msgstr "Otherwise iOS fills transparent areas with black. Baukasten color, color name or hex."
 
@@ -1488,8 +1676,12 @@ msgid "weiß"
 msgstr "white"
 
 #: acf-json/group_zpt_settings_grid.json
-msgid "Abstand zwischen den Spalten einer Row und Gap von .grid, je Breakpoint. Leer = Wert des kleineren Breakpoints. Klassen wie .g-30 / .gx-md-40 überschreiben ihn weiterhin."
-msgstr "Spacing between the columns of a row and gap of .grid, per breakpoint. Empty = value of the smaller breakpoint. Classes like .g-30 / .gx-md-40 still override it."
+msgid ""
+"Abstand zwischen den Spalten einer Row und Gap von .grid, je Breakpoint. Leer = Wert des kleineren Breakpoints. "
+"Klassen wie .g-30 / .gx-md-40 überschreiben ihn weiterhin."
+msgstr ""
+"Spacing between the columns of a row and gap of .grid, per breakpoint. Empty = value of the smaller breakpoint. "
+"Classes like .g-30 / .gx-md-40 still override it."
 
 #: acf-json/group_zpt_settings_grid.json
 msgid "Baukasten: Grid"
@@ -1504,8 +1696,12 @@ msgid "Gutter"
 msgstr "Gutter"
 
 #: acf-json/group_zpt_settings_grid.json
-msgid "Innenabstand von .container links und rechts (je Seite), je Breakpoint. Leer = Wert des kleineren Breakpoints, ganz leer = halber Gutter."
-msgstr "Left and right padding of .container (per side), per breakpoint. Empty = value of the smaller breakpoint, completely empty = half the gutter."
+msgid ""
+"Innenabstand von .container links und rechts (je Seite), je Breakpoint. Leer = Wert des kleineren Breakpoints, ganz "
+"leer = halber Gutter."
+msgstr ""
+"Left and right padding of .container (per side), per breakpoint. Empty = value of the smaller breakpoint, completely "
+"empty = half the gutter."
 
 #: acf-json/group_zpt_settings_icons_bootstrap.json
 msgid "Baukasten: Icons – Bootstrap Icons"
@@ -1516,8 +1712,12 @@ msgid "Bootstrap Icons laden"
 msgstr "Load Bootstrap Icons"
 
 #: acf-json/group_zpt_settings_icons_bootstrap.json
-msgid "Rund 2.000 Icons, Übersicht: <a href=\"https://icons.getbootstrap.com/\" target=\"_blank\">icons.getbootstrap.com</a>. Wird lokal aus dem Plugin geladen (ca. 130 KB)."
-msgstr "Around 2,000 icons, overview: <a href=\"https://icons.getbootstrap.com/\" target=\"_blank\">icons.getbootstrap.com</a>. Loaded locally from the plugin (approx. 130 KB)."
+msgid ""
+"Rund 2.000 Icons, Übersicht: <a href=\"https://icons.getbootstrap.com/\" target=\"_blank\">icons.getbootstrap.com</"
+"a>. Wird lokal aus dem Plugin geladen (ca. 130 KB)."
+msgstr ""
+"Around 2,000 icons, overview: <a href=\"https://icons.getbootstrap.com/\" target=\"_blank\">icons.getbootstrap.com</"
+"a>. Loaded locally from the plugin (approx. 130 KB)."
 
 #: acf-json/group_zpt_settings_icons_fontawesome.json
 msgid "Baukasten: Icons – Font Awesome"
@@ -1532,8 +1732,12 @@ msgid "Eigene CSS-URL"
 msgstr "Custom CSS URL"
 
 #: acf-json/group_zpt_settings_icons_fontawesome.json
-msgid "Font Awesome Free 7, Übersicht: <a href=\"https://fontawesome.com/search?ic=free\" target=\"_blank\">fontawesome.com/search</a>. Wird lokal aus dem Plugin geladen."
-msgstr "Font Awesome Free 7, overview: <a href=\"https://fontawesome.com/search?ic=free\" target=\"_blank\">fontawesome.com/search</a>. Loaded locally from the plugin."
+msgid ""
+"Font Awesome Free 7, Übersicht: <a href=\"https://fontawesome.com/search?ic=free\" target=\"_blank\">fontawesome.com/"
+"search</a>. Wird lokal aus dem Plugin geladen."
+msgstr ""
+"Font Awesome Free 7, overview: <a href=\"https://fontawesome.com/search?ic=free\" target=\"_blank\">fontawesome.com/"
+"search</a>. Loaded locally from the plugin."
 
 #: acf-json/group_zpt_settings_icons_fontawesome.json
 msgid "Font Awesome laden"
@@ -1544,8 +1748,12 @@ msgid "Nur gewählte Stile werden geladen und in der Icon-Auswahl angeboten (je 
 msgstr "Only selected styles are loaded and offered in the icon picker (approx. 100 KB each)."
 
 #: acf-json/group_zpt_settings_icons_fontawesome.json
-msgid "Optional, z. B. für Font Awesome Pro: CSS-Datei, die statt der mitgelieferten Free-Version geladen wird. Externe Adressen beachten (Datenschutz) – besser eine Datei im Theme."
-msgstr "Optional, e.g. for Font Awesome Pro: CSS file loaded instead of the bundled Free version. Mind external URLs (privacy) – a file in the theme is better."
+msgid ""
+"Optional, z. B. für Font Awesome Pro: CSS-Datei, die statt der mitgelieferten Free-Version geladen wird. Externe "
+"Adressen beachten (Datenschutz) – besser eine Datei im Theme."
+msgstr ""
+"Optional, e.g. for Font Awesome Pro: CSS file loaded instead of the bundled Free version. Mind external URLs "
+"(privacy) – a file in the theme is better."
 
 #: acf-json/group_zpt_settings_icons_fontawesome.json
 msgid "Regular (fa-regular)"
@@ -1572,8 +1780,12 @@ msgid "Filled"
 msgstr "Filled"
 
 #: acf-json/group_zpt_settings_icons_material.json
-msgid "Google Material Icons, Übersicht: <a href=\"https://fonts.google.com/icons?icon.set=Material+Icons\" target=\"_blank\">fonts.google.com/icons</a>. Wird lokal aus dem Plugin geladen (nicht von Google)."
-msgstr "Google Material Icons, overview: <a href=\"https://fonts.google.com/icons?icon.set=Material+Icons\" target=\"_blank\">fonts.google.com/icons</a>. Loaded locally from the plugin (not from Google)."
+msgid ""
+"Google Material Icons, Übersicht: <a href=\"https://fonts.google.com/icons?icon.set=Material+Icons\" "
+"target=\"_blank\">fonts.google.com/icons</a>. Wird lokal aus dem Plugin geladen (nicht von Google)."
+msgstr ""
+"Google Material Icons, overview: <a href=\"https://fonts.google.com/icons?icon.set=Material+Icons\" "
+"target=\"_blank\">fonts.google.com/icons</a>. Loaded locally from the plugin (not from Google)."
 
 #: acf-json/group_zpt_settings_icons_material.json
 msgid "Material Icons laden"
@@ -1604,16 +1816,24 @@ msgid "<svg …>…</svg>"
 msgstr "<svg …>…</svg>"
 
 #: acf-json/group_zpt_settings_icons_svg.json
-msgid "Alle *.svg-Dateien darin, Name = Dateiname (z. B. kamera.svg → kamera). Child-Theme geht vor Eltern-Theme. Leer = kein Ordner"
-msgstr "All *.svg files in it, name = file name (e.g. camera.svg → camera). Child theme takes precedence over parent theme. Empty = no folder"
+msgid ""
+"Alle *.svg-Dateien darin, Name = Dateiname (z. B. kamera.svg → kamera). Child-Theme geht vor Eltern-Theme. Leer = "
+"kein Ordner"
+msgstr ""
+"All *.svg files in it, name = file name (e.g. camera.svg → camera). Child theme takes precedence over parent theme. "
+"Empty = no folder"
 
 #: acf-json/group_zpt_settings_icons_svg.json
 msgid "Baukasten: Icons – Eigenes SVG Icon Set"
 msgstr "Baukasten: Icons – Custom SVG icon set"
 
 #: acf-json/group_zpt_settings_icons_svg.json
-msgid "Eigene Icons als SVG – aus einem Ordner im Theme und/oder als Code. Die Icons werden direkt ins HTML geschrieben (bereinigt, ohne Skripte) und sind so groß wie die Schrift."
-msgstr "Custom icons as SVG – from a folder in the theme and/or as code. The icons are written directly into the HTML (sanitized, without scripts) and are as large as the font."
+msgid ""
+"Eigene Icons als SVG – aus einem Ordner im Theme und/oder als Code. Die Icons werden direkt ins HTML geschrieben "
+"(bereinigt, ohne Skripte) und sind so groß wie die Schrift."
+msgstr ""
+"Custom icons as SVG – from a folder in the theme and/or as code. The icons are written directly into the HTML "
+"(sanitized, without scripts) and are as large as the font."
 
 #: acf-json/group_zpt_settings_icons_svg.json
 msgid "Eigenes SVG Icon Set laden"
@@ -1624,8 +1844,12 @@ msgid "Farbe = Textfarbe"
 msgstr "Color = text color"
 
 #: acf-json/group_zpt_settings_icons_svg.json
-msgid "Füll- und Linienfarben der SVGs durch die Textfarbe ersetzen (currentColor) – Icons lassen sich dann über Schriftfarbe einfärben. Aus = Originalfarben."
-msgstr "Replace fill and stroke colors of the SVGs with the text color (currentColor) – icons can then be colored via the font color. Off = original colors."
+msgid ""
+"Füll- und Linienfarben der SVGs durch die Textfarbe ersetzen (currentColor) – Icons lassen sich dann über "
+"Schriftfarbe einfärben. Aus = Originalfarben."
+msgstr ""
+"Replace fill and stroke colors of the SVGs with the text color (currentColor) – icons can then be colored via the "
+"font color. Off = original colors."
 
 #: acf-json/group_zpt_settings_icons_svg.json
 msgid "Icon hinzufügen"
@@ -1634,10 +1858,6 @@ msgstr "Add icon"
 #: acf-json/group_zpt_settings_icons_svg.json
 msgid "Icons als Code"
 msgstr "Icons as code"
-
-#: acf-json/group_zpt_settings_icons_svg.json
-msgid "Ordner im Theme"
-msgstr "Folder in theme"
 
 #: acf-json/group_zpt_settings_icons_svg.json
 msgid "Vorschau"
@@ -1656,10 +1876,6 @@ msgid "kamera"
 msgstr "camera"
 
 #: acf-json/group_zpt_settings_logo.json
-msgid "Alternativtext"
-msgstr "Alt text"
-
-#: acf-json/group_zpt_settings_logo.json
 msgid "Baukasten: Logo"
 msgstr "Baukasten: Logo"
 
@@ -1668,12 +1884,24 @@ msgid "Für alle Logos. Leer = Seitenname."
 msgstr "For all logos. Empty = site name."
 
 #: acf-json/group_zpt_settings_logo.json
-msgid "Hauptlogo, z. B. im Header. SVG, PNG, JPG oder WebP. Leer = Logo aus dem Customizer (Design → Customizer → Website-Informationen) bzw. Seitenname."
-msgstr "Main logo, e.g. in the header. SVG, PNG, JPG or WebP. Empty = logo from the Customizer (Appearance → Customize → Site Identity) or site name."
+msgid ""
+"Hauptlogo, z. B. im Header. SVG, PNG, JPG oder WebP. Leer = Logo aus dem Customizer (Design → Customizer → Website-"
+"Informationen) bzw. Seitenname."
+msgstr ""
+"Main logo, e.g. in the header. SVG, PNG, JPG or WebP. Empty = logo from the Customizer (Appearance → Customize → Site "
+"Identity) or site name."
 
 #: acf-json/group_zpt_settings_logo.json
-msgid "Weitere Fassungen des Logos, z. B. Weiß (für dunkle Hintergründe), Negativ, Quer, Signet. Ausgabe im Template: zpt_logo('kürzel'), im Text: [zpt_logo variant=\"kürzel\"]."
-msgstr "Additional versions of the logo, e.g. white (for dark backgrounds), negative, horizontal, emblem. Output in template: zpt_logo('slug'), in text: [zpt_logo variant=\"slug\"]."
+msgid "Logo"
+msgstr "Logo"
+
+#: acf-json/group_zpt_settings_logo.json
+msgid ""
+"Weitere Fassungen des Logos, z. B. Weiß (für dunkle Hintergründe), Negativ, Quer, Signet. Ausgabe im Template: "
+"zpt_logo('kürzel'), im Text: [zpt_logo variant=\"kürzel\"]."
+msgstr ""
+"Additional versions of the logo, e.g. white (for dark backgrounds), negative, horizontal, emblem. Output in template: "
+"zpt_logo('slug'), in text: [zpt_logo variant=\"slug\"]."
 
 #: acf-json/group_zpt_settings_logo.json
 msgid "z. B. Weiß"
@@ -1704,8 +1932,12 @@ msgid "Position"
 msgstr "Position"
 
 #: acf-json/group_zpt_settings_nav_bar.json
-msgid "Sticky: Die Leiste bleibt beim Scrollen oben stehen (.sticky-top am Header) – dann eine Hintergrundfarbe setzen (Schrift, Farben, Größen → Leiste → Farben)."
-msgstr "Sticky: the bar stays at the top while scrolling (.sticky-top on the header) – then set a background color (Typography, colors, sizes → Bar → Colors)."
+msgid ""
+"Sticky: Die Leiste bleibt beim Scrollen oben stehen (.sticky-top am Header) – dann eine Hintergrundfarbe setzen "
+"(Schrift, Farben, Größen → Leiste → Farben)."
+msgstr ""
+"Sticky: the bar stays at the top while scrolling (.sticky-top on the header) – then set a background color "
+"(Typography, colors, sizes → Bar → Colors)."
 
 #: acf-json/group_zpt_settings_nav_bar.json
 msgid "feste Breite wie der Inhalt (.container)"
@@ -1748,8 +1980,12 @@ msgid "Menüpunkt (.nav-link)"
 msgstr "Menu item (.nav-link)"
 
 #: acf-json/group_zpt_settings_nav_elements.json
-msgid "Schrift, Farben und Größen der Navigationsleiste. Leer = wie umgebend bzw. wie Bootstrap; Größe und Abstände je Breakpoint wie unter Baukasten → Elemente (leer = wie der nächstkleinere)."
-msgstr "Typography, colors and sizes of the navigation bar. Empty = inherit or as in Bootstrap; size and spacing per breakpoint as under Baukasten → Elements (empty = same as next smaller)."
+msgid ""
+"Schrift, Farben und Größen der Navigationsleiste. Leer = wie umgebend bzw. wie Bootstrap; Größe und Abstände je "
+"Breakpoint wie unter Baukasten → Elemente (leer = wie der nächstkleinere)."
+msgstr ""
+"Typography, colors and sizes of the navigation bar. Empty = inherit or as in Bootstrap; size and spacing per "
+"breakpoint as under Baukasten → Elements (empty = same as next smaller)."
 
 #: acf-json/group_zpt_settings_nav_elements.json includes/config.php
 msgid "Untermenü (.dropdown-menu)"
@@ -1816,8 +2052,14 @@ msgid "Eigene"
 msgstr "Custom"
 
 #: acf-json/group_zpt_settings_style.json
-msgid "Eigene Farben: Name (Kleinbuchstaben, Ziffern, Bindestrich, z. B. ecos-blau) und Grundfarbe. Leere Shades werden aus der Grundfarbe berechnet (Vorschau), eingetragene überschreiben die Berechnung. Werte: Hexwert oder HTML-Farbname. Klassen z. B. .bg-ecos-blau-300, CSS-Variablen --theme-ecos-blau-300. Die Shades legt der Tab „Einstellungen“ fest."
-msgstr "Custom colors: name (lowercase letters, digits, hyphen, e.g. ecos-blue) and base color. Empty shades are calculated from the base color (preview), entered ones override the calculation. Values: hex value or HTML color name. Classes e.g. .bg-ecos-blue-300, CSS variables --theme-ecos-blue-300. The shades are defined in the “Settings” tab."
+msgid ""
+"Eigene Farben: Name (Kleinbuchstaben, Ziffern, Bindestrich, z. B. ecos-blau) und Grundfarbe. Leere Shades werden aus "
+"der Grundfarbe berechnet (Vorschau), eingetragene überschreiben die Berechnung. Werte: Hexwert oder HTML-Farbname. "
+"Klassen z. B. .bg-ecos-blau-300, CSS-Variablen --theme-ecos-blau-300. Die Shades legt der Tab „Einstellungen“ fest."
+msgstr ""
+"Custom colors: name (lowercase letters, digits, hyphen, e.g. ecos-blue) and base color. Empty shades are calculated "
+"from the base color (preview), entered ones override the calculation. Values: hex value or HTML color name. Classes "
+"e.g. .bg-ecos-blue-300, CSS variables --theme-ecos-blue-300. The shades are defined in the “Settings” tab."
 
 #: acf-json/group_zpt_settings_style.json
 msgid "Einstellungen"
@@ -1836,24 +2078,50 @@ msgid "Grundfarbe"
 msgstr "Base color"
 
 #: acf-json/group_zpt_settings_style.json
-msgid "Lädt die Shades der Vorlage in die Tabelle, danach anpassbar (wird dann zu „Eigene“). Nach dem Speichern zeigt der Tab „Farbpalette“ die neuen Shades."
-msgstr "Loads the preset’s shades into the table, adjustable afterwards (then becomes “Custom”). After saving, the “Color palette” tab shows the new shades."
+msgid ""
+"Lädt die Shades der Vorlage in die Tabelle, danach anpassbar (wird dann zu „Eigene“). Nach dem Speichern zeigt der "
+"Tab „Farbpalette“ die neuen Shades."
+msgstr ""
+"Loads the preset’s shades into the table, adjustable afterwards (then becomes “Custom”). After saving, the “Color "
+"palette” tab shows the new shades."
 
 #: acf-json/group_zpt_settings_style.json
 msgid "Mischen"
 msgstr "Mix"
 
 #: acf-json/group_zpt_settings_style.json
-msgid "Name + Farbe (Palettenfarbe mit Shading oder eigene). Ganze Palettenfarbe → die Systemfarbe übernimmt deren Shades; mit Shading oder eigene Farbe → daraus werden die Shades berechnet. Bootstrap-Namen (primary, secondary, tertiary, quaternary, success, info, warning, danger, light, dark, black, white, gray) setzen auch Bootstraps Farbe (.btn-primary, .text-bg-dark …); nicht angelegte behalten Bootstraps Wert (--theme-primary = --bs-primary). Eigene Namen (z. B. accent oder section für einen Hintergrund) ergeben .text-accent, .bg-section, .bg-section-100, --theme-section …."
-msgstr "Name + color (palette color with shading or custom). Whole palette color → the system color takes over its shades; with shading or custom color → the shades are calculated from it. Bootstrap names (primary, secondary, tertiary, quaternary, success, info, warning, danger, light, dark, black, white, gray) also set Bootstrap’s color (.btn-primary, .text-bg-dark …); those not created keep Bootstrap’s value (--theme-primary = --bs-primary). Custom names (e.g. accent or section for a background) result in .text-accent, .bg-section, .bg-section-100, --theme-section …."
+msgid ""
+"Name + Farbe (Palettenfarbe mit Shading oder eigene). Ganze Palettenfarbe → die Systemfarbe übernimmt deren Shades; "
+"mit Shading oder eigene Farbe → daraus werden die Shades berechnet. Bootstrap-Namen (primary, secondary, tertiary, "
+"quaternary, success, info, warning, danger, light, dark, black, white, gray) setzen auch Bootstraps Farbe (.btn-"
+"primary, .text-bg-dark …); nicht angelegte behalten Bootstraps Wert (--theme-primary = --bs-primary). Eigene Namen "
+"(z. B. accent oder section für einen Hintergrund) ergeben .text-accent, .bg-section, .bg-section-100, --theme-section "
+"…."
+msgstr ""
+"Name + color (palette color with shading or custom). Whole palette color → the system color takes over its shades; "
+"with shading or custom color → the shades are calculated from it. Bootstrap names (primary, secondary, tertiary, "
+"quaternary, success, info, warning, danger, light, dark, black, white, gray) also set Bootstrap’s color (.btn-"
+"primary, .text-bg-dark …); those not created keep Bootstrap’s value (--theme-primary = --bs-primary). Custom names "
+"(e.g. accent or section for a background) result in .text-accent, .bg-section, .bg-section-100, --theme-section …."
 
 #: acf-json/group_zpt_settings_style.json
-msgid "Nur diese Farben erscheinen in WordPress: in den Farbauswahlen der Komponenten und Einstellungen (Farbe + Shading) und in der Farbpalette von Block-Editor und klassischem Editor. Reihenfolge = Reihenfolge in der Palette. Leer = alle Farben. Die Systemfarben-Definition zeigt weiter die ganze Palette. Neue Einträge wirken nach dem Speichern."
-msgstr "Only these colors appear in WordPress: in the color pickers of components and settings (color + shading) and in the color palette of the block editor and classic editor. Order = order in the palette. Empty = all colors. The system color definition still shows the whole palette. New entries take effect after saving."
+msgid ""
+"Nur diese Farben erscheinen in WordPress: in den Farbauswahlen der Komponenten und Einstellungen (Farbe + Shading) "
+"und in der Farbpalette von Block-Editor und klassischem Editor. Reihenfolge = Reihenfolge in der Palette. Leer = alle "
+"Farben. Die Systemfarben-Definition zeigt weiter die ganze Palette. Neue Einträge wirken nach dem Speichern."
+msgstr ""
+"Only these colors appear in WordPress: in the color pickers of components and settings (color + shading) and in the "
+"color palette of the block editor and classic editor. Order = order in the palette. Empty = all colors. The system "
+"color definition still shows the whole palette. New entries take effect after saving."
 
 #: acf-json/group_zpt_settings_style.json
-msgid "Reihenfolge hell → dunkel. Name = Endung der Klassen und Variablen (.bg-primary-300, --theme-primary-light). Genau ein Shade ist die Grundfarbe; die anderen werden aus ihr berechnet: aufhellen = mit Weiß mischen, abdunkeln = mit Schwarz mischen."
-msgstr "Order light → dark. Name = suffix of the classes and variables (.bg-primary-300, --theme-primary-light). Exactly one shade is the base color; the others are calculated from it: lighten = mix with white, darken = mix with black."
+msgid ""
+"Reihenfolge hell → dunkel. Name = Endung der Klassen und Variablen (.bg-primary-300, --theme-primary-light). Genau "
+"ein Shade ist die Grundfarbe; die anderen werden aus ihr berechnet: aufhellen = mit Weiß mischen, abdunkeln = mit "
+"Schwarz mischen."
+msgstr ""
+"Order light → dark. Name = suffix of the classes and variables (.bg-primary-300, --theme-primary-light). Exactly one "
+"shade is the base color; the others are calculated from it: lighten = mix with white, darken = mix with black."
 
 #: acf-json/group_zpt_settings_style.json
 msgid "Shade hinzufügen"
@@ -1903,6 +2171,21 @@ msgstr "e.g. 300 or light"
 msgid "z. B. primary"
 msgstr "e.g. primary"
 
+#: acf-json/group_zpt_settings_theme_images.json
+msgid "Baukasten: Bilder aus dem Theme"
+msgstr ""
+
+#: acf-json/group_zpt_settings_theme_images.json
+msgid ""
+"Bilder, die zum Theme gehören und nicht redaktionell verwaltet werden (Illustrationen, Grafiken). Bild-, Card- und "
+"Row-Block können sie mit Quelle „Theme“ wählen. Mit Unterordnern; png, jpg, gif, webp, avif, svg. Child-Theme geht "
+"vor Eltern-Theme. Leer = keine."
+msgstr ""
+
+#: acf-json/group_zpt_settings_theme_images.json
+msgid "assets/img"
+msgstr ""
+
 #: acf-json/group_zpt_settings_typo_defaults.json
 msgid "12punkt (sm, copy, copy-l, l, xl, xxl, xxxl)"
 msgstr "12punkt (sm, copy, copy-l, l, xl, xxl, xxxl)"
@@ -1920,12 +2203,22 @@ msgid "Fließtext"
 msgstr "Body text"
 
 #: acf-json/group_zpt_settings_typo_defaults.json
-msgid "Lädt die Stufen der Vorlage in die Tabelle, danach anpassbar (wird dann zu „Eigene“). Nach dem Speichern haben die Schriften unter „Schriftschnitte & Maße“ die neuen Stufen."
-msgstr "Loads the preset’s steps into the table, adjustable afterwards (then becomes “Custom”). After saving, the fonts under “Font styles & metrics” have the new steps."
+msgid ""
+"Lädt die Stufen der Vorlage in die Tabelle, danach anpassbar (wird dann zu „Eigene“). Nach dem Speichern haben die "
+"Schriften unter „Schriftschnitte & Maße“ die neuen Stufen."
+msgstr ""
+"Loads the preset’s steps into the table, adjustable afterwards (then becomes “Custom”). After saving, the fonts under "
+"“Font styles & metrics” have the new steps."
 
 #: acf-json/group_zpt_settings_typo_defaults.json
-msgid "Reihenfolge klein → groß. Name = Endung der Klassen und Variablen (.font-size-copy-l, .font-size-md-copy-l, --theme-font-size-copy-l). Größe und Zeilenhöhe gelten für alle Schriften ohne eigene Werte. Genau eine Stufe ist der Fließtext (body)."
-msgstr "Order small → large. Name = suffix of the classes and variables (.font-size-copy-l, .font-size-md-copy-l, --theme-font-size-copy-l). Size and line height apply to all fonts without their own values. Exactly one step is the body text (body)."
+msgid ""
+"Reihenfolge klein → groß. Name = Endung der Klassen und Variablen (.font-size-copy-l, .font-size-md-copy-l, --theme-"
+"font-size-copy-l). Größe und Zeilenhöhe gelten für alle Schriften ohne eigene Werte. Genau eine Stufe ist der "
+"Fließtext (body)."
+msgstr ""
+"Order small → large. Name = suffix of the classes and variables (.font-size-copy-l, .font-size-md-copy-l, --theme-"
+"font-size-copy-l). Size and line height apply to all fonts without their own values. Exactly one step is the body "
+"text (body)."
 
 #: acf-json/group_zpt_settings_typo_defaults.json
 msgid "Stufe hinzufügen"
@@ -1956,12 +2249,24 @@ msgid "Installierte Schriften (Design → Schriftarten), die in „Schriftschnit
 msgstr "Installed fonts (Appearance → Fonts) offered in “Font styles & metrics”."
 
 #: acf-json/group_zpt_settings_typo_loading.json
-msgid "Optional: Ordner mit eigenen Schriften im Theme. Liegt dort eine CSS-Datei mit @font-face-Regeln, wird sie geladen. Sonst werden die Dateien (woff2, woff, ttf, otf) automatisch eingebunden: Familie = Unterordner (fonts/Lato/…) oder Dateiname bis zum ersten - bzw. _; Gewicht und Stil aus dem Dateinamen (Bold, 700, Italic …). Nach dem Speichern stehen die Schriften in „Schriftschnitte & Maße“ zur Auswahl."
-msgstr "Optional: folder with custom fonts in the theme. If it contains a CSS file with @font-face rules, it is loaded. Otherwise the files (woff2, woff, ttf, otf) are included automatically: family = subfolder (fonts/Lato/…) or file name up to the first - or _; weight and style from the file name (Bold, 700, Italic …). After saving, the fonts are available in “Font styles & metrics”."
+msgid ""
+"Optional: Ordner mit eigenen Schriften im Theme. Liegt dort eine CSS-Datei mit @font-face-Regeln, wird sie geladen. "
+"Sonst werden die Dateien (woff2, woff, ttf, otf) automatisch eingebunden: Familie = Unterordner (fonts/Lato/…) oder "
+"Dateiname bis zum ersten - bzw. _; Gewicht und Stil aus dem Dateinamen (Bold, 700, Italic …). Nach dem Speichern "
+"stehen die Schriften in „Schriftschnitte & Maße“ zur Auswahl."
+msgstr ""
+"Optional: folder with custom fonts in the theme. If it contains a CSS file with @font-face rules, it is loaded. "
+"Otherwise the files (woff2, woff, ttf, otf) are included automatically: family = subfolder (fonts/Lato/…) or file "
+"name up to the first - or _; weight and style from the file name (Bold, 700, Italic …). After saving, the fonts are "
+"available in “Font styles & metrics”."
 
 #: acf-json/group_zpt_settings_typo_loading.json
-msgid "Schrift, die auf den Geräten vorhanden ist – ohne Download. Stack mit Ausweichschriften wie bei font-family; der erste Name ist der Name der Schrift. Leer = keine."
-msgstr "Font available on the devices – no download. Stack with fallback fonts as in font-family; the first name is the name of the font. Empty = none."
+msgid ""
+"Schrift, die auf den Geräten vorhanden ist – ohne Download. Stack mit Ausweichschriften wie bei font-family; der "
+"erste Name ist der Name der Schrift. Leer = keine."
+msgstr ""
+"Font available on the devices – no download. Stack with fallback fonts as in font-family; the first name is the name "
+"of the font. Empty = none."
 
 #: acf-json/group_zpt_settings_typo_loading.json
 msgid "System-Standard"
@@ -1988,8 +2293,12 @@ msgid "Baukasten: Rollen"
 msgstr "Baukasten: Roles"
 
 #: acf-json/group_zpt_settings_typo_roles.json
-msgid "Welche Schrift für welche Rolle (Auswahl aus „Schriftschnitte & Maße“, nach Änderungen dort erst speichern). Leer = Standard. Grundschrift gilt für die ganze Seite; Klassen .font-sans-serif, .font-serif, .font-style-deco, .font-mono."
-msgstr "Which font for which role (selection from “Font styles & metrics”; after changes there, save first). Empty = default. Base font applies to the whole page; classes .font-sans-serif, .font-serif, .font-style-deco, .font-mono."
+msgid ""
+"Welche Schrift für welche Rolle (Auswahl aus „Schriftschnitte & Maße“, nach Änderungen dort erst speichern). Leer = "
+"Standard. Grundschrift gilt für die ganze Seite; Klassen .font-sans-serif, .font-serif, .font-style-deco, .font-mono."
+msgstr ""
+"Which font for which role (selection from “Font styles & metrics”; after changes there, save first). Empty = default. "
+"Base font applies to the whole page; classes .font-sans-serif, .font-serif, .font-style-deco, .font-mono."
 
 #: acf-json/group_zpt_settings_typography.json
 msgid "Aus den Schriftquellen (WP-Schriften, Theme-Ordner, System-Standard)."
@@ -2000,16 +2309,23 @@ msgid "Baukasten: Schriftschnitte & Maße"
 msgstr "Baukasten: Font styles & metrics"
 
 #: acf-json/group_zpt_settings_typography.json
-msgid "Eine Zeile je Schrift. Geladen werden nur Schriften in dieser Liste. Klasse je Schrift: .ff-{name} (z. B. .ff-inter). Leere Felder: Werte aus „Schriftgrößen“."
-msgstr "One row per font. Only fonts in this list are loaded. Class per font: .ff-{name} (e.g. .ff-inter). Empty fields: values from “Font sizes”."
+msgid ""
+"Eine Zeile je Schrift. Geladen werden nur Schriften in dieser Liste. Klasse je Schrift: .ff-{name} (z. B. .ff-inter). "
+"Leere Felder: Werte aus „Schriftgrößen“."
+msgstr ""
+"One row per font. Only fonts in this list are loaded. Class per font: .ff-{name} (e.g. .ff-inter). Empty fields: "
+"values from “Font sizes”."
 
 #: acf-json/group_zpt_settings_typography.json
 msgid "Gewicht hinzufügen"
 msgstr "Add weight"
 
 #: acf-json/group_zpt_settings_typography.json
-msgid "Je Gewicht, z. B. 0.02em oder -0.01em (em skaliert mit der Schriftgröße). Zeilen für alle geladenen Gewichte werden beim Speichern angelegt."
-msgstr "Per weight, e.g. 0.02em or -0.01em (em scales with the font size). Rows for all loaded weights are created on save."
+msgid ""
+"Je Gewicht, z. B. 0.02em oder -0.01em (em skaliert mit der Schriftgröße). Zeilen für alle geladenen Gewichte werden "
+"beim Speichern angelegt."
+msgstr ""
+"Per weight, e.g. 0.02em or -0.01em (em scales with the font size). Rows for all loaded weights are created on save."
 
 #: acf-json/group_zpt_settings_typography.json
 msgid "Laufweiten"
@@ -2343,8 +2659,11 @@ msgstr "faq"
 
 #: blocks/anchors/block.json
 msgctxt "block description"
-msgid "Links zu Abschnitten dieser Seite (CSS IDs) – horizontal oder vertikal, markiert beim Scrollen den sichtbaren Abschnitt."
-msgstr "Links to sections of this page (CSS IDs) – horizontal or vertical, highlights the visible section while scrolling."
+msgid ""
+"Links zu Abschnitten dieser Seite (CSS IDs) – horizontal oder vertikal, markiert beim Scrollen den sichtbaren "
+"Abschnitt."
+msgstr ""
+"Links to sections of this page (CSS IDs) – horizontal or vertical, highlights the visible section while scrolling."
 
 #: blocks/anchors/block.json
 msgctxt "block title"
@@ -2442,7 +2761,7 @@ msgctxt "block keyword"
 msgid "teaser"
 msgstr "teaser"
 
-#: blocks/card/render.php:25
+#: blocks/card/render.php:26
 msgid "Mehr erfahren"
 msgstr "Learn more"
 
@@ -2765,7 +3084,8 @@ msgstr "This slug is already a button class (color, size or variant)."
 msgid "Das Kürzel ist mehrfach vergeben."
 msgstr "The slug is used more than once."
 
-#: includes/buttons.php:658 includes/buttons.php:679 includes/buttons.php:791 includes/components.php:167 includes/typography.php:390 includes/typography.php:467 templates/styleguide/overview.php:21
+#: includes/buttons.php:658 includes/buttons.php:679 includes/buttons.php:791 includes/components.php:167
+#: includes/typography.php:390 includes/typography.php:467 templates/styleguide/overview.php:21
 msgid "Standard"
 msgstr "Default"
 
@@ -2864,16 +3184,24 @@ msgid "Farbe aus der Palette (mit Shade) oder eigene Farbe (Hexwert, Farbname) �
 msgstr "Color from the palette (with shade) or custom color (hex value, color name) – no other system color."
 
 #: includes/colors.php:613
-msgid "Nur Kleinbuchstaben, Ziffern und Bindestrich (z. B. primary oder accent), nicht wie eine Palettenfarbe, nicht mit der Endung eines Shades."
-msgstr "Only lowercase letters, digits and hyphens (e.g. primary or accent), not the same as a palette color, not ending in a shade suffix."
+msgid ""
+"Nur Kleinbuchstaben, Ziffern und Bindestrich (z. B. primary oder accent), nicht wie eine Palettenfarbe, nicht mit der "
+"Endung eines Shades."
+msgstr ""
+"Only lowercase letters, digits and hyphens (e.g. primary or accent), not the same as a palette color, not ending in a "
+"shade suffix."
 
 #: includes/colors.php:621 includes/colors.php:639
 msgid "Der Name ist mehrfach vergeben."
 msgstr "The name is used more than once."
 
 #: includes/colors.php:631
-msgid "Nur Kleinbuchstaben, Ziffern und Bindestrich (z. B. ecos-blau), nicht wie eine Bootstrap- oder Systemfarbe (primary, dark …), nicht mit der Endung eines Shades (z. B. -300)."
-msgstr "Only lowercase letters, digits and hyphens (e.g. ecos-blue), not the same as a Bootstrap or system color (primary, dark …), not ending in a shade suffix (e.g. -300)."
+msgid ""
+"Nur Kleinbuchstaben, Ziffern und Bindestrich (z. B. ecos-blau), nicht wie eine Bootstrap- oder Systemfarbe (primary, "
+"dark …), nicht mit der Endung eines Shades (z. B. -300)."
+msgstr ""
+"Only lowercase letters, digits and hyphens (e.g. ecos-blue), not the same as a Bootstrap or system color (primary, "
+"dark …), not ending in a shade suffix (e.g. -300)."
 
 #: includes/colors.php:690
 msgid "Baukasten-Farbe (z. B. primary-300), HTML-Farbname (z. B. tomato) oder Hexwert (#ff6347)."
@@ -2936,8 +3264,12 @@ msgid "%1$s (Theme: %2$s/)"
 msgstr "%1$s (theme: %2$s/)"
 
 #: includes/fonts.php:476
-msgid "Keine Schriften gefunden: unter „Schriftquellen“ → „WP-Schriften“ Schriften anhaken bzw. installieren (Design → Schriftarten), einen System-Standard eintragen oder einen Theme-Ordner angeben."
-msgstr "No fonts found: under “Font sources” → “WP fonts”, check or install fonts (Appearance → Fonts), enter a system default or specify a theme folder."
+msgid ""
+"Keine Schriften gefunden: unter „Schriftquellen“ → „WP-Schriften“ Schriften anhaken bzw. installieren (Design → "
+"Schriftarten), einen System-Standard eintragen oder einen Theme-Ordner angeben."
+msgstr ""
+"No fonts found: under “Font sources” → “WP fonts”, check or install fonts (Appearance → Fonts), enter a system "
+"default or specify a theme folder."
 
 #: includes/fonts.php:486
 msgid "Noch keine Schriften installiert (Design → Schriftarten)."
@@ -2967,24 +3299,24 @@ msgstr "Component “%s” not found."
 msgid "Eigenes Set"
 msgstr "Custom set"
 
-#: includes/icons.php:293
+#: includes/icons.php:292
 msgid "Icon suchen …"
 msgstr "Search icon …"
 
-#: includes/icons.php:320
+#: includes/icons.php:319
 msgid "(nicht geladen)"
 msgstr "(not loaded)"
 
-#: includes/icons.php:403
+#: includes/icons.php:402
 msgid "Set ist ausgeschaltet."
 msgstr "Set is turned off."
 
-#: includes/icons.php:407
+#: includes/icons.php:406
 msgid "Noch keine Icons – Ordner angeben oder unten SVG-Code einfügen und speichern."
 msgstr "No icons yet – specify a folder or paste SVG code below and save."
 
 #. translators: %d: Anzahl der Icons
-#: includes/icons.php:411
+#: includes/icons.php:410
 #, php-format
 msgid "%d Icon, Stand beim letzten Speichern:"
 msgid_plural "%d Icons, Stand beim letzten Speichern:"
@@ -2992,14 +3324,14 @@ msgstr[0] "%d icon, as of last save:"
 msgstr[1] "%d icons, as of last save:"
 
 #. translators: %d: Anzahl gefundener SVG-Dateien
-#: includes/icons.php:429
+#: includes/icons.php:428
 #, php-format
 msgid "gefunden: %d Datei."
 msgid_plural "gefunden: %d Dateien."
 msgstr[0] "found: %d file."
 msgstr[1] "found: %d files."
 
-#: includes/icons.php:429
+#: includes/icons.php:428
 msgid "keine SVG-Dateien gefunden."
 msgstr "no SVG files found."
 
@@ -3028,8 +3360,12 @@ msgid "Import"
 msgstr "Import"
 
 #: includes/import-export.php:135
-msgid "Übernimmt die Einstellungen aus einer Export-Datei. Die Werte der gewählten Seiten werden <strong>vollständig ersetzt</strong>; Seiten, die in der Datei fehlen, bleiben unverändert."
-msgstr "Applies the settings from an export file. The values of the selected pages are <strong>completely replaced</strong>; pages missing from the file remain unchanged."
+msgid ""
+"Übernimmt die Einstellungen aus einer Export-Datei. Die Werte der gewählten Seiten werden <strong>vollständig "
+"ersetzt</strong>; Seiten, die in der Datei fehlen, bleiben unverändert."
+msgstr ""
+"Applies the settings from an export file. The values of the selected pages are <strong>completely replaced</strong>; "
+"pages missing from the file remain unchanged."
 
 #: includes/import-export.php:136
 msgid "Schriften werden nur über den Namen zugeordnet – die Schriftdateien müssen hier vorhanden sein."
@@ -3083,21 +3419,31 @@ msgstr[1] "%d entries did not belong to any field of the page and were skipped."
 msgid "Keine Berechtigung."
 msgstr "Permission denied."
 
-#: includes/logo.php:125
+#: includes/logo.php:128
 msgid "Name bzw. Kürzel ergibt kein gültiges Kürzel."
 msgstr "Name or slug does not result in a valid slug."
 
 #. translators: %s: Kürzel der Logo-Variante
-#: includes/logo.php:129
+#: includes/logo.php:132
 #, php-format
 msgid "Das Kürzel „%s“ ist mehrfach vergeben."
 msgstr "The slug “%s” is used more than once."
 
-#: includes/logo.php:374
-msgid "Noch keine Dateien – Favicon-Bild wählen und speichern."
-msgstr "No files yet – choose a favicon image and save."
+#. translators: 1: gefundene Dateien, 2: Bild, aus dem fehlende Dateien erzeugt werden
+#: includes/logo.php:445
+#, php-format
+msgid "Gefunden: %1$s. Fehlende Dateien werden erzeugt aus: %2$s"
+msgstr ""
 
-#: includes/logo.php:407
+#: includes/logo.php:446
+msgid "Keine passenden Dateien gefunden."
+msgstr ""
+
+#: includes/logo.php:461
+msgid "Noch keine Dateien – Favicon-Bild bzw. Ordner wählen und speichern."
+msgstr ""
+
+#: includes/logo.php:494
 msgid "Die Datei enthält kein gültiges SVG."
 msgstr "The file does not contain valid SVG."
 
@@ -3210,8 +3556,8 @@ msgid "Icons"
 msgstr "Icons"
 
 #: includes/settings.php:35
-msgid "Logo"
-msgstr "Logo"
+msgid "Logo & Bilder"
+msgstr ""
 
 #: includes/settings.php:36
 msgid "Navigation"
@@ -3239,6 +3585,28 @@ msgstr "Baukasten – %s"
 msgid "Styleguide"
 msgstr "Styleguide"
 
+#: includes/theme-files.php:180
+msgid "Noch kein Ordner eingestellt: Baukasten → Logo & Bilder → Bilder aus dem Theme."
+msgstr ""
+
+#. translators: %s: Ordner im Theme
+#: includes/theme-files.php:182
+#, php-format
+msgid "Keine Bilder in „%s“ gefunden."
+msgstr ""
+
+#. translators: %d: Anzahl gefundener Bilder
+#: includes/theme-files.php:230
+#, php-format
+msgid "gefunden: %d Bild."
+msgid_plural "gefunden: %d Bilder."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/theme-files.php:230
+msgid "keine Bilder gefunden."
+msgstr ""
+
 #: includes/typography.php:373
 msgid "Jede Stufe braucht einen Namen (a–z, 0–9, Bindestrich)."
 msgstr "Each step needs a name (a–z, 0–9, hyphen)."
@@ -3260,6 +3628,18 @@ msgstr "Default (inherit)"
 #: templates/components/navigation.php:55
 msgid "Inhalt der Seite"
 msgstr "Page content"
+
+#. translators: %s: Anbieter, z. B. YouTube
+#: templates/components/video.php:51
+#, php-format
+msgid "%s-Video"
+msgstr "%s video"
+
+#. translators: %s: Anbieter, z. B. YouTube
+#: templates/components/video.php:58
+#, php-format
+msgid "Video abspielen – dabei werden Daten an %s übertragen."
+msgstr "Play video – this will transfer data to %s."
 
 #: templates/styleguide/buttons.php:21
 msgid "Größen"
@@ -3438,8 +3818,12 @@ msgid "Standard (Grundschrift)"
 msgstr "Default (base font)"
 
 #: templates/styleguide/typography.php:17
-msgid "Gemessen wird im Browser: Schrift · Gewicht, Größe / Zeilenhöhe · Laufweite (LS). Werte ändern sich je Breakpoint – Fenster verkleinern zum Prüfen."
-msgstr "Measured in the browser: font · weight, size / line height · letter spacing (LS). Values change per breakpoint – resize the window to check."
+msgid ""
+"Gemessen wird im Browser: Schrift · Gewicht, Größe / Zeilenhöhe · Laufweite (LS). Werte ändern sich je Breakpoint – "
+"Fenster verkleinern zum Prüfen."
+msgstr ""
+"Measured in the browser: font · weight, size / line height · letter spacing (LS). Values change per breakpoint – "
+"resize the window to check."
 
 #: templates/styleguide/typography.php:24
 msgid "Stufen"
@@ -3468,8 +3852,12 @@ msgstr "with"
 #. translators: %1$s: Beispielsatz
 #: templates/styleguide/typography.php:77
 #, php-format
-msgid "%1$s. Mit <strong>fettem Text</strong>, <em>kursivem Text</em> und einem <a href=\"#\">Link</a>. Zweite Zeile, damit die Zeilenhöhe sichtbar wird: %1$s."
-msgstr "%1$s. With <strong>bold text</strong>, <em>italic text</em> and a <a href=\"#\">link</a>. Second line so the line height becomes visible: %1$s."
+msgid ""
+"%1$s. Mit <strong>fettem Text</strong>, <em>kursivem Text</em> und einem <a href=\"#\">Link</a>. Zweite Zeile, damit "
+"die Zeilenhöhe sichtbar wird: %1$s."
+msgstr ""
+"%1$s. With <strong>bold text</strong>, <em>italic text</em> and a <a href=\"#\">link</a>. Second line so the line "
+"height becomes visible: %1$s."
 
 #: templates/tmpl-styleguide.php:65
 msgid "Text"
@@ -3482,3 +3870,6 @@ msgstr "Border"
 #: templates/tmpl-styleguide.php:73
 msgid "Radius"
 msgstr "Radius"
+
+#~ msgid "Noch keine Dateien – Favicon-Bild wählen und speichern."
+#~ msgstr "No files yet – choose a favicon image and save."

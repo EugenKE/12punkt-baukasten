@@ -48,14 +48,14 @@ $attrs['class'] = zpt_class_list($attrs['class'] ?? [], 'ratio', 'ratio-' . ($ar
             <?php echo $title !== '' ? 'aria-label="' . esc_attr($title) . '"' : ''; ?>></video>
     <?php else: ?>
         <button type="button" class="zpt-video-consent" data-zpt-video-src="<?php echo esc_url($embed); ?>"
-            data-zpt-video-title="<?php echo esc_attr($title ?: $provider . '-Video'); ?>">
+            data-zpt-video-title="<?php echo esc_attr($title ?: sprintf(/* translators: %s: Anbieter, z. B. YouTube */ __('%s-Video', '12punkt-baukasten'), $provider)); ?>">
             <?php if ($poster): ?>
                 <?php echo wp_get_attachment_image($poster, 'large', false, ['class' => 'zpt-video-poster', 'alt' => '']); ?>
             <?php endif; ?>
             <span class="zpt-video-play" aria-hidden="true"><svg class="zpt-svg-icon" viewBox="0 0 16 16" fill="currentColor" focusable="false"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z"/></svg></span>
             <span class="zpt-video-notice">
                 <?php if ($title !== ''): ?><strong><?php echo esc_html($title); ?></strong><br><?php endif; ?>
-                Video abspielen – dabei werden Daten an <?php echo esc_html($provider); ?> übertragen.
+                <?php echo esc_html(sprintf(/* translators: %s: Anbieter, z. B. YouTube */ __('Video abspielen – dabei werden Daten an %s übertragen.', '12punkt-baukasten'), $provider)); ?>
             </span>
         </button>
     <?php endif; ?>

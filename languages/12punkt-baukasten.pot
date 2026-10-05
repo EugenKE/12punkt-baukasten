@@ -7,7 +7,7 @@ msgstr ""
 "Language: de_DE\n"
 "X-Domain: 12punkt-baukasten\n"
 
-#: 12punkt-baukasten.php:25
+#: 12punkt-baukasten.php:27
 msgid "ACF Pro muss installiert und aktiviert sein."
 msgstr ""
 
@@ -434,6 +434,11 @@ msgstr ""
 msgid "zentriert"
 msgstr ""
 
+#: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_image.json
+#: acf-json/group_zpt_settings_logo.json
+msgid "Alternativtext"
+msgstr ""
+
 #: acf-json/group_zpt_block_card.json
 msgid "Anordnung"
 msgstr ""
@@ -448,6 +453,11 @@ msgstr ""
 
 #: acf-json/group_zpt_block_card.json
 msgid "Bild oben"
+msgstr ""
+
+#: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_image.json
+#: acf-json/group_zpt_block_row.json
+msgid "Bild wählen …"
 msgstr ""
 
 #: acf-json/group_zpt_block_card.json
@@ -478,12 +488,22 @@ msgstr ""
 msgid "CSS Text-Bereich"
 msgstr ""
 
+#: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_image.json
+msgid "Leer = aus dem Dateinamen."
+msgstr ""
+
 #: acf-json/group_zpt_block_card.json
 msgid "Link als"
 msgstr ""
 
+#: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_image.json
+#: acf-json/group_zpt_block_row.json acf-json/group_zpt_settings_favicon.json
+msgid "Mediathek"
+msgstr ""
+
 #: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_icon.json
-#: acf-json/group_zpt_block_video.json
+#: acf-json/group_zpt_block_image.json acf-json/group_zpt_block_video.json
+#: acf-json/group_zpt_settings_favicon.json
 msgid "Quelle"
 msgstr ""
 
@@ -497,6 +517,16 @@ msgstr ""
 
 #: acf-json/group_zpt_block_card.json
 msgid "Text zuerst"
+msgstr ""
+
+#: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_image.json
+#: acf-json/group_zpt_block_row.json
+msgid "Theme"
+msgstr ""
+
+#: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_image.json
+#: acf-json/group_zpt_block_row.json
+msgid "Theme = Bild aus dem Bilder-Ordner des Themes (Illustrationen, Grafiken, die zum Theme gehören)."
 msgstr ""
 
 #: acf-json/group_zpt_block_card.json
@@ -892,6 +922,10 @@ msgstr ""
 
 #: acf-json/group_zpt_block_row.json
 msgid "Oben anheften"
+msgstr ""
+
+#: acf-json/group_zpt_block_row.json
+msgid "Quelle Hintergrundbild"
 msgstr ""
 
 #: acf-json/group_zpt_block_row.json
@@ -1649,6 +1683,10 @@ msgid "Favicon"
 msgstr ""
 
 #: acf-json/group_zpt_settings_favicon.json
+msgid "Fertige Dateien werden direkt verwendet: favicon.ico, favicon.svg, apple-touch-icon.png, icon-192.png, icon-512.png, site.webmanifest. Fehlende werden aus dem größten PNG/JPG/WebP erzeugt (bevorzugt favicon.png, mind. 512 px) – ein einzelnes favicon.png reicht. Child-Theme geht vor Eltern-Theme."
+msgstr ""
+
+#: acf-json/group_zpt_settings_favicon.json
 msgid "Färbt in mobilen Browsern die Adressleiste (meta theme-color, Manifest). Leer = keine."
 msgstr ""
 
@@ -1657,7 +1695,17 @@ msgid "Hintergrund Apple Touch Icon"
 msgstr ""
 
 #: acf-json/group_zpt_settings_favicon.json
+msgid "Mediathek = Bild hochladen und hier verwalten. Ordner im Theme = die Favicons gehören zum Theme und kommen mit ihm (wie im Baukasten 1)."
+msgstr ""
+
+#: acf-json/group_zpt_settings_favicon.json
 msgid "Optional. Moderne Browser nehmen es statt favicon.ico – scharf in jeder Größe, im SVG per @media (prefers-color-scheme: dark) auch mit eigenen Farben für den Dark Mode."
+msgstr ""
+
+#: acf-json/group_zpt_settings_favicon.json
+#: acf-json/group_zpt_settings_icons_svg.json
+#: acf-json/group_zpt_settings_theme_images.json
+msgid "Ordner im Theme"
 msgstr ""
 
 #: acf-json/group_zpt_settings_favicon.json
@@ -1670,6 +1718,10 @@ msgstr ""
 
 #: acf-json/group_zpt_settings_favicon.json
 msgid "Theme-Farbe"
+msgstr ""
+
+#: acf-json/group_zpt_settings_favicon.json
+msgid "assets/favicons"
 msgstr ""
 
 #: acf-json/group_zpt_settings_favicon.json
@@ -1830,10 +1882,6 @@ msgid "Icons als Code"
 msgstr ""
 
 #: acf-json/group_zpt_settings_icons_svg.json
-msgid "Ordner im Theme"
-msgstr ""
-
-#: acf-json/group_zpt_settings_icons_svg.json
 msgid "Vorschau"
 msgstr ""
 
@@ -1850,10 +1898,6 @@ msgid "kamera"
 msgstr ""
 
 #: acf-json/group_zpt_settings_logo.json
-msgid "Alternativtext"
-msgstr ""
-
-#: acf-json/group_zpt_settings_logo.json
 msgid "Baukasten: Logo"
 msgstr ""
 
@@ -1863,6 +1907,10 @@ msgstr ""
 
 #: acf-json/group_zpt_settings_logo.json
 msgid "Hauptlogo, z. B. im Header. SVG, PNG, JPG oder WebP. Leer = Logo aus dem Customizer (Design → Customizer → Website-Informationen) bzw. Seitenname."
+msgstr ""
+
+#: acf-json/group_zpt_settings_logo.json
+msgid "Logo"
 msgstr ""
 
 #: acf-json/group_zpt_settings_logo.json
@@ -2097,6 +2145,18 @@ msgstr ""
 
 #: acf-json/group_zpt_settings_style.json
 msgid "z. B. primary"
+msgstr ""
+
+#: acf-json/group_zpt_settings_theme_images.json
+msgid "Baukasten: Bilder aus dem Theme"
+msgstr ""
+
+#: acf-json/group_zpt_settings_theme_images.json
+msgid "Bilder, die zum Theme gehören und nicht redaktionell verwaltet werden (Illustrationen, Grafiken). Bild-, Card- und Row-Block können sie mit Quelle „Theme“ wählen. Mit Unterordnern; png, jpg, gif, webp, avif, svg. Child-Theme geht vor Eltern-Theme. Leer = keine."
+msgstr ""
+
+#: acf-json/group_zpt_settings_theme_images.json
+msgid "assets/img"
 msgstr ""
 
 #: acf-json/group_zpt_settings_typo_defaults.json
@@ -2638,7 +2698,7 @@ msgctxt "block keyword"
 msgid "teaser"
 msgstr ""
 
-#: blocks/card/render.php:25
+#: blocks/card/render.php:26
 msgid "Mehr erfahren"
 msgstr ""
 
@@ -3166,24 +3226,24 @@ msgstr ""
 msgid "Eigenes Set"
 msgstr ""
 
-#: includes/icons.php:293
+#: includes/icons.php:292
 msgid "Icon suchen …"
 msgstr ""
 
-#: includes/icons.php:320
+#: includes/icons.php:319
 msgid "(nicht geladen)"
 msgstr ""
 
-#: includes/icons.php:403
+#: includes/icons.php:402
 msgid "Set ist ausgeschaltet."
 msgstr ""
 
-#: includes/icons.php:407
+#: includes/icons.php:406
 msgid "Noch keine Icons – Ordner angeben oder unten SVG-Code einfügen und speichern."
 msgstr ""
 
 #. translators: %d: Anzahl der Icons
-#: includes/icons.php:411
+#: includes/icons.php:410
 #, php-format
 msgid "%d Icon, Stand beim letzten Speichern:"
 msgid_plural "%d Icons, Stand beim letzten Speichern:"
@@ -3191,14 +3251,14 @@ msgstr[0] ""
 msgstr[1] ""
 
 #. translators: %d: Anzahl gefundener SVG-Dateien
-#: includes/icons.php:429
+#: includes/icons.php:428
 #, php-format
 msgid "gefunden: %d Datei."
 msgid_plural "gefunden: %d Dateien."
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/icons.php:429
+#: includes/icons.php:428
 msgid "keine SVG-Dateien gefunden."
 msgstr ""
 
@@ -3282,21 +3342,31 @@ msgstr[1] ""
 msgid "Keine Berechtigung."
 msgstr ""
 
-#: includes/logo.php:125
+#: includes/logo.php:128
 msgid "Name bzw. Kürzel ergibt kein gültiges Kürzel."
 msgstr ""
 
 #. translators: %s: Kürzel der Logo-Variante
-#: includes/logo.php:129
+#: includes/logo.php:132
 #, php-format
 msgid "Das Kürzel „%s“ ist mehrfach vergeben."
 msgstr ""
 
-#: includes/logo.php:374
-msgid "Noch keine Dateien – Favicon-Bild wählen und speichern."
+#. translators: 1: gefundene Dateien, 2: Bild, aus dem fehlende Dateien erzeugt werden
+#: includes/logo.php:445
+#, php-format
+msgid "Gefunden: %1$s. Fehlende Dateien werden erzeugt aus: %2$s"
 msgstr ""
 
-#: includes/logo.php:407
+#: includes/logo.php:446
+msgid "Keine passenden Dateien gefunden."
+msgstr ""
+
+#: includes/logo.php:461
+msgid "Noch keine Dateien – Favicon-Bild bzw. Ordner wählen und speichern."
+msgstr ""
+
+#: includes/logo.php:494
 msgid "Die Datei enthält kein gültiges SVG."
 msgstr ""
 
@@ -3409,7 +3479,7 @@ msgid "Icons"
 msgstr ""
 
 #: includes/settings.php:35
-msgid "Logo"
+msgid "Logo & Bilder"
 msgstr ""
 
 #: includes/settings.php:36
@@ -3438,6 +3508,28 @@ msgstr ""
 msgid "Styleguide"
 msgstr ""
 
+#: includes/theme-files.php:180
+msgid "Noch kein Ordner eingestellt: Baukasten → Logo & Bilder → Bilder aus dem Theme."
+msgstr ""
+
+#. translators: %s: Ordner im Theme
+#: includes/theme-files.php:182
+#, php-format
+msgid "Keine Bilder in „%s“ gefunden."
+msgstr ""
+
+#. translators: %d: Anzahl gefundener Bilder
+#: includes/theme-files.php:230
+#, php-format
+msgid "gefunden: %d Bild."
+msgid_plural "gefunden: %d Bilder."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/theme-files.php:230
+msgid "keine Bilder gefunden."
+msgstr ""
+
 #: includes/typography.php:373
 msgid "Jede Stufe braucht einen Namen (a–z, 0–9, Bindestrich)."
 msgstr ""
@@ -3458,6 +3550,18 @@ msgstr ""
 
 #: templates/components/navigation.php:55
 msgid "Inhalt der Seite"
+msgstr ""
+
+#. translators: %s: Anbieter, z. B. YouTube
+#: templates/components/video.php:51
+#, php-format
+msgid "%s-Video"
+msgstr ""
+
+#. translators: %s: Anbieter, z. B. YouTube
+#: templates/components/video.php:58
+#, php-format
+msgid "Video abspielen – dabei werden Daten an %s übertragen."
 msgstr ""
 
 #: templates/styleguide/buttons.php:21

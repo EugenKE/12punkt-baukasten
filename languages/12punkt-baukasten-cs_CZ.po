@@ -11,7 +11,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Domain: 12punkt-baukasten\n"
 
-#: 12punkt-baukasten.php:25
+#: 12punkt-baukasten.php:27
 msgid "ACF Pro muss installiert und aktiviert sein."
 msgstr "ACF Pro musí být nainstalován a aktivován."
 
@@ -23,15 +23,26 @@ msgstr "Otevřeno při načtení"
 msgid "Bootstrap .accordion-flush"
 msgstr "Bootstrap .accordion-flush"
 
-#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_button.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_column.json acf-json/group_zpt_block_gallery.json acf-json/group_zpt_block_headline.json acf-json/group_zpt_block_icon.json acf-json/group_zpt_block_image.json acf-json/group_zpt_block_navigation.json acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_row.json acf-json/group_zpt_block_text.json acf-json/group_zpt_block_video.json
+#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_button.json
+#: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_column.json acf-json/group_zpt_block_gallery.json
+#: acf-json/group_zpt_block_headline.json acf-json/group_zpt_block_icon.json acf-json/group_zpt_block_image.json
+#: acf-json/group_zpt_block_navigation.json acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_row.json
+#: acf-json/group_zpt_block_text.json acf-json/group_zpt_block_video.json
 msgid "CSS"
 msgstr "CSS"
 
-#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_button.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_column.json acf-json/group_zpt_block_gallery.json acf-json/group_zpt_block_headline.json acf-json/group_zpt_block_icon.json acf-json/group_zpt_block_image.json acf-json/group_zpt_block_navigation.json acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_text.json acf-json/group_zpt_block_video.json
+#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_button.json
+#: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_column.json acf-json/group_zpt_block_gallery.json
+#: acf-json/group_zpt_block_headline.json acf-json/group_zpt_block_icon.json acf-json/group_zpt_block_image.json
+#: acf-json/group_zpt_block_navigation.json acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_text.json
+#: acf-json/group_zpt_block_video.json
 msgid "CSS ID"
 msgstr "CSS ID"
 
-#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_gallery.json acf-json/group_zpt_block_headline.json acf-json/group_zpt_block_icon.json acf-json/group_zpt_block_navigation.json acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_row.json acf-json/group_zpt_block_text.json acf-json/group_zpt_block_video.json
+#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_card.json
+#: acf-json/group_zpt_block_gallery.json acf-json/group_zpt_block_headline.json acf-json/group_zpt_block_icon.json
+#: acf-json/group_zpt_block_navigation.json acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_row.json
+#: acf-json/group_zpt_block_text.json acf-json/group_zpt_block_video.json
 msgid "CSS Klassen"
 msgstr "CSS třídy"
 
@@ -43,15 +54,25 @@ msgstr "Přidat položku"
 msgid "Einträge"
 msgstr "Položky"
 
-#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_button.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_column.json acf-json/group_zpt_block_gallery.json acf-json/group_zpt_block_headline.json acf-json/group_zpt_block_icon.json acf-json/group_zpt_block_image.json acf-json/group_zpt_block_navigation.json acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_row.json acf-json/group_zpt_block_text.json acf-json/group_zpt_block_video.json acf-json/group_zpt_settings_buttons.json acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_tpl_message.json acf-json/group_zpt_tpl_properties.json
+#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_button.json
+#: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_column.json acf-json/group_zpt_block_gallery.json
+#: acf-json/group_zpt_block_headline.json acf-json/group_zpt_block_icon.json acf-json/group_zpt_block_image.json
+#: acf-json/group_zpt_block_navigation.json acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_row.json
+#: acf-json/group_zpt_block_text.json acf-json/group_zpt_block_video.json acf-json/group_zpt_settings_buttons.json
+#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json
+#: acf-json/group_zpt_tpl_message.json acf-json/group_zpt_tpl_properties.json
 msgid "Hintergrund"
 msgstr "Pozadí"
 
-#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_button.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_gallery.json acf-json/group_zpt_block_headline.json acf-json/group_zpt_block_icon.json acf-json/group_zpt_block_image.json acf-json/group_zpt_block_navigation.json acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_text.json acf-json/group_zpt_block_video.json
+#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_button.json
+#: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_gallery.json acf-json/group_zpt_block_headline.json
+#: acf-json/group_zpt_block_icon.json acf-json/group_zpt_block_image.json acf-json/group_zpt_block_navigation.json
+#: acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_text.json acf-json/group_zpt_block_video.json
 msgid "Inhalt"
 msgstr "Obsah"
 
-#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_gallery.json acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_video.json
+#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_gallery.json
+#: acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_video.json
 msgid "Ja"
 msgstr "Ano"
 
@@ -59,7 +80,8 @@ msgstr "Ano"
 msgid "Mehrere gleichzeitig offen"
 msgstr "Více otevřených současně"
 
-#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_gallery.json acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_video.json
+#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_gallery.json
+#: acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_video.json
 msgid "Nein"
 msgstr "Ne"
 
@@ -67,7 +89,13 @@ msgstr "Ne"
 msgid "Ohne Rahmen"
 msgstr "Bez rámečku"
 
-#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_column.json acf-json/group_zpt_block_gallery.json acf-json/group_zpt_block_headline.json acf-json/group_zpt_block_icon.json acf-json/group_zpt_block_image.json acf-json/group_zpt_block_navigation.json acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_row.json acf-json/group_zpt_block_text.json acf-json/group_zpt_block_video.json acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_settings_typography.json acf-json/group_zpt_tpl_message.json acf-json/group_zpt_tpl_properties.json
+#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_card.json
+#: acf-json/group_zpt_block_column.json acf-json/group_zpt_block_gallery.json acf-json/group_zpt_block_headline.json
+#: acf-json/group_zpt_block_icon.json acf-json/group_zpt_block_image.json acf-json/group_zpt_block_navigation.json
+#: acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_row.json acf-json/group_zpt_block_text.json
+#: acf-json/group_zpt_block_video.json acf-json/group_zpt_settings_elements.json
+#: acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_settings_typography.json
+#: acf-json/group_zpt_tpl_message.json acf-json/group_zpt_tpl_properties.json
 msgid "Schrift"
 msgstr "Písmo"
 
@@ -95,23 +123,28 @@ msgstr "div"
 msgid "erster Eintrag"
 msgstr "první položka"
 
-#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_headline.json acf-json/group_zpt_block_posts.json
+#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_headline.json
+#: acf-json/group_zpt_block_posts.json
 msgid "h2"
 msgstr "h2"
 
-#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_headline.json acf-json/group_zpt_block_posts.json
+#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_headline.json
+#: acf-json/group_zpt_block_posts.json
 msgid "h3"
 msgstr "h3"
 
-#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_headline.json acf-json/group_zpt_block_posts.json
+#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_headline.json
+#: acf-json/group_zpt_block_posts.json
 msgid "h4"
 msgstr "h4"
 
-#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_headline.json acf-json/group_zpt_block_posts.json
+#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_headline.json
+#: acf-json/group_zpt_block_posts.json
 msgid "h5"
 msgstr "h5"
 
-#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_headline.json acf-json/group_zpt_block_posts.json
+#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_headline.json
+#: acf-json/group_zpt_block_posts.json
 msgid "h6"
 msgstr "h6"
 
@@ -119,11 +152,19 @@ msgstr "h6"
 msgid "keiner"
 msgstr "žádná"
 
-#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_button.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_column.json acf-json/group_zpt_block_gallery.json acf-json/group_zpt_block_headline.json acf-json/group_zpt_block_icon.json acf-json/group_zpt_block_image.json acf-json/group_zpt_block_navigation.json acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_row.json acf-json/group_zpt_block_text.json acf-json/group_zpt_block_video.json
+#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_button.json
+#: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_column.json acf-json/group_zpt_block_gallery.json
+#: acf-json/group_zpt_block_headline.json acf-json/group_zpt_block_icon.json acf-json/group_zpt_block_image.json
+#: acf-json/group_zpt_block_navigation.json acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_row.json
+#: acf-json/group_zpt_block_text.json acf-json/group_zpt_block_video.json
 msgid "ohne „#“, ohne Leerzeichen; muss auf der Seite eindeutig sein"
 msgstr "bez „#“, bez mezer; musí být na stránce jedinečné"
 
-#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_button.json acf-json/group_zpt_block_card.json acf-json/group_zpt_block_gallery.json acf-json/group_zpt_block_headline.json acf-json/group_zpt_block_icon.json acf-json/group_zpt_block_image.json acf-json/group_zpt_block_navigation.json acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_row.json acf-json/group_zpt_block_text.json acf-json/group_zpt_block_video.json acf-json/group_zpt_tpl_column.json acf-json/group_zpt_tpl_image_options.json
+#: acf-json/group_zpt_block_accordion.json acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_button.json
+#: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_gallery.json acf-json/group_zpt_block_headline.json
+#: acf-json/group_zpt_block_icon.json acf-json/group_zpt_block_image.json acf-json/group_zpt_block_navigation.json
+#: acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_row.json acf-json/group_zpt_block_text.json
+#: acf-json/group_zpt_block_video.json acf-json/group_zpt_tpl_column.json acf-json/group_zpt_tpl_image_options.json
 msgid "ohne „.“, trennen mit Leerzeichen"
 msgstr "bez „.“, oddělujte mezerami"
 
@@ -143,7 +184,8 @@ msgstr "Při posouvání se aktivuje odkaz na viditelnou sekci (jako u Pills / p
 msgid "CSS Links"
 msgstr "CSS odkazy"
 
-#: acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_button.json acf-json/group_zpt_block_navigation.json acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_video.json
+#: acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_button.json acf-json/group_zpt_block_navigation.json
+#: acf-json/group_zpt_block_posts.json acf-json/group_zpt_block_video.json
 msgid "Darstellung"
 msgstr "Vzhled"
 
@@ -195,7 +237,8 @@ msgstr "Cíl = CSS ID prvku na této stránce (např. Řádek → CSS → CSS ID
 msgid "horizontal"
 msgstr "vodorovně"
 
-#: acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_navigation.json acf-json/group_zpt_tpl_message.json includes/config.php
+#: acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_navigation.json acf-json/group_zpt_tpl_message.json
+#: includes/config.php
 msgid "links"
 msgstr "vlevo"
 
@@ -207,7 +250,8 @@ msgstr "na střed"
 msgid "ohne „.“, trennen mit Leerzeichen – an jedem Link"
 msgstr "bez „.“, oddělujte mezerami – u každého odkazu"
 
-#: acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_button.json acf-json/group_zpt_block_navigation.json acf-json/group_zpt_tpl_message.json includes/config.php
+#: acf-json/group_zpt_block_anchors.json acf-json/group_zpt_block_button.json acf-json/group_zpt_block_navigation.json
+#: acf-json/group_zpt_tpl_message.json includes/config.php
 msgid "rechts"
 msgstr "vpravo"
 
@@ -243,7 +287,9 @@ msgstr "CSS třídy (tlačítko)"
 msgid "CSS Klassen (Wrapper aller Buttons)"
 msgstr "CSS třídy (wrapper všech tlačítek)"
 
-#: acf-json/group_zpt_block_button.json acf-json/group_zpt_block_icon.json acf-json/group_zpt_settings_buttons.json acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_settings_typo_defaults.json
+#: acf-json/group_zpt_block_button.json acf-json/group_zpt_block_icon.json acf-json/group_zpt_settings_buttons.json
+#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json
+#: acf-json/group_zpt_settings_typo_defaults.json
 msgid "Größe"
 msgstr "Velikost"
 
@@ -255,7 +301,10 @@ msgstr "Ikona"
 msgid "Icon-Position"
 msgstr "Pozice ikony"
 
-#: acf-json/group_zpt_block_button.json acf-json/group_zpt_settings_breakpoints.json acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_grid.json acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_settings_nav_toggler.json acf-json/group_zpt_tpl_column.json acf-json/group_zpt_tpl_message.json acf-json/group_zpt_tpl_per_row.json
+#: acf-json/group_zpt_block_button.json acf-json/group_zpt_settings_breakpoints.json
+#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_grid.json
+#: acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_settings_nav_toggler.json
+#: acf-json/group_zpt_tpl_column.json acf-json/group_zpt_tpl_message.json acf-json/group_zpt_tpl_per_row.json
 msgid "LG"
 msgstr "LG"
 
@@ -263,7 +312,10 @@ msgstr "LG"
 msgid "Link"
 msgstr "Odkaz"
 
-#: acf-json/group_zpt_block_button.json acf-json/group_zpt_settings_breakpoints.json acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_grid.json acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_tpl_column.json acf-json/group_zpt_tpl_message.json acf-json/group_zpt_tpl_per_row.json
+#: acf-json/group_zpt_block_button.json acf-json/group_zpt_settings_breakpoints.json
+#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_grid.json
+#: acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_tpl_column.json acf-json/group_zpt_tpl_message.json
+#: acf-json/group_zpt_tpl_per_row.json
 msgid "MD"
 msgstr "MD"
 
@@ -271,7 +323,10 @@ msgstr "MD"
 msgid "Mehrere Buttons stehen nebeneinander. Schrift, Größen und Rahmen: Baukasten → Buttons."
 msgstr "Více tlačítek je umístěno vedle sebe. Písmo, velikosti a rámečky: Baukasten → Tlačítka."
 
-#: acf-json/group_zpt_block_button.json acf-json/group_zpt_settings_breakpoints.json acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_grid.json acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_tpl_column.json acf-json/group_zpt_tpl_message.json acf-json/group_zpt_tpl_per_row.json acf-json/group_zpt_tpl_properties.json
+#: acf-json/group_zpt_block_button.json acf-json/group_zpt_settings_breakpoints.json
+#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_grid.json
+#: acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_tpl_column.json acf-json/group_zpt_tpl_message.json
+#: acf-json/group_zpt_tpl_per_row.json acf-json/group_zpt_tpl_properties.json
 msgid "SM"
 msgstr "SM"
 
@@ -279,15 +334,22 @@ msgstr "SM"
 msgid "Suche nach Name oder Begriff über alle Icon-Sets aus Baukasten → Icons."
 msgstr "Hledání podle názvu nebo pojmu ve všech sadách ikon z Baukasten → Ikony."
 
-#: acf-json/group_zpt_block_button.json acf-json/group_zpt_settings_breakpoints.json acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_grid.json acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_tpl_column.json acf-json/group_zpt_tpl_message.json acf-json/group_zpt_tpl_per_row.json acf-json/group_zpt_tpl_properties.json
+#: acf-json/group_zpt_block_button.json acf-json/group_zpt_settings_breakpoints.json
+#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_grid.json
+#: acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_tpl_column.json acf-json/group_zpt_tpl_message.json
+#: acf-json/group_zpt_tpl_per_row.json acf-json/group_zpt_tpl_properties.json
 msgid "XL"
 msgstr "XL"
 
-#: acf-json/group_zpt_block_button.json acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_grid.json acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_tpl_message.json acf-json/group_zpt_tpl_per_row.json
+#: acf-json/group_zpt_block_button.json acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_grid.json
+#: acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_tpl_message.json acf-json/group_zpt_tpl_per_row.json
 msgid "XS"
 msgstr "XS"
 
-#: acf-json/group_zpt_block_button.json acf-json/group_zpt_settings_breakpoints.json acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_grid.json acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_tpl_column.json acf-json/group_zpt_tpl_message.json acf-json/group_zpt_tpl_per_row.json acf-json/group_zpt_tpl_properties.json
+#: acf-json/group_zpt_block_button.json acf-json/group_zpt_settings_breakpoints.json
+#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_grid.json
+#: acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_tpl_column.json acf-json/group_zpt_tpl_message.json
+#: acf-json/group_zpt_tpl_per_row.json acf-json/group_zpt_tpl_properties.json
 msgid "XXL"
 msgstr "XXL"
 
@@ -311,6 +373,10 @@ msgstr "před textem"
 msgid "zentriert"
 msgstr "na střed"
 
+#: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_image.json acf-json/group_zpt_settings_logo.json
+msgid "Alternativtext"
+msgstr "Alternativní text"
+
 #: acf-json/group_zpt_block_card.json
 msgid "Anordnung"
 msgstr "Uspořádání"
@@ -326,6 +392,10 @@ msgstr "Příspěvek / stránka"
 #: acf-json/group_zpt_block_card.json
 msgid "Bild oben"
 msgstr "Obrázek nahoře"
+
+#: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_image.json acf-json/group_zpt_block_row.json
+msgid "Bild wählen …"
+msgstr ""
 
 #: acf-json/group_zpt_block_card.json
 msgid "Bild zuerst"
@@ -355,11 +425,21 @@ msgstr "Styl tlačítka"
 msgid "CSS Text-Bereich"
 msgstr "CSS textová oblast"
 
+#: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_image.json
+msgid "Leer = aus dem Dateinamen."
+msgstr ""
+
 #: acf-json/group_zpt_block_card.json
 msgid "Link als"
 msgstr "Odkaz jako"
 
-#: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_icon.json acf-json/group_zpt_block_video.json
+#: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_image.json acf-json/group_zpt_block_row.json
+#: acf-json/group_zpt_settings_favicon.json
+msgid "Mediathek"
+msgstr ""
+
+#: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_icon.json acf-json/group_zpt_block_image.json
+#: acf-json/group_zpt_block_video.json acf-json/group_zpt_settings_favicon.json
 msgid "Quelle"
 msgstr "Zdroj"
 
@@ -374,6 +454,14 @@ msgstr "Pořadí"
 #: acf-json/group_zpt_block_card.json
 msgid "Text zuerst"
 msgstr "Text první"
+
+#: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_image.json acf-json/group_zpt_block_row.json
+msgid "Theme"
+msgstr ""
+
+#: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_image.json acf-json/group_zpt_block_row.json
+msgid "Theme = Bild aus dem Bilder-Ordner des Themes (Illustrationen, Grafiken, die zum Theme gehören)."
+msgstr ""
 
 #: acf-json/group_zpt_block_card.json
 msgid "ZPT Block: Card"
@@ -515,7 +603,9 @@ msgstr "z knihovny médií (formátovaný)"
 msgid "groß"
 msgstr "velký"
 
-#: acf-json/group_zpt_block_gallery.json acf-json/group_zpt_settings_buttons.json acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_favicon.json acf-json/group_zpt_tpl_image_options.json acf-json/group_zpt_tpl_message.json includes/config.php
+#: acf-json/group_zpt_block_gallery.json acf-json/group_zpt_settings_buttons.json
+#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_favicon.json
+#: acf-json/group_zpt_tpl_image_options.json acf-json/group_zpt_tpl_message.json includes/config.php
 msgid "keine"
 msgstr "žádné"
 
@@ -720,8 +810,12 @@ msgid "Container Klassen"
 msgstr "Třídy containeru"
 
 #: acf-json/group_zpt_block_row.json
-msgid "Die Row bleibt beim Scrollen am oberen Rand stehen (z. B. für eine Sprungmarken-Navigation). Hintergrundfarbe setzen, sonst scheint der Inhalt durch."
-msgstr "Řádek při posouvání zůstává u horního okraje (např. pro navigaci s kotvami). Nastavte barvu pozadí, jinak bude obsah prosvítat."
+msgid ""
+"Die Row bleibt beim Scrollen am oberen Rand stehen (z. B. für eine Sprungmarken-Navigation). Hintergrundfarbe setzen, "
+"sonst scheint der Inhalt durch."
+msgstr ""
+"Řádek při posouvání zůstává u horního okraje (např. pro navigaci s kotvami). Nastavte barvu pozadí, jinak bude obsah "
+"prosvítat."
 
 #: acf-json/group_zpt_block_row.json acf-json/group_zpt_page.json
 msgid "Fest (zentriert)"
@@ -743,7 +837,8 @@ msgstr "Grid (.grid-row)"
 msgid "Hintergrundbild"
 msgstr "Obrázek na pozadí"
 
-#: acf-json/group_zpt_block_row.json acf-json/group_zpt_settings_buttons.json acf-json/group_zpt_tpl_message.json acf-json/group_zpt_tpl_properties.json
+#: acf-json/group_zpt_block_row.json acf-json/group_zpt_settings_buttons.json acf-json/group_zpt_tpl_message.json
+#: acf-json/group_zpt_tpl_properties.json
 msgid "Hintergrundfarbe"
 msgstr "Barva pozadí"
 
@@ -758,6 +853,10 @@ msgstr "Inline styl (wrapper)"
 #: acf-json/group_zpt_block_row.json
 msgid "Oben anheften"
 msgstr "Připnout nahoru"
+
+#: acf-json/group_zpt_block_row.json
+msgid "Quelle Hintergrundbild"
+msgstr ""
 
 #: acf-json/group_zpt_block_row.json
 msgid "Row Display"
@@ -812,7 +911,8 @@ msgid "Autoplay (stumm, Schleife)"
 msgstr "Automatické přehrávání (ztlumené, smyčka)"
 
 #: acf-json/group_zpt_block_video.json
-msgid "Bei YouTube/Vimeo wird das Video erst nach Klick geladen (Datenschutz) – bis dahin ist das Vorschaubild zu sehen."
+msgid ""
+"Bei YouTube/Vimeo wird das Video erst nach Klick geladen (Datenschutz) – bis dahin ist das Vorschaubild zu sehen."
 msgstr "U YouTube/Vimeo se video načte až po kliknutí (ochrana osobních údajů) – do té doby je vidět náhledový obrázek."
 
 #: acf-json/group_zpt_block_video.json
@@ -908,8 +1008,12 @@ msgid "Als Footer verwenden"
 msgstr "Použít jako patičku"
 
 #: acf-json/group_zpt_section.json
-msgid "Diese Sektion als Footer aller Seiten ausgeben (nur eine Sektion; ohne Haken gilt die Sektion mit Slug „footer“). Ein Theme mit eigenem Footer schaltet das ab."
-msgstr "Vypsat tuto sekci jako patičku všech stránek (jen jedna sekce; bez zaškrtnutí platí sekce se zkratkou „footer“). Šablona vzhledu s vlastní patičkou toto vypíná."
+msgid ""
+"Diese Sektion als Footer aller Seiten ausgeben (nur eine Sektion; ohne Haken gilt die Sektion mit Slug „footer“). Ein "
+"Theme mit eigenem Footer schaltet das ab."
+msgstr ""
+"Vypsat tuto sekci jako patičku všech stránek (jen jedna sekce; bez zaškrtnutí platí sekce se zkratkou „footer“). "
+"Šablona vzhledu s vlastní patičkou toto vypíná."
 
 #: acf-json/group_zpt_settings_breakpoints.json
 msgid "Baukasten: Breakpoints"
@@ -920,8 +1024,14 @@ msgid "Breakpoints"
 msgstr "Breakpointy"
 
 #: acf-json/group_zpt_settings_breakpoints.json
-msgid "Standard: Bootstrap 5.3. „ab Breite“ = Mindestbreite des Breakpoints (Klassen wie .col-md-6, .mt-lg-40, .d-xl-none); „Container“ = maximale Breite von .container ab diesem Breakpoint. XS ist alles unterhalb von SM. Weichen die Werte von Bootstrap ab, erzeugt das Plugin eine angepasste Kopie der CSS (uploads/zpt-baukasten/)."
-msgstr "Výchozí: Bootstrap 5.3. „od šířky“ = minimální šířka breakpointu (třídy jako .col-md-6, .mt-lg-40, .d-xl-none); „Container“ = maximální šířka .container od tohoto breakpointu. XS je vše pod SM. Pokud se hodnoty liší od Bootstrapu, plugin vytvoří upravenou kopii CSS (uploads/zpt-baukasten/)."
+msgid ""
+"Standard: Bootstrap 5.3. „ab Breite“ = Mindestbreite des Breakpoints (Klassen wie .col-md-6, .mt-lg-40, .d-xl-none); "
+"„Container“ = maximale Breite von .container ab diesem Breakpoint. XS ist alles unterhalb von SM. Weichen die Werte "
+"von Bootstrap ab, erzeugt das Plugin eine angepasste Kopie der CSS (uploads/zpt-baukasten/)."
+msgstr ""
+"Výchozí: Bootstrap 5.3. „od šířky“ = minimální šířka breakpointu (třídy jako .col-md-6, .mt-lg-40, .d-xl-none); "
+"„Container“ = maximální šířka .container od tohoto breakpointu. XS je vše pod SM. Pokud se hodnoty liší od "
+"Bootstrapu, plugin vytvoří upravenou kopii CSS (uploads/zpt-baukasten/)."
 
 #: acf-json/group_zpt_settings_breakpoints.json acf-json/group_zpt_settings_grid.json
 msgid "px"
@@ -952,16 +1062,26 @@ msgid "Aus = transparent, beim Hover mit der Rahmenfarbe gefüllt."
 msgstr "Vypnuto = průhledné, při najetí myší vyplněné barvou rámečku."
 
 #: acf-json/group_zpt_settings_buttons.json
-msgid "Baukasten-Farbe (primary-300), HTML-Farbname oder Hex. Schriftfarbe leer = lesbare Kontrastfarbe, Rahmenfarbe leer = Hintergrundfarbe."
-msgstr "Barva Baukastenu (primary-300), název barvy HTML nebo hex. Prázdná barva písma = čitelná kontrastní barva, prázdná barva rámečku = barva pozadí."
+msgid ""
+"Baukasten-Farbe (primary-300), HTML-Farbname oder Hex. Schriftfarbe leer = lesbare Kontrastfarbe, Rahmenfarbe leer = "
+"Hintergrundfarbe."
+msgstr ""
+"Barva Baukastenu (primary-300), název barvy HTML nebo hex. Prázdná barva písma = čitelná kontrastní barva, prázdná "
+"barva rámečku = barva pozadí."
 
 #: acf-json/group_zpt_settings_buttons.json
 msgid "Baukasten: Buttons"
 msgstr "Baukasten: Tlačítka"
 
 #: acf-json/group_zpt_settings_buttons.json
-msgid "Button-Größen mit Name und CSS-Klasse: „md“ = Standard (.btn ohne Klasse), alle anderen werden zu .btn-{klasse} (z. B. .btn-sm, .btn-xl) und stehen im Button-Block unter „Größe“ zur Auswahl. Schriftgröße, Zeilenhöhe, Laufweite und Innenabstände je Größe: Templates und Varianten."
-msgstr "Velikosti tlačítek s názvem a CSS třídou: „md“ = výchozí (.btn bez třídy), všechny ostatní se stanou .btn-{class} (např. .btn-sm, .btn-xl) a jsou k výběru v bloku Tlačítko pod „Velikost“. Velikost písma, výška řádku, prostrkání a vnitřní okraje pro každou velikost: Šablony a Varianty."
+msgid ""
+"Button-Größen mit Name und CSS-Klasse: „md“ = Standard (.btn ohne Klasse), alle anderen werden zu .btn-{klasse} (z. "
+"B. .btn-sm, .btn-xl) und stehen im Button-Block unter „Größe“ zur Auswahl. Schriftgröße, Zeilenhöhe, Laufweite und "
+"Innenabstände je Größe: Templates und Varianten."
+msgstr ""
+"Velikosti tlačítek s názvem a CSS třídou: „md“ = výchozí (.btn bez třídy), všechny ostatní se stanou .btn-{class} "
+"(např. .btn-sm, .btn-xl) a jsou k výběru v bloku Tlačítko pod „Velikost“. Velikost písma, výška řádku, prostrkání a "
+"vnitřní okraje pro každou velikost: Šablony a Varianty."
 
 #: acf-json/group_zpt_settings_buttons.json
 msgid "CSS-Klasse"
@@ -987,11 +1107,14 @@ msgstr "Barvy při najetí / aktivní"
 msgid "Farben normal"
 msgstr "Barvy normální"
 
-#: acf-json/group_zpt_settings_buttons.json acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_settings_typography.json acf-json/group_zpt_tpl_message.json acf-json/group_zpt_tpl_properties.json
+#: acf-json/group_zpt_settings_buttons.json acf-json/group_zpt_settings_elements.json
+#: acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_settings_typography.json
+#: acf-json/group_zpt_tpl_message.json acf-json/group_zpt_tpl_properties.json
 msgid "Gewicht"
 msgstr "Řez"
 
-#: acf-json/group_zpt_settings_buttons.json acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json includes/config.php
+#: acf-json/group_zpt_settings_buttons.json acf-json/group_zpt_settings_elements.json
+#: acf-json/group_zpt_settings_nav_elements.json includes/config.php
 msgid "Großbuchstaben"
 msgstr "Verzálky"
 
@@ -1016,12 +1139,20 @@ msgid "Je Größe. Leer = wie Template."
 msgstr "Pro každou velikost. Prázdné = jako šablona."
 
 #: acf-json/group_zpt_settings_buttons.json
-msgid "Je Größe. Leer: btn default = Bootstrap-Wert der Größe, andere Templates = wie btn default. Schriftgröße auch als Stufe (copy, l …), Abstände ohne Einheit = px."
-msgstr "Pro každou velikost. Prázdné: btn default = hodnota Bootstrapu pro velikost, ostatní šablony = jako btn default. Velikost písma i jako stupeň (copy, l …), mezery bez jednotky = px."
+msgid ""
+"Je Größe. Leer: btn default = Bootstrap-Wert der Größe, andere Templates = wie btn default. Schriftgröße auch als "
+"Stufe (copy, l …), Abstände ohne Einheit = px."
+msgstr ""
+"Pro každou velikost. Prázdné: btn default = hodnota Bootstrapu pro velikost, ostatní šablony = jako btn default. "
+"Velikost písma i jako stupeň (copy, l …), mezery bez jednotky = px."
 
 #: acf-json/group_zpt_settings_buttons.json
-msgid "Je Zeile eine Button-Klasse genauer definieren (überschreibt Templates und Farben aus Baukasten → Farben) oder eine eigene Klasse anlegen. Leere Felder = Template bzw. Bootstrap."
-msgstr "Na každém řádku podrobněji definujte jednu třídu tlačítka (přepíše šablony a barvy z Baukasten → Barvy) nebo vytvořte vlastní třídu. Prázdná pole = šablona, resp. Bootstrap."
+msgid ""
+"Je Zeile eine Button-Klasse genauer definieren (überschreibt Templates und Farben aus Baukasten → Farben) oder eine "
+"eigene Klasse anlegen. Leere Felder = Template bzw. Bootstrap."
+msgstr ""
+"Na každém řádku podrobněji definujte jednu třídu tlačítka (přepíše šablony a barvy z Baukasten → Barvy) nebo vytvořte "
+"vlastní třídu. Prázdná pole = šablona, resp. Bootstrap."
 
 #: acf-json/group_zpt_settings_buttons.json
 msgid "Klasse"
@@ -1045,9 +1176,13 @@ msgstr "Prostrkání"
 
 #: acf-json/group_zpt_settings_buttons.json
 msgid "Leer = 30 % dunkler als normal, Schriftfarbe = normal bzw. Kontrastfarbe, Rahmenfarbe = Hintergrundfarbe Hover."
-msgstr "Prázdné = o 30 % tmavší než normální, barva písma = normální, resp. kontrastní barva, barva rámečku = barva pozadí při najetí."
+msgstr ""
+"Prázdné = o 30 % tmavší než normální, barva písma = normální, resp. kontrastní barva, barva rámečku = barva pozadí "
+"při najetí."
 
-#: acf-json/group_zpt_settings_buttons.json acf-json/group_zpt_settings_icons_svg.json acf-json/group_zpt_settings_logo.json acf-json/group_zpt_settings_style.json acf-json/group_zpt_settings_typo_defaults.json
+#: acf-json/group_zpt_settings_buttons.json acf-json/group_zpt_settings_icons_svg.json
+#: acf-json/group_zpt_settings_logo.json acf-json/group_zpt_settings_style.json
+#: acf-json/group_zpt_settings_typo_defaults.json
 msgid "Name"
 msgstr "Název"
 
@@ -1123,7 +1258,8 @@ msgstr "ne"
 msgid "pill"
 msgstr "pill"
 
-#: acf-json/group_zpt_settings_buttons.json acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json
+#: acf-json/group_zpt_settings_buttons.json acf-json/group_zpt_settings_elements.json
+#: acf-json/group_zpt_settings_nav_elements.json
 msgid "xl"
 msgstr "xl"
 
@@ -1136,8 +1272,16 @@ msgid "z. B. 6px, 50rem = Pill."
 msgstr "např. 6px, 50rem = Pill."
 
 #: acf-json/group_zpt_settings_buttons.json
-msgid "„btn default“ gilt für alle Buttons (.btn) und kann nicht gelöscht werden. Weitere Templates werden zur Klasse .btn-{kürzel} (z. B. .btn-pill), lassen sich mit jeder Farbe kombinieren und stehen im Button-Block unter „Template“. Leere Felder: btn default = Bootstrap-Standard, andere Templates = wie btn default. Schriftgröße, Zeilenhöhe, Laufweite und Innenabstände je Größe. Längen ohne Einheit = px."
-msgstr "„btn default“ platí pro všechna tlačítka (.btn) a nelze ji smazat. Další šablony se stanou třídou .btn-{slug} (např. .btn-pill), lze je kombinovat s libovolnou barvou a jsou k výběru v bloku Tlačítko pod „Šablona“. Prázdná pole: btn default = výchozí Bootstrap, ostatní šablony = jako btn default. Velikost písma, výška řádku, prostrkání a vnitřní okraje pro každou velikost. Délky bez jednotky = px."
+msgid ""
+"„btn default“ gilt für alle Buttons (.btn) und kann nicht gelöscht werden. Weitere Templates werden zur Klasse .btn-"
+"{kürzel} (z. B. .btn-pill), lassen sich mit jeder Farbe kombinieren und stehen im Button-Block unter „Template“. "
+"Leere Felder: btn default = Bootstrap-Standard, andere Templates = wie btn default. Schriftgröße, Zeilenhöhe, "
+"Laufweite und Innenabstände je Größe. Längen ohne Einheit = px."
+msgstr ""
+"„btn default“ platí pro všechna tlačítka (.btn) a nelze ji smazat. Další šablony se stanou třídou .btn-{slug} "
+"(např. .btn-pill), lze je kombinovat s libovolnou barvou a jsou k výběru v bloku Tlačítko pod „Šablona“. Prázdná "
+"pole: btn default = výchozí Bootstrap, ostatní šablony = jako btn default. Velikost písma, výška řádku, prostrkání a "
+"vnitřní okraje pro každou velikost. Délky bez jednotky = px."
 
 #: acf-json/group_zpt_settings_elements.json includes/config.php
 msgid "01. Zahl mit Null"
@@ -1147,39 +1291,48 @@ msgstr "01. Číslo s nulou"
 msgid "1. Zahl"
 msgstr "1. Číslo"
 
-#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_settings_typography.json
+#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json
+#: acf-json/group_zpt_settings_typography.json
 msgid "100 Thin"
 msgstr "100 Thin"
 
-#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_settings_typography.json
+#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json
+#: acf-json/group_zpt_settings_typography.json
 msgid "200 ExtraLight"
 msgstr "200 ExtraLight"
 
-#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_settings_typography.json
+#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json
+#: acf-json/group_zpt_settings_typography.json
 msgid "300 Light"
 msgstr "300 Light"
 
-#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_settings_typography.json
+#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json
+#: acf-json/group_zpt_settings_typography.json
 msgid "400 Regular"
 msgstr "400 Regular"
 
-#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_settings_typography.json
+#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json
+#: acf-json/group_zpt_settings_typography.json
 msgid "500 Medium"
 msgstr "500 Medium"
 
-#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_settings_typography.json
+#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json
+#: acf-json/group_zpt_settings_typography.json
 msgid "600 SemiBold"
 msgstr "600 SemiBold"
 
-#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_settings_typography.json
+#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json
+#: acf-json/group_zpt_settings_typography.json
 msgid "700 Bold"
 msgstr "700 Bold"
 
-#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_settings_typography.json
+#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json
+#: acf-json/group_zpt_settings_typography.json
 msgid "800 ExtraBold"
 msgstr "800 ExtraBold"
 
-#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_settings_typography.json
+#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json
+#: acf-json/group_zpt_settings_typography.json
 msgid "900 Black"
 msgstr "900 Black"
 
@@ -1228,8 +1381,14 @@ msgid "Einleitung (.lead)"
 msgstr "Úvod (.lead)"
 
 #: acf-json/group_zpt_settings_elements.json
-msgid "Einstellungen je HTML-Element. Leer = wie umgebend bzw. wie der nächstkleinere Breakpoint (XS = alle Breiten, SM … XXL = ab diesem Breakpoint, siehe Baukasten → Breakpoints). Abstände in px (5er-Schritte, Margin auch negativ). Klassen am Element (<code>.mt-20</code>, <code>.font-size-xl</code>, <code>.fw-700</code> …) haben Vorrang."
-msgstr "Nastavení pro každý HTML prvek. Prázdné = jako okolí, resp. jako nejbližší menší breakpoint (XS = všechny šířky, SM … XXL = od tohoto breakpointu, viz Baukasten → Breakpointy). Mezery v px (po 5, margin i záporný). Třídy na prvku (<code>.mt-20</code>, <code>.font-size-xl</code>, <code>.fw-700</code> …) mají přednost."
+msgid ""
+"Einstellungen je HTML-Element. Leer = wie umgebend bzw. wie der nächstkleinere Breakpoint (XS = alle Breiten, SM … "
+"XXL = ab diesem Breakpoint, siehe Baukasten → Breakpoints). Abstände in px (5er-Schritte, Margin auch negativ). "
+"Klassen am Element (<code>.mt-20</code>, <code>.font-size-xl</code>, <code>.fw-700</code> …) haben Vorrang."
+msgstr ""
+"Nastavení pro každý HTML prvek. Prázdné = jako okolí, resp. jako nejbližší menší breakpoint (XS = všechny šířky, SM … "
+"XXL = od tohoto breakpointu, viz Baukasten → Breakpointy). Mezery v px (po 5, margin i záporný). Třídy na prvku "
+"(<code>.mt-20</code>, <code>.font-size-xl</code>, <code>.fw-700</code> …) mají přednost."
 
 #: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json
 msgid "Farbe Hover"
@@ -1415,7 +1574,8 @@ msgstr "nepodtržené"
 msgid "sm"
 msgstr "sm"
 
-#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json acf-json/group_zpt_tpl_message.json
+#: acf-json/group_zpt_settings_elements.json acf-json/group_zpt_settings_nav_elements.json
+#: acf-json/group_zpt_tpl_message.json
 msgid "wie umgebend"
 msgstr "jako okolí"
 
@@ -1456,6 +1616,13 @@ msgid "Favicon"
 msgstr "Favicon"
 
 #: acf-json/group_zpt_settings_favicon.json
+msgid ""
+"Fertige Dateien werden direkt verwendet: favicon.ico, favicon.svg, apple-touch-icon.png, icon-192.png, icon-512.png, "
+"site.webmanifest. Fehlende werden aus dem größten PNG/JPG/WebP erzeugt (bevorzugt favicon.png, mind. 512 px) – ein "
+"einzelnes favicon.png reicht. Child-Theme geht vor Eltern-Theme."
+msgstr ""
+
+#: acf-json/group_zpt_settings_favicon.json
 msgid "Färbt in mobilen Browsern die Adressleiste (meta theme-color, Manifest). Leer = keine."
 msgstr "Obarví adresní řádek v mobilních prohlížečích (meta theme-color, manifest). Prázdné = žádná."
 
@@ -1464,12 +1631,31 @@ msgid "Hintergrund Apple Touch Icon"
 msgstr "Pozadí Apple Touch Icon"
 
 #: acf-json/group_zpt_settings_favicon.json
-msgid "Optional. Moderne Browser nehmen es statt favicon.ico – scharf in jeder Größe, im SVG per @media (prefers-color-scheme: dark) auch mit eigenen Farben für den Dark Mode."
-msgstr "Volitelné. Moderní prohlížeče jej používají místo favicon.ico – ostrý v každé velikosti, v SVG přes @media (prefers-color-scheme: dark) i s vlastními barvami pro tmavý režim."
+msgid ""
+"Mediathek = Bild hochladen und hier verwalten. Ordner im Theme = die Favicons gehören zum Theme und kommen mit ihm "
+"(wie im Baukasten 1)."
+msgstr ""
 
 #: acf-json/group_zpt_settings_favicon.json
-msgid "Quadratisch, mindestens 512 × 512 px (PNG mit Transparenz). Daraus werden beim Speichern favicon.ico, Apple Touch Icon (180 px) und Android-Icons (192/512 px) samt Manifest erzeugt. Ersetzt das Website-Icon aus dem Customizer."
-msgstr "Čtvercový, minimálně 512 × 512 px (PNG s průhledností). Při uložení se z něj vytvoří favicon.ico, Apple Touch Icon (180 px) a ikony pro Android (192/512 px) včetně manifestu. Nahrazuje ikonu webu z Přizpůsobení."
+msgid ""
+"Optional. Moderne Browser nehmen es statt favicon.ico – scharf in jeder Größe, im SVG per @media (prefers-color-"
+"scheme: dark) auch mit eigenen Farben für den Dark Mode."
+msgstr ""
+"Volitelné. Moderní prohlížeče jej používají místo favicon.ico – ostrý v každé velikosti, v SVG přes @media (prefers-"
+"color-scheme: dark) i s vlastními barvami pro tmavý režim."
+
+#: acf-json/group_zpt_settings_favicon.json acf-json/group_zpt_settings_icons_svg.json
+#: acf-json/group_zpt_settings_theme_images.json
+msgid "Ordner im Theme"
+msgstr "Složka v šabloně"
+
+#: acf-json/group_zpt_settings_favicon.json
+msgid ""
+"Quadratisch, mindestens 512 × 512 px (PNG mit Transparenz). Daraus werden beim Speichern favicon.ico, Apple Touch "
+"Icon (180 px) und Android-Icons (192/512 px) samt Manifest erzeugt. Ersetzt das Website-Icon aus dem Customizer."
+msgstr ""
+"Čtvercový, minimálně 512 × 512 px (PNG s průhledností). Při uložení se z něj vytvoří favicon.ico, Apple Touch Icon "
+"(180 px) a ikony pro Android (192/512 px) včetně manifestu. Nahrazuje ikonu webu z Přizpůsobení."
 
 #: acf-json/group_zpt_settings_favicon.json
 msgid "SVG-Favicon"
@@ -1480,6 +1666,10 @@ msgid "Theme-Farbe"
 msgstr "Barva motivu"
 
 #: acf-json/group_zpt_settings_favicon.json
+msgid "assets/favicons"
+msgstr ""
+
+#: acf-json/group_zpt_settings_favicon.json
 msgid "iOS füllt transparente Flächen sonst schwarz. Baukasten-Farbe, Farbname oder Hex."
 msgstr "iOS jinak vyplní průhledné plochy černou. Barva Baukastenu, název barvy nebo hex."
 
@@ -1488,8 +1678,12 @@ msgid "weiß"
 msgstr "bílá"
 
 #: acf-json/group_zpt_settings_grid.json
-msgid "Abstand zwischen den Spalten einer Row und Gap von .grid, je Breakpoint. Leer = Wert des kleineren Breakpoints. Klassen wie .g-30 / .gx-md-40 überschreiben ihn weiterhin."
-msgstr "Mezera mezi sloupci řádku a gap u .grid, pro každý breakpoint. Prázdné = hodnota menšího breakpointu. Třídy jako .g-30 / .gx-md-40 ji nadále přepisují."
+msgid ""
+"Abstand zwischen den Spalten einer Row und Gap von .grid, je Breakpoint. Leer = Wert des kleineren Breakpoints. "
+"Klassen wie .g-30 / .gx-md-40 überschreiben ihn weiterhin."
+msgstr ""
+"Mezera mezi sloupci řádku a gap u .grid, pro každý breakpoint. Prázdné = hodnota menšího breakpointu. Třídy "
+"jako .g-30 / .gx-md-40 ji nadále přepisují."
 
 #: acf-json/group_zpt_settings_grid.json
 msgid "Baukasten: Grid"
@@ -1504,8 +1698,12 @@ msgid "Gutter"
 msgstr "Gutter"
 
 #: acf-json/group_zpt_settings_grid.json
-msgid "Innenabstand von .container links und rechts (je Seite), je Breakpoint. Leer = Wert des kleineren Breakpoints, ganz leer = halber Gutter."
-msgstr "Vnitřní okraj .container vlevo a vpravo (na každé straně), pro každý breakpoint. Prázdné = hodnota menšího breakpointu, zcela prázdné = polovina gutteru."
+msgid ""
+"Innenabstand von .container links und rechts (je Seite), je Breakpoint. Leer = Wert des kleineren Breakpoints, ganz "
+"leer = halber Gutter."
+msgstr ""
+"Vnitřní okraj .container vlevo a vpravo (na každé straně), pro každý breakpoint. Prázdné = hodnota menšího "
+"breakpointu, zcela prázdné = polovina gutteru."
 
 #: acf-json/group_zpt_settings_icons_bootstrap.json
 msgid "Baukasten: Icons – Bootstrap Icons"
@@ -1516,8 +1714,12 @@ msgid "Bootstrap Icons laden"
 msgstr "Načíst Bootstrap Icons"
 
 #: acf-json/group_zpt_settings_icons_bootstrap.json
-msgid "Rund 2.000 Icons, Übersicht: <a href=\"https://icons.getbootstrap.com/\" target=\"_blank\">icons.getbootstrap.com</a>. Wird lokal aus dem Plugin geladen (ca. 130 KB)."
-msgstr "Přibližně 2 000 ikon, přehled: <a href=\"https://icons.getbootstrap.com/\" target=\"_blank\">icons.getbootstrap.com</a>. Načítá se lokálně z pluginu (cca 130 KB)."
+msgid ""
+"Rund 2.000 Icons, Übersicht: <a href=\"https://icons.getbootstrap.com/\" target=\"_blank\">icons.getbootstrap.com</"
+"a>. Wird lokal aus dem Plugin geladen (ca. 130 KB)."
+msgstr ""
+"Přibližně 2 000 ikon, přehled: <a href=\"https://icons.getbootstrap.com/\" target=\"_blank\">icons.getbootstrap.com</"
+"a>. Načítá se lokálně z pluginu (cca 130 KB)."
 
 #: acf-json/group_zpt_settings_icons_fontawesome.json
 msgid "Baukasten: Icons – Font Awesome"
@@ -1532,8 +1734,12 @@ msgid "Eigene CSS-URL"
 msgstr "Vlastní URL CSS"
 
 #: acf-json/group_zpt_settings_icons_fontawesome.json
-msgid "Font Awesome Free 7, Übersicht: <a href=\"https://fontawesome.com/search?ic=free\" target=\"_blank\">fontawesome.com/search</a>. Wird lokal aus dem Plugin geladen."
-msgstr "Font Awesome Free 7, přehled: <a href=\"https://fontawesome.com/search?ic=free\" target=\"_blank\">fontawesome.com/search</a>. Načítá se lokálně z pluginu."
+msgid ""
+"Font Awesome Free 7, Übersicht: <a href=\"https://fontawesome.com/search?ic=free\" target=\"_blank\">fontawesome.com/"
+"search</a>. Wird lokal aus dem Plugin geladen."
+msgstr ""
+"Font Awesome Free 7, přehled: <a href=\"https://fontawesome.com/search?ic=free\" target=\"_blank\">fontawesome.com/"
+"search</a>. Načítá se lokálně z pluginu."
 
 #: acf-json/group_zpt_settings_icons_fontawesome.json
 msgid "Font Awesome laden"
@@ -1544,8 +1750,12 @@ msgid "Nur gewählte Stile werden geladen und in der Icon-Auswahl angeboten (je 
 msgstr "Načtou se a ve výběru ikon nabídnou jen zvolené styly (každý cca 100 KB)."
 
 #: acf-json/group_zpt_settings_icons_fontawesome.json
-msgid "Optional, z. B. für Font Awesome Pro: CSS-Datei, die statt der mitgelieferten Free-Version geladen wird. Externe Adressen beachten (Datenschutz) – besser eine Datei im Theme."
-msgstr "Volitelné, např. pro Font Awesome Pro: CSS soubor, který se načte místo přiložené verze Free. Pozor na externí adresy (ochrana osobních údajů) – lepší je soubor v šabloně vzhledu."
+msgid ""
+"Optional, z. B. für Font Awesome Pro: CSS-Datei, die statt der mitgelieferten Free-Version geladen wird. Externe "
+"Adressen beachten (Datenschutz) – besser eine Datei im Theme."
+msgstr ""
+"Volitelné, např. pro Font Awesome Pro: CSS soubor, který se načte místo přiložené verze Free. Pozor na externí adresy "
+"(ochrana osobních údajů) – lepší je soubor v šabloně vzhledu."
 
 #: acf-json/group_zpt_settings_icons_fontawesome.json
 msgid "Regular (fa-regular)"
@@ -1572,8 +1782,12 @@ msgid "Filled"
 msgstr "Filled"
 
 #: acf-json/group_zpt_settings_icons_material.json
-msgid "Google Material Icons, Übersicht: <a href=\"https://fonts.google.com/icons?icon.set=Material+Icons\" target=\"_blank\">fonts.google.com/icons</a>. Wird lokal aus dem Plugin geladen (nicht von Google)."
-msgstr "Google Material Icons, přehled: <a href=\"https://fonts.google.com/icons?icon.set=Material+Icons\" target=\"_blank\">fonts.google.com/icons</a>. Načítají se lokálně z pluginu (ne od Googlu)."
+msgid ""
+"Google Material Icons, Übersicht: <a href=\"https://fonts.google.com/icons?icon.set=Material+Icons\" "
+"target=\"_blank\">fonts.google.com/icons</a>. Wird lokal aus dem Plugin geladen (nicht von Google)."
+msgstr ""
+"Google Material Icons, přehled: <a href=\"https://fonts.google.com/icons?icon.set=Material+Icons\" "
+"target=\"_blank\">fonts.google.com/icons</a>. Načítají se lokálně z pluginu (ne od Googlu)."
 
 #: acf-json/group_zpt_settings_icons_material.json
 msgid "Material Icons laden"
@@ -1604,16 +1818,24 @@ msgid "<svg …>…</svg>"
 msgstr "<svg …>…</svg>"
 
 #: acf-json/group_zpt_settings_icons_svg.json
-msgid "Alle *.svg-Dateien darin, Name = Dateiname (z. B. kamera.svg → kamera). Child-Theme geht vor Eltern-Theme. Leer = kein Ordner"
-msgstr "Všechny soubory *.svg v ní, název = název souboru (např. kamera.svg → kamera). Podřízená šablona má přednost před nadřazenou. Prázdné = žádná složka"
+msgid ""
+"Alle *.svg-Dateien darin, Name = Dateiname (z. B. kamera.svg → kamera). Child-Theme geht vor Eltern-Theme. Leer = "
+"kein Ordner"
+msgstr ""
+"Všechny soubory *.svg v ní, název = název souboru (např. kamera.svg → kamera). Podřízená šablona má přednost před "
+"nadřazenou. Prázdné = žádná složka"
 
 #: acf-json/group_zpt_settings_icons_svg.json
 msgid "Baukasten: Icons – Eigenes SVG Icon Set"
 msgstr "Baukasten: Ikony – Vlastní sada SVG ikon"
 
 #: acf-json/group_zpt_settings_icons_svg.json
-msgid "Eigene Icons als SVG – aus einem Ordner im Theme und/oder als Code. Die Icons werden direkt ins HTML geschrieben (bereinigt, ohne Skripte) und sind so groß wie die Schrift."
-msgstr "Vlastní ikony jako SVG – ze složky v šabloně a/nebo jako kód. Ikony se zapisují přímo do HTML (vyčištěné, bez skriptů) a jsou stejně velké jako písmo."
+msgid ""
+"Eigene Icons als SVG – aus einem Ordner im Theme und/oder als Code. Die Icons werden direkt ins HTML geschrieben "
+"(bereinigt, ohne Skripte) und sind so groß wie die Schrift."
+msgstr ""
+"Vlastní ikony jako SVG – ze složky v šabloně a/nebo jako kód. Ikony se zapisují přímo do HTML (vyčištěné, bez "
+"skriptů) a jsou stejně velké jako písmo."
 
 #: acf-json/group_zpt_settings_icons_svg.json
 msgid "Eigenes SVG Icon Set laden"
@@ -1624,8 +1846,12 @@ msgid "Farbe = Textfarbe"
 msgstr "Barva = barva textu"
 
 #: acf-json/group_zpt_settings_icons_svg.json
-msgid "Füll- und Linienfarben der SVGs durch die Textfarbe ersetzen (currentColor) – Icons lassen sich dann über Schriftfarbe einfärben. Aus = Originalfarben."
-msgstr "Nahradit barvy výplně a čar v SVG barvou textu (currentColor) – ikony pak lze obarvit barvou písma. Vypnuto = původní barvy."
+msgid ""
+"Füll- und Linienfarben der SVGs durch die Textfarbe ersetzen (currentColor) – Icons lassen sich dann über "
+"Schriftfarbe einfärben. Aus = Originalfarben."
+msgstr ""
+"Nahradit barvy výplně a čar v SVG barvou textu (currentColor) – ikony pak lze obarvit barvou písma. Vypnuto = původní "
+"barvy."
 
 #: acf-json/group_zpt_settings_icons_svg.json
 msgid "Icon hinzufügen"
@@ -1634,10 +1860,6 @@ msgstr "Přidat ikonu"
 #: acf-json/group_zpt_settings_icons_svg.json
 msgid "Icons als Code"
 msgstr "Ikony jako kód"
-
-#: acf-json/group_zpt_settings_icons_svg.json
-msgid "Ordner im Theme"
-msgstr "Složka v šabloně"
 
 #: acf-json/group_zpt_settings_icons_svg.json
 msgid "Vorschau"
@@ -1656,10 +1878,6 @@ msgid "kamera"
 msgstr "kamera"
 
 #: acf-json/group_zpt_settings_logo.json
-msgid "Alternativtext"
-msgstr "Alternativní text"
-
-#: acf-json/group_zpt_settings_logo.json
 msgid "Baukasten: Logo"
 msgstr "Baukasten: Logo"
 
@@ -1668,12 +1886,24 @@ msgid "Für alle Logos. Leer = Seitenname."
 msgstr "Pro všechna loga. Prázdné = název webu."
 
 #: acf-json/group_zpt_settings_logo.json
-msgid "Hauptlogo, z. B. im Header. SVG, PNG, JPG oder WebP. Leer = Logo aus dem Customizer (Design → Customizer → Website-Informationen) bzw. Seitenname."
-msgstr "Hlavní logo, např. v záhlaví. SVG, PNG, JPG nebo WebP. Prázdné = logo z Přizpůsobení (Vzhled → Přizpůsobit → Identita webu), případně název webu."
+msgid ""
+"Hauptlogo, z. B. im Header. SVG, PNG, JPG oder WebP. Leer = Logo aus dem Customizer (Design → Customizer → Website-"
+"Informationen) bzw. Seitenname."
+msgstr ""
+"Hlavní logo, např. v záhlaví. SVG, PNG, JPG nebo WebP. Prázdné = logo z Přizpůsobení (Vzhled → Přizpůsobit → Identita "
+"webu), případně název webu."
 
 #: acf-json/group_zpt_settings_logo.json
-msgid "Weitere Fassungen des Logos, z. B. Weiß (für dunkle Hintergründe), Negativ, Quer, Signet. Ausgabe im Template: zpt_logo('kürzel'), im Text: [zpt_logo variant=\"kürzel\"]."
-msgstr "Další verze loga, např. bílé (pro tmavá pozadí), negativ, na šířku, znak. Výstup v šabloně: zpt_logo('zkratka'), v textu: [zpt_logo variant=\"zkratka\"]."
+msgid "Logo"
+msgstr "Logo"
+
+#: acf-json/group_zpt_settings_logo.json
+msgid ""
+"Weitere Fassungen des Logos, z. B. Weiß (für dunkle Hintergründe), Negativ, Quer, Signet. Ausgabe im Template: "
+"zpt_logo('kürzel'), im Text: [zpt_logo variant=\"kürzel\"]."
+msgstr ""
+"Další verze loga, např. bílé (pro tmavá pozadí), negativ, na šířku, znak. Výstup v šabloně: zpt_logo('zkratka'), v "
+"textu: [zpt_logo variant=\"zkratka\"]."
 
 #: acf-json/group_zpt_settings_logo.json
 msgid "z. B. Weiß"
@@ -1689,7 +1919,8 @@ msgstr "Oddělené čárkou. Lze přepsat pro každou stránku."
 
 #: acf-json/group_zpt_settings_meta.json
 msgid "Standard für alle Seiten. Leer = Untertitel der Website. Pro Seite überschreibbar (Seitenleiste „Meta Infos“)."
-msgstr "Výchozí pro všechny stránky. Prázdné = popis webu. Lze přepsat pro každou stránku (postranní panel „Meta informace“)."
+msgstr ""
+"Výchozí pro všechny stránky. Prázdné = popis webu. Lze přepsat pro každou stránku (postranní panel „Meta informace“)."
 
 #: acf-json/group_zpt_settings_nav_bar.json
 msgid "Baukasten: Navigation – Navigationsleiste"
@@ -1704,8 +1935,12 @@ msgid "Position"
 msgstr "Pozice"
 
 #: acf-json/group_zpt_settings_nav_bar.json
-msgid "Sticky: Die Leiste bleibt beim Scrollen oben stehen (.sticky-top am Header) – dann eine Hintergrundfarbe setzen (Schrift, Farben, Größen → Leiste → Farben)."
-msgstr "Sticky: lišta zůstává při posouvání nahoře (.sticky-top na záhlaví) – pak nastavte barvu pozadí (Písmo, barvy, velikosti → Lišta → Barvy)."
+msgid ""
+"Sticky: Die Leiste bleibt beim Scrollen oben stehen (.sticky-top am Header) – dann eine Hintergrundfarbe setzen "
+"(Schrift, Farben, Größen → Leiste → Farben)."
+msgstr ""
+"Sticky: lišta zůstává při posouvání nahoře (.sticky-top na záhlaví) – pak nastavte barvu pozadí (Písmo, barvy, "
+"velikosti → Lišta → Barvy)."
 
 #: acf-json/group_zpt_settings_nav_bar.json
 msgid "feste Breite wie der Inhalt (.container)"
@@ -1748,8 +1983,12 @@ msgid "Menüpunkt (.nav-link)"
 msgstr "Položka menu (.nav-link)"
 
 #: acf-json/group_zpt_settings_nav_elements.json
-msgid "Schrift, Farben und Größen der Navigationsleiste. Leer = wie umgebend bzw. wie Bootstrap; Größe und Abstände je Breakpoint wie unter Baukasten → Elemente (leer = wie der nächstkleinere)."
-msgstr "Písmo, barvy a velikosti navigační lišty. Prázdné = jako okolí, případně jako v Bootstrapu; velikost a mezery pro každý breakpoint jako v Baukasten → Prvky (prázdné = jako nejbližší menší)."
+msgid ""
+"Schrift, Farben und Größen der Navigationsleiste. Leer = wie umgebend bzw. wie Bootstrap; Größe und Abstände je "
+"Breakpoint wie unter Baukasten → Elemente (leer = wie der nächstkleinere)."
+msgstr ""
+"Písmo, barvy a velikosti navigační lišty. Prázdné = jako okolí, případně jako v Bootstrapu; velikost a mezery pro "
+"každý breakpoint jako v Baukasten → Prvky (prázdné = jako nejbližší menší)."
 
 #: acf-json/group_zpt_settings_nav_elements.json includes/config.php
 msgid "Untermenü (.dropdown-menu)"
@@ -1816,8 +2055,14 @@ msgid "Eigene"
 msgstr "Vlastní"
 
 #: acf-json/group_zpt_settings_style.json
-msgid "Eigene Farben: Name (Kleinbuchstaben, Ziffern, Bindestrich, z. B. ecos-blau) und Grundfarbe. Leere Shades werden aus der Grundfarbe berechnet (Vorschau), eingetragene überschreiben die Berechnung. Werte: Hexwert oder HTML-Farbname. Klassen z. B. .bg-ecos-blau-300, CSS-Variablen --theme-ecos-blau-300. Die Shades legt der Tab „Einstellungen“ fest."
-msgstr "Vlastní barvy: název (malá písmena, číslice, pomlčka, např. ecos-modra) a základní barva. Prázdné odstíny se vypočítají ze základní barvy (náhled), zadané výpočet přepíší. Hodnoty: hex hodnota nebo název barvy HTML. Třídy např. .bg-ecos-modra-300, CSS proměnné --theme-ecos-modra-300. Odstíny určuje karta „Nastavení“."
+msgid ""
+"Eigene Farben: Name (Kleinbuchstaben, Ziffern, Bindestrich, z. B. ecos-blau) und Grundfarbe. Leere Shades werden aus "
+"der Grundfarbe berechnet (Vorschau), eingetragene überschreiben die Berechnung. Werte: Hexwert oder HTML-Farbname. "
+"Klassen z. B. .bg-ecos-blau-300, CSS-Variablen --theme-ecos-blau-300. Die Shades legt der Tab „Einstellungen“ fest."
+msgstr ""
+"Vlastní barvy: název (malá písmena, číslice, pomlčka, např. ecos-modra) a základní barva. Prázdné odstíny se "
+"vypočítají ze základní barvy (náhled), zadané výpočet přepíší. Hodnoty: hex hodnota nebo název barvy HTML. Třídy "
+"např. .bg-ecos-modra-300, CSS proměnné --theme-ecos-modra-300. Odstíny určuje karta „Nastavení“."
 
 #: acf-json/group_zpt_settings_style.json
 msgid "Einstellungen"
@@ -1836,24 +2081,50 @@ msgid "Grundfarbe"
 msgstr "Základní barva"
 
 #: acf-json/group_zpt_settings_style.json
-msgid "Lädt die Shades der Vorlage in die Tabelle, danach anpassbar (wird dann zu „Eigene“). Nach dem Speichern zeigt der Tab „Farbpalette“ die neuen Shades."
-msgstr "Načte odstíny předvolby do tabulky, poté je lze upravit (předvolba se pak změní na „Vlastní“). Po uložení zobrazí karta „Barevná paleta“ nové odstíny."
+msgid ""
+"Lädt die Shades der Vorlage in die Tabelle, danach anpassbar (wird dann zu „Eigene“). Nach dem Speichern zeigt der "
+"Tab „Farbpalette“ die neuen Shades."
+msgstr ""
+"Načte odstíny předvolby do tabulky, poté je lze upravit (předvolba se pak změní na „Vlastní“). Po uložení zobrazí "
+"karta „Barevná paleta“ nové odstíny."
 
 #: acf-json/group_zpt_settings_style.json
 msgid "Mischen"
 msgstr "Míchání"
 
 #: acf-json/group_zpt_settings_style.json
-msgid "Name + Farbe (Palettenfarbe mit Shading oder eigene). Ganze Palettenfarbe → die Systemfarbe übernimmt deren Shades; mit Shading oder eigene Farbe → daraus werden die Shades berechnet. Bootstrap-Namen (primary, secondary, tertiary, quaternary, success, info, warning, danger, light, dark, black, white, gray) setzen auch Bootstraps Farbe (.btn-primary, .text-bg-dark …); nicht angelegte behalten Bootstraps Wert (--theme-primary = --bs-primary). Eigene Namen (z. B. accent oder section für einen Hintergrund) ergeben .text-accent, .bg-section, .bg-section-100, --theme-section …."
-msgstr "Název + barva (barva palety s odstínem nebo vlastní). Celá barva palety → systémová barva převezme její odstíny; s odstínem nebo vlastní barvou → odstíny se z ní vypočítají. Názvy Bootstrapu (primary, secondary, tertiary, quaternary, success, info, warning, danger, light, dark, black, white, gray) nastavují i barvu Bootstrapu (.btn-primary, .text-bg-dark …); nevytvořené si ponechají hodnotu Bootstrapu (--theme-primary = --bs-primary). Vlastní názvy (např. accent nebo section pro pozadí) vytvoří .text-accent, .bg-section, .bg-section-100, --theme-section …."
+msgid ""
+"Name + Farbe (Palettenfarbe mit Shading oder eigene). Ganze Palettenfarbe → die Systemfarbe übernimmt deren Shades; "
+"mit Shading oder eigene Farbe → daraus werden die Shades berechnet. Bootstrap-Namen (primary, secondary, tertiary, "
+"quaternary, success, info, warning, danger, light, dark, black, white, gray) setzen auch Bootstraps Farbe (.btn-"
+"primary, .text-bg-dark …); nicht angelegte behalten Bootstraps Wert (--theme-primary = --bs-primary). Eigene Namen "
+"(z. B. accent oder section für einen Hintergrund) ergeben .text-accent, .bg-section, .bg-section-100, --theme-section "
+"…."
+msgstr ""
+"Název + barva (barva palety s odstínem nebo vlastní). Celá barva palety → systémová barva převezme její odstíny; s "
+"odstínem nebo vlastní barvou → odstíny se z ní vypočítají. Názvy Bootstrapu (primary, secondary, tertiary, "
+"quaternary, success, info, warning, danger, light, dark, black, white, gray) nastavují i barvu Bootstrapu (.btn-"
+"primary, .text-bg-dark …); nevytvořené si ponechají hodnotu Bootstrapu (--theme-primary = --bs-primary). Vlastní "
+"názvy (např. accent nebo section pro pozadí) vytvoří .text-accent, .bg-section, .bg-section-100, --theme-section …."
 
 #: acf-json/group_zpt_settings_style.json
-msgid "Nur diese Farben erscheinen in WordPress: in den Farbauswahlen der Komponenten und Einstellungen (Farbe + Shading) und in der Farbpalette von Block-Editor und klassischem Editor. Reihenfolge = Reihenfolge in der Palette. Leer = alle Farben. Die Systemfarben-Definition zeigt weiter die ganze Palette. Neue Einträge wirken nach dem Speichern."
-msgstr "Ve WordPressu se zobrazí jen tyto barvy: ve výběrech barev komponent a nastavení (barva + odstín) a v barevné paletě blokového a klasického editoru. Pořadí = pořadí v paletě. Prázdné = všechny barvy. Definice systémových barev nadále zobrazuje celou paletu. Nové položky se projeví po uložení."
+msgid ""
+"Nur diese Farben erscheinen in WordPress: in den Farbauswahlen der Komponenten und Einstellungen (Farbe + Shading) "
+"und in der Farbpalette von Block-Editor und klassischem Editor. Reihenfolge = Reihenfolge in der Palette. Leer = alle "
+"Farben. Die Systemfarben-Definition zeigt weiter die ganze Palette. Neue Einträge wirken nach dem Speichern."
+msgstr ""
+"Ve WordPressu se zobrazí jen tyto barvy: ve výběrech barev komponent a nastavení (barva + odstín) a v barevné paletě "
+"blokového a klasického editoru. Pořadí = pořadí v paletě. Prázdné = všechny barvy. Definice systémových barev nadále "
+"zobrazuje celou paletu. Nové položky se projeví po uložení."
 
 #: acf-json/group_zpt_settings_style.json
-msgid "Reihenfolge hell → dunkel. Name = Endung der Klassen und Variablen (.bg-primary-300, --theme-primary-light). Genau ein Shade ist die Grundfarbe; die anderen werden aus ihr berechnet: aufhellen = mit Weiß mischen, abdunkeln = mit Schwarz mischen."
-msgstr "Pořadí světlá → tmavá. Název = koncovka tříd a proměnných (.bg-primary-300, --theme-primary-light). Právě jeden odstín je základní barva; ostatní se z ní vypočítají: zesvětlit = míchat s bílou, ztmavit = míchat s černou."
+msgid ""
+"Reihenfolge hell → dunkel. Name = Endung der Klassen und Variablen (.bg-primary-300, --theme-primary-light). Genau "
+"ein Shade ist die Grundfarbe; die anderen werden aus ihr berechnet: aufhellen = mit Weiß mischen, abdunkeln = mit "
+"Schwarz mischen."
+msgstr ""
+"Pořadí světlá → tmavá. Název = koncovka tříd a proměnných (.bg-primary-300, --theme-primary-light). Právě jeden "
+"odstín je základní barva; ostatní se z ní vypočítají: zesvětlit = míchat s bílou, ztmavit = míchat s černou."
 
 #: acf-json/group_zpt_settings_style.json
 msgid "Shade hinzufügen"
@@ -1903,6 +2174,21 @@ msgstr "např. 300 nebo light"
 msgid "z. B. primary"
 msgstr "např. primary"
 
+#: acf-json/group_zpt_settings_theme_images.json
+msgid "Baukasten: Bilder aus dem Theme"
+msgstr ""
+
+#: acf-json/group_zpt_settings_theme_images.json
+msgid ""
+"Bilder, die zum Theme gehören und nicht redaktionell verwaltet werden (Illustrationen, Grafiken). Bild-, Card- und "
+"Row-Block können sie mit Quelle „Theme“ wählen. Mit Unterordnern; png, jpg, gif, webp, avif, svg. Child-Theme geht "
+"vor Eltern-Theme. Leer = keine."
+msgstr ""
+
+#: acf-json/group_zpt_settings_theme_images.json
+msgid "assets/img"
+msgstr ""
+
 #: acf-json/group_zpt_settings_typo_defaults.json
 msgid "12punkt (sm, copy, copy-l, l, xl, xxl, xxxl)"
 msgstr "12punkt (sm, copy, copy-l, l, xl, xxl, xxxl)"
@@ -1920,12 +2206,22 @@ msgid "Fließtext"
 msgstr "Základní text"
 
 #: acf-json/group_zpt_settings_typo_defaults.json
-msgid "Lädt die Stufen der Vorlage in die Tabelle, danach anpassbar (wird dann zu „Eigene“). Nach dem Speichern haben die Schriften unter „Schriftschnitte & Maße“ die neuen Stufen."
-msgstr "Načte stupně předvolby do tabulky, poté je lze upravit (předvolba se pak změní na „Vlastní“). Po uložení mají písma v „Řezy písma a míry“ nové stupně."
+msgid ""
+"Lädt die Stufen der Vorlage in die Tabelle, danach anpassbar (wird dann zu „Eigene“). Nach dem Speichern haben die "
+"Schriften unter „Schriftschnitte & Maße“ die neuen Stufen."
+msgstr ""
+"Načte stupně předvolby do tabulky, poté je lze upravit (předvolba se pak změní na „Vlastní“). Po uložení mají písma v "
+"„Řezy písma a míry“ nové stupně."
 
 #: acf-json/group_zpt_settings_typo_defaults.json
-msgid "Reihenfolge klein → groß. Name = Endung der Klassen und Variablen (.font-size-copy-l, .font-size-md-copy-l, --theme-font-size-copy-l). Größe und Zeilenhöhe gelten für alle Schriften ohne eigene Werte. Genau eine Stufe ist der Fließtext (body)."
-msgstr "Pořadí malá → velká. Název = koncovka tříd a proměnných (.font-size-copy-l, .font-size-md-copy-l, --theme-font-size-copy-l). Velikost a výška řádku platí pro všechna písma bez vlastních hodnot. Právě jeden stupeň je základní text (body)."
+msgid ""
+"Reihenfolge klein → groß. Name = Endung der Klassen und Variablen (.font-size-copy-l, .font-size-md-copy-l, --theme-"
+"font-size-copy-l). Größe und Zeilenhöhe gelten für alle Schriften ohne eigene Werte. Genau eine Stufe ist der "
+"Fließtext (body)."
+msgstr ""
+"Pořadí malá → velká. Název = koncovka tříd a proměnných (.font-size-copy-l, .font-size-md-copy-l, --theme-font-size-"
+"copy-l). Velikost a výška řádku platí pro všechna písma bez vlastních hodnot. Právě jeden stupeň je základní text "
+"(body)."
 
 #: acf-json/group_zpt_settings_typo_defaults.json
 msgid "Stufe hinzufügen"
@@ -1956,12 +2252,23 @@ msgid "Installierte Schriften (Design → Schriftarten), die in „Schriftschnit
 msgstr "Nainstalovaná písma (Vzhled → Písma), která se nabízejí v „Řezy písma a míry“."
 
 #: acf-json/group_zpt_settings_typo_loading.json
-msgid "Optional: Ordner mit eigenen Schriften im Theme. Liegt dort eine CSS-Datei mit @font-face-Regeln, wird sie geladen. Sonst werden die Dateien (woff2, woff, ttf, otf) automatisch eingebunden: Familie = Unterordner (fonts/Lato/…) oder Dateiname bis zum ersten - bzw. _; Gewicht und Stil aus dem Dateinamen (Bold, 700, Italic …). Nach dem Speichern stehen die Schriften in „Schriftschnitte & Maße“ zur Auswahl."
-msgstr "Volitelné: složka s vlastními písmy v šabloně. Pokud obsahuje soubor CSS s pravidly @font-face, načte se. Jinak se soubory (woff2, woff, ttf, otf) vloží automaticky: rodina = podsložka (fonts/Lato/…) nebo název souboru až po první - nebo _; řez a styl z názvu souboru (Bold, 700, Italic …). Po uložení jsou písma k výběru v „Řezy písma a míry“."
+msgid ""
+"Optional: Ordner mit eigenen Schriften im Theme. Liegt dort eine CSS-Datei mit @font-face-Regeln, wird sie geladen. "
+"Sonst werden die Dateien (woff2, woff, ttf, otf) automatisch eingebunden: Familie = Unterordner (fonts/Lato/…) oder "
+"Dateiname bis zum ersten - bzw. _; Gewicht und Stil aus dem Dateinamen (Bold, 700, Italic …). Nach dem Speichern "
+"stehen die Schriften in „Schriftschnitte & Maße“ zur Auswahl."
+msgstr ""
+"Volitelné: složka s vlastními písmy v šabloně. Pokud obsahuje soubor CSS s pravidly @font-face, načte se. Jinak se "
+"soubory (woff2, woff, ttf, otf) vloží automaticky: rodina = podsložka (fonts/Lato/…) nebo název souboru až po první - "
+"nebo _; řez a styl z názvu souboru (Bold, 700, Italic …). Po uložení jsou písma k výběru v „Řezy písma a míry“."
 
 #: acf-json/group_zpt_settings_typo_loading.json
-msgid "Schrift, die auf den Geräten vorhanden ist – ohne Download. Stack mit Ausweichschriften wie bei font-family; der erste Name ist der Name der Schrift. Leer = keine."
-msgstr "Písmo dostupné v zařízeních – bez stahování. Seznam s náhradními písmy jako u font-family; první název je název písma. Prázdné = žádné."
+msgid ""
+"Schrift, die auf den Geräten vorhanden ist – ohne Download. Stack mit Ausweichschriften wie bei font-family; der "
+"erste Name ist der Name der Schrift. Leer = keine."
+msgstr ""
+"Písmo dostupné v zařízeních – bez stahování. Seznam s náhradními písmy jako u font-family; první název je název "
+"písma. Prázdné = žádné."
 
 #: acf-json/group_zpt_settings_typo_loading.json
 msgid "System-Standard"
@@ -1988,8 +2295,12 @@ msgid "Baukasten: Rollen"
 msgstr "Baukasten: Role"
 
 #: acf-json/group_zpt_settings_typo_roles.json
-msgid "Welche Schrift für welche Rolle (Auswahl aus „Schriftschnitte & Maße“, nach Änderungen dort erst speichern). Leer = Standard. Grundschrift gilt für die ganze Seite; Klassen .font-sans-serif, .font-serif, .font-style-deco, .font-mono."
-msgstr "Které písmo pro kterou roli (výběr z „Řezy písma a míry“, po změnách tam nejprve uložte). Prázdné = výchozí. Základní písmo platí pro celou stránku; třídy .font-sans-serif, .font-serif, .font-style-deco, .font-mono."
+msgid ""
+"Welche Schrift für welche Rolle (Auswahl aus „Schriftschnitte & Maße“, nach Änderungen dort erst speichern). Leer = "
+"Standard. Grundschrift gilt für die ganze Seite; Klassen .font-sans-serif, .font-serif, .font-style-deco, .font-mono."
+msgstr ""
+"Které písmo pro kterou roli (výběr z „Řezy písma a míry“, po změnách tam nejprve uložte). Prázdné = výchozí. Základní "
+"písmo platí pro celou stránku; třídy .font-sans-serif, .font-serif, .font-style-deco, .font-mono."
 
 #: acf-json/group_zpt_settings_typography.json
 msgid "Aus den Schriftquellen (WP-Schriften, Theme-Ordner, System-Standard)."
@@ -2000,16 +2311,24 @@ msgid "Baukasten: Schriftschnitte & Maße"
 msgstr "Baukasten: Řezy písma a míry"
 
 #: acf-json/group_zpt_settings_typography.json
-msgid "Eine Zeile je Schrift. Geladen werden nur Schriften in dieser Liste. Klasse je Schrift: .ff-{name} (z. B. .ff-inter). Leere Felder: Werte aus „Schriftgrößen“."
-msgstr "Jeden řádek pro každé písmo. Načítají se jen písma z tohoto seznamu. Třída pro každé písmo: .ff-{name} (např. .ff-inter). Prázdná pole: hodnoty z „Velikosti písma“."
+msgid ""
+"Eine Zeile je Schrift. Geladen werden nur Schriften in dieser Liste. Klasse je Schrift: .ff-{name} (z. B. .ff-inter). "
+"Leere Felder: Werte aus „Schriftgrößen“."
+msgstr ""
+"Jeden řádek pro každé písmo. Načítají se jen písma z tohoto seznamu. Třída pro každé písmo: .ff-{name} (např. .ff-"
+"inter). Prázdná pole: hodnoty z „Velikosti písma“."
 
 #: acf-json/group_zpt_settings_typography.json
 msgid "Gewicht hinzufügen"
 msgstr "Přidat řez"
 
 #: acf-json/group_zpt_settings_typography.json
-msgid "Je Gewicht, z. B. 0.02em oder -0.01em (em skaliert mit der Schriftgröße). Zeilen für alle geladenen Gewichte werden beim Speichern angelegt."
-msgstr "Pro každý řez, např. 0.02em nebo -0.01em (em se mění s velikostí písma). Řádky pro všechny načtené řezy se vytvoří při uložení."
+msgid ""
+"Je Gewicht, z. B. 0.02em oder -0.01em (em skaliert mit der Schriftgröße). Zeilen für alle geladenen Gewichte werden "
+"beim Speichern angelegt."
+msgstr ""
+"Pro každý řez, např. 0.02em nebo -0.01em (em se mění s velikostí písma). Řádky pro všechny načtené řezy se vytvoří "
+"při uložení."
 
 #: acf-json/group_zpt_settings_typography.json
 msgid "Laufweiten"
@@ -2343,7 +2662,9 @@ msgstr "faq"
 
 #: blocks/anchors/block.json
 msgctxt "block description"
-msgid "Links zu Abschnitten dieser Seite (CSS IDs) – horizontal oder vertikal, markiert beim Scrollen den sichtbaren Abschnitt."
+msgid ""
+"Links zu Abschnitten dieser Seite (CSS IDs) – horizontal oder vertikal, markiert beim Scrollen den sichtbaren "
+"Abschnitt."
 msgstr "Odkazy na části této stránky (CSS ID) – vodorovně nebo svisle, při posouvání zvýrazní viditelnou část."
 
 #: blocks/anchors/block.json
@@ -2442,7 +2763,7 @@ msgctxt "block keyword"
 msgid "teaser"
 msgstr "upoutávka"
 
-#: blocks/card/render.php:25
+#: blocks/card/render.php:26
 msgid "Mehr erfahren"
 msgstr "Zjistit více"
 
@@ -2584,7 +2905,8 @@ msgstr "image"
 #: blocks/navigation/block.json
 msgctxt "block description"
 msgid "Gibt ein WordPress-Menü aus (Menü oder Menü-Position des Themes) – horizontal mit Dropdowns oder vertikal."
-msgstr "Vypíše menu WordPressu (menu nebo umístění menu šablony vzhledu) – vodorovně s rozbalovacími nabídkami nebo svisle."
+msgstr ""
+"Vypíše menu WordPressu (menu nebo umístění menu šablony vzhledu) – vodorovně s rozbalovacími nabídkami nebo svisle."
 
 #: blocks/navigation/block.json
 msgctxt "block title"
@@ -2765,7 +3087,8 @@ msgstr "Tato zkratka už je třídou tlačítka (barva, velikost nebo varianta).
 msgid "Das Kürzel ist mehrfach vergeben."
 msgstr "Zkratka je použita vícekrát."
 
-#: includes/buttons.php:658 includes/buttons.php:679 includes/buttons.php:791 includes/components.php:167 includes/typography.php:390 includes/typography.php:467 templates/styleguide/overview.php:21
+#: includes/buttons.php:658 includes/buttons.php:679 includes/buttons.php:791 includes/components.php:167
+#: includes/typography.php:390 includes/typography.php:467 templates/styleguide/overview.php:21
 msgid "Standard"
 msgstr "Výchozí"
 
@@ -2864,16 +3187,24 @@ msgid "Farbe aus der Palette (mit Shade) oder eigene Farbe (Hexwert, Farbname) �
 msgstr "Barva z palety (s odstínem) nebo vlastní barva (hex hodnota, název barvy) – žádná jiná systémová barva."
 
 #: includes/colors.php:613
-msgid "Nur Kleinbuchstaben, Ziffern und Bindestrich (z. B. primary oder accent), nicht wie eine Palettenfarbe, nicht mit der Endung eines Shades."
-msgstr "Pouze malá písmena, číslice a pomlčka (např. primary nebo accent), ne stejně jako barva palety, ne s koncovkou odstínu."
+msgid ""
+"Nur Kleinbuchstaben, Ziffern und Bindestrich (z. B. primary oder accent), nicht wie eine Palettenfarbe, nicht mit der "
+"Endung eines Shades."
+msgstr ""
+"Pouze malá písmena, číslice a pomlčka (např. primary nebo accent), ne stejně jako barva palety, ne s koncovkou "
+"odstínu."
 
 #: includes/colors.php:621 includes/colors.php:639
 msgid "Der Name ist mehrfach vergeben."
 msgstr "Název je použit vícekrát."
 
 #: includes/colors.php:631
-msgid "Nur Kleinbuchstaben, Ziffern und Bindestrich (z. B. ecos-blau), nicht wie eine Bootstrap- oder Systemfarbe (primary, dark …), nicht mit der Endung eines Shades (z. B. -300)."
-msgstr "Pouze malá písmena, číslice a pomlčka (např. ecos-modra), ne stejně jako barva Bootstrapu nebo systémová barva (primary, dark …), ne s koncovkou odstínu (např. -300)."
+msgid ""
+"Nur Kleinbuchstaben, Ziffern und Bindestrich (z. B. ecos-blau), nicht wie eine Bootstrap- oder Systemfarbe (primary, "
+"dark …), nicht mit der Endung eines Shades (z. B. -300)."
+msgstr ""
+"Pouze malá písmena, číslice a pomlčka (např. ecos-modra), ne stejně jako barva Bootstrapu nebo systémová barva "
+"(primary, dark …), ne s koncovkou odstínu (např. -300)."
 
 #: includes/colors.php:690
 msgid "Baukasten-Farbe (z. B. primary-300), HTML-Farbname (z. B. tomato) oder Hexwert (#ff6347)."
@@ -2936,8 +3267,12 @@ msgid "%1$s (Theme: %2$s/)"
 msgstr "%1$s (šablona vzhledu: %2$s/)"
 
 #: includes/fonts.php:476
-msgid "Keine Schriften gefunden: unter „Schriftquellen“ → „WP-Schriften“ Schriften anhaken bzw. installieren (Design → Schriftarten), einen System-Standard eintragen oder einen Theme-Ordner angeben."
-msgstr "Nenalezena žádná písma: v části „Zdroje písem“ → „Písma WP“ zaškrtněte nebo nainstalujte písma (Vzhled → Písma), zadejte systémové výchozí písmo nebo uveďte složku v šabloně vzhledu."
+msgid ""
+"Keine Schriften gefunden: unter „Schriftquellen“ → „WP-Schriften“ Schriften anhaken bzw. installieren (Design → "
+"Schriftarten), einen System-Standard eintragen oder einen Theme-Ordner angeben."
+msgstr ""
+"Nenalezena žádná písma: v části „Zdroje písem“ → „Písma WP“ zaškrtněte nebo nainstalujte písma (Vzhled → Písma), "
+"zadejte systémové výchozí písmo nebo uveďte složku v šabloně vzhledu."
 
 #: includes/fonts.php:486
 msgid "Noch keine Schriften installiert (Design → Schriftarten)."
@@ -2967,24 +3302,24 @@ msgstr "Komponenta „%s“ nenalezena."
 msgid "Eigenes Set"
 msgstr "Vlastní sada"
 
-#: includes/icons.php:293
+#: includes/icons.php:292
 msgid "Icon suchen …"
 msgstr "Hledat ikonu …"
 
-#: includes/icons.php:320
+#: includes/icons.php:319
 msgid "(nicht geladen)"
 msgstr "(nenačteno)"
 
-#: includes/icons.php:403
+#: includes/icons.php:402
 msgid "Set ist ausgeschaltet."
 msgstr "Sada je vypnutá."
 
-#: includes/icons.php:407
+#: includes/icons.php:406
 msgid "Noch keine Icons – Ordner angeben oder unten SVG-Code einfügen und speichern."
 msgstr "Zatím žádné ikony – zadejte složku nebo níže vložte SVG kód a uložte."
 
 #. translators: %d: Anzahl der Icons
-#: includes/icons.php:411
+#: includes/icons.php:410
 #, php-format
 msgid "%d Icon, Stand beim letzten Speichern:"
 msgid_plural "%d Icons, Stand beim letzten Speichern:"
@@ -2993,7 +3328,7 @@ msgstr[1] "%d ikony, stav při posledním uložení:"
 msgstr[2] "%d ikon, stav při posledním uložení:"
 
 #. translators: %d: Anzahl gefundener SVG-Dateien
-#: includes/icons.php:429
+#: includes/icons.php:428
 #, php-format
 msgid "gefunden: %d Datei."
 msgid_plural "gefunden: %d Dateien."
@@ -3001,7 +3336,7 @@ msgstr[0] "nalezen: %d soubor."
 msgstr[1] "nalezeny: %d soubory."
 msgstr[2] "nalezeno: %d souborů."
 
-#: includes/icons.php:429
+#: includes/icons.php:428
 msgid "keine SVG-Dateien gefunden."
 msgstr "nenalezeny žádné SVG soubory."
 
@@ -3030,8 +3365,12 @@ msgid "Import"
 msgstr "Import"
 
 #: includes/import-export.php:135
-msgid "Übernimmt die Einstellungen aus einer Export-Datei. Die Werte der gewählten Seiten werden <strong>vollständig ersetzt</strong>; Seiten, die in der Datei fehlen, bleiben unverändert."
-msgstr "Převezme nastavení ze souboru exportu. Hodnoty vybraných stránek budou <strong>zcela nahrazeny</strong>; stránky, které v souboru chybí, zůstanou beze změny."
+msgid ""
+"Übernimmt die Einstellungen aus einer Export-Datei. Die Werte der gewählten Seiten werden <strong>vollständig "
+"ersetzt</strong>; Seiten, die in der Datei fehlen, bleiben unverändert."
+msgstr ""
+"Převezme nastavení ze souboru exportu. Hodnoty vybraných stránek budou <strong>zcela nahrazeny</strong>; stránky, "
+"které v souboru chybí, zůstanou beze změny."
 
 #: includes/import-export.php:136
 msgid "Schriften werden nur über den Namen zugeordnet – die Schriftdateien müssen hier vorhanden sein."
@@ -3088,21 +3427,31 @@ msgstr[2] "%d položek nepatřilo k žádnému poli stránky a bylo přeskočeno
 msgid "Keine Berechtigung."
 msgstr "Nemáte oprávnění."
 
-#: includes/logo.php:125
+#: includes/logo.php:128
 msgid "Name bzw. Kürzel ergibt kein gültiges Kürzel."
 msgstr "Z názvu ani zkratky nevznikne platná zkratka."
 
 #. translators: %s: Kürzel der Logo-Variante
-#: includes/logo.php:129
+#: includes/logo.php:132
 #, php-format
 msgid "Das Kürzel „%s“ ist mehrfach vergeben."
 msgstr "Zkratka „%s“ je použita vícekrát."
 
-#: includes/logo.php:374
-msgid "Noch keine Dateien – Favicon-Bild wählen und speichern."
-msgstr "Zatím žádné soubory – vyberte obrázek favikony a uložte."
+#. translators: 1: gefundene Dateien, 2: Bild, aus dem fehlende Dateien erzeugt werden
+#: includes/logo.php:445
+#, php-format
+msgid "Gefunden: %1$s. Fehlende Dateien werden erzeugt aus: %2$s"
+msgstr ""
 
-#: includes/logo.php:407
+#: includes/logo.php:446
+msgid "Keine passenden Dateien gefunden."
+msgstr ""
+
+#: includes/logo.php:461
+msgid "Noch keine Dateien – Favicon-Bild bzw. Ordner wählen und speichern."
+msgstr ""
+
+#: includes/logo.php:494
 msgid "Die Datei enthält kein gültiges SVG."
 msgstr "Soubor neobsahuje platné SVG."
 
@@ -3215,8 +3564,8 @@ msgid "Icons"
 msgstr "Ikony"
 
 #: includes/settings.php:35
-msgid "Logo"
-msgstr "Logo"
+msgid "Logo & Bilder"
+msgstr ""
 
 #: includes/settings.php:36
 msgid "Navigation"
@@ -3244,6 +3593,29 @@ msgstr "Baukasten – %s"
 msgid "Styleguide"
 msgstr "Styleguide"
 
+#: includes/theme-files.php:180
+msgid "Noch kein Ordner eingestellt: Baukasten → Logo & Bilder → Bilder aus dem Theme."
+msgstr ""
+
+#. translators: %s: Ordner im Theme
+#: includes/theme-files.php:182
+#, php-format
+msgid "Keine Bilder in „%s“ gefunden."
+msgstr ""
+
+#. translators: %d: Anzahl gefundener Bilder
+#: includes/theme-files.php:230
+#, php-format
+msgid "gefunden: %d Bild."
+msgid_plural "gefunden: %d Bilder."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: includes/theme-files.php:230
+msgid "keine Bilder gefunden."
+msgstr ""
+
 #: includes/typography.php:373
 msgid "Jede Stufe braucht einen Namen (a–z, 0–9, Bindestrich)."
 msgstr "Každý stupeň potřebuje název (a–z, 0–9, pomlčka)."
@@ -3265,6 +3637,18 @@ msgstr "Výchozí (jako okolí)"
 #: templates/components/navigation.php:55
 msgid "Inhalt der Seite"
 msgstr "Obsah stránky"
+
+#. translators: %s: Anbieter, z. B. YouTube
+#: templates/components/video.php:51
+#, php-format
+msgid "%s-Video"
+msgstr "Video %s"
+
+#. translators: %s: Anbieter, z. B. YouTube
+#: templates/components/video.php:58
+#, php-format
+msgid "Video abspielen – dabei werden Daten an %s übertragen."
+msgstr "Přehrát video – přitom budou předána data službě %s."
 
 #: templates/styleguide/buttons.php:21
 msgid "Größen"
@@ -3443,8 +3827,12 @@ msgid "Standard (Grundschrift)"
 msgstr "Výchozí (základní písmo)"
 
 #: templates/styleguide/typography.php:17
-msgid "Gemessen wird im Browser: Schrift · Gewicht, Größe / Zeilenhöhe · Laufweite (LS). Werte ändern sich je Breakpoint – Fenster verkleinern zum Prüfen."
-msgstr "Měřeno v prohlížeči: písmo · řez, velikost / výška řádku · prostrkání (LS). Hodnoty se mění podle breakpointu – pro kontrolu zmenšete okno."
+msgid ""
+"Gemessen wird im Browser: Schrift · Gewicht, Größe / Zeilenhöhe · Laufweite (LS). Werte ändern sich je Breakpoint – "
+"Fenster verkleinern zum Prüfen."
+msgstr ""
+"Měřeno v prohlížeči: písmo · řez, velikost / výška řádku · prostrkání (LS). Hodnoty se mění podle breakpointu – pro "
+"kontrolu zmenšete okno."
 
 #: templates/styleguide/typography.php:24
 msgid "Stufen"
@@ -3473,8 +3861,12 @@ msgstr "s"
 #. translators: %1$s: Beispielsatz
 #: templates/styleguide/typography.php:77
 #, php-format
-msgid "%1$s. Mit <strong>fettem Text</strong>, <em>kursivem Text</em> und einem <a href=\"#\">Link</a>. Zweite Zeile, damit die Zeilenhöhe sichtbar wird: %1$s."
-msgstr "%1$s. S <strong>tučným textem</strong>, <em>kurzívou</em> a <a href=\"#\">odkazem</a>. Druhý řádek, aby byla vidět výška řádku: %1$s."
+msgid ""
+"%1$s. Mit <strong>fettem Text</strong>, <em>kursivem Text</em> und einem <a href=\"#\">Link</a>. Zweite Zeile, damit "
+"die Zeilenhöhe sichtbar wird: %1$s."
+msgstr ""
+"%1$s. S <strong>tučným textem</strong>, <em>kurzívou</em> a <a href=\"#\">odkazem</a>. Druhý řádek, aby byla vidět "
+"výška řádku: %1$s."
 
 #: templates/tmpl-styleguide.php:65
 msgid "Text"
@@ -3487,3 +3879,6 @@ msgstr "Rámeček"
 #: templates/tmpl-styleguide.php:73
 msgid "Radius"
 msgstr "Zaoblení"
+
+#~ msgid "Noch keine Dateien – Favicon-Bild wählen und speichern."
+#~ msgstr "Zatím žádné soubory – vyberte obrázek favikony a uložte."
