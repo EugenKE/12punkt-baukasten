@@ -64,6 +64,56 @@ function zpt_video_embed_url(string $source, string $value): string {
     return '';
 }
 
+/**
+ * Vorschaubild des Anbieters aus der Einbettungs-Adresse, lokal in uploads/zpt-video/ gespeichert –
+ * Besucher laden es von der eigenen Site, ohne Verbindung zum Anbieter. Nicht abrufbar → ''
+ * (dann einen Tag lang kein neuer Versuch).
+ */
+function zpt_video_thumbnail_url(string $embed): string {
+    if (preg_match('~youtube-nocookie\.com/embed/([\w-]{11})~', $embed, $m)) {
+        $name    = 'youtube-' . $m[1] . '.jpg';
+        $sources = ["https://i.ytimg.com/vi/{$m[1]}/maxresdefault.jpg", "https://i.ytimg.com/vi/{$m[1]}/hqdefault.jpg"];
+    } elseif (preg_match('~player\.vimeo\.com/video/(\d+)~', $embed, $m)) {
+        $name    = 'vimeo-' . $m[1] . '.jpg';
+        $sources = [];
+    } else {
+        return '';
+    }
+
+    $uploads = wp_upload_dir(null, false);
+    $dir     = $uploads['basedir'] . '/zpt-video';
+    $url     = set_url_scheme($uploads['baseurl'] . '/zpt-video/' . $name);
+    if (file_exists($dir . '/' . $name)) {
+        return $url;
+    }
+
+    $failed = 'zpt_video_thumb_' . md5($name);
+    if (get_transient($failed)) {
+        return '';
+    }
+
+    // Vimeo: Bildadresse über oEmbed
+    if (!$sources) {
+        $response = wp_remote_get('https://vimeo.com/api/oembed.json?width=1280&url=' . rawurlencode('https://vimeo.com/' . $m[1]), ['timeout' => 5]);
+        $data     = json_decode((string) wp_remote_retrieve_body($response), true);
+        if (!empty($data['thumbnail_url'])) {
+            $sources[] = $data['thumbnail_url'];
+        }
+    }
+
+    foreach ($sources as $source) {
+        $response = wp_remote_get($source, ['timeout' => 5]);
+        $body     = wp_remote_retrieve_body($response);
+        if (wp_remote_retrieve_response_code($response) === 200 && $body !== '' && wp_mkdir_p($dir)
+            && file_put_contents($dir . '/' . $name, $body) !== false) {
+            return $url;
+        }
+    }
+
+    set_transient($failed, 1, DAY_IN_SECONDS);
+    return '';
+}
+
 // ----------------------------------------------------------------- SVG
 
 /**

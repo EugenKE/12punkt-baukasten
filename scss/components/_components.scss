@@ -102,6 +102,14 @@
 
     &:hover .zpt-video-poster,
     &:focus-visible .zpt-video-poster { opacity: .45; }
+
+    // ohne Hinweis: Vorschaubild unverändert, Play-Symbol mit Schatten
+    &.zpt-video-plain {
+        .zpt-video-poster { opacity: 1; }
+        .zpt-video-play   { filter: drop-shadow(0 2px 6px rgba(0, 0, 0, .5)); }
+        &:hover .zpt-video-poster,
+        &:focus-visible .zpt-video-poster { opacity: .85; }
+    }
 }
 
 // --- Posts

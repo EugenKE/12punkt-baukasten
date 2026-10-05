@@ -215,7 +215,7 @@
             "label": "Datenschutz-Hinweis anzeigen",
             "name": "notice",
             "type": "true_false",
-            "instructions": "„Video abspielen – dabei werden Daten an … übertragen.“ Aus = nur für Screenreader. Das Video lädt in jedem Fall erst nach Klick.",
+            "instructions": "„Video abspielen – dabei werden Daten an … übertragen.“ Aus = nur für Screenreader; ohne eigenes Vorschaubild wird das des Anbieters gezeigt (auf der Site gespeichert). Das Video lädt in jedem Fall erst nach Klick.",
             "wrapper": {
                 "width": "50",
                 "class": "",
@@ -371,5 +371,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1791208566
+    "modified": 1791208980
 }

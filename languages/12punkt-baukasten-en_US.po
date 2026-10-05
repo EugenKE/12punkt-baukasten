@@ -969,10 +969,11 @@ msgstr "e.g. https://www.youtube.com/watch?v=… or just the ID"
 
 #: acf-json/group_zpt_block_video.json
 msgid ""
-"„Video abspielen – dabei werden Daten an … übertragen.“ Aus = nur für Screenreader. Das Video lädt in jedem Fall erst "
-"nach Klick."
+"„Video abspielen – dabei werden Daten an … übertragen.“ Aus = nur für Screenreader; ohne eigenes Vorschaubild wird "
+"das des Anbieters gezeigt (auf der Site gespeichert). Das Video lädt in jedem Fall erst nach Klick."
 msgstr ""
-"“Play video – this will transfer data to ….” Off = for screen readers only. The video always loads only after a click."
+"“Play video – this will transfer data to ….” Off = for screen readers only; without a custom preview image, the "
+"provider's thumbnail is shown (stored on the site). The video always loads only after a click."
 
 #: acf-json/group_zpt_meta.json
 msgid "Leer = globale Meta Description (Baukasten → Einstellungen)."
@@ -3103,7 +3104,7 @@ msgstr "This slug is already a button class (color, size or variant)."
 msgid "Das Kürzel ist mehrfach vergeben."
 msgstr "The slug is used more than once."
 
-#: includes/buttons.php:658 includes/buttons.php:679 includes/buttons.php:791 includes/components.php:167
+#: includes/buttons.php:658 includes/buttons.php:679 includes/buttons.php:791 includes/components.php:217
 #: includes/typography.php:390 includes/typography.php:467 templates/styleguide/overview.php:21
 msgid "Standard"
 msgstr "Default"
@@ -3140,7 +3141,7 @@ msgstr "Only lowercase letters, digits and hyphens, e.g. xl. “md” = default 
 msgid "Dieses Kürzel ist schon eine Button-Klasse (Farbe, Template oder Variante)."
 msgstr "This slug is already a button class (color, template or variant)."
 
-#: includes/buttons.php:798 includes/components.php:167 includes/elements.php:217
+#: includes/buttons.php:798 includes/components.php:217 includes/elements.php:217
 msgid "wie kleiner"
 msgstr "same as smaller"
 
@@ -3649,13 +3650,13 @@ msgid "Inhalt der Seite"
 msgstr "Page content"
 
 #. translators: %s: Anbieter, z. B. YouTube
-#: templates/components/video.php:52
+#: templates/components/video.php:56
 #, php-format
 msgid "%s-Video"
 msgstr "%s video"
 
 #. translators: %s: Anbieter, z. B. YouTube
-#: templates/components/video.php:59
+#: templates/components/video.php:65
 #, php-format
 msgid "Video abspielen – dabei werden Daten an %s übertragen."
 msgstr "Play video – this will transfer data to %s."
@@ -3889,6 +3890,13 @@ msgstr "Border"
 #: templates/tmpl-styleguide.php:73
 msgid "Radius"
 msgstr "Radius"
+
+#~ msgid ""
+#~ "„Video abspielen – dabei werden Daten an … übertragen.“ Aus = nur für Screenreader. Das Video lädt in jedem Fall "
+#~ "erst nach Klick."
+#~ msgstr ""
+#~ "“Play video – this will transfer data to ….” Off = for screen readers only. The video always loads only after a "
+#~ "click."
 
 #~ msgid "Noch keine Dateien – Favicon-Bild wählen und speichern."
 #~ msgstr "No files yet – choose a favicon image and save."

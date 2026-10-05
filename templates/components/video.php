@@ -12,10 +12,12 @@
  *     @type string $file       Adresse der Videodatei.
  *     @type string $title
  *     @type int    $poster     Attachment-ID des Vorschaubilds.
+ *     @type string $poster_url Adresse eines Vorschaubilds, wenn kein $poster gesetzt ist.
  *     @type string $ratio      16x9, 4x3, 1x1, 21x9, 9x16
  *     @type bool   $controls   Datei: Steuerung.
  *     @type bool   $autoplay   Datei: stumm, Schleife, automatisch.
- *     @type bool   $notice     YouTube/Vimeo: Datenschutz-Hinweis sichtbar (Standard), sonst nur für Screenreader.
+ *     @type bool   $notice     YouTube/Vimeo: Datenschutz-Hinweis sichtbar (Standard), sonst nur für Screenreader
+ *                              und Vorschaubild nicht abgedunkelt.
  *     @type array  $attrs      ['id', 'class', 'style'] für zpt_html_attrs().
  *     @type bool   $is_preview true im Editor.
  * }
@@ -33,10 +35,12 @@ if ($embed === '' && $file === ''):
     return;
 endif;
 
-$title    = (string) ($args['title'] ?? '');
-$poster   = (int) ($args['poster'] ?? 0);
-$provider = ($args['source'] ?? '') === 'vimeo' ? 'Vimeo' : 'YouTube';
-$attrs    = $args['attrs'] ?? [];
+$title      = (string) ($args['title'] ?? '');
+$poster     = (int) ($args['poster'] ?? 0);
+$poster_url = (string) ($args['poster_url'] ?? '');
+$notice     = (bool) ($args['notice'] ?? true);
+$provider   = ($args['source'] ?? '') === 'vimeo' ? 'Vimeo' : 'YouTube';
+$attrs      = $args['attrs'] ?? [];
 $attrs['class'] = zpt_class_list($attrs['class'] ?? [], 'ratio', 'ratio-' . ($args['ratio'] ?? '16x9'));
 ?>
 
@@ -48,13 +52,15 @@ $attrs['class'] = zpt_class_list($attrs['class'] ?? [], 'ratio', 'ratio-' . ($ar
             <?php echo !empty($args['autoplay']) && empty($args['is_preview']) ? 'autoplay muted loop' : ''; ?>
             <?php echo $title !== '' ? 'aria-label="' . esc_attr($title) . '"' : ''; ?>></video>
     <?php else: ?>
-        <button type="button" class="zpt-video-consent" data-zpt-video-src="<?php echo esc_url($embed); ?>"
+        <button type="button" class="zpt-video-consent<?php echo $notice ? '' : ' zpt-video-plain'; ?>" data-zpt-video-src="<?php echo esc_url($embed); ?>"
             data-zpt-video-title="<?php echo esc_attr($title ?: sprintf(/* translators: %s: Anbieter, z. B. YouTube */ __('%s-Video', '12punkt-baukasten'), $provider)); ?>">
             <?php if ($poster): ?>
                 <?php echo wp_get_attachment_image($poster, 'large', false, ['class' => 'zpt-video-poster', 'alt' => '']); ?>
+            <?php elseif ($poster_url !== ''): ?>
+                <img src="<?php echo esc_url($poster_url); ?>" class="zpt-video-poster" alt="" loading="lazy" decoding="async">
             <?php endif; ?>
             <span class="zpt-video-play" aria-hidden="true"><svg class="zpt-svg-icon" viewBox="0 0 16 16" fill="currentColor" focusable="false"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z"/></svg></span>
-            <span class="<?php echo ($args['notice'] ?? true) ? 'zpt-video-notice' : 'visually-hidden'; ?>">
+            <span class="<?php echo $notice ? 'zpt-video-notice' : 'visually-hidden'; ?>">
                 <?php if ($title !== ''): ?><strong><?php echo esc_html($title); ?></strong><br><?php endif; ?>
                 <?php echo esc_html(sprintf(/* translators: %s: Anbieter, z. B. YouTube */ __('Video abspielen – dabei werden Daten an %s übertragen.', '12punkt-baukasten'), $provider)); ?>
             </span>
