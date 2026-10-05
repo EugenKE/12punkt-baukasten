@@ -395,7 +395,7 @@ msgstr "Obrázek nahoře"
 
 #: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_image.json acf-json/group_zpt_block_row.json
 msgid "Bild wählen …"
-msgstr ""
+msgstr "Vybrat obrázek …"
 
 #: acf-json/group_zpt_block_card.json
 msgid "Bild zuerst"
@@ -427,7 +427,7 @@ msgstr "CSS textová oblast"
 
 #: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_image.json
 msgid "Leer = aus dem Dateinamen."
-msgstr ""
+msgstr "Prázdné = z názvu souboru."
 
 #: acf-json/group_zpt_block_card.json
 msgid "Link als"
@@ -436,7 +436,7 @@ msgstr "Odkaz jako"
 #: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_image.json acf-json/group_zpt_block_row.json
 #: acf-json/group_zpt_settings_favicon.json
 msgid "Mediathek"
-msgstr ""
+msgstr "Knihovna médií"
 
 #: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_icon.json acf-json/group_zpt_block_image.json
 #: acf-json/group_zpt_block_video.json acf-json/group_zpt_settings_favicon.json
@@ -457,11 +457,11 @@ msgstr "Text první"
 
 #: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_image.json acf-json/group_zpt_block_row.json
 msgid "Theme"
-msgstr ""
+msgstr "Šablona"
 
 #: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_image.json acf-json/group_zpt_block_row.json
 msgid "Theme = Bild aus dem Bilder-Ordner des Themes (Illustrationen, Grafiken, die zum Theme gehören)."
-msgstr ""
+msgstr "Šablona = obrázek ze složky obrázků šablony (ilustrace, grafika, které patří k šabloně)."
 
 #: acf-json/group_zpt_block_card.json
 msgid "ZPT Block: Card"
@@ -856,7 +856,7 @@ msgstr "Připnout nahoru"
 
 #: acf-json/group_zpt_block_row.json
 msgid "Quelle Hintergrundbild"
-msgstr ""
+msgstr "Zdroj obrázku na pozadí"
 
 #: acf-json/group_zpt_block_row.json
 msgid "Row Display"
@@ -1621,6 +1621,9 @@ msgid ""
 "site.webmanifest. Fehlende werden aus dem größten PNG/JPG/WebP erzeugt (bevorzugt favicon.png, mind. 512 px) – ein "
 "einzelnes favicon.png reicht. Child-Theme geht vor Eltern-Theme."
 msgstr ""
+"Hotové soubory se použijí přímo: favicon.ico, favicon.svg, apple-touch-icon.png, icon-192.png, icon-512.png, "
+"site.webmanifest. Chybějící se vytvoří z největšího PNG/JPG/WebP (přednostně favicon.png, min. 512 px) – stačí jediný "
+"favicon.png. Podřízená šablona má přednost před nadřazenou."
 
 #: acf-json/group_zpt_settings_favicon.json
 msgid "Färbt in mobilen Browsern die Adressleiste (meta theme-color, Manifest). Leer = keine."
@@ -1635,6 +1638,8 @@ msgid ""
 "Mediathek = Bild hochladen und hier verwalten. Ordner im Theme = die Favicons gehören zum Theme und kommen mit ihm "
 "(wie im Baukasten 1)."
 msgstr ""
+"Knihovna médií = nahrát obrázek a spravovat ho zde. Složka v šabloně = favicony patří k šabloně a přicházejí s ní "
+"(jako v Baukasten 1)."
 
 #: acf-json/group_zpt_settings_favicon.json
 msgid ""
@@ -1667,7 +1672,7 @@ msgstr "Barva motivu"
 
 #: acf-json/group_zpt_settings_favicon.json
 msgid "assets/favicons"
-msgstr ""
+msgstr "assets/favicons"
 
 #: acf-json/group_zpt_settings_favicon.json
 msgid "iOS füllt transparente Flächen sonst schwarz. Baukasten-Farbe, Farbname oder Hex."
@@ -2176,7 +2181,7 @@ msgstr "např. primary"
 
 #: acf-json/group_zpt_settings_theme_images.json
 msgid "Baukasten: Bilder aus dem Theme"
-msgstr ""
+msgstr "Baukasten: Obrázky ze šablony"
 
 #: acf-json/group_zpt_settings_theme_images.json
 msgid ""
@@ -2184,10 +2189,13 @@ msgid ""
 "Row-Block können sie mit Quelle „Theme“ wählen. Mit Unterordnern; png, jpg, gif, webp, avif, svg. Child-Theme geht "
 "vor Eltern-Theme. Leer = keine."
 msgstr ""
+"Obrázky, které patří k šabloně a nespravují se redakčně (ilustrace, grafika). Bloky Obrázek, Karta a Řádek je mohou "
+"vybrat se zdrojem „Šablona“. Včetně podsložek; png, jpg, gif, webp, avif, svg. Podřízená šablona má přednost před "
+"nadřazenou. Prázdné = žádné."
 
 #: acf-json/group_zpt_settings_theme_images.json
 msgid "assets/img"
-msgstr ""
+msgstr "assets/img"
 
 #: acf-json/group_zpt_settings_typo_defaults.json
 msgid "12punkt (sm, copy, copy-l, l, xl, xxl, xxxl)"
@@ -3441,15 +3449,15 @@ msgstr "Zkratka „%s“ je použita vícekrát."
 #: includes/logo.php:445
 #, php-format
 msgid "Gefunden: %1$s. Fehlende Dateien werden erzeugt aus: %2$s"
-msgstr ""
+msgstr "Nalezeno: %1$s. Chybějící soubory se vytvoří z: %2$s"
 
 #: includes/logo.php:446
 msgid "Keine passenden Dateien gefunden."
-msgstr ""
+msgstr "Nebyly nalezeny žádné vhodné soubory."
 
 #: includes/logo.php:461
 msgid "Noch keine Dateien – Favicon-Bild bzw. Ordner wählen und speichern."
-msgstr ""
+msgstr "Zatím žádné soubory – vyberte obrázek favicony nebo složku a uložte."
 
 #: includes/logo.php:494
 msgid "Die Datei enthält kein gültiges SVG."
@@ -3565,7 +3573,7 @@ msgstr "Ikony"
 
 #: includes/settings.php:35
 msgid "Logo & Bilder"
-msgstr ""
+msgstr "Logo a obrázky"
 
 #: includes/settings.php:36
 msgid "Navigation"
@@ -3595,26 +3603,26 @@ msgstr "Styleguide"
 
 #: includes/theme-files.php:180
 msgid "Noch kein Ordner eingestellt: Baukasten → Logo & Bilder → Bilder aus dem Theme."
-msgstr ""
+msgstr "Zatím není nastavena žádná složka: Baukasten → Logo a obrázky → Obrázky ze šablony."
 
 #. translators: %s: Ordner im Theme
 #: includes/theme-files.php:182
 #, php-format
 msgid "Keine Bilder in „%s“ gefunden."
-msgstr ""
+msgstr "Ve složce „%s“ nebyly nalezeny žádné obrázky."
 
 #. translators: %d: Anzahl gefundener Bilder
 #: includes/theme-files.php:230
 #, php-format
 msgid "gefunden: %d Bild."
 msgid_plural "gefunden: %d Bilder."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "nalezen: %d obrázek."
+msgstr[1] "nalezeny: %d obrázky."
+msgstr[2] "nalezeno: %d obrázků."
 
 #: includes/theme-files.php:230
 msgid "keine Bilder gefunden."
-msgstr ""
+msgstr "nebyly nalezeny žádné obrázky."
 
 #: includes/typography.php:373
 msgid "Jede Stufe braucht einen Namen (a–z, 0–9, Bindestrich)."

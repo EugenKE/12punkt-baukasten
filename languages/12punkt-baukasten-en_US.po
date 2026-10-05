@@ -395,7 +395,7 @@ msgstr "Image on top"
 
 #: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_image.json acf-json/group_zpt_block_row.json
 msgid "Bild wählen …"
-msgstr ""
+msgstr "Choose image …"
 
 #: acf-json/group_zpt_block_card.json
 msgid "Bild zuerst"
@@ -427,7 +427,7 @@ msgstr "CSS text area"
 
 #: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_image.json
 msgid "Leer = aus dem Dateinamen."
-msgstr ""
+msgstr "Empty = from the file name."
 
 #: acf-json/group_zpt_block_card.json
 msgid "Link als"
@@ -436,7 +436,7 @@ msgstr "Link as"
 #: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_image.json acf-json/group_zpt_block_row.json
 #: acf-json/group_zpt_settings_favicon.json
 msgid "Mediathek"
-msgstr ""
+msgstr "Media Library"
 
 #: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_icon.json acf-json/group_zpt_block_image.json
 #: acf-json/group_zpt_block_video.json acf-json/group_zpt_settings_favicon.json
@@ -457,11 +457,11 @@ msgstr "Text first"
 
 #: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_image.json acf-json/group_zpt_block_row.json
 msgid "Theme"
-msgstr ""
+msgstr "Theme"
 
 #: acf-json/group_zpt_block_card.json acf-json/group_zpt_block_image.json acf-json/group_zpt_block_row.json
 msgid "Theme = Bild aus dem Bilder-Ordner des Themes (Illustrationen, Grafiken, die zum Theme gehören)."
-msgstr ""
+msgstr "Theme = image from the theme's image folder (illustrations, graphics that belong to the theme)."
 
 #: acf-json/group_zpt_block_card.json
 msgid "ZPT Block: Card"
@@ -856,7 +856,7 @@ msgstr "Stick to top"
 
 #: acf-json/group_zpt_block_row.json
 msgid "Quelle Hintergrundbild"
-msgstr ""
+msgstr "Background image source"
 
 #: acf-json/group_zpt_block_row.json
 msgid "Row Display"
@@ -1619,6 +1619,9 @@ msgid ""
 "site.webmanifest. Fehlende werden aus dem größten PNG/JPG/WebP erzeugt (bevorzugt favicon.png, mind. 512 px) – ein "
 "einzelnes favicon.png reicht. Child-Theme geht vor Eltern-Theme."
 msgstr ""
+"Existing files are used as they are: favicon.ico, favicon.svg, apple-touch-icon.png, icon-192.png, icon-512.png, "
+"site.webmanifest. Missing ones are generated from the largest PNG/JPG/WebP (preferably favicon.png, at least 512 px) "
+"– a single favicon.png is enough. Child theme takes precedence over parent theme."
 
 #: acf-json/group_zpt_settings_favicon.json
 msgid "Färbt in mobilen Browsern die Adressleiste (meta theme-color, Manifest). Leer = keine."
@@ -1633,6 +1636,8 @@ msgid ""
 "Mediathek = Bild hochladen und hier verwalten. Ordner im Theme = die Favicons gehören zum Theme und kommen mit ihm "
 "(wie im Baukasten 1)."
 msgstr ""
+"Media Library = upload the image and manage it here. Folder in theme = the favicons belong to the theme and come with "
+"it (as in Baukasten 1)."
 
 #: acf-json/group_zpt_settings_favicon.json
 msgid ""
@@ -1665,7 +1670,7 @@ msgstr "Theme color"
 
 #: acf-json/group_zpt_settings_favicon.json
 msgid "assets/favicons"
-msgstr ""
+msgstr "assets/favicons"
 
 #: acf-json/group_zpt_settings_favicon.json
 msgid "iOS füllt transparente Flächen sonst schwarz. Baukasten-Farbe, Farbname oder Hex."
@@ -2173,7 +2178,7 @@ msgstr "e.g. primary"
 
 #: acf-json/group_zpt_settings_theme_images.json
 msgid "Baukasten: Bilder aus dem Theme"
-msgstr ""
+msgstr "Baukasten: Images from the theme"
 
 #: acf-json/group_zpt_settings_theme_images.json
 msgid ""
@@ -2181,10 +2186,13 @@ msgid ""
 "Row-Block können sie mit Quelle „Theme“ wählen. Mit Unterordnern; png, jpg, gif, webp, avif, svg. Child-Theme geht "
 "vor Eltern-Theme. Leer = keine."
 msgstr ""
+"Images that belong to the theme and are not managed editorially (illustrations, graphics). The Image, Card and Row "
+"blocks can select them with source “Theme”. Including subfolders; png, jpg, gif, webp, avif, svg. Child theme takes "
+"precedence over parent theme. Empty = none."
 
 #: acf-json/group_zpt_settings_theme_images.json
 msgid "assets/img"
-msgstr ""
+msgstr "assets/img"
 
 #: acf-json/group_zpt_settings_typo_defaults.json
 msgid "12punkt (sm, copy, copy-l, l, xl, xxl, xxxl)"
@@ -3433,15 +3441,15 @@ msgstr "The slug “%s” is used more than once."
 #: includes/logo.php:445
 #, php-format
 msgid "Gefunden: %1$s. Fehlende Dateien werden erzeugt aus: %2$s"
-msgstr ""
+msgstr "Found: %1$s. Missing files are generated from: %2$s"
 
 #: includes/logo.php:446
 msgid "Keine passenden Dateien gefunden."
-msgstr ""
+msgstr "No matching files found."
 
 #: includes/logo.php:461
 msgid "Noch keine Dateien – Favicon-Bild bzw. Ordner wählen und speichern."
-msgstr ""
+msgstr "No files yet – choose a favicon image or folder and save."
 
 #: includes/logo.php:494
 msgid "Die Datei enthält kein gültiges SVG."
@@ -3557,7 +3565,7 @@ msgstr "Icons"
 
 #: includes/settings.php:35
 msgid "Logo & Bilder"
-msgstr ""
+msgstr "Logo & Images"
 
 #: includes/settings.php:36
 msgid "Navigation"
@@ -3587,25 +3595,25 @@ msgstr "Styleguide"
 
 #: includes/theme-files.php:180
 msgid "Noch kein Ordner eingestellt: Baukasten → Logo & Bilder → Bilder aus dem Theme."
-msgstr ""
+msgstr "No folder set yet: Baukasten → Logo & Images → Images from the theme."
 
 #. translators: %s: Ordner im Theme
 #: includes/theme-files.php:182
 #, php-format
 msgid "Keine Bilder in „%s“ gefunden."
-msgstr ""
+msgstr "No images found in “%s”."
 
 #. translators: %d: Anzahl gefundener Bilder
 #: includes/theme-files.php:230
 #, php-format
 msgid "gefunden: %d Bild."
 msgid_plural "gefunden: %d Bilder."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "found: %d image."
+msgstr[1] "found: %d images."
 
 #: includes/theme-files.php:230
 msgid "keine Bilder gefunden."
-msgstr ""
+msgstr "no images found."
 
 #: includes/typography.php:373
 msgid "Jede Stufe braucht einen Namen (a–z, 0–9, Bindestrich)."
