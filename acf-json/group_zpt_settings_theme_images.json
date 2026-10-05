@@ -1,0 +1,43 @@
+{
+    "key": "group_zpt_settings_theme_images",
+    "title": "Baukasten: Bilder aus dem Theme",
+    "display_title": "Bilder aus dem Theme",
+    "fields": [
+        {
+            "key": "field_zpt_theme_images_folder",
+            "label": "Ordner im Theme",
+            "name": "zpt_theme_images_folder",
+            "type": "text",
+            "instructions": "Bilder, die zum Theme gehören und nicht redaktionell verwaltet werden (Illustrationen, Grafiken). Bild-, Card- und Row-Block können sie mit Quelle „Theme“ wählen. Mit Unterordnern; png, jpg, gif, webp, avif, svg. Child-Theme geht vor Eltern-Theme. Leer = keine.",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "assets/img",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "zpt-logo"
+            }
+        ]
+    ],
+    "menu_order": 20,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "field",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1791195067
+}

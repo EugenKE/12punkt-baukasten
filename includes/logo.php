@@ -1,6 +1,6 @@
 <?php
 /**
- * Logo: Einstellungsseite Baukasten → Logo (Slug zpt-logo) und Ausgabe.
+ * Logo: Einstellungsseite Baukasten → Logo & Bilder (Slug zpt-logo) und Ausgabe. Box „Bilder aus dem Theme“: theme-files.php.
  *
  * Box „Logo“:
  * - Hauptlogo (zpt_logo) + Alternativtext (zpt_logo_alt, leer = Seitenname).
@@ -10,11 +10,14 @@
  * Ausgabe: zpt_logo() / zpt_logo('weiss', ['class' => 'h-px-40 w-auto', 'inline' => true]),
  *          Shortcode [zpt_logo variant="weiss" class="…" inline="1"]. Unbekannte Variante → Hauptlogo.
  *
- * Box „Favicon“:
- * - Favicon-Bild (zpt_favicon, quadratisch, mind. 512 px) → beim Speichern erzeugt nach uploads/zpt-favicon/:
- *   favicon.ico (16/32/48), apple-touch-icon.png (180, Hintergrund zpt_favicon_background), icon-192.png,
- *   icon-512.png, site.webmanifest.
- * - SVG-Favicon (zpt_favicon_svg, optional), Theme-Farbe (zpt_theme_color, <meta name="theme-color">).
+ * Box „Favicon“ – Quelle (zpt_favicon_source):
+ * - Mediathek: Favicon-Bild (zpt_favicon, quadratisch, mind. 512 px) → beim Speichern erzeugt nach
+ *   uploads/zpt-favicon/: favicon.ico (16/32/48), apple-touch-icon.png (180, Hintergrund zpt_favicon_background),
+ *   icon-192.png, icon-512.png, site.webmanifest. Dazu SVG-Favicon (zpt_favicon_svg, optional).
+ * - Ordner im Theme (zpt_favicon_folder, z. B. assets/favicons): fertige Dateien mit diesen Namen werden direkt
+ *   verwendet, fehlende aus dem größten Rasterbild erzeugt (bevorzugt favicon.png); *.svg = SVG-Favicon.
+ *   Geänderte Dateien im Theme werden beim nächsten Aufruf des Admin-Bereichs übernommen.
+ * - Theme-Farbe (zpt_theme_color, <meta name="theme-color">).
  * Ersetzt das Website-Icon aus dem Customizer (site_icon), solange ein Favicon gesetzt ist – auch im Admin
  * und auf der Login-Seite; /favicon.ico leitet WordPress auf die erzeugte Datei um.
  *
@@ -175,6 +178,8 @@ function zpt_favicon_dir(): array {
  */
 function zpt_favicon_settings(): array {
     return [
+        'source'     => get_option('options_zpt_favicon_source') === 'theme' ? 'theme' : 'media',
+        'folder'     => zpt_theme_folder((string) get_option('options_zpt_favicon_folder')),
         'image'      => (int) get_option('options_zpt_favicon'),
         'svg'        => (int) get_option('options_zpt_favicon_svg'),
         'background' => zpt_favicon_color((string) get_option('options_zpt_favicon_background')) ?: '#ffffff',
@@ -195,7 +200,7 @@ function zpt_favicon_color(string $value): string {
 }
 
 /**
- * Stand der erzeugten Dateien (Option zpt_favicon): ['key' => Fingerabdruck, 'files' => [Name => Datei], 'v' => Version].
+ * Stand der erzeugten Dateien (Option zpt_favicon): ['key' => Fingerabdruck, 'files' => [Name => URL], 'v' => Version].
  */
 function zpt_favicon_state(): array {
     $state = get_option('zpt_favicon');
@@ -203,13 +208,64 @@ function zpt_favicon_state(): array {
 }
 
 /**
- * Favicon-Dateien erzeugen, wenn sich Bild, Hintergrund, Theme-Farbe oder Seitenname geändert haben.
+ * Dateien im Favicon-Ordner des Themes, nach Rolle: ['source' => Pfad, 'favicon.ico' => Pfad, …].
+ * Fertige Dateien (favicon.ico, favicon.svg, apple-touch-icon.png, icon-192.png, icon-512.png,
+ * site.webmanifest) werden direkt verwendet; fehlende werden aus dem größten Rasterbild erzeugt
+ * (bevorzugt favicon.png). Ein einzelnes favicon.png (≥ 512 px) reicht also.
+ */
+function zpt_favicon_theme_files(string $folder): array {
+    $files = [];
+    $best  = 0;
+    foreach (zpt_theme_files($folder, ['ico', 'svg', 'png', 'jpg', 'jpeg', 'webp', 'webmanifest', 'json']) as $rel => $path) {
+        $name = strtolower(basename($rel));
+        $ext  = strtolower(pathinfo($name, PATHINFO_EXTENSION));
+        if (in_array($name, ['favicon.ico', 'apple-touch-icon.png', 'icon-192.png', 'icon-512.png'], true)) {
+            $files[$name] = $path;
+        } elseif (in_array($name, ['site.webmanifest', 'manifest.webmanifest', 'manifest.json'], true)) {
+            $files['manifest'] ??= $path;
+        } elseif ($ext === 'svg' && ($name === 'favicon.svg' || !isset($files['favicon.svg']))) {
+            $files['favicon.svg'] = $path;
+        }
+        if (in_array($ext, ['png', 'jpg', 'jpeg', 'webp'], true)) {
+            $width = zpt_image_file_size($path)[0] + ($name === 'favicon.png' ? 100000 : 0);
+            if ($width > $best) {
+                [$best, $files['source']] = [$width, $path];
+            }
+        }
+    }
+    return $files;
+}
+
+/**
+ * URL einer Datei im Theme (absoluter Pfad → URL).
+ */
+function zpt_favicon_theme_url(string $path): string {
+    foreach (zpt_theme_roots() as $dir => $url) {
+        if (str_starts_with($path, $dir . '/')) {
+            return $url . '/' . implode('/', array_map('rawurlencode', explode('/', substr($path, strlen($dir) + 1))));
+        }
+    }
+    return '';
+}
+
+/**
+ * Favicon-Dateien erzeugen, wenn sich Quelle, Bild, Theme-Dateien, Hintergrund, Theme-Farbe oder Seitenname geändert haben.
  */
 function zpt_favicon_generate(bool $force = false): void {
     $settings = zpt_favicon_settings();
-    $file     = $settings['image'] ? get_attached_file($settings['image']) : '';
-    $key      = md5(implode('|', [$file, $file ? (int) @filemtime($file) : 0, $settings['background'], $settings['theme'], $settings['svg'], get_bloginfo('name')]));
-    $state    = zpt_favicon_state();
+    $theme    = $settings['source'] === 'theme' && $settings['folder'] !== '' ? zpt_favicon_theme_files($settings['folder']) : [];
+    $file     = $settings['source'] === 'theme' ? ($theme['source'] ?? '') : ($settings['image'] ? (string) get_attached_file($settings['image']) : '');
+
+    $fingerprint = [$settings['source'], $file, $file ? (int) @filemtime($file) : 0, $settings['background'], $settings['theme'], get_bloginfo('name')];
+    if ($settings['source'] === 'theme') {
+        foreach ($theme as $path) {
+            $fingerprint[] = $path . ':' . (int) @filemtime($path);
+        }
+    } else {
+        $fingerprint[] = $settings['svg'];
+    }
+    $key   = md5(implode('|', $fingerprint));
+    $state = zpt_favicon_state();
     if (!$force && ($state['key'] ?? '') === $key) {
         return;
     }
@@ -219,38 +275,47 @@ function zpt_favicon_generate(bool $force = false): void {
         @unlink($old);
     }
 
+    // fertige Dateien aus dem Theme
     $files = [];
-    $src   = ($file && is_readable($file) && function_exists('imagecreatefromstring')) ? @imagecreatefromstring((string) file_get_contents($file)) : false;
-    if ($src && wp_mkdir_p($dir['dir'])) {
-        $ico = [];
-        foreach ([16, 32, 48] as $size) {
-            $ico[$size] = zpt_favicon_png($src, $size);
+    foreach (['favicon.ico', 'favicon.svg', 'apple-touch-icon.png', 'icon-192.png', 'icon-512.png', 'manifest'] as $name) {
+        if (isset($theme[$name])) {
+            $files[$name] = zpt_favicon_theme_url($theme[$name]);
         }
-        $png = [
-            'favicon.ico'          => zpt_favicon_ico($ico),
-            'apple-touch-icon.png' => zpt_favicon_png($src, 180, $settings['background']),
-            'icon-192.png'         => zpt_favicon_png($src, 192),
-            'icon-512.png'         => zpt_favicon_png($src, 512),
+    }
+    if ($settings['source'] === 'media' && $settings['svg'] && ($svg = wp_get_attachment_url($settings['svg']))) {
+        $files['favicon.svg'] = $svg;
+    }
+
+    // fehlende erzeugen
+    $src = ($file && is_readable($file) && function_exists('imagecreatefromstring')) ? @imagecreatefromstring((string) file_get_contents($file)) : false;
+    if ($src && wp_mkdir_p($dir['dir'])) {
+        $create = [
+            'favicon.ico'          => fn() => zpt_favicon_ico([16 => zpt_favicon_png($src, 16), 32 => zpt_favicon_png($src, 32), 48 => zpt_favicon_png($src, 48)]),
+            'apple-touch-icon.png' => fn() => zpt_favicon_png($src, 180, $settings['background']),
+            'icon-192.png'         => fn() => zpt_favicon_png($src, 192),
+            'icon-512.png'         => fn() => zpt_favicon_png($src, 512),
         ];
-        foreach ($png as $name => $data) {
-            if ($data !== '' && file_put_contents($dir['dir'] . '/' . $name, $data)) {
-                $files[$name] = $name;
+        foreach ($create as $name => $data) {
+            if (!isset($files[$name]) && ($data = $data()) !== '' && file_put_contents($dir['dir'] . '/' . $name, $data)) {
+                $files[$name] = $dir['url'] . '/' . $name;
             }
         }
+    }
 
+    if (!isset($files['manifest']) && (isset($files['icon-192.png']) || isset($files['icon-512.png']))) {
         $manifest = [
             'name'             => get_bloginfo('name'),
             'short_name'       => get_bloginfo('name'),
-            'icons'            => [
-                ['src' => $dir['url'] . '/icon-192.png', 'sizes' => '192x192', 'type' => 'image/png'],
-                ['src' => $dir['url'] . '/icon-512.png', 'sizes' => '512x512', 'type' => 'image/png'],
-            ],
+            'icons'            => array_values(array_filter([
+                isset($files['icon-192.png']) ? ['src' => $files['icon-192.png'], 'sizes' => '192x192', 'type' => 'image/png'] : null,
+                isset($files['icon-512.png']) ? ['src' => $files['icon-512.png'], 'sizes' => '512x512', 'type' => 'image/png'] : null,
+            ])),
             'theme_color'      => $settings['theme'] ?: null,
             'background_color' => $settings['background'],
             'display'          => 'browser',
         ];
-        if (file_put_contents($dir['dir'] . '/site.webmanifest', wp_json_encode(array_filter($manifest), JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE))) {
-            $files['manifest'] = 'site.webmanifest';
+        if (wp_mkdir_p($dir['dir']) && file_put_contents($dir['dir'] . '/site.webmanifest', wp_json_encode(array_filter($manifest), JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE))) {
+            $files['manifest'] = $dir['url'] . '/site.webmanifest';
         }
     }
 
@@ -304,14 +369,19 @@ function zpt_favicon_ico(array $pngs): string {
  */
 function zpt_favicon_url(string $name): string {
     $state = zpt_favicon_state();
-    return isset($state['files'][$name]) ? zpt_favicon_dir()['url'] . '/' . $state['files'][$name] . '?v=' . $state['v'] : '';
+    $file  = (string) ($state['files'][$name] ?? '');
+    if ($file === '') {
+        return '';
+    }
+    // ältere Stände speichern nur den Dateinamen im Upload-Ordner
+    return (str_contains($file, '/') ? $file : zpt_favicon_dir()['url'] . '/' . $file) . '?v=' . $state['v'];
 }
 
 /**
  * Ist ein eigenes Favicon (Bild oder SVG) gesetzt?
  */
 function zpt_has_favicon(): bool {
-    return zpt_favicon_url('favicon.ico') !== '' || (int) get_option('options_zpt_favicon_svg') > 0;
+    return zpt_favicon_url('favicon.ico') !== '' || zpt_favicon_url('favicon.svg') !== '';
 }
 
 /**
@@ -322,7 +392,7 @@ function zpt_favicon_tags(): string {
     if ($ico = zpt_favicon_url('favicon.ico')) {
         $tags[] = '<link rel="icon" href="' . esc_url($ico) . '" sizes="any">';
     }
-    if (($svg_id = (int) get_option('options_zpt_favicon_svg')) && ($svg = wp_get_attachment_url($svg_id))) {
+    if ($svg = zpt_favicon_url('favicon.svg')) {
         $tags[] = '<link rel="icon" href="' . esc_url($svg) . '" type="image/svg+xml">';
     }
     if ($apple = zpt_favicon_url('apple-touch-icon.png')) {
@@ -361,17 +431,34 @@ add_filter('get_site_icon_url', function ($url, $size) {
     return zpt_favicon_url($size <= 192 ? 'icon-192.png' : 'icon-512.png') ?: $url;
 }, 10, 2);
 
+// --- Ordner im Theme: bereinigen, Theme-Name davor, gefundene Dateien anzeigen
+add_filter('acf/update_value/key=field_zpt_favicon_folder', fn($value) => zpt_theme_folder((string) $value));
+add_filter('acf/prepare_field/key=field_zpt_favicon_folder', function ($field) {
+    $field['prepend'] = wp_get_theme()->get_stylesheet() . '/';
+    $folder = zpt_theme_folder((string) $field['value']);
+    if ($folder !== '') {
+        $found  = zpt_favicon_theme_files($folder);
+        $source = $found['source'] ?? '';
+        $files  = array_map('basename', array_diff_key($found, ['source' => 1]));
+        $field['instructions'] .= '<br>' . ($files || $source
+            /* translators: 1: gefundene Dateien, 2: Bild, aus dem fehlende Dateien erzeugt werden */
+            ? sprintf(__('Gefunden: %1$s. Fehlende Dateien werden erzeugt aus: %2$s', '12punkt-baukasten'), esc_html(implode(', ', $files) ?: '–'), esc_html($source ? basename($source) : '–'))
+            : '<strong>' . __('Keine passenden Dateien gefunden.', '12punkt-baukasten') . '</strong>');
+    }
+    return $field;
+});
+
 // --- Vorschau der erzeugten Dateien in der Box
 add_filter('acf/load_field/key=field_zpt_favicon_preview', function ($field) {
     $items = [];
-    foreach (['favicon.ico' => [32, 'favicon.ico'], 'apple-touch-icon.png' => [90, 'Apple 180 × 180'], 'icon-192.png' => [96, '192 × 192'], 'icon-512.png' => [128, '512 × 512']] as $name => [$px, $label]) {
+    foreach (['favicon.ico' => [32, 'favicon.ico'], 'favicon.svg' => [32, 'favicon.svg'], 'apple-touch-icon.png' => [90, 'Apple 180 × 180'], 'icon-192.png' => [96, '192 × 192'], 'icon-512.png' => [128, '512 × 512']] as $name => [$px, $label]) {
         if ($url = zpt_favicon_url($name)) {
             $items[] = '<figure><img src="' . esc_url($url) . '" width="' . $px . '" height="' . $px . '" alt="">' . esc_html($label) . '</figure>';
         }
     }
     $field['message'] = $items
         ? '<div class="zpt-favicon-preview">' . implode('', $items) . '</div>'
-        : __('Noch keine Dateien – Favicon-Bild wählen und speichern.', '12punkt-baukasten');
+        : __('Noch keine Dateien – Favicon-Bild bzw. Ordner wählen und speichern.', '12punkt-baukasten');
     return $field;
 });
 

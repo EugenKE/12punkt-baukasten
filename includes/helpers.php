@@ -231,8 +231,13 @@ function zpt_col_width_classes($widths): array {
 
 /**
  * Bilddaten für Komponenten (Nachfolger von get_image_details() aus dem Theme).
+ * $image_id: Attachment-ID oder Bild aus dem Theme (Pfad, theme-files.php).
  */
-function zpt_image_data(int $image_id): array {
+function zpt_image_data(int|string $image_id): array {
+    if (zpt_is_theme_image($image_id)) {
+        return zpt_theme_image_data($image_id);
+    }
+    $image_id = (int) $image_id;
     $meta = wp_get_attachment_metadata($image_id) ?: [];
     $full = wp_get_attachment_image_src($image_id, 'full');
 

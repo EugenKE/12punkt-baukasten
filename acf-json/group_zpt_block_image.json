@@ -17,13 +17,99 @@
             "endpoint": 0
         },
         {
+            "key": "field_zpt_image_image_source",
+            "label": "Quelle",
+            "name": "image_source",
+            "type": "button_group",
+            "instructions": "Theme = Bild aus dem Bilder-Ordner des Themes (Illustrationen, Grafiken, die zum Theme gehören).",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "media": "Mediathek",
+                "theme": "Theme"
+            },
+            "default_value": "media",
+            "return_format": "value",
+            "allow_null": 0,
+            "layout": "horizontal"
+        },
+        {
             "key": "field_zpt_image_image",
             "label": "Bild",
             "name": "image",
             "type": "image",
             "return_format": "array",
             "preview_size": "medium",
-            "library": "all"
+            "library": "all",
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_zpt_image_image_source",
+                        "operator": "!=",
+                        "value": "theme"
+                    }
+                ]
+            ]
+        },
+        {
+            "key": "field_zpt_image_theme_image",
+            "label": "Bild",
+            "name": "theme_image",
+            "type": "select",
+            "instructions": "",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-theme-image",
+                "id": ""
+            },
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_zpt_image_image_source",
+                        "operator": "==",
+                        "value": "theme"
+                    }
+                ]
+            ],
+            "choices": {},
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 1,
+            "ui": 1,
+            "ajax": 0,
+            "placeholder": "Bild wählen …",
+            "allow_custom": 0,
+            "search_placeholder": ""
+        },
+        {
+            "key": "field_zpt_image_theme_image_alt",
+            "label": "Alternativtext",
+            "name": "theme_image_alt",
+            "type": "text",
+            "instructions": "Leer = aus dem Dateinamen.",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_zpt_image_image_source",
+                        "operator": "==",
+                        "value": "theme"
+                    }
+                ]
+            ],
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_zpt_image_options_content",
@@ -244,5 +330,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1791110607
+    "modified": 1791195067
 }

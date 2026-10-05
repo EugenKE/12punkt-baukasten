@@ -11,7 +11,8 @@
 
 defined('ABSPATH') || exit;
 
-$image    = (int) get_field('image');
+// Quelle „Theme“: Pfad im Theme statt Attachment-ID (theme-files.php)
+$image    = get_field('image_source') === 'theme' ? (string) get_field('theme_image') : (int) get_field('image');
 $headline = (string) get_field('headline');
 $text     = (string) get_field('text');
 $link     = is_array(get_field('link')) ? get_field('link') : [];
@@ -29,6 +30,7 @@ if (get_field('source') === 'post' && ($source_post = (int) get_field('post'))) 
 
 zpt_component('card', [
     'image'        => $image,
+    'image_alt'    => get_field('image_source') === 'theme' ? (string) get_field('theme_image_alt') : '',
     'headline'     => $headline,
     'headline_tag' => get_field('headline_tag') ?: 'h3',
     'text'         => $text,

@@ -16,7 +16,10 @@ $style = [
     'background-color' => zpt_color_value(get_field('wrapper_background_color')),
 ];
 
-$image_bg = get_field('image_bg');
+// Quelle „Theme“: Bild aus dem Theme (theme-files.php)
+$image_bg = get_field('image_bg_source') === 'theme'
+    ? zpt_image_data((string) get_field('theme_image_bg') ?: 0)
+    : get_field('image_bg');
 if (!empty($image_bg['url'])) {
     $style['background-image'] = 'url(' . esc_url($image_bg['url']) . ')';
 }

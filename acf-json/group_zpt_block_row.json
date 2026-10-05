@@ -143,13 +143,73 @@
             "default_value": ""
         },
         {
+            "key": "field_zpt_row_image_bg_source",
+            "label": "Quelle Hintergrundbild",
+            "name": "image_bg_source",
+            "type": "button_group",
+            "instructions": "Theme = Bild aus dem Bilder-Ordner des Themes (Illustrationen, Grafiken, die zum Theme gehören).",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "media": "Mediathek",
+                "theme": "Theme"
+            },
+            "default_value": "media",
+            "return_format": "value",
+            "allow_null": 0,
+            "layout": "horizontal"
+        },
+        {
             "key": "field_zpt_row_image_bg",
             "label": "Hintergrundbild",
             "name": "image_bg",
             "type": "image",
             "return_format": "array",
             "preview_size": "medium",
-            "library": "all"
+            "library": "all",
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_zpt_row_image_bg_source",
+                        "operator": "!=",
+                        "value": "theme"
+                    }
+                ]
+            ]
+        },
+        {
+            "key": "field_zpt_row_theme_image_bg",
+            "label": "Hintergrundbild",
+            "name": "theme_image_bg",
+            "type": "select",
+            "instructions": "",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-theme-image",
+                "id": ""
+            },
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_zpt_row_image_bg_source",
+                        "operator": "==",
+                        "value": "theme"
+                    }
+                ]
+            ],
+            "choices": {},
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 1,
+            "ui": 1,
+            "ajax": 0,
+            "placeholder": "Bild wählen …",
+            "allow_custom": 0,
+            "search_placeholder": ""
         },
         {
             "key": "field_zpt_row_video_bg",
@@ -320,5 +380,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1791113402
+    "modified": 1791195067
 }

@@ -5,7 +5,8 @@
  * Override im Theme: zpt-baukasten/components/image.php
  *
  * @var array $args {
- *     @type int    $image_id
+ *     @type int|string $image_id  Attachment-ID oder Bild aus dem Theme (Pfad relativ zum Theme, theme-files.php).
+ *     @type string $alt              Alternativtext, nur bei Bild aus dem Theme (leer = aus dem Dateinamen).
  *     @type bool   $photoswipe
  *     @type string $figure_classes
  *     @type string $container_classes
@@ -30,7 +31,15 @@ if (empty($args['image_id'])):
     return;
 endif;
 
-$image = zpt_image_data($args['image_id']);
+$image = zpt_is_theme_image($args['image_id'])
+    ? zpt_theme_image_data($args['image_id'], (string) ($args['alt'] ?? ''))
+    : zpt_image_data((int) $args['image_id']);
+if (!$image):
+    if (!empty($args['is_preview'])):
+        echo '<div class="zpt-placeholder">' . esc_html(sprintf('Bild „%s“ nicht im Theme gefunden.', $args['image_id'])) . '</div>';
+    endif;
+    return;
+endif;
 
 // Im Editor kein Photoswipe-Link, sonst öffnet ein Klick das Bild statt den Block auszuwählen
 $photoswipe = !empty($args['photoswipe']) && empty($args['is_preview']);
@@ -40,7 +49,7 @@ $caption_source = ($args['caption_source'] ?? '') ?: 'caption_none';
 $caption        = '';
 if ($caption_source === 'caption_local'):
     $caption = $args['caption_local'] ?? '';
-elseif ($caption_source === 'caption_media_wysiwyg' && function_exists('get_field')):
+elseif ($caption_source === 'caption_media_wysiwyg' && $image['ID'] && function_exists('get_field')):
     $caption = apply_filters('the_content', get_field('caption_wysiwyg', $image['ID']) ?: '');
 elseif ($caption_source === 'caption_media'):
     $caption = esc_html($image['caption']);
@@ -55,7 +64,7 @@ $figure_attrs['class'] = zpt_class_list(
     $caption_source !== 'caption_none' ? 'has-caption' : ''
 );
 
-$img_html = wp_get_attachment_image($image['ID'], $args['size'] ?? 'large', false, [
+$img_html = zpt_image_html($image['ID'] ?: $args['image_id'], $args['size'] ?? 'large', [
     'class' => implode(' ', zpt_class_list(
         !$photoswipe ? 'preload' : '',
         ($args['img_classes'] ?? '') ?: 'img-fluid w-100',

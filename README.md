@@ -11,10 +11,10 @@ Bringt Bootstrap 5.3 (CSS + JS), Grid-Erweiterungen, Spacing-/Typo-Utilities, Ic
 | `zpt/column`   | Spalte `.zpt-col col-*`: Breite pro Breakpoint, Klassen, randabfallend, Schrift (Rolle, Größe, Gewicht, Ausrichtung, Farbe), Hintergrund. Enthält eine oder mehrere Komponenten |
 | `zpt/headline` | Komponente (nur in einer Spalte)                                        |
 | `zpt/text`     | dto.                                                                    |
-| `zpt/image`    | dto., optional Photoswipe                                               |
+| `zpt/image`    | dto., optional Photoswipe. Quelle **Mediathek** oder **Theme** (Bild aus dem Bilder-Ordner des Themes, s. Logo & Bilder) |
 | `zpt/button`   | dto., ein oder mehrere Buttons/Links (Repeater): Link, Stil, Größe je Breakpoint (XS–XXL untereinander, leer = wie kleiner → `.btn-sm .btn-md-lg`), Icon (Icon-Auswahl, s. Icons) vor/nach dem Text; Ausrichtung (links/zentriert/rechts/verteilt). Stil: sind unter Baukasten → Buttons Varianten angelegt, nur diese, sonst Button/Outline je Farbe – dazu immer `.btn-link`, `.link-further`, Link. Kein Template (kommt über die Variante), keine Schrift (Baukasten → Buttons). Stile erweiterbar: Filter `zpt/button/styles` |
 | `zpt/gallery`  | dto., Bilder als **Kacheln**, **Masonry** oder **Karussell** (Bootstrap-Carousel: Pfeile, Punkte, automatisch weiter, überblenden). Raster „pro Reihe“ je Breakpoint → `.row-cols-*`, Abstand → `.g-*`. Photoswipe, Bildunterschrift aus der Mediathek, Bildgröße, Seitenverhältnis (zugeschnitten) |
-| `zpt/card`     | dto., Bootstrap-Card: Bild, Überschrift, Text, Link. Quelle eigener Inhalt oder **Beitrag/Seite** (Teaser: Beitragsbild, Titel, Auszug, Link – eigene Angaben gehen vor). Bild oben oder nebeneinander 50/50 bzw. 40/60 (ab MD), Reihenfolge, Link als Button (Stil wie Button-Block) und/oder ganze Card klickbar |
+| `zpt/card`     | dto., Bootstrap-Card: Bild, Überschrift, Text, Link. Quelle eigener Inhalt oder **Beitrag/Seite** (Teaser: Beitragsbild, Titel, Auszug, Link – eigene Angaben gehen vor). Bild oben oder nebeneinander 50/50 bzw. 40/60 (ab MD), Reihenfolge, Link als Button (Stil wie Button-Block) und/oder ganze Card klickbar. Bild aus Mediathek oder Theme |
 | `zpt/accordion`| dto., Bootstrap-Akkordeon: Einträge (Titel + Text), beim Laden offen (erster/keiner/alle), mehrere gleichzeitig offen, ohne Rahmen, Titel-Tag |
 | `zpt/icon`     | dto., Icon aus den Icon-Sets (Icon-Auswahl, s. Einstellungen → Icons) oder SVG-Code (bereinigt: nur SVG-Elemente, keine Skripte/Ereignisse – `zpt_sanitize_svg()`), optional verlinkt, Größe (sonst Schriftgröße), Beschriftung für Screenreader |
 | `zpt/video`    | dto., YouTube (`youtube-nocookie.com`) / Vimeo (`dnt=1`) – erst **nach Klick** geladen (Vorschaubild + Hinweis, `assets/js/video.js`), oder eigene Datei (Steuerung, Autoplay stumm/Schleife). Seitenverhältnis 16:9, 4:3, 1:1, 21:9, 9:16 |
@@ -119,7 +119,7 @@ Bootstrap (logische Seiten `s`/`e` statt `l`/`r`, Breakpoint vor dem Wert):
 Achtung: Bootstraps `.mb-1` … `.mb-4` gibt es nicht mehr, `.m-5` ist 5px (nicht 3rem).
 Skala ändern (eigener Build): `$zpt-spacer-step`, `$zpt-spacer-count` bzw. `$spacers`.
 
-## Einstellungen (Menü „Baukasten“ → Farben, Typografie, Elemente, Buttons, Icons, Logo, Layout, Meta Infos, Import / Export)
+## Einstellungen (Menü „Baukasten“ → Farben, Typografie, Elemente, Buttons, Icons, Logo & Bilder, Layout, Meta Infos, Import / Export)
 
 - **Farben → Tab „Einstellungen“**: Shade-Skala (Repeater `zpt_shade_scale`: Name, Mischen aufhellen/Grundfarbe/
   abdunkeln, Anteil in %), Reihenfolge hell → dunkel, genau eine Grundfarbe. Vorlagen (`ZPT_SHADE_PRESETS`):
@@ -234,18 +234,29 @@ Skala ändern (eigener Build): `$zpt-spacer-step`, `$zpt-spacer-count` bzw. `$sp
     Gespeichert wird ein Kürzel: `bi:arrow-right`, `fa-solid:house`, `fa-brands:github`, `mi-outlined:home`, `svg:kamera`
     (ohne „:“ = Bootstrap, alte Werte). Ausgabe: `zpt_icon('fa-solid:house')` – leer, wenn das Set nicht geladen ist.
     Icons sind so groß wie die Schrift (`.zpt-svg-icon`, `.zpt-mi`). Code: `includes/icons.php`.
-- **Logo** (zwei Boxen; beim Export standardmäßig nicht angehakt, da Mediathek-IDs seitenspezifisch):
+- **Logo & Bilder** (Slug `zpt-logo`, drei Boxen; beim Export standardmäßig nicht angehakt, da Mediathek-IDs seitenspezifisch):
   - *Logo*: Hauptlogo (`zpt_logo`, SVG/PNG/JPG/WebP; leer = Logo aus dem Customizer), Alternativtext (leer = Seitenname),
     Repeater **Varianten** (`zpt_logo_variants`: Name, Kürzel – leer = aus dem Namen, „Weiß“ → `weiss`, eindeutig –, Bild).
     Ausgabe: `zpt_logo()`, `zpt_logo('weiss', ['class' => 'h-px-40 w-auto', 'inline' => true])` (SVG inline, bereinigt),
     Shortcode `[zpt_logo variant="weiss" class="…" inline="1"]`; Klassen `.zpt-logo .zpt-logo-{kürzel}`. Unbekannte
     Variante → Hauptlogo. Daten: `zpt_logos()`, `zpt_logo_id()`, Filter `zpt/logos`. Das Theme nimmt `zpt_logo()` im Header.
-  - *Favicon*: Bild (`zpt_favicon`, quadratisch, mind. 512 px) → erzeugt in `uploads/zpt-favicon/`: `favicon.ico`
+  - *Favicon*: Quelle (`zpt_favicon_source`) **Mediathek** oder **Ordner im Theme**.
+    Mediathek: Bild (`zpt_favicon`, quadratisch, mind. 512 px) → erzeugt in `uploads/zpt-favicon/`: `favicon.ico`
     (16/32/48, PNG im ICO), `apple-touch-icon.png` (180, auf Hintergrundfarbe `zpt_favicon_background`, Standard weiß),
     `icon-192.png`, `icon-512.png`, `site.webmanifest`. Neu erzeugt, sobald sich Bild, Farben oder Seitenname ändern
     (Fingerabdruck, geprüft bei `admin_init`; Stand in Option `zpt_favicon`). Optional SVG-Favicon (`zpt_favicon_svg`),
     Theme-Farbe (`zpt_theme_color` → `<meta name="theme-color">`). Ersetzt das Website-Icon von WordPress
     (`wp_site_icon`) in Frontend, Admin und Login; `/favicon.ico` leitet auf die erzeugte Datei um.
+    Ordner im Theme (`zpt_favicon_folder`, Standard `assets/favicons`, Child- vor Eltern-Theme): fertige Dateien
+    `favicon.ico`, `favicon.svg` (sonst erstes `*.svg`), `apple-touch-icon.png`, `icon-192.png`, `icon-512.png`,
+    `site.webmanifest` werden direkt verlinkt, fehlende aus dem größten PNG/JPG/WebP erzeugt (bevorzugt `favicon.png`) –
+    ein einzelnes `favicon.png` reicht. Geänderte Theme-Dateien greifen beim nächsten Aufruf des Admin-Bereichs.
+  - *Bilder aus dem Theme*: Ordner (`zpt_theme_images_folder`, z. B. `assets/img`, mit Unterordnern; png/jpg/gif/webp/avif/svg)
+    für Illustrationen und Grafiken, die zum Theme gehören. Bild-, Card- und Row-Block (Hintergrundbild) haben eine
+    **Quelle Mediathek / Theme**; mit Theme eine Auswahl mit Vorschau (Feld mit Wrapper-Klasse `zpt-theme-image`),
+    gespeichert als Pfad relativ zum Theme (`assets/img/illustrationen/sonne.svg`), plus Alternativtext (leer = aus dem
+    Dateinamen). Ausgabe als `<img>` mit Breite/Höhe, ohne srcset. Helfer: `zpt_theme_file()`, `zpt_theme_files()`,
+    `zpt_image_data()` / `zpt_image_html()` nehmen Attachment-ID oder Pfad. Code: `includes/theme-files.php`.
   - **SVG-Upload**: Administratoren dürfen SVG in die Mediathek laden; die Datei wird beim Hochladen mit
     `zpt_sanitize_svg()` bereinigt, Maße aus `width`/`height`/`viewBox` in den Metadaten, Vorschau in Mediathek/ACF,
     `wp_get_attachment_image()` funktioniert. Abschalten: `add_filter('zpt/svg_upload', '__return_false');`.

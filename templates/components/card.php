@@ -4,7 +4,8 @@
  * Override im Theme: zpt-baukasten/components/card.php
  *
  * @var array $args {
- *     @type int    $image        Attachment-ID (0 = ohne Bild).
+ *     @type int|string $image    Attachment-ID oder Bild aus dem Theme (Pfad), 0/'' = ohne Bild.
+ *     @type string $image_alt    Alternativtext (nur Bild aus dem Theme, leer = aus dem Dateinamen).
  *     @type string $headline
  *     @type string $headline_tag h2 … h6, p.
  *     @type string $text         Formatierter Text.
@@ -22,7 +23,7 @@
 
 defined('ABSPATH') || exit;
 
-$image    = (int) ($args['image'] ?? 0);
+$image    = zpt_is_theme_image($args['image'] ?? 0) ? $args['image'] : (int) ($args['image'] ?? 0);
 $headline = (string) ($args['headline'] ?? '');
 $text     = (string) ($args['text'] ?? '');
 $link     = $args['link'] ?? [];
@@ -55,6 +56,7 @@ ob_start();
 if ($image) {
     zpt_component('image', [
         'image_id'          => $image,
+        'alt'               => (string) ($args['image_alt'] ?? ''),
         'container_classes' => zpt_ratio_classes((string) ($args['ratio'] ?? '')),
         'img_classes'       => 'img-fluid w-100' . ($horizontal ? ' h-100 object-fit-cover' : ''),
         'attrs'             => ['class' => ['mb-0', 'zpt-card-image', $horizontal ? 'h-100' : '']],

@@ -32,7 +32,7 @@ function zpt_settings_subpages(): array {
         'zpt-elements'   => __('Elemente', '12punkt-baukasten'),
         'zpt-buttons'    => __('Buttons', '12punkt-baukasten'),
         'zpt-icons'      => __('Icons', '12punkt-baukasten'),
-        'zpt-logo'       => __('Logo', '12punkt-baukasten'),
+        'zpt-logo'       => __('Logo & Bilder', '12punkt-baukasten'),
         'zpt-navigation' => __('Navigation', '12punkt-baukasten'),
         'zpt-layout'     => __('Layout', '12punkt-baukasten'),
         'zpt-meta'       => __('Meta Infos', '12punkt-baukasten'),

@@ -9,7 +9,9 @@
 
 defined('ABSPATH') || exit;
 
-$image   = get_field('image');
+// Quelle „Theme“: Pfad im Theme statt Attachment-ID (theme-files.php)
+$theme   = get_field('image_source') === 'theme';
+$image   = $theme ? (string) get_field('theme_image') : (int) (get_field('image')['ID'] ?? 0);
 // Felder aus „ZPT Template: Bild-Einstellungen“, als Einzel-Klone auf die Bereiche Inhalt und Bildunterschrift verteilt
 $options = [];
 foreach (['add_to_photoswipe', 'css_figure', 'css_image_container', 'css_image', 'image_caption_source', 'caption_overwrite_local', 'css_image_caption'] as $name) {
@@ -25,7 +27,8 @@ if ($photoswipe) {
 }
 
 zpt_component('image', [
-    'image_id'          => (int) ($image['ID'] ?? 0),
+    'image_id'          => $image,
+    'alt'               => $theme ? (string) get_field('theme_image_alt') : '',
     'photoswipe'        => $photoswipe,
     'figure_classes'    => $options['css_figure'] ?? '',
     'container_classes' => $options['css_image_container'] ?? '',

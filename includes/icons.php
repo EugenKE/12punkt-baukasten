@@ -131,8 +131,7 @@ function zpt_icon(string $token, array $classes = []): string {
  * Ordner im Theme bereinigen: relativ, ohne „..“, ohne Schrägstriche außen.
  */
 function zpt_icon_svg_folder(string $folder): string {
-    $folder = trim(str_replace('\\', '/', $folder), "/ \t");
-    return preg_match('~(^|/)\.\.(/|$)~', $folder) ? '' : $folder;
+    return zpt_theme_folder($folder);
 }
 
 /**
