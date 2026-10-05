@@ -4,6 +4,11 @@ Neue Version: Version in `12punkt-baukasten.php` (Header + `ZPT_VERSION`) und `p
 hier eintragen, committen, Tag `vX.Y.Z` setzen und pushen – Sites mit Update-Checker zeigen dann das Update.
 Vermerken, wenn Inhalte/Einstellungen angepasst werden müssen.
 
+## 0.4.0 – 2026-10-05
+- Video-Block: Schalter „Datenschutz-Hinweis anzeigen“ (Darstellung, nur YouTube/Vimeo). Aus = Hinweis und
+  Titel nur für Screenreader; das Video lädt weiterhin erst nach Klick.
+- Abwärtskompatibel: neues Feld, Standard an – bestehende Videos unverändert.
+
 ## 0.3.1 – 2026-10-05
 - Video-Komponente: Hinweistext „Video abspielen – dabei werden Daten an … übertragen.“ im Frontend
   übersetzbar (Sprache der Website).
