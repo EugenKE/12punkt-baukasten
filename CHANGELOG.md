@@ -4,6 +4,11 @@ Neue Version: Version in `12punkt-baukasten.php` (Header + `ZPT_VERSION`) und `p
 hier eintragen, committen, Tag `vX.Y.Z` setzen und pushen – Sites mit Update-Checker zeigen dann das Update.
 Vermerken, wenn Inhalte/Einstellungen angepasst werden müssen.
 
+## 0.4.1 – 2026-10-05
+- Video-Block ohne Datenschutz-Hinweis: Vorschaubild des Anbieters (YouTube/Vimeo), wenn kein eigenes gesetzt ist –
+  einmalig vom Server geholt und in `uploads/zpt-video/` gespeichert, Besucher laden es von der eigenen Site.
+  Bild nicht abgedunkelt.
+
 ## 0.4.0 – 2026-10-05
 - Video-Block: Schalter „Datenschutz-Hinweis anzeigen“ (Darstellung, nur YouTube/Vimeo). Aus = Hinweis und
   Titel nur für Screenreader; das Video lädt weiterhin erst nach Klick.
