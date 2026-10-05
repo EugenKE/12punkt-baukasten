@@ -385,3 +385,20 @@ npm run i18n:build  # .po → .mo (PHP, ACF, block.json) und .json (JS)
 - Neues Skript mit Texten: Handle in `ZPT_I18N_SCRIPTS` (`includes/i18n.php`) eintragen.
 - Im ACF-Feldgruppen-Editor wird nicht übersetzt, damit beim Speichern deutsche Texte im `acf-json/` bleiben.
 - Die Sprache richtet sich nach der Profilsprache des Benutzers (Admin) bzw. der Website-Sprache (Frontend, z. B. Styleguide).
+
+### Versionen und Updates
+
+Repo: `git@github.com:EugenKE/12punkt-baukasten.git` (Branch `main`). Änderungen je Version in `CHANGELOG.md`.
+
+Neue Version veröffentlichen:
+
+1. Version in `12punkt-baukasten.php` (Header `Version` und `ZPT_VERSION`) und `package.json` hochsetzen, `CHANGELOG.md` ergänzen.
+2. Committen, Tag setzen, pushen: `git tag v0.4.0 && git push origin main --tags`.
+
+Sites mit dem Plugin (ohne `.git` im Plugin-Ordner) prüfen alle 12 Stunden bzw. unter Dashboard → Aktualisierungen
+das Repo (Bibliothek *Plugin Update Checker*, `vendor/plugin-update-checker/`, Code: `includes/updater.php`) und bieten
+das neueste Tag als Update an. Das Paket ist das Tag-Archiv von GitHub, ohne die Pfade mit `export-ignore` in
+`.gitattributes` (`scss/`, `bin/`, `package*.json`) – die gebaute `assets/css/zpt.css` muss also mit committet sein.
+Solange das Repo privat ist, braucht jede Site einen GitHub-Token mit Leserecht in der `wp-config.php`:
+`define('ZPT_GITHUB_TOKEN', '…');`. Update-Paket von Hand: `git archive --prefix=12punkt-baukasten/ -o 12punkt-baukasten.zip v0.4.0`
+(in WordPress unter Plugins → Installieren → Plugin hochladen, „Aktuelle Version ersetzen“).

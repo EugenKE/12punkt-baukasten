@@ -1,0 +1,7 @@
+# Nicht im Update-Paket (Tag-Archiv von GitHub) – nur für die Entwicklung
+/scss export-ignore
+/bin export-ignore
+/package.json export-ignore
+/package-lock.json export-ignore
+/.gitignore export-ignore
+/.gitattributes export-ignore
