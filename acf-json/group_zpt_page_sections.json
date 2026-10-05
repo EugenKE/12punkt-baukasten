@@ -1,0 +1,49 @@
+{
+    "key": "group_zpt_page_sections",
+    "title": "Sektionen",
+    "fields": [
+        {
+            "key": "field_zpt_page_sections",
+            "label": "Sektionen",
+            "name": "sections",
+            "type": "relationship",
+            "instructions": "Sektionen in der Reihenfolge der Ausgabe. Sektionen bearbeiten: Menü „Sektionen“.",
+            "post_type": [
+                "section"
+            ],
+            "post_status": [
+                "publish"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search"
+            ],
+            "elements": [
+                "featured_image"
+            ],
+            "min": "",
+            "max": "",
+            "return_format": "id",
+            "bidirectional": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "tmpl-sections_page.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1791110220
+}

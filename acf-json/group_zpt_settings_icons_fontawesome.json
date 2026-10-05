@@ -1,0 +1,101 @@
+{
+    "key": "group_zpt_settings_icons_fontawesome",
+    "title": "Baukasten: Icons – Font Awesome",
+    "display_title": "Font Awesome",
+    "fields": [
+        {
+            "key": "field_zpt_icons_fontawesome",
+            "label": "Font Awesome laden",
+            "name": "zpt_icons_fontawesome",
+            "type": "true_false",
+            "instructions": "Font Awesome Free 7, Übersicht: <a href=\"https://fontawesome.com/search?ic=free\" target=\"_blank\">fontawesome.com/search</a>. Wird lokal aus dem Plugin geladen.",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_zpt_icons_fontawesome_styles",
+            "label": "Stile",
+            "name": "zpt_icons_fontawesome_styles",
+            "type": "checkbox",
+            "instructions": "Nur gewählte Stile werden geladen und in der Icon-Auswahl angeboten (je ca. 100 KB).",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "solid": "Solid (fa-solid)",
+                "regular": "Regular (fa-regular)",
+                "brands": "Brands (fa-brands)"
+            },
+            "default_value": [
+                "solid",
+                "brands"
+            ],
+            "return_format": "value",
+            "layout": "vertical",
+            "toggle": 0,
+            "allow_custom": 0,
+            "save_custom": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_zpt_icons_fontawesome",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ]
+        },
+        {
+            "key": "field_zpt_icons_fontawesome_css",
+            "label": "Eigene CSS-URL",
+            "name": "zpt_icons_fontawesome_css",
+            "type": "url",
+            "instructions": "Optional, z. B. für Font Awesome Pro: CSS-Datei, die statt der mitgelieferten Free-Version geladen wird. Externe Adressen beachten (Datenschutz) – besser eine Datei im Theme.",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "https://…/css/all.min.css",
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_zpt_icons_fontawesome",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "zpt-icons"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1791020308
+}

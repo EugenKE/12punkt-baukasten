@@ -1,0 +1,55 @@
+// =============================================================================
+// 12punkt Baukasten – zusätzliche Utilities (Bootstrap Utility API, erzeugt kein CSS)
+//
+// Ersetzt die früheren Klassen aus baukasten/_spacings.scss:
+//   .w-{0…100} in 5er-Schritten (%), responsiv: .w-md-50
+//   .h-vh-{0…100} in 10er-Schritten, responsiv: .h-vh-md-50
+//   .h-px-{0…500} in 10er-Schritten, responsiv: .h-px-lg-300
+//   .fw-100 … .fw-900 (zusätzlich zu .fw-light, .fw-bold …)
+// Abstände (.mt-20, .px-md-40, .mt-n20 …) kommen über $spacers (siehe _config.scss).
+// =============================================================================
+
+$zpt-width-percent: ();
+@for $i from 0 through 20 {
+    $zpt-width-percent: map-merge($zpt-width-percent, ($i * 5: $i * 5%));
+}
+
+$zpt-height-vh: ();
+@for $i from 0 through 10 {
+    $zpt-height-vh: map-merge($zpt-height-vh, ($i * 10: $i * 10vh));
+}
+
+$zpt-height-px: ();
+@for $i from 0 through 50 {
+    $zpt-height-px: map-merge($zpt-height-px, ($i * 10: $i * 10px));
+}
+
+$zpt-width-utility: map-get($utilities, "width");
+$zpt-font-weight-utility: map-get($utilities, "font-weight");
+
+$zpt-font-weights: ();
+@for $i from 1 through 9 {
+    $zpt-font-weights: map-merge($zpt-font-weights, ($i * 100: $i * 100));
+}
+
+$utilities: map-merge($utilities, (
+    "width": map-merge($zpt-width-utility, (
+        responsive: true,
+        values: map-merge(map-get($zpt-width-utility, "values"), $zpt-width-percent),
+    )),
+    "font-weight": map-merge($zpt-font-weight-utility, (
+        values: map-merge(map-get($zpt-font-weight-utility, "values"), $zpt-font-weights),
+    )),
+    "zpt-height-vh": (
+        property: height,
+        class: h-vh,
+        responsive: true,
+        values: $zpt-height-vh,
+    ),
+    "zpt-height-px": (
+        property: height,
+        class: h-px,
+        responsive: true,
+        values: $zpt-height-px,
+    ),
+));

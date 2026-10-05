@@ -1,0 +1,141 @@
+{
+    "key": "group_zpt_settings_typo_roles",
+    "title": "Baukasten: Rollen",
+    "display_title": "Rollen",
+    "fields": [
+        {
+            "key": "field_zpt_settings_font_families_info",
+            "label": "",
+            "name": "",
+            "type": "message",
+            "parent": "group_zpt_settings_typo_roles",
+            "message": "Welche Schrift für welche Rolle (Auswahl aus „Schriftschnitte & Maße“, nach Änderungen dort erst speichern). Leer = Standard. Grundschrift gilt für die ganze Seite; Klassen .font-sans-serif, .font-serif, .font-style-deco, .font-mono.",
+            "new_lines": "",
+            "esc_html": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "key": "field_zpt_settings_font_family_base",
+            "label": "Grundschrift",
+            "name": "zpt_font_families_base",
+            "type": "select",
+            "instructions": "",
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "choices": {},
+            "default_value": "",
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "placeholder": "Standard",
+            "parent": "group_zpt_settings_typo_roles"
+        },
+        {
+            "key": "field_zpt_settings_font_family_sans_serif",
+            "label": "Sans-Serif",
+            "name": "zpt_font_families_sans_serif",
+            "type": "select",
+            "instructions": "",
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "choices": {},
+            "default_value": "",
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "placeholder": "Standard",
+            "parent": "group_zpt_settings_typo_roles"
+        },
+        {
+            "key": "field_zpt_settings_font_family_serif",
+            "label": "Serif",
+            "name": "zpt_font_families_serif",
+            "type": "select",
+            "instructions": "",
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "choices": {},
+            "default_value": "",
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "placeholder": "Standard",
+            "parent": "group_zpt_settings_typo_roles"
+        },
+        {
+            "key": "field_zpt_settings_font_family_deco",
+            "label": "Deko",
+            "name": "zpt_font_families_deco",
+            "type": "select",
+            "instructions": "",
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "choices": {},
+            "default_value": "",
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "placeholder": "Standard",
+            "parent": "group_zpt_settings_typo_roles"
+        },
+        {
+            "key": "field_zpt_settings_font_family_mono",
+            "label": "Mono",
+            "name": "zpt_font_families_mono",
+            "type": "select",
+            "instructions": "",
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "choices": {},
+            "default_value": "",
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "placeholder": "Standard",
+            "parent": "group_zpt_settings_typo_roles"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "zpt-typography"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Typografie: Zuordnung Schrift → Rolle (Grundschrift, Serif …).",
+    "show_in_rest": 0,
+    "modified": 1790929794
+}

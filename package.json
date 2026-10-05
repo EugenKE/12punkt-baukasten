@@ -1,0 +1,25 @@
+{
+  "name": "12punkt-baukasten",
+  "version": "0.1.0",
+  "private": true,
+  "description": "12punkt Baukasten – Bootstrap-basiertes Layout-System als ACF-Blocks",
+  "scripts": {
+    "build": "npm run build:css && npm run copy:vendor && npm run build:icons",
+    "build:css": "sass scss/zpt.scss assets/css/zpt.css --load-path=node_modules --style=compressed --no-source-map --no-charset --quiet-deps --silence-deprecation=import,global-builtin,color-functions",
+    "watch": "sass scss/zpt.scss assets/css/zpt.css --load-path=node_modules --watch --no-charset --quiet-deps --silence-deprecation=import,global-builtin,color-functions",
+    "copy:vendor": "mkdir -p assets/vendor && cp node_modules/bootstrap/dist/js/bootstrap.bundle.min.js assets/vendor/",
+    "build:acf": "php bin/build-acf-elements.php",
+    "build:icons": "node bin/build-icons.js",
+    "i18n:pot": "php bin/build-i18n.php pot",
+    "i18n:build": "php bin/build-i18n.php build"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.3.1",
+    "bootstrap": "^5.3.8",
+    "bootstrap-icons": "^1.13.1",
+    "material-icons": "^1.13.14"
+  },
+  "devDependencies": {
+    "sass": "1.93.2"
+  }
+}

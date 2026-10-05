@@ -1,0 +1,79 @@
+{
+    "key": "group_zpt_settings_icons_material",
+    "title": "Baukasten: Icons – Material Icons",
+    "display_title": "Material Icons",
+    "fields": [
+        {
+            "key": "field_zpt_icons_material",
+            "label": "Material Icons laden",
+            "name": "zpt_icons_material",
+            "type": "true_false",
+            "instructions": "Google Material Icons, Übersicht: <a href=\"https://fonts.google.com/icons?icon.set=Material+Icons\" target=\"_blank\">fonts.google.com/icons</a>. Wird lokal aus dem Plugin geladen (nicht von Google).",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_zpt_icons_material_styles",
+            "label": "Stile",
+            "name": "zpt_icons_material_styles",
+            "type": "checkbox",
+            "instructions": "Nur gewählte Stile werden geladen und in der Icon-Auswahl angeboten (je ca. 150 KB).",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "filled": "Filled",
+                "outlined": "Outlined",
+                "round": "Round",
+                "sharp": "Sharp",
+                "two-tone": "Two Tone"
+            },
+            "default_value": [
+                "filled"
+            ],
+            "return_format": "value",
+            "layout": "horizontal",
+            "toggle": 0,
+            "allow_custom": 0,
+            "save_custom": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_zpt_icons_material",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "zpt-icons"
+            }
+        ]
+    ],
+    "menu_order": 2,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1791020308
+}

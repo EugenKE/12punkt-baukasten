@@ -1,0 +1,344 @@
+{
+    "key": "group_zpt_settings_style",
+    "title": "Baukasten: Farben",
+    "display_title": "Farben",
+    "fields": [
+        {
+            "key": "field_zpt_settings_colors_tab_settings",
+            "label": "Einstellungen",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_zpt_settings_shade_preset",
+            "label": "Vorlage",
+            "name": "zpt_shade_preset",
+            "type": "select",
+            "instructions": "Lädt die Shades der Vorlage in die Tabelle, danach anpassbar (wird dann zu „Eigene“). Nach dem Speichern zeigt der Tab „Farbpalette“ die neuen Shades.",
+            "required": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "bootstrap": "Bootstrap (100–900)",
+                "tailwind": "Tailwind (50–950)",
+                "simple": "Simple (light, base, dark)",
+                "custom": "Eigene"
+            },
+            "default_value": "bootstrap",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_zpt_settings_shade_scale",
+            "label": "Shades",
+            "name": "zpt_shade_scale",
+            "type": "repeater",
+            "instructions": "Reihenfolge hell → dunkel. Name = Endung der Klassen und Variablen (.bg-primary-300, --theme-primary-light). Genau ein Shade ist die Grundfarbe; die anderen werden aus ihr berechnet: aufhellen = mit Weiß mischen, abdunkeln = mit Schwarz mischen.",
+            "required": 0,
+            "wrapper": {
+                "width": "",
+                "class": "zpt-shade-scale",
+                "id": ""
+            },
+            "layout": "table",
+            "min": 1,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Shade hinzufügen",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_zpt_settings_shade_scale_name",
+                    "label": "Name",
+                    "name": "name",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "z. B. 300 oder light",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": 20
+                },
+                {
+                    "key": "field_zpt_settings_shade_scale_type",
+                    "label": "Mischen",
+                    "name": "type",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 1,
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "tint": "aufhellen (mit Weiß)",
+                        "base": "Grundfarbe",
+                        "shade": "abdunkeln (mit Schwarz)"
+                    },
+                    "default_value": "tint",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_zpt_settings_shade_scale_amount",
+                    "label": "Anteil",
+                    "name": "amount",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_zpt_settings_shade_scale_type",
+                                "operator": "!=",
+                                "value": "base"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "min": 0,
+                    "max": 100,
+                    "step": 1,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "%"
+                }
+            ]
+        },
+        {
+            "key": "field_zpt_settings_colors_tab_palette",
+            "label": "Farbpalette",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_zpt_settings_palette",
+            "label": "Farbpalette",
+            "name": "zpt_palette",
+            "type": "repeater",
+            "instructions": "Eigene Farben: Name (Kleinbuchstaben, Ziffern, Bindestrich, z. B. ecos-blau) und Grundfarbe. Leere Shades werden aus der Grundfarbe berechnet (Vorschau), eingetragene überschreiben die Berechnung. Werte: Hexwert oder HTML-Farbname. Klassen z. B. .bg-ecos-blau-300, CSS-Variablen --theme-ecos-blau-300. Die Shades legt der Tab „Einstellungen“ fest.",
+            "required": 0,
+            "wrapper": {
+                "width": "",
+                "class": "zpt-color-shades",
+                "id": ""
+            },
+            "layout": "table",
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Farbe hinzufügen",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_zpt_settings_palette_name",
+                    "label": "Name",
+                    "name": "name",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "wrapper": {
+                        "width": "14",
+                        "class": "zpt-color-name",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "ecos-blau",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": 40
+                }
+            ]
+        },
+        {
+            "key": "field_zpt_settings_colors_tab_system",
+            "label": "Systemfarben",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_zpt_settings_system_colors",
+            "label": "Systemfarben",
+            "name": "zpt_system_colors",
+            "type": "repeater",
+            "instructions": "Name + Farbe (Palettenfarbe mit Shading oder eigene). Ganze Palettenfarbe → die Systemfarbe übernimmt deren Shades; mit Shading oder eigene Farbe → daraus werden die Shades berechnet. Bootstrap-Namen (primary, secondary, tertiary, quaternary, success, info, warning, danger, light, dark, black, white, gray) setzen auch Bootstraps Farbe (.btn-primary, .text-bg-dark …); nicht angelegte behalten Bootstraps Wert (--theme-primary = --bs-primary). Eigene Namen (z. B. accent oder section für einen Hintergrund) ergeben .text-accent, .bg-section, .bg-section-100, --theme-section ….",
+            "required": 0,
+            "wrapper": {
+                "width": "",
+                "class": "zpt-system-colors",
+                "id": ""
+            },
+            "layout": "table",
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Systemfarbe hinzufügen",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_zpt_settings_system_colors_name",
+                    "label": "Name",
+                    "name": "name",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "wrapper": {
+                        "width": "35",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "z. B. primary",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": 40
+                },
+                {
+                    "key": "field_zpt_settings_system_colors_color",
+                    "label": "Farbe",
+                    "name": "color",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "wrapper": {
+                        "width": "65",
+                        "class": "zpt-color-field zpt-color-tokens zpt-color-palette",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_zpt_settings_colors_tab_wp",
+            "label": "WordPress",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_zpt_settings_wp_colors",
+            "label": "Farben in WordPress",
+            "name": "zpt_wp_colors",
+            "type": "repeater",
+            "instructions": "Nur diese Farben erscheinen in WordPress: in den Farbauswahlen der Komponenten und Einstellungen (Farbe + Shading) und in der Farbpalette von Block-Editor und klassischem Editor. Reihenfolge = Reihenfolge in der Palette. Leer = alle Farben. Die Systemfarben-Definition zeigt weiter die ganze Palette. Neue Einträge wirken nach dem Speichern.",
+            "required": 0,
+            "wrapper": {
+                "width": "",
+                "class": "zpt-wp-colors",
+                "id": ""
+            },
+            "layout": "table",
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Farbe hinzufügen",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_zpt_settings_wp_colors_color",
+                    "label": "Farbe",
+                    "name": "color",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "wrapper": {
+                        "width": "",
+                        "class": "zpt-color-field zpt-color-tokens",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "zpt-colors"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1791112544
+}

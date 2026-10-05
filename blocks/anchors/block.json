@@ -1,0 +1,21 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 2,
+    "name": "zpt/anchors",
+    "title": "Sprungmarken",
+    "description": "Links zu Abschnitten dieser Seite (CSS IDs) – horizontal oder vertikal, markiert beim Scrollen den sichtbaren Abschnitt.",
+    "category": "zpt",
+    "icon": "editor-ul",
+    "keywords": ["sprungmarken", "anker", "anchor", "inhaltsverzeichnis", "navigation", "scrollspy"],
+    "textdomain": "12punkt-baukasten",
+    "ancestor": ["zpt/column"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "render.php"
+    },
+    "supports": {
+        "anchor": true,
+        "align": false,
+        "html": false
+    }
+}

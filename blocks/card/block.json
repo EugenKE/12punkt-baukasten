@@ -1,0 +1,28 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 2,
+    "name": "zpt/card",
+    "title": "Card",
+    "description": "Bild, Überschrift, Text und Link – eigener Inhalt oder aus einem Beitrag / einer Seite (Teaser).",
+    "category": "zpt",
+    "icon": "id-alt",
+    "keywords": [
+        "card",
+        "karte",
+        "teaser",
+        "kachel"
+    ],
+    "textdomain": "12punkt-baukasten",
+    "ancestor": [
+        "zpt/column"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "render.php"
+    },
+    "supports": {
+        "anchor": true,
+        "align": false,
+        "html": false
+    }
+}

@@ -1,0 +1,147 @@
+{
+    "key": "group_zpt_settings_logo",
+    "title": "Baukasten: Logo",
+    "display_title": "Logo",
+    "fields": [
+        {
+            "key": "field_zpt_logo",
+            "label": "Logo",
+            "name": "zpt_logo",
+            "type": "image",
+            "instructions": "Hauptlogo, z. B. im Header. SVG, PNG, JPG oder WebP. Leer = Logo aus dem Customizer (Design → Customizer → Website-Informationen) bzw. Seitenname.",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "preview_size": "medium",
+            "mime_types": "svg, png, jpg, jpeg, webp",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": ""
+        },
+        {
+            "key": "field_zpt_logo_alt",
+            "label": "Alternativtext",
+            "name": "zpt_logo_alt",
+            "type": "text",
+            "instructions": "Für alle Logos. Leer = Seitenname.",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_zpt_logo_variants",
+            "label": "Varianten",
+            "name": "zpt_logo_variants",
+            "type": "repeater",
+            "instructions": "Weitere Fassungen des Logos, z. B. Weiß (für dunkle Hintergründe), Negativ, Quer, Signet. Ausgabe im Template: zpt_logo('kürzel'), im Text: [zpt_logo variant=\"kürzel\"].",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_zpt_logo_variants_name",
+            "button_label": "Variante hinzufügen",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_zpt_logo_variants_name",
+                    "label": "Name",
+                    "name": "name",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "z. B. Weiß",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_zpt_logo_variants"
+                },
+                {
+                    "key": "field_zpt_logo_variants_slug",
+                    "label": "Kürzel",
+                    "name": "slug",
+                    "type": "text",
+                    "instructions": "",
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_zpt_logo_variants"
+                },
+                {
+                    "key": "field_zpt_logo_variants_image",
+                    "label": "Bild",
+                    "name": "image",
+                    "type": "image",
+                    "instructions": "",
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "library": "all",
+                    "preview_size": "medium",
+                    "mime_types": "svg, png, jpg, jpeg, webp",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "required": 1,
+                    "parent_repeater": "field_zpt_logo_variants"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "zpt-logo"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "field",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1791101122
+}

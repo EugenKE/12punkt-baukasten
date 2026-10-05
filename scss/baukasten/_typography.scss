@@ -1,0 +1,52 @@
+
+h1 {font-size: var(--theme-font-size-xxl, $default-font-size-xxl); line-height: var(--theme-line-height-xl, $default-line-height-xl);}
+h2 {font-size: var(--theme-font-size-xl, $default-font-size-xl); line-height: var(--theme-line-height-xl, $default-line-height-xl);}
+h3 {font-size: var(--theme-font-size-l, $default-font-size-l); line-height: var(--theme-line-height-l, $default-line-height-l);}
+
+@include media-breakpoint-up(md) {
+    h1 {font-size: var(--theme-font-size-xxxl, $default-font-size-xxxl); line-height: var(--theme-line-height-xxl, $default-line-height-xxl);}
+    h2 {font-size: var(--theme-font-size-xxl, $default-font-size-xxl); line-height: var(--theme-line-height-xxl, $default-line-height-xxl);}
+    h3 {font-size: var(--theme-font-size-xl, $default-font-size-xl); line-height: var(--theme-line-height-xl, $default-line-height-xl);} 
+}
+
+h1, h2, h3, h4 {font-weight: normal;}
+
+p + h1, p + h2, p + h3, p + h4 {margin-top:60px;}
+
+h1 + p, h2 + p, h3 + p, h4 + p {margin-top:30px;}
+
+em, .italic, .font-italic {font-style: italic; letter-spacing: .05em;}
+strong, .font-bold {font-weight:700;}
+.font-regular {font-weight:normal;}
+.uppercase, .font-uppercase {text-transform: uppercase;}
+
+
+.font-serif {font-family:var(--theme-font-family-serif, $default-font-family-serif);}
+.font-sans-serif {font-family:var(--theme-font-family-sans-serif, var(--theme-font-family, $default-font-family-sans-serif));}
+.font-style-deco {font-family:var(--theme-font-family-deco, var(--theme-font-family-sans-serif, var(--theme-font-family, $default-font-family-sans-serif)));}
+.font-mono, code, kbd, pre, samp {font-family:var(--theme-font-family-mono, $default-font-family-mono);}
+
+ul {padding-left:1em;}
+
+// .font-size-{stufe} und .font-size-{bp}-{stufe}: aus der Schriftgrößen-Skala (includes/typography.php)
+
+// ---------------------------------------------------------------- Laufweite je Gewicht
+// Werte pro Schrift kommen aus Baukasten → Style → Typografie (--zpt-ls-{gewicht}, siehe
+// includes/typography.php). --zpt-ls wird als Token vererbt; em rechnet so am jeweiligen Element.
+:root {--zpt-ls: var(--zpt-ls-400, normal);}
+:where(*, ::before, ::after) {letter-spacing: var(--zpt-ls);}
+
+$zpt-weight-selectors: (
+    100: ".fw-100",
+    200: ".fw-200",
+    300: ".fw-300, .fw-light",
+    400: ".fw-400, .fw-normal, .font-regular",
+    500: ".fw-500, .fw-medium, h5, h6",
+    600: ".fw-600, .fw-semibold",
+    700: ".fw-700, .fw-bold, strong, b, .font-bold",
+    800: ".fw-800",
+    900: ".fw-900",
+);
+@each $weight, $selectors in $zpt-weight-selectors {
+    #{$selectors} {--zpt-ls: var(--zpt-ls-#{$weight}, normal);}
+}

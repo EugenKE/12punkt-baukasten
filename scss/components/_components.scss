@@ -1,0 +1,118 @@
+// -----------------------------------------------------------------------------
+// Komponenten: Galerie, Card, Icon, Video, Posts (templates/components/*.php)
+// -----------------------------------------------------------------------------
+
+// --- Seitenverhältnisse zusätzlich zu Bootstraps 1x1, 4x3, 16x9, 21x9
+.ratio-3x2  { --bs-aspect-ratio: calc(2 / 3 * 100%); }
+.ratio-9x16 { --bs-aspect-ratio: calc(16 / 9 * 100%); }
+
+// Bild füllt die Fläche (zugeschnitten)
+.zpt-cover > img,
+.zpt-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+// --- Galerie
+.zpt-gallery .carousel-item .figure-image { margin-bottom: 0; }
+
+// --- Card nebeneinander: Bild füllt die Höhe der Card (ab MD, darunter normal oben)
+@include media-breakpoint-up(md) {
+    .zpt-card-horizontal-50,
+    .zpt-card-horizontal-40 {
+        .zpt-card-image,
+        .zpt-card-image .image-container { height: 100%; }
+        .zpt-card-image img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+// --- Icon: SVG so groß wie die Schrift, Farbe = Textfarbe (wenn das SVG keine eigene hat)
+.zpt-icon {
+    line-height: 1;
+
+    svg {
+        width: 1em;
+        height: 1em;
+        vertical-align: -0.125em;
+    }
+    svg:not([fill]) { fill: currentColor; }
+
+    .zpt-icon-link {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+// --- Icons aus Baukasten → Icons (zpt_icon()): so groß wie die Schrift, auch Material Icons (sonst 24px)
+.zpt-svg-icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.125em;
+    overflow: visible;
+}
+.zpt-mi {
+    font-size: inherit !important;
+    vertical-align: -0.125em;
+}
+
+// --- Navigationsleiste (Baukasten → Navigation): Toggler zeigt je nach Zustand das Icon „öffnen“ bzw. „schließen“
+.zpt-navbar .navbar-toggler {
+    line-height: 1;
+
+    .zpt-toggler-close { display: none; }
+    &[aria-expanded="true"] {
+        .zpt-toggler-open  { display: none; }
+        .zpt-toggler-close { display: inline; }
+    }
+}
+
+// --- Video: Vorschaubild mit Hinweis, bis per Klick geladen wird
+.zpt-video-consent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    border: 0;
+    background: var(--bs-dark, #212529);
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+
+    .zpt-video-poster {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: .6;
+        transition: opacity .2s;
+    }
+    .zpt-video-play,
+    .zpt-video-notice { position: relative; }
+    .zpt-video-play   { font-size: 64px; line-height: 1; }
+    .zpt-video-notice { max-width: 40em; font-size: .875rem; }
+
+    &:hover .zpt-video-poster,
+    &:focus-visible .zpt-video-poster { opacity: .45; }
+}
+
+// --- Posts
+.zpt-posts-list .zpt-post + .zpt-post {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--bs-border-color);
+}
+.zpt-post-date {
+    display: block;
+    margin-bottom: 5px;
+    font-size: .875em;
+    opacity: .7;
+}

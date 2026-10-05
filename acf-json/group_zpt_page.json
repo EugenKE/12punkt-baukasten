@@ -1,0 +1,55 @@
+{
+    "key": "group_zpt_page",
+    "title": "Baukasten",
+    "fields": [
+        {
+            "key": "field_zpt_page_container",
+            "label": "Container (Standard für Rows)",
+            "name": "zpt_container",
+            "type": "select",
+            "choices": {
+                "container-fluid": "Fluid (volle Breite)",
+                "container": "Fest (zentriert)"
+            },
+            "default_value": "container-fluid",
+            "return_format": "value",
+            "ui": 0,
+            "allow_null": 0,
+            "multiple": 0,
+            "instructions": "Gilt für alle Rows mit Container „wie Seite“."
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "section"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1790867957
+}

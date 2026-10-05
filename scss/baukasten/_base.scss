@@ -1,0 +1,64 @@
+// =============================================================================
+// Basis (aus main.scss des Themes)
+// =============================================================================
+
+:root {
+    // --- disable auto scrolling in chrome, ff and safari > 14
+    // --- because safari < 14 dos'nt have it and scrolls without offest
+    scroll-behavior: auto;
+}
+
+html, body {width:100%; margin:0; padding:0;}
+
+body {
+    min-height:100vh;
+    height:auto;
+    font-family: var(--theme-font-family, $default-font-family);
+    font-size:var(--theme-font-size-copy, $default-font-size-copy);
+    line-height: var(--theme-line-height-copy, $default-line-height-copy);
+}
+
+// --------------------------------------- Baukasten-Struktur
+.zpt-row-block {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.section-video-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    & ~ .container, & ~ .container-fluid {position: relative; z-index: 1;}
+}
+
+.masonry-grid-sizer {display:none;}
+
+// --------------------------------------- Komponenten (allgemein)
+.yt-player {max-width:100%; background-color:gray;}
+.svg-wrapper {display: block;}
+
+.video-preview {
+    & a {text-decoration: none;
+        &:hover img {@extend .blow-up;}
+    }
+}
+
+// --------------------------------------- Entwicklung
+.gsap-marker-scroller-start {right:100px !important;}
+
+.test-grid {z-index:4000; position: fixed; top:0; left:0; width:100%; height:100%;
+    pointer-events: none;
+    & .row {height:100%;}
+    & .col {height:100%; border:1px dashed rgba(255, 0, 0, .4);}
+    & .col-inner {height:100%; background-color:rgba(255, 0, 0, .1);}
+}
+
+body.show-grid {
+    & .zpt-col, & .section-col {border:1px dotted blue;}
+    & .zpt-row-block, & section {border:1px solid yellow;}
+}

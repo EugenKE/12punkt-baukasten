@@ -1,0 +1,356 @@
+{
+    "key": "group_zpt_block_anchors",
+    "title": "ZPT Block: Sprungmarken",
+    "fields": [
+        {
+            "key": "field_zpt_anchors_tab_content",
+            "label": "Inhalt",
+            "name": "",
+            "type": "accordion",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-panel",
+                "id": ""
+            },
+            "open": 1,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_zpt_anchors_anchors",
+            "label": "Sprungmarken",
+            "name": "anchors",
+            "type": "repeater",
+            "instructions": "Ziel = CSS ID eines Elements auf dieser Seite (z. B. Row → CSS → CSS ID).",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "min": 1,
+            "max": 0,
+            "button_label": "Sprungmarke hinzufügen",
+            "collapsed": "field_zpt_anchors_anchor_label",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_zpt_anchors_anchor_label",
+                    "label": "Text",
+                    "name": "label",
+                    "type": "text",
+                    "instructions": "",
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_zpt_anchors_anchors"
+                },
+                {
+                    "key": "field_zpt_anchors_anchor_target",
+                    "label": "Ziel (CSS ID)",
+                    "name": "target",
+                    "type": "text",
+                    "instructions": "",
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "#",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_zpt_anchors_anchors"
+                }
+            ]
+        },
+        {
+            "key": "field_zpt_anchors_tab_layout",
+            "label": "Darstellung",
+            "name": "",
+            "type": "accordion",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-panel",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_zpt_anchors_direction",
+            "label": "Richtung",
+            "name": "direction",
+            "type": "select",
+            "instructions": "",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "horizontal": "horizontal",
+                "vertical": "vertikal (untereinander)"
+            },
+            "default_value": "horizontal",
+            "return_format": "value",
+            "ui": 0,
+            "allow_null": 0,
+            "multiple": 0
+        },
+        {
+            "key": "field_zpt_anchors_style",
+            "label": "Stil",
+            "name": "style",
+            "type": "select",
+            "instructions": "",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "nav": "Links",
+                "pills": "Pills (aktiver Punkt hinterlegt)",
+                "underline": "unterstrichen (aktiver Punkt)",
+                "list": "schlichte Liste"
+            },
+            "default_value": "underline",
+            "return_format": "value",
+            "ui": 0,
+            "allow_null": 0,
+            "multiple": 0
+        },
+        {
+            "key": "field_zpt_anchors_align",
+            "label": "Ausrichtung",
+            "name": "align",
+            "type": "select",
+            "instructions": "",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "": "links",
+                "center": "mittig",
+                "end": "rechts",
+                "between": "verteilt",
+                "fill": "volle Breite"
+            },
+            "default_value": "",
+            "return_format": "value",
+            "ui": 0,
+            "allow_null": 0,
+            "multiple": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_zpt_anchors_direction",
+                        "operator": "==",
+                        "value": "horizontal"
+                    }
+                ]
+            ]
+        },
+        {
+            "key": "field_zpt_anchors_scrollspy",
+            "label": "Aktiven Abschnitt markieren",
+            "name": "scrollspy",
+            "type": "true_false",
+            "instructions": "Beim Scrollen wird der Link zum sichtbaren Abschnitt aktiv (wie bei Pills / unterstrichen).",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_zpt_anchors_nowrap",
+            "label": "Nicht umbrechen",
+            "name": "nowrap",
+            "type": "true_false",
+            "instructions": "Passen die Links nicht in eine Zeile, lassen sie sich seitlich wischen (kein Untermenü möglich).",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "ui": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_zpt_anchors_direction",
+                        "operator": "==",
+                        "value": "horizontal"
+                    }
+                ]
+            ]
+        },
+        {
+            "key": "field_zpt_anchors_tab_font",
+            "label": "Schrift",
+            "name": "",
+            "type": "accordion",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-panel",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_zpt_anchors_font",
+            "label": "Schrift",
+            "name": "",
+            "type": "clone",
+            "clone": [
+                "field_zpt_props_group_font"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_zpt_anchors_tab_props",
+            "label": "Hintergrund",
+            "name": "",
+            "type": "accordion",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-panel",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_zpt_anchors_properties",
+            "label": "Hintergrund",
+            "name": "properties",
+            "type": "clone",
+            "clone": [
+                "field_zpt_props_group_colors"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_zpt_anchors_tab_css",
+            "label": "CSS",
+            "name": "",
+            "type": "accordion",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-panel",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_zpt_anchors_css_id",
+            "label": "CSS ID",
+            "name": "css_id",
+            "type": "text",
+            "instructions": "ohne „#“, ohne Leerzeichen; muss auf der Seite eindeutig sein",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "#",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_zpt_anchors_css_classes",
+            "label": "CSS Klassen",
+            "name": "css_classes",
+            "type": "text",
+            "instructions": "ohne „.“, trennen mit Leerzeichen",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_zpt_anchors_css_link",
+            "label": "CSS Links",
+            "name": "css_link",
+            "type": "text",
+            "instructions": "ohne „.“, trennen mit Leerzeichen – an jedem Link",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_zpt_anchors_accordion_end",
+            "label": "",
+            "name": "",
+            "type": "accordion",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-panel",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "zpt/anchors"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1791118477
+}

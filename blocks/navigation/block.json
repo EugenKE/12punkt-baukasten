@@ -1,0 +1,21 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 2,
+    "name": "zpt/navigation",
+    "title": "Navigation",
+    "description": "Gibt ein WordPress-Menü aus (Menü oder Menü-Position des Themes) – horizontal mit Dropdowns oder vertikal.",
+    "category": "zpt",
+    "icon": "menu",
+    "keywords": ["navigation", "menü", "menu", "nav"],
+    "textdomain": "12punkt-baukasten",
+    "ancestor": ["zpt/column"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "render.php"
+    },
+    "supports": {
+        "anchor": true,
+        "align": false,
+        "html": false
+    }
+}

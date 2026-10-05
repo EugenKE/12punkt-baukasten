@@ -1,0 +1,61 @@
+// =============================================================================
+// 12punkt Baukasten – Konfiguration
+//
+// Alle Werte mit !default: ein Theme mit eigenem Sass-Build kann sie vor dem
+// Import überschreiben. Ohne Build passt das Theme die CSS-Variablen an
+// (--theme-*, --bs-*), siehe README.md.
+// =============================================================================
+
+// ---------------------------------------------------------------- Bootstrap
+$enable-rounded:     false !default;
+$enable-cssgrid:     true !default;
+// Gutter und Container-Rand als CSS-Variablen: Werte aus Baukasten → Layout → Grid (breakpoints.php).
+// --zpt-grid-gutter:       Spaltenabstand (Fallback 20px)
+// --zpt-container-padding: Rand von .container je Seite (Fallback halber Gutter);
+//                          Bootstrap erwartet beide Seiten zusammen, daher * 2.
+// Bootstrap rechnet mit $grid-gutter-width nur für $card-group-margin – mit var() daher als calc().
+$grid-gutter-width:   var(--zpt-grid-gutter, 20px) !default;
+$container-padding-x: calc(var(--zpt-container-padding, calc(#{$grid-gutter-width} * .5)) * 2) !default;
+$card-group-margin:   calc(#{$grid-gutter-width} * .5) !default;
+
+// ---------------------------------------------------------------- Schriften
+// Fallbacks für var(--theme-font-family …)
+$default-font-family:            'Arial', sans-serif !default;
+$default-font-family-sans-serif: $default-font-family !default;
+$default-font-family-serif:      'Georgia', serif !default;
+$default-font-family-mono:       SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace !default;
+
+$default-font-size-sm:     12px !default;
+$default-font-size-copy:   16px !default;
+$default-font-size-copy-l: 20px !default;
+$default-font-size-l:      25px !default;
+$default-font-size-xl:     32px !default;
+$default-font-size-xxl:    46px !default;
+$default-font-size-xxxl:   74px !default;
+
+$default-line-height-sm:     1.2em !default;
+$default-line-height-copy:   1.2em !default;
+$default-line-height-copy-l: 1.2em !default;
+$default-line-height-l:      1.2em !default;
+$default-line-height-xl:     1em !default;
+$default-line-height-xxl:    1em !default;
+$default-line-height-xxxl:   1em !default;
+
+// ---------------------------------------------------------------- Abstände
+// Bootstrap-Spacing-Utilities mit 5px-Skala statt 0–5 (rem):
+//   .mt-20, .px-md-40, .gap-10, .g-30, negativ: .mt-n20, .ms-lg-n40
+$zpt-spacer-step:  5 !default;    // px, zugleich Klassenname (.mt-5, .mt-10 …)
+$zpt-spacer-count: 60 !default;   // Stufen → 0 … 300px
+
+$zpt-spacers: ();
+@for $i from 0 through $zpt-spacer-count {
+    $zpt-spacers: map-merge($zpt-spacers, ($i * $zpt-spacer-step: $i * $zpt-spacer-step * 1px));
+}
+$spacers: $zpt-spacers !default;
+$enable-negative-margins: true !default;
+
+// ---------------------------------------------------------------- Zusätzliche System-Farben
+// Werte nur Fallback – im Betrieb kommen die Farben aus Baukasten → Einstellungen → Style
+// (CSS-Variablen --bs-tertiary, --theme-tertiary …).
+$tertiary:   #6f42c1 !default;
+$quaternary: #fd7e14 !default;

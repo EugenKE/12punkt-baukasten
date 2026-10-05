@@ -1,0 +1,47 @@
+{
+    "key": "group_zpt_meta",
+    "title": "Meta Infos",
+    "fields": [
+        {
+            "key": "field_zpt_meta_description",
+            "label": "Meta Description",
+            "name": "meta_description",
+            "type": "textarea",
+            "rows": 4,
+            "instructions": "Leer = globale Meta Description (Baukasten → Einstellungen)."
+        },
+        {
+            "key": "field_zpt_meta_keywords",
+            "label": "Meta Keywords",
+            "name": "meta_keywords",
+            "type": "textarea",
+            "rows": 2
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 10,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1790867957
+}

@@ -1,0 +1,81 @@
+{
+    "key": "group_zpt_settings_typo_loading",
+    "title": "Baukasten: Schriftquellen",
+    "display_title": "Schriftquellen",
+    "fields": [
+        {
+            "key": "field_zpt_font_loading_wp_families",
+            "label": "WP-Schriften",
+            "name": "zpt_font_loading_wp_families",
+            "type": "checkbox",
+            "instructions": "Installierte Schriften (Design → Schriftarten), die in „Schriftschnitte & Maße“ angeboten werden.",
+            "choices": {},
+            "default_value": [],
+            "return_format": "value",
+            "layout": "vertical",
+            "toggle": 1,
+            "allow_custom": 0,
+            "save_custom": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "parent": "group_zpt_settings_typo_loading"
+        },
+        {
+            "key": "field_zpt_font_theme_folder",
+            "label": "Theme-Ordner",
+            "name": "zpt_font_loading_theme_folder",
+            "type": "text",
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "fonts",
+            "default_value": "",
+            "instructions": "Optional: Ordner mit eigenen Schriften im Theme. Liegt dort eine CSS-Datei mit @font-face-Regeln, wird sie geladen. Sonst werden die Dateien (woff2, woff, ttf, otf) automatisch eingebunden: Familie = Unterordner (fonts/Lato/…) oder Dateiname bis zum ersten - bzw. _; Gewicht und Stil aus dem Dateinamen (Bold, 700, Italic …). Nach dem Speichern stehen die Schriften in „Schriftschnitte & Maße“ zur Auswahl.",
+            "prepend": "",
+            "append": "/",
+            "parent": "group_zpt_settings_typo_loading"
+        },
+        {
+            "key": "field_zpt_font_loading_system_stack",
+            "label": "System-Standard",
+            "name": "zpt_font_loading_system_stack",
+            "type": "text",
+            "instructions": "Schrift, die auf den Geräten vorhanden ist – ohne Download. Stack mit Ausweichschriften wie bei font-family; der erste Name ist der Name der Schrift. Leer = keine.",
+            "default_value": "Arial, \"Helvetica Neue\", Helvetica, sans-serif",
+            "placeholder": "Arial, \"Helvetica Neue\", Helvetica, sans-serif",
+            "prepend": "font-family:",
+            "append": "",
+            "maxlength": "",
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "parent": "group_zpt_settings_typo_loading"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "zpt-typography"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Typografie: Quellen der Schriften (WP-Schriftbibliothek, System-Standard, Theme-Ordner).",
+    "show_in_rest": 0,
+    "modified": 1790930581
+}

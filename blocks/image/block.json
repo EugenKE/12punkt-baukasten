@@ -1,0 +1,27 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 2,
+    "name": "zpt/image",
+    "title": "Bild",
+    "description": "Bild mit optionaler Bildunterschrift und Photoswipe.",
+    "category": "zpt",
+    "icon": "format-image",
+    "keywords": [
+        "image",
+        "bild",
+        "foto"
+    ],
+    "textdomain": "12punkt-baukasten",
+    "ancestor": [
+        "zpt/column"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "render.php"
+    },
+    "supports": {
+        "anchor": true,
+        "align": false,
+        "html": false
+    }
+}

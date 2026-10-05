@@ -1,0 +1,221 @@
+{
+    "key": "group_zpt_tpl_per_row",
+    "title": "ZPT Template: pro Reihe",
+    "fields": [
+        {
+            "key": "field_zpt_perrow_per_row",
+            "label": "pro Reihe",
+            "name": "per_row",
+            "type": "group",
+            "instructions": "",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-cols-2",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_zpt_perrow_bp_xs",
+                    "label": "XS",
+                    "name": "bp_xs",
+                    "type": "select",
+                    "instructions": "",
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "1": "1",
+                        "2": "2",
+                        "3": "3",
+                        "4": "4",
+                        "5": "5",
+                        "6": "6"
+                    },
+                    "default_value": "1",
+                    "return_format": "value",
+                    "ui": 0,
+                    "allow_null": 0,
+                    "multiple": 0
+                },
+                {
+                    "key": "field_zpt_perrow_bp_sm",
+                    "label": "SM",
+                    "name": "bp_sm",
+                    "type": "select",
+                    "instructions": "",
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "": "wie kleiner",
+                        "1": "1",
+                        "2": "2",
+                        "3": "3",
+                        "4": "4",
+                        "5": "5",
+                        "6": "6"
+                    },
+                    "default_value": "",
+                    "return_format": "value",
+                    "ui": 0,
+                    "allow_null": 0,
+                    "multiple": 0
+                },
+                {
+                    "key": "field_zpt_perrow_bp_md",
+                    "label": "MD",
+                    "name": "bp_md",
+                    "type": "select",
+                    "instructions": "",
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "": "wie kleiner",
+                        "1": "1",
+                        "2": "2",
+                        "3": "3",
+                        "4": "4",
+                        "5": "5",
+                        "6": "6"
+                    },
+                    "default_value": "",
+                    "return_format": "value",
+                    "ui": 0,
+                    "allow_null": 0,
+                    "multiple": 0
+                },
+                {
+                    "key": "field_zpt_perrow_bp_lg",
+                    "label": "LG",
+                    "name": "bp_lg",
+                    "type": "select",
+                    "instructions": "",
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "": "wie kleiner",
+                        "1": "1",
+                        "2": "2",
+                        "3": "3",
+                        "4": "4",
+                        "5": "5",
+                        "6": "6"
+                    },
+                    "default_value": "",
+                    "return_format": "value",
+                    "ui": 0,
+                    "allow_null": 0,
+                    "multiple": 0
+                },
+                {
+                    "key": "field_zpt_perrow_bp_xl",
+                    "label": "XL",
+                    "name": "bp_xl",
+                    "type": "select",
+                    "instructions": "",
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "": "wie kleiner",
+                        "1": "1",
+                        "2": "2",
+                        "3": "3",
+                        "4": "4",
+                        "5": "5",
+                        "6": "6"
+                    },
+                    "default_value": "",
+                    "return_format": "value",
+                    "ui": 0,
+                    "allow_null": 0,
+                    "multiple": 0
+                },
+                {
+                    "key": "field_zpt_perrow_bp_xxl",
+                    "label": "XXL",
+                    "name": "bp_xxl",
+                    "type": "select",
+                    "instructions": "",
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "": "wie kleiner",
+                        "1": "1",
+                        "2": "2",
+                        "3": "3",
+                        "4": "4",
+                        "5": "5",
+                        "6": "6"
+                    },
+                    "default_value": "",
+                    "return_format": "value",
+                    "ui": 0,
+                    "allow_null": 0,
+                    "multiple": 0
+                }
+            ]
+        },
+        {
+            "key": "field_zpt_perrow_gap",
+            "label": "Abstand",
+            "name": "gap",
+            "type": "select",
+            "instructions": "",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "": "Standard (Gutter)",
+                "0": "0",
+                "10": "10 px",
+                "20": "20 px",
+                "30": "30 px",
+                "40": "40 px",
+                "60": "60 px"
+            },
+            "default_value": "",
+            "return_format": "value",
+            "ui": 0,
+            "allow_null": 0,
+            "multiple": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 100,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "Nur zum Klonen (Galerie, Posts): Elemente pro Reihe je Breakpoint → row-cols-*, Abstand → g-*.",
+    "show_in_rest": 0,
+    "modified": 1791020530
+}

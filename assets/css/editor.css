@@ -1,0 +1,206 @@
+/**
+ * 12punkt Baukasten – Editor
+ *
+ * Im Editor liegen zwischen .row, Spalte und Komponenten Wrapper von Gutenberg/ACF:
+ *   .zpt-row > .acf-innerblocks-container > .wp-block (Spalte) > … > .zpt-col
+ *            > .acf-innerblocks-container > .wp-block (Komponente) > …
+ *
+ * Der Block-Wrapper (.wp-block) muss eine echte Box bleiben – nur sie ist fokussierbar,
+ * sonst wählt ein Klick die Row statt der Spalte aus. Darum:
+ * 1. Wrapper zwischen Row und Spalte (und in der .zpt-col) → display: contents
+ *    (Spalten-Block wird Flex-Kind der Row)
+ * 2. Spalten-Block übernimmt Gutter und Breite der .zpt-col
+ *    (Breiten-Regeln je Spaltenklasse: zpt_editor_column_css() in includes/blocks.php)
+ * 3. Wrapper zwischen Spalten-Block und .zpt-col → display: contents, .zpt-col füllt den Block
+ * 4. Komponenten in der Spalte ohne die Editor-Standardbreite/-abstände
+ */
+
+/* 1. */
+.zpt-row :not(.wp-block, .zpt-col):has(.wp-block) {
+    display: contents;
+}
+
+/* 2. */
+.editor-styles-wrapper .zpt-row .wp-block:has(.zpt-col) {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: none;
+    margin: var(--bs-gutter-y, 0) 0 0 0;
+    padding-right: calc(var(--bs-gutter-x, 1.5rem) * .5);
+    padding-left: calc(var(--bs-gutter-x, 1.5rem) * .5);
+}
+
+.editor-styles-wrapper .zpt-row .wp-block:has(.zpt-col.px-0) {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+/* 3. */
+.zpt-row .wp-block :not(.zpt-col):has(.zpt-col) {
+    display: contents;
+}
+
+.editor-styles-wrapper .zpt-row .wp-block .zpt-col {
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+    min-height: 40px;
+    margin-left: 0;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+/* 4. */
+.editor-styles-wrapper .zpt-col .wp-block {
+    max-width: none;
+    margin: 0;
+}
+
+/* --- Rows im Editor volle Breite wie im Frontend
+ * (Classic-Theme ohne theme.json: .wp-block max-width 840px + margin 28px,
+ *  .editor-styles-wrapper padding 8px – aus wp-includes/css/dist/edit-post/classic.css) */
+.editor-styles-wrapper .is-root-container > .wp-block[data-type="zpt/row"] {
+    max-width: none;
+    margin: 0 -8px;
+}
+
+/* --- Sichtbarkeit im Editor */
+.editor-styles-wrapper .zpt-row-block {
+    min-height: 60px;
+    outline: 1px dashed rgba(0, 0, 0, .15);
+    outline-offset: -1px;
+}
+
+.editor-styles-wrapper .zpt-col {
+    outline: 1px dashed rgba(0, 120, 200, .35);
+    outline-offset: -1px;
+}
+
+.editor-styles-wrapper .zpt-row .block-list-appender,
+.editor-styles-wrapper .zpt-row .block-editor-default-block-appender {
+    flex: 0 0 100%;
+    width: 100%;
+}
+
+.editor-styles-wrapper .zpt-placeholder {
+    padding: 1rem;
+    border: 1px dashed currentColor;
+    opacity: .5;
+    font-size: .875rem;
+    text-align: center;
+}
+
+/* --- Links in der Vorschau nicht klickbar: Klick wählt den Block aus statt zu navigieren */
+.editor-styles-wrapper .zpt-col a {
+    pointer-events: none;
+}
+
+/* --- Seitenleiste + „Open Expanded Editor“ (ACF-Modal .acf-block-form-modal): ACF-Akkordeons der
+ * Blocks (Wrapper-Klasse „zpt-panel“) wie die nativen Bereiche („Erweitert“): Titel, Abstände,
+ * Pfeil und Trennlinie wie .components-panel__body */
+:is(.block-editor-block-inspector, .acf-block-form-modal) .acf-fields > .acf-field.acf-accordion.zpt-panel {
+    display: flow-root; /* umschließt die halbbreiten (gefloateten) Felder */
+    margin: 0;          /* ACF: margin -1px 0 → das folgende Akkordeon verdeckt die Linie */
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 0;
+}
+
+/* oben trennt schon die Linie unter „Open Expanded Editor“, unten die von „Erweitert“ */
+:is(.block-editor-block-inspector, .acf-block-form-modal) .acf-fields > .acf-field.acf-accordion.zpt-panel:first-child {
+    border-top: 0;
+}
+
+:is(.block-editor-block-inspector, .acf-block-form-modal) .acf-fields > .acf-field.acf-accordion.zpt-panel > .acf-accordion-title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 50px;
+    margin: 0;
+    padding: 16px 48px 16px 16px;
+    box-sizing: border-box;
+    color: #1e1e1e;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: normal;
+}
+
+:is(.block-editor-block-inspector, .acf-block-form-modal) .acf-fields > .acf-field.acf-accordion.zpt-panel > .acf-accordion-title:hover {
+    background: #f0f0f0;
+}
+
+:is(.block-editor-block-inspector, .acf-block-form-modal) .acf-fields > .acf-field.acf-accordion.zpt-panel > .acf-accordion-title label {
+    margin: 0;
+    color: inherit;
+    font-weight: inherit;
+}
+
+:is(.block-editor-block-inspector, .acf-block-form-modal) .acf-fields > .acf-field.acf-accordion.zpt-panel > .acf-accordion-title .acf-accordion-icon {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    margin: 0;
+    transform: translateY(-50%);
+    float: none;
+}
+
+/* Expanded Editor: ACF setzt dort .acf-fields > .acf-field {border: none !important} → Linien
+ * zwischen den Bereichen wieder herstellen; unten fehlt „Erweitert“, darum Linie auch nach dem letzten */
+.acf-block-form-modal .components-modal__content .acf-fields > .acf-field.acf-accordion.zpt-panel {
+    border-top: 1px solid #e0e0e0 !important;
+}
+
+.acf-block-form-modal .components-modal__content .acf-fields > .acf-field.acf-accordion.zpt-panel:first-child {
+    border-top: 0 !important;
+}
+
+.acf-block-form-modal .components-modal__content .acf-fields > .acf-field.acf-accordion.zpt-panel:not(:has(~ .zpt-panel)) {
+    border-bottom: 1px solid #e0e0e0 !important;
+}
+
+/* --- Feldbreiten: In der Seitenleiste ist jedes Feld 100 % breit; die Breiten aus den Feldgruppen
+ * (z. B. 50 %) gelten nur im Expanded Editor. ACF rechnet Spalten/Zeilen (.-c0, .-r0, min-height)
+ * für die Feldgruppen-Breiten aus – das wird hier neutralisiert (wie ACF bei .acf-fields.-left). */
+.block-editor-block-inspector .acf-fields > .acf-field[data-width] {
+    float: none;
+    clear: both;
+    width: auto !important;
+    min-height: 0 !important;
+    border-left-width: 0 !important;
+}
+
+.block-editor-block-inspector .acf-fields > .acf-field[data-width].-r0:not(:first-child) {
+    border-top-width: 1px !important;
+}
+
+/* Ausnahme (Wrapper-Klasse „zpt-cols-2“ an der Gruppe): in der Seitenleiste 2 Felder pro Zeile,
+ * z. B. Spaltenbreite XS–XXL (im Expanded Editor 3 pro Zeile laut Feldgruppe) */
+.block-editor-block-inspector .zpt-cols-2 > .acf-input > .acf-fields > .acf-field[data-width] {
+    float: left;
+    clear: none;
+    width: 50% !important;
+    border-top-width: 1px !important;
+    border-left-width: 1px !important;
+}
+
+.block-editor-block-inspector .zpt-cols-2 > .acf-input > .acf-fields > .acf-field[data-width]:nth-child(odd) {
+    clear: both;
+    border-left-width: 0 !important;
+}
+
+.block-editor-block-inspector .zpt-cols-2 > .acf-input > .acf-fields > .acf-field[data-width]:nth-child(-n+2) {
+    border-top-width: 0 !important;
+}
+
+/* --- Gruppen ohne Rahmen/Titel (Wrapper-Klasse „zpt-group-plain“): die Felder stehen direkt im
+ * Bereich, z. B. Gruppe „Schrift“ im Bereich „Schrift“ (der Titel stünde sonst doppelt da) */
+.acf-field-group.zpt-group-plain {
+    padding: 0 !important;
+}
+
+.acf-field-group.zpt-group-plain > .acf-label {
+    display: none;
+}
+
+.acf-field-group.zpt-group-plain > .acf-input > .acf-fields {
+    border: 0;
+}

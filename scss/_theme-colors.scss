@@ -1,0 +1,50 @@
+// =============================================================================
+// Bootstrap $theme-colors um tertiary und quaternary erweitern.
+// Zwei Schritte, weil Bootstrap die abgeleiteten Maps in _maps.scss ohne !default setzt.
+// =============================================================================
+
+// --- vor bootstrap/scss/maps
+@mixin zpt-extend-theme-colors() {
+    $theme-colors: map-merge($theme-colors, (
+        "tertiary":   $tertiary,
+        "quaternary": $quaternary,
+    )) !global;
+}
+
+// --- nach bootstrap/scss/maps
+@mixin zpt-extend-theme-color-maps() {
+    $theme-colors-text: map-merge($theme-colors-text, (
+        "tertiary":   shade-color($tertiary, 60%),
+        "quaternary": shade-color($quaternary, 60%),
+    )) !global;
+    $theme-colors-bg-subtle: map-merge($theme-colors-bg-subtle, (
+        "tertiary":   tint-color($tertiary, 80%),
+        "quaternary": tint-color($quaternary, 80%),
+    )) !global;
+    $theme-colors-border-subtle: map-merge($theme-colors-border-subtle, (
+        "tertiary":   tint-color($tertiary, 60%),
+        "quaternary": tint-color($quaternary, 60%),
+    )) !global;
+
+    // Utility-Klassen .bg-*-subtle, .border-*-subtle, .text-*-emphasis (Bootstrap listet die Farben fest auf)
+    @each $color in ("tertiary", "quaternary") {
+        $utilities-bg-subtle: map-merge($utilities-bg-subtle, ("#{$color}-subtle": var(--#{$prefix}#{$color}-bg-subtle))) !global;
+        $utilities-border-subtle: map-merge($utilities-border-subtle, ("#{$color}-subtle": var(--#{$prefix}#{$color}-border-subtle))) !global;
+        $utilities-text-emphasis-colors: map-merge($utilities-text-emphasis-colors, ("#{$color}-emphasis": var(--#{$prefix}#{$color}-text-emphasis))) !global;
+    }
+
+    @if $enable-dark-mode {
+        $theme-colors-text-dark: map-merge($theme-colors-text-dark, (
+            "tertiary":   tint-color($tertiary, 40%),
+            "quaternary": tint-color($quaternary, 40%),
+        )) !global;
+        $theme-colors-bg-subtle-dark: map-merge($theme-colors-bg-subtle-dark, (
+            "tertiary":   shade-color($tertiary, 80%),
+            "quaternary": shade-color($quaternary, 80%),
+        )) !global;
+        $theme-colors-border-subtle-dark: map-merge($theme-colors-border-subtle-dark, (
+            "tertiary":   shade-color($tertiary, 40%),
+            "quaternary": shade-color($quaternary, 40%),
+        )) !global;
+    }
+}

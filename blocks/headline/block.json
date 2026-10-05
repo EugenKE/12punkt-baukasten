@@ -1,0 +1,27 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 2,
+    "name": "zpt/headline",
+    "title": "Headline",
+    "description": "Überschrift. Ohne eigenen Text wird der Seitentitel verwendet.",
+    "category": "zpt",
+    "icon": "heading",
+    "keywords": [
+        "headline",
+        "überschrift",
+        "titel"
+    ],
+    "textdomain": "12punkt-baukasten",
+    "ancestor": [
+        "zpt/column"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "render.php"
+    },
+    "supports": {
+        "anchor": true,
+        "align": false,
+        "html": false
+    }
+}

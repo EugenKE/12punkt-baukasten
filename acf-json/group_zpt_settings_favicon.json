@@ -1,0 +1,119 @@
+{
+    "key": "group_zpt_settings_favicon",
+    "title": "Baukasten: Favicon",
+    "display_title": "Favicon",
+    "fields": [
+        {
+            "key": "field_zpt_favicon",
+            "label": "Favicon",
+            "name": "zpt_favicon",
+            "type": "image",
+            "instructions": "Quadratisch, mindestens 512 × 512 px (PNG mit Transparenz). Daraus werden beim Speichern favicon.ico, Apple Touch Icon (180 px) und Android-Icons (192/512 px) samt Manifest erzeugt. Ersetzt das Website-Icon aus dem Customizer.",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "preview_size": "medium",
+            "mime_types": "png, jpg, jpeg, webp",
+            "min_width": 512,
+            "min_height": 512,
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": ""
+        },
+        {
+            "key": "field_zpt_favicon_svg",
+            "label": "SVG-Favicon",
+            "name": "zpt_favicon_svg",
+            "type": "image",
+            "instructions": "Optional. Moderne Browser nehmen es statt favicon.ico – scharf in jeder Größe, im SVG per @media (prefers-color-scheme: dark) auch mit eigenen Farben für den Dark Mode.",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "preview_size": "medium",
+            "mime_types": "svg",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": ""
+        },
+        {
+            "key": "field_zpt_favicon_background",
+            "label": "Hintergrund Apple Touch Icon",
+            "name": "zpt_favicon_background",
+            "type": "text",
+            "instructions": "iOS füllt transparente Flächen sonst schwarz. Baukasten-Farbe, Farbname oder Hex.",
+            "wrapper": {
+                "width": "50",
+                "class": "zpt-color-field zpt-color-tokens",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "weiß",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_zpt_theme_color",
+            "label": "Theme-Farbe",
+            "name": "zpt_theme_color",
+            "type": "text",
+            "instructions": "Färbt in mobilen Browsern die Adressleiste (meta theme-color, Manifest). Leer = keine.",
+            "wrapper": {
+                "width": "50",
+                "class": "zpt-color-field zpt-color-tokens",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "keine",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_zpt_favicon_preview",
+            "label": "Erzeugte Dateien",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "new_lines": "",
+            "esc_html": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "zpt-logo"
+            }
+        ]
+    ],
+    "menu_order": 10,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "field",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1791101122
+}

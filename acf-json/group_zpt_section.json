@@ -1,0 +1,35 @@
+{
+    "key": "group_zpt_section",
+    "title": "Sektion",
+    "fields": [
+        {
+            "key": "field_zpt_section_footer",
+            "label": "Footer",
+            "name": "zpt_footer",
+            "type": "true_false",
+            "instructions": "Diese Sektion als Footer aller Seiten ausgeben (nur eine Sektion; ohne Haken gilt die Sektion mit Slug „footer“). Ein Theme mit eigenem Footer schaltet das ab.",
+            "message": "Als Footer verwenden",
+            "default_value": 0,
+            "ui": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "section"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1791043200
+}

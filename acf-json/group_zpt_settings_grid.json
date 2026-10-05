@@ -1,0 +1,228 @@
+{
+    "key": "group_zpt_settings_grid",
+    "title": "Baukasten: Grid",
+    "display_title": "Grid",
+    "fields": [
+        {
+            "key": "field_zpt_grid_gutter",
+            "label": "Gutter",
+            "name": "zpt_grid_gutter",
+            "type": "group",
+            "layout": "block",
+            "instructions": "Abstand zwischen den Spalten einer Row und Gap von .grid, je Breakpoint. Leer = Wert des kleineren Breakpoints. Klassen wie .g-30 / .gx-md-40 überschreiben ihn weiterhin.",
+            "sub_fields": [
+                {
+                    "key": "field_zpt_grid_gutter_xs",
+                    "label": "XS",
+                    "name": "xs",
+                    "type": "number",
+                    "wrapper": {
+                        "width": "16",
+                        "class": "",
+                        "id": ""
+                    },
+                    "append": "px",
+                    "min": 0,
+                    "max": 200,
+                    "step": 1,
+                    "default_value": 20,
+                    "placeholder": 20
+                },
+                {
+                    "key": "field_zpt_grid_gutter_sm",
+                    "label": "SM",
+                    "name": "sm",
+                    "type": "number",
+                    "wrapper": {
+                        "width": "16",
+                        "class": "",
+                        "id": ""
+                    },
+                    "append": "px",
+                    "min": 0,
+                    "max": 200,
+                    "step": 1
+                },
+                {
+                    "key": "field_zpt_grid_gutter_md",
+                    "label": "MD",
+                    "name": "md",
+                    "type": "number",
+                    "wrapper": {
+                        "width": "16",
+                        "class": "",
+                        "id": ""
+                    },
+                    "append": "px",
+                    "min": 0,
+                    "max": 200,
+                    "step": 1
+                },
+                {
+                    "key": "field_zpt_grid_gutter_lg",
+                    "label": "LG",
+                    "name": "lg",
+                    "type": "number",
+                    "wrapper": {
+                        "width": "16",
+                        "class": "",
+                        "id": ""
+                    },
+                    "append": "px",
+                    "min": 0,
+                    "max": 200,
+                    "step": 1
+                },
+                {
+                    "key": "field_zpt_grid_gutter_xl",
+                    "label": "XL",
+                    "name": "xl",
+                    "type": "number",
+                    "wrapper": {
+                        "width": "16",
+                        "class": "",
+                        "id": ""
+                    },
+                    "append": "px",
+                    "min": 0,
+                    "max": 200,
+                    "step": 1
+                },
+                {
+                    "key": "field_zpt_grid_gutter_xxl",
+                    "label": "XXL",
+                    "name": "xxl",
+                    "type": "number",
+                    "wrapper": {
+                        "width": "16",
+                        "class": "",
+                        "id": ""
+                    },
+                    "append": "px",
+                    "min": 0,
+                    "max": 200,
+                    "step": 1
+                }
+            ]
+        },
+        {
+            "key": "field_zpt_container_padding",
+            "label": "Container-Rand",
+            "name": "zpt_container_padding",
+            "type": "group",
+            "layout": "block",
+            "instructions": "Innenabstand von .container links und rechts (je Seite), je Breakpoint. Leer = Wert des kleineren Breakpoints, ganz leer = halber Gutter.",
+            "sub_fields": [
+                {
+                    "key": "field_zpt_container_padding_xs",
+                    "label": "XS",
+                    "name": "xs",
+                    "type": "number",
+                    "wrapper": {
+                        "width": "16",
+                        "class": "",
+                        "id": ""
+                    },
+                    "append": "px",
+                    "min": 0,
+                    "max": 200,
+                    "step": 1
+                },
+                {
+                    "key": "field_zpt_container_padding_sm",
+                    "label": "SM",
+                    "name": "sm",
+                    "type": "number",
+                    "wrapper": {
+                        "width": "16",
+                        "class": "",
+                        "id": ""
+                    },
+                    "append": "px",
+                    "min": 0,
+                    "max": 200,
+                    "step": 1
+                },
+                {
+                    "key": "field_zpt_container_padding_md",
+                    "label": "MD",
+                    "name": "md",
+                    "type": "number",
+                    "wrapper": {
+                        "width": "16",
+                        "class": "",
+                        "id": ""
+                    },
+                    "append": "px",
+                    "min": 0,
+                    "max": 200,
+                    "step": 1
+                },
+                {
+                    "key": "field_zpt_container_padding_lg",
+                    "label": "LG",
+                    "name": "lg",
+                    "type": "number",
+                    "wrapper": {
+                        "width": "16",
+                        "class": "",
+                        "id": ""
+                    },
+                    "append": "px",
+                    "min": 0,
+                    "max": 200,
+                    "step": 1
+                },
+                {
+                    "key": "field_zpt_container_padding_xl",
+                    "label": "XL",
+                    "name": "xl",
+                    "type": "number",
+                    "wrapper": {
+                        "width": "16",
+                        "class": "",
+                        "id": ""
+                    },
+                    "append": "px",
+                    "min": 0,
+                    "max": 200,
+                    "step": 1
+                },
+                {
+                    "key": "field_zpt_container_padding_xxl",
+                    "label": "XXL",
+                    "name": "xxl",
+                    "type": "number",
+                    "wrapper": {
+                        "width": "16",
+                        "class": "",
+                        "id": ""
+                    },
+                    "append": "px",
+                    "min": 0,
+                    "max": 200,
+                    "step": 1
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "zpt-layout"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1790920170
+}

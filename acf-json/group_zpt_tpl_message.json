@@ -1,0 +1,908 @@
+{
+    "key": "group_zpt_tpl_message",
+    "title": "ZPT Template: Message",
+    "fields": [
+        {
+            "key": "field_zpt_msg_message",
+            "label": "Message",
+            "name": "message",
+            "type": "group",
+            "instructions": "",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-group-plain",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_zpt_msg_tab_text",
+                    "label": "Text",
+                    "name": "",
+                    "type": "tab",
+                    "placement": "top",
+                    "endpoint": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    }
+                },
+                {
+                    "key": "field_zpt_msg_text",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "wysiwyg",
+                    "instructions": "Leer = keine Message. Liegt über dem Bild bzw. der Galerie.",
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 0,
+                    "delay": 0
+                },
+                {
+                    "key": "field_zpt_msg_tab_position",
+                    "label": "Position",
+                    "name": "",
+                    "type": "tab",
+                    "placement": "top",
+                    "endpoint": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    }
+                },
+                {
+                    "key": "field_zpt_msg_position",
+                    "label": "Position",
+                    "name": "position",
+                    "type": "group",
+                    "instructions": "",
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_zpt_msg_position_bp_xs",
+                            "label": "XS",
+                            "name": "bp_xs",
+                            "type": "select",
+                            "instructions": "",
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "top-start": "oben links",
+                                "top-center": "oben mittig",
+                                "top-end": "oben rechts",
+                                "middle-start": "Mitte links",
+                                "middle-center": "Mitte",
+                                "middle-end": "Mitte rechts",
+                                "bottom-start": "unten links",
+                                "bottom-center": "unten mittig",
+                                "bottom-end": "unten rechts",
+                                "below": "unter dem Bild (nicht darüber)"
+                            },
+                            "default_value": "bottom-start",
+                            "return_format": "value",
+                            "ui": 0,
+                            "allow_null": 0,
+                            "multiple": 0
+                        },
+                        {
+                            "key": "field_zpt_msg_position_bp_sm",
+                            "label": "SM",
+                            "name": "bp_sm",
+                            "type": "select",
+                            "instructions": "",
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "": "wie kleiner",
+                                "top-start": "oben links",
+                                "top-center": "oben mittig",
+                                "top-end": "oben rechts",
+                                "middle-start": "Mitte links",
+                                "middle-center": "Mitte",
+                                "middle-end": "Mitte rechts",
+                                "bottom-start": "unten links",
+                                "bottom-center": "unten mittig",
+                                "bottom-end": "unten rechts",
+                                "below": "unter dem Bild (nicht darüber)"
+                            },
+                            "default_value": "",
+                            "return_format": "value",
+                            "ui": 0,
+                            "allow_null": 0,
+                            "multiple": 0
+                        },
+                        {
+                            "key": "field_zpt_msg_position_bp_md",
+                            "label": "MD",
+                            "name": "bp_md",
+                            "type": "select",
+                            "instructions": "",
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "": "wie kleiner",
+                                "top-start": "oben links",
+                                "top-center": "oben mittig",
+                                "top-end": "oben rechts",
+                                "middle-start": "Mitte links",
+                                "middle-center": "Mitte",
+                                "middle-end": "Mitte rechts",
+                                "bottom-start": "unten links",
+                                "bottom-center": "unten mittig",
+                                "bottom-end": "unten rechts",
+                                "below": "unter dem Bild (nicht darüber)"
+                            },
+                            "default_value": "",
+                            "return_format": "value",
+                            "ui": 0,
+                            "allow_null": 0,
+                            "multiple": 0
+                        },
+                        {
+                            "key": "field_zpt_msg_position_bp_lg",
+                            "label": "LG",
+                            "name": "bp_lg",
+                            "type": "select",
+                            "instructions": "",
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "": "wie kleiner",
+                                "top-start": "oben links",
+                                "top-center": "oben mittig",
+                                "top-end": "oben rechts",
+                                "middle-start": "Mitte links",
+                                "middle-center": "Mitte",
+                                "middle-end": "Mitte rechts",
+                                "bottom-start": "unten links",
+                                "bottom-center": "unten mittig",
+                                "bottom-end": "unten rechts",
+                                "below": "unter dem Bild (nicht darüber)"
+                            },
+                            "default_value": "",
+                            "return_format": "value",
+                            "ui": 0,
+                            "allow_null": 0,
+                            "multiple": 0
+                        },
+                        {
+                            "key": "field_zpt_msg_position_bp_xl",
+                            "label": "XL",
+                            "name": "bp_xl",
+                            "type": "select",
+                            "instructions": "",
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "": "wie kleiner",
+                                "top-start": "oben links",
+                                "top-center": "oben mittig",
+                                "top-end": "oben rechts",
+                                "middle-start": "Mitte links",
+                                "middle-center": "Mitte",
+                                "middle-end": "Mitte rechts",
+                                "bottom-start": "unten links",
+                                "bottom-center": "unten mittig",
+                                "bottom-end": "unten rechts",
+                                "below": "unter dem Bild (nicht darüber)"
+                            },
+                            "default_value": "",
+                            "return_format": "value",
+                            "ui": 0,
+                            "allow_null": 0,
+                            "multiple": 0
+                        },
+                        {
+                            "key": "field_zpt_msg_position_bp_xxl",
+                            "label": "XXL",
+                            "name": "bp_xxl",
+                            "type": "select",
+                            "instructions": "",
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "": "wie kleiner",
+                                "top-start": "oben links",
+                                "top-center": "oben mittig",
+                                "top-end": "oben rechts",
+                                "middle-start": "Mitte links",
+                                "middle-center": "Mitte",
+                                "middle-end": "Mitte rechts",
+                                "bottom-start": "unten links",
+                                "bottom-center": "unten mittig",
+                                "bottom-end": "unten rechts",
+                                "below": "unter dem Bild (nicht darüber)"
+                            },
+                            "default_value": "",
+                            "return_format": "value",
+                            "ui": 0,
+                            "allow_null": 0,
+                            "multiple": 0
+                        }
+                    ]
+                },
+                {
+                    "key": "field_zpt_msg_width",
+                    "label": "Breite",
+                    "name": "width",
+                    "type": "group",
+                    "instructions": "",
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_zpt_msg_width_bp_xs",
+                            "label": "XS",
+                            "name": "bp_xs",
+                            "type": "select",
+                            "instructions": "",
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "100": "100 %",
+                                "75": "75 %",
+                                "66": "66 %",
+                                "50": "50 %",
+                                "33": "33 %",
+                                "25": "25 %",
+                                "auto": "passend zum Text"
+                            },
+                            "default_value": "75",
+                            "return_format": "value",
+                            "ui": 0,
+                            "allow_null": 0,
+                            "multiple": 0
+                        },
+                        {
+                            "key": "field_zpt_msg_width_bp_sm",
+                            "label": "SM",
+                            "name": "bp_sm",
+                            "type": "select",
+                            "instructions": "",
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "": "wie kleiner",
+                                "100": "100 %",
+                                "75": "75 %",
+                                "66": "66 %",
+                                "50": "50 %",
+                                "33": "33 %",
+                                "25": "25 %",
+                                "auto": "passend zum Text"
+                            },
+                            "default_value": "",
+                            "return_format": "value",
+                            "ui": 0,
+                            "allow_null": 0,
+                            "multiple": 0
+                        },
+                        {
+                            "key": "field_zpt_msg_width_bp_md",
+                            "label": "MD",
+                            "name": "bp_md",
+                            "type": "select",
+                            "instructions": "",
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "": "wie kleiner",
+                                "100": "100 %",
+                                "75": "75 %",
+                                "66": "66 %",
+                                "50": "50 %",
+                                "33": "33 %",
+                                "25": "25 %",
+                                "auto": "passend zum Text"
+                            },
+                            "default_value": "",
+                            "return_format": "value",
+                            "ui": 0,
+                            "allow_null": 0,
+                            "multiple": 0
+                        },
+                        {
+                            "key": "field_zpt_msg_width_bp_lg",
+                            "label": "LG",
+                            "name": "bp_lg",
+                            "type": "select",
+                            "instructions": "",
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "": "wie kleiner",
+                                "100": "100 %",
+                                "75": "75 %",
+                                "66": "66 %",
+                                "50": "50 %",
+                                "33": "33 %",
+                                "25": "25 %",
+                                "auto": "passend zum Text"
+                            },
+                            "default_value": "",
+                            "return_format": "value",
+                            "ui": 0,
+                            "allow_null": 0,
+                            "multiple": 0
+                        },
+                        {
+                            "key": "field_zpt_msg_width_bp_xl",
+                            "label": "XL",
+                            "name": "bp_xl",
+                            "type": "select",
+                            "instructions": "",
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "": "wie kleiner",
+                                "100": "100 %",
+                                "75": "75 %",
+                                "66": "66 %",
+                                "50": "50 %",
+                                "33": "33 %",
+                                "25": "25 %",
+                                "auto": "passend zum Text"
+                            },
+                            "default_value": "",
+                            "return_format": "value",
+                            "ui": 0,
+                            "allow_null": 0,
+                            "multiple": 0
+                        },
+                        {
+                            "key": "field_zpt_msg_width_bp_xxl",
+                            "label": "XXL",
+                            "name": "bp_xxl",
+                            "type": "select",
+                            "instructions": "",
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "": "wie kleiner",
+                                "100": "100 %",
+                                "75": "75 %",
+                                "66": "66 %",
+                                "50": "50 %",
+                                "33": "33 %",
+                                "25": "25 %",
+                                "auto": "passend zum Text"
+                            },
+                            "default_value": "",
+                            "return_format": "value",
+                            "ui": 0,
+                            "allow_null": 0,
+                            "multiple": 0
+                        }
+                    ]
+                },
+                {
+                    "key": "field_zpt_msg_offset",
+                    "label": "Abstand zum Rand",
+                    "name": "offset",
+                    "type": "select",
+                    "instructions": "",
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "": "Standard (20 px)",
+                        "0": "0",
+                        "10": "10 px",
+                        "20": "20 px",
+                        "30": "30 px",
+                        "40": "40 px",
+                        "60": "60 px"
+                    },
+                    "default_value": "",
+                    "return_format": "value",
+                    "ui": 0,
+                    "allow_null": 0,
+                    "multiple": 0
+                },
+                {
+                    "key": "field_zpt_msg_tab_font",
+                    "label": "Schrift",
+                    "name": "",
+                    "type": "tab",
+                    "placement": "top",
+                    "endpoint": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    }
+                },
+                {
+                    "key": "field_zpt_msg_font",
+                    "label": "Schrift",
+                    "name": "font",
+                    "type": "group",
+                    "instructions": "",
+                    "wrapper": {
+                        "width": "",
+                        "class": "zpt-group-plain",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_zpt_msg_font_role",
+                            "label": "Schriftrolle",
+                            "name": "zpt_font_role",
+                            "type": "select",
+                            "instructions": "",
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "": "Standard (wie umgebend)"
+                            },
+                            "default_value": "",
+                            "return_format": "value",
+                            "ui": 0,
+                            "allow_null": 0,
+                            "multiple": 0
+                        },
+                        {
+                            "key": "field_zpt_msg_font_weight",
+                            "label": "Gewicht",
+                            "name": "zpt_font_weight_class",
+                            "type": "select",
+                            "instructions": "",
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "": "Standard"
+                            },
+                            "default_value": "",
+                            "return_format": "value",
+                            "ui": 0,
+                            "allow_null": 0,
+                            "multiple": 0
+                        },
+                        {
+                            "key": "field_zpt_msg_font_color",
+                            "label": "Schriftfarbe",
+                            "name": "color",
+                            "type": "text",
+                            "instructions": "Baukasten-Farbe (primary, primary-100 … -900), Farbname oder Hex",
+                            "wrapper": {
+                                "width": "",
+                                "class": "zpt-color-field zpt-color-tokens",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "Standard",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_zpt_msg_font_size",
+                            "label": "Schriftgröße",
+                            "name": "size",
+                            "type": "group",
+                            "instructions": "",
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_zpt_msg_font_size_bp_xs",
+                                    "label": "XS",
+                                    "name": "bp_xs",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "wrapper": {
+                                        "width": "33",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "": "Standard"
+                                    },
+                                    "default_value": "",
+                                    "return_format": "value",
+                                    "ui": 0,
+                                    "allow_null": 0,
+                                    "multiple": 0
+                                },
+                                {
+                                    "key": "field_zpt_msg_font_size_bp_sm",
+                                    "label": "SM",
+                                    "name": "bp_sm",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "wrapper": {
+                                        "width": "33",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "": "wie kleiner"
+                                    },
+                                    "default_value": "",
+                                    "return_format": "value",
+                                    "ui": 0,
+                                    "allow_null": 0,
+                                    "multiple": 0
+                                },
+                                {
+                                    "key": "field_zpt_msg_font_size_bp_md",
+                                    "label": "MD",
+                                    "name": "bp_md",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "wrapper": {
+                                        "width": "33",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "": "wie kleiner"
+                                    },
+                                    "default_value": "",
+                                    "return_format": "value",
+                                    "ui": 0,
+                                    "allow_null": 0,
+                                    "multiple": 0
+                                },
+                                {
+                                    "key": "field_zpt_msg_font_size_bp_lg",
+                                    "label": "LG",
+                                    "name": "bp_lg",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "wrapper": {
+                                        "width": "33",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "": "wie kleiner"
+                                    },
+                                    "default_value": "",
+                                    "return_format": "value",
+                                    "ui": 0,
+                                    "allow_null": 0,
+                                    "multiple": 0
+                                },
+                                {
+                                    "key": "field_zpt_msg_font_size_bp_xl",
+                                    "label": "XL",
+                                    "name": "bp_xl",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "wrapper": {
+                                        "width": "33",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "": "wie kleiner"
+                                    },
+                                    "default_value": "",
+                                    "return_format": "value",
+                                    "ui": 0,
+                                    "allow_null": 0,
+                                    "multiple": 0
+                                },
+                                {
+                                    "key": "field_zpt_msg_font_size_bp_xxl",
+                                    "label": "XXL",
+                                    "name": "bp_xxl",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "wrapper": {
+                                        "width": "33",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "": "wie kleiner"
+                                    },
+                                    "default_value": "",
+                                    "return_format": "value",
+                                    "ui": 0,
+                                    "allow_null": 0,
+                                    "multiple": 0
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_zpt_msg_font_align",
+                            "label": "Textausrichtung",
+                            "name": "align",
+                            "type": "group",
+                            "instructions": "",
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_zpt_msg_font_align_bp_xs",
+                                    "label": "XS",
+                                    "name": "bp_xs",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "wrapper": {
+                                        "width": "33",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "": "wie umgebend",
+                                        "start": "links",
+                                        "center": "mittig",
+                                        "end": "rechts"
+                                    },
+                                    "default_value": "",
+                                    "return_format": "value",
+                                    "ui": 0,
+                                    "allow_null": 0,
+                                    "multiple": 0
+                                },
+                                {
+                                    "key": "field_zpt_msg_font_align_bp_sm",
+                                    "label": "SM",
+                                    "name": "bp_sm",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "wrapper": {
+                                        "width": "33",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "": "wie kleiner",
+                                        "start": "links",
+                                        "center": "mittig",
+                                        "end": "rechts"
+                                    },
+                                    "default_value": "",
+                                    "return_format": "value",
+                                    "ui": 0,
+                                    "allow_null": 0,
+                                    "multiple": 0
+                                },
+                                {
+                                    "key": "field_zpt_msg_font_align_bp_md",
+                                    "label": "MD",
+                                    "name": "bp_md",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "wrapper": {
+                                        "width": "33",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "": "wie kleiner",
+                                        "start": "links",
+                                        "center": "mittig",
+                                        "end": "rechts"
+                                    },
+                                    "default_value": "",
+                                    "return_format": "value",
+                                    "ui": 0,
+                                    "allow_null": 0,
+                                    "multiple": 0
+                                },
+                                {
+                                    "key": "field_zpt_msg_font_align_bp_lg",
+                                    "label": "LG",
+                                    "name": "bp_lg",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "wrapper": {
+                                        "width": "33",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "": "wie kleiner",
+                                        "start": "links",
+                                        "center": "mittig",
+                                        "end": "rechts"
+                                    },
+                                    "default_value": "",
+                                    "return_format": "value",
+                                    "ui": 0,
+                                    "allow_null": 0,
+                                    "multiple": 0
+                                },
+                                {
+                                    "key": "field_zpt_msg_font_align_bp_xl",
+                                    "label": "XL",
+                                    "name": "bp_xl",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "wrapper": {
+                                        "width": "33",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "": "wie kleiner",
+                                        "start": "links",
+                                        "center": "mittig",
+                                        "end": "rechts"
+                                    },
+                                    "default_value": "",
+                                    "return_format": "value",
+                                    "ui": 0,
+                                    "allow_null": 0,
+                                    "multiple": 0
+                                },
+                                {
+                                    "key": "field_zpt_msg_font_align_bp_xxl",
+                                    "label": "XXL",
+                                    "name": "bp_xxl",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "wrapper": {
+                                        "width": "33",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "": "wie kleiner",
+                                        "start": "links",
+                                        "center": "mittig",
+                                        "end": "rechts"
+                                    },
+                                    "default_value": "",
+                                    "return_format": "value",
+                                    "ui": 0,
+                                    "allow_null": 0,
+                                    "multiple": 0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "key": "field_zpt_msg_tab_background",
+                    "label": "Hintergrund",
+                    "name": "",
+                    "type": "tab",
+                    "placement": "top",
+                    "endpoint": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    }
+                },
+                {
+                    "key": "field_zpt_msg_background",
+                    "label": "Hintergrundfarbe",
+                    "name": "background",
+                    "type": "text",
+                    "instructions": "Baukasten-Farbe (primary, primary-100 … -900), Farbname oder Hex",
+                    "wrapper": {
+                        "width": "",
+                        "class": "zpt-color-field zpt-color-tokens",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "keine",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_zpt_msg_padding",
+                    "label": "Innenabstand",
+                    "name": "padding",
+                    "type": "select",
+                    "instructions": "",
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "": "Standard (20 px)",
+                        "0": "0",
+                        "10": "10 px",
+                        "20": "20 px",
+                        "30": "30 px",
+                        "40": "40 px",
+                        "60": "60 px"
+                    },
+                    "default_value": "",
+                    "return_format": "value",
+                    "ui": 0,
+                    "allow_null": 0,
+                    "multiple": 0
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 100,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "Nur zum Klonen (Bild, Galerie): Text-Container über dem Bild, Position/Breite je Breakpoint, eigene Schrift.",
+    "show_in_rest": 0,
+    "modified": 1791114432
+}

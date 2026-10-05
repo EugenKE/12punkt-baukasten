@@ -1,0 +1,682 @@
+{
+    "key": "group_zpt_settings_buttons",
+    "title": "Baukasten: Buttons",
+    "display_title": "Buttons",
+    "fields": [
+        {
+            "key": "field_zpt_btn_tab_sizes",
+            "label": "Grundeinstellungen",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_zpt_btn_sizes",
+            "label": "Größen",
+            "name": "zpt_btn_sizes",
+            "type": "repeater",
+            "layout": "table",
+            "instructions": "Button-Größen mit Name und CSS-Klasse: „md“ = Standard (.btn ohne Klasse), alle anderen werden zu .btn-{klasse} (z. B. .btn-sm, .btn-xl) und stehen im Button-Block unter „Größe“ zur Auswahl. Schriftgröße, Zeilenhöhe, Laufweite und Innenabstände je Größe: Templates und Varianten.",
+            "min": 0,
+            "max": 0,
+            "button_label": "Größe hinzufügen",
+            "collapsed": "",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_zpt_btn_size_label",
+                    "label": "Name",
+                    "name": "label",
+                    "type": "text",
+                    "placeholder": "Extra groß",
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "required": 1
+                },
+                {
+                    "key": "field_zpt_btn_size_slug",
+                    "label": "CSS-Klasse",
+                    "name": "slug",
+                    "type": "text",
+                    "placeholder": "xl",
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "required": 1,
+                    "prepend": ".btn-"
+                }
+            ]
+        },
+        {
+            "key": "field_zpt_btn_tab_general",
+            "label": "Templates",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_zpt_btn_templates",
+            "label": "Templates",
+            "name": "zpt_btn_templates",
+            "type": "repeater",
+            "layout": "block",
+            "instructions": "„btn default“ gilt für alle Buttons (.btn) und kann nicht gelöscht werden. Weitere Templates werden zur Klasse .btn-{kürzel} (z. B. .btn-pill), lassen sich mit jeder Farbe kombinieren und stehen im Button-Block unter „Template“. Leere Felder: btn default = Bootstrap-Standard, andere Templates = wie btn default. Schriftgröße, Zeilenhöhe, Laufweite und Innenabstände je Größe. Längen ohne Einheit = px.",
+            "collapsed": "field_zpt_btn_tpl_label",
+            "min": 1,
+            "max": 0,
+            "button_label": "Template hinzufügen",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_zpt_btn_tpl_label",
+                    "label": "Name",
+                    "name": "label",
+                    "type": "text",
+                    "placeholder": "Pill",
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "required": 1
+                },
+                {
+                    "key": "field_zpt_btn_tpl_slug",
+                    "label": "Kürzel",
+                    "name": "slug",
+                    "type": "text",
+                    "placeholder": "pill",
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "required": 1,
+                    "prepend": ".btn-",
+                    "instructions": "Kleinbuchstaben, Ziffern, Bindestrich. „default“ = btn default (.btn)."
+                },
+                {
+                    "key": "field_zpt_btn_tpl_font_role",
+                    "label": "Schriftrolle",
+                    "name": "font_role",
+                    "type": "select",
+                    "choices": {},
+                    "default_value": "",
+                    "return_format": "value",
+                    "ui": 0,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    }
+                },
+                {
+                    "key": "field_zpt_btn_tpl_weight",
+                    "label": "Gewicht",
+                    "name": "weight",
+                    "type": "select",
+                    "choices": {},
+                    "default_value": "",
+                    "return_format": "value",
+                    "ui": 0,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    }
+                },
+                {
+                    "key": "field_zpt_btn_tpl_uppercase",
+                    "label": "Großbuchstaben",
+                    "name": "uppercase",
+                    "type": "select",
+                    "choices": {
+                        "": "Standard",
+                        "1": "ja",
+                        "0": "nein"
+                    },
+                    "default_value": "",
+                    "return_format": "value",
+                    "ui": 0,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    }
+                },
+                {
+                    "key": "field_zpt_btn_tpl_border_width",
+                    "label": "Rahmenbreite",
+                    "name": "border_width",
+                    "type": "text",
+                    "placeholder": "keine",
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "instructions": "z. B. 2px. Leer, 0 oder „keine“ = kein Rahmen."
+                },
+                {
+                    "key": "field_zpt_btn_tpl_border_radius",
+                    "label": "Eckenradius",
+                    "name": "border_radius",
+                    "type": "text",
+                    "placeholder": "0",
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "instructions": "z. B. 6px, 50rem = Pill."
+                },
+                {
+                    "key": "field_zpt_btn_tpl_background",
+                    "label": "Hintergrund",
+                    "name": "background",
+                    "type": "true_false",
+                    "ui": 1,
+                    "default_value": 1,
+                    "instructions": "Aus = transparent, beim Hover mit der Rahmenfarbe gefüllt.",
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    }
+                },
+                {
+                    "key": "field_zpt_btn_tpl_outline",
+                    "label": "Outline",
+                    "name": "outline",
+                    "type": "true_false",
+                    "ui": 1,
+                    "default_value": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "instructions": "Schrift in Rahmenfarbe."
+                },
+                {
+                    "key": "field_zpt_btn_tpl_sizes",
+                    "label": "Größen",
+                    "name": "sizes",
+                    "type": "repeater",
+                    "layout": "table",
+                    "instructions": "Je Größe. Leer: btn default = Bootstrap-Wert der Größe, andere Templates = wie btn default. Schriftgröße auch als Stufe (copy, l …), Abstände ohne Einheit = px.",
+                    "min": 0,
+                    "max": 0,
+                    "button_label": "Größe hinzufügen",
+                    "collapsed": "",
+                    "rows_per_page": 20,
+                    "sub_fields": [
+                        {
+                            "key": "field_zpt_btn_tpl_size_size",
+                            "label": "Größe",
+                            "name": "size",
+                            "type": "select",
+                            "choices": {},
+                            "default_value": "md",
+                            "return_format": "value",
+                            "ui": 0,
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "wrapper": {
+                                "width": "16",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_zpt_btn_tpl_size_font_size",
+                            "label": "Schriftgröße",
+                            "name": "font_size",
+                            "type": "text",
+                            "placeholder": "1rem / copy-l",
+                            "wrapper": {
+                                "width": "17",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_zpt_btn_tpl_size_line_height",
+                            "label": "Zeilenhöhe",
+                            "name": "line_height",
+                            "type": "text",
+                            "placeholder": "1.5",
+                            "wrapper": {
+                                "width": "16",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_zpt_btn_tpl_size_letter_spacing",
+                            "label": "Laufweite",
+                            "name": "letter_spacing",
+                            "type": "text",
+                            "placeholder": "0.05em",
+                            "wrapper": {
+                                "width": "16",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_zpt_btn_tpl_size_padding_y",
+                            "label": "Innenabstand oben/unten",
+                            "name": "padding_y",
+                            "type": "text",
+                            "placeholder": "0.375rem",
+                            "wrapper": {
+                                "width": "17",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_zpt_btn_tpl_size_padding_x",
+                            "label": "Innenabstand links/rechts",
+                            "name": "padding_x",
+                            "type": "text",
+                            "placeholder": "0.75rem",
+                            "wrapper": {
+                                "width": "18",
+                                "class": "",
+                                "id": ""
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "field_zpt_btn_tab_variants",
+            "label": "Varianten",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_zpt_btn_variants",
+            "label": "Varianten",
+            "name": "zpt_btn_variants",
+            "type": "repeater",
+            "layout": "block",
+            "instructions": "Je Zeile eine Button-Klasse genauer definieren (überschreibt Templates und Farben aus Baukasten → Farben) oder eine eigene Klasse anlegen. Leere Felder = Template bzw. Bootstrap.",
+            "collapsed": "field_zpt_btn_var_class",
+            "min": 0,
+            "max": 0,
+            "button_label": "Variante hinzufügen",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_zpt_btn_var_class",
+                    "label": "Klasse",
+                    "name": "class",
+                    "type": "select",
+                    "choices": {},
+                    "default_value": "btn-primary",
+                    "return_format": "value",
+                    "ui": 0,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    }
+                },
+                {
+                    "key": "field_zpt_btn_var_template",
+                    "label": "Template",
+                    "name": "template",
+                    "type": "select",
+                    "choices": {},
+                    "default_value": "",
+                    "return_format": "value",
+                    "ui": 0,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "instructions": "Werte des Templates übernehmen; Angaben dieser Variante gehen vor.",
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    }
+                },
+                {
+                    "key": "field_zpt_btn_var_custom",
+                    "label": "Eigene Klasse",
+                    "name": "custom",
+                    "type": "text",
+                    "placeholder": "black",
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "instructions": "Kleinbuchstaben, Ziffern, Bindestrich. Erscheint im Button-Block unter Stil.",
+                    "prepend": ".btn-",
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_zpt_btn_var_class",
+                                "operator": "==",
+                                "value": "custom"
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "key": "field_zpt_btn_var_normal",
+                    "label": "Farben normal",
+                    "name": "normal",
+                    "type": "group",
+                    "layout": "block",
+                    "instructions": "Baukasten-Farbe (primary-300), HTML-Farbname oder Hex. Schriftfarbe leer = lesbare Kontrastfarbe, Rahmenfarbe leer = Hintergrundfarbe.",
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    },
+                    "sub_fields": [
+                        {
+                            "key": "field_zpt_btn_var_normal_color",
+                            "label": "Schriftfarbe",
+                            "name": "color",
+                            "type": "text",
+                            "placeholder": "",
+                            "wrapper": {
+                                "width": "33",
+                                "class": "zpt-color-field zpt-color-tokens",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_zpt_btn_var_normal_background",
+                            "label": "Hintergrundfarbe",
+                            "name": "background",
+                            "type": "text",
+                            "placeholder": "",
+                            "wrapper": {
+                                "width": "33",
+                                "class": "zpt-color-field zpt-color-tokens",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_zpt_btn_var_normal_border",
+                            "label": "Rahmenfarbe",
+                            "name": "border",
+                            "type": "text",
+                            "placeholder": "",
+                            "wrapper": {
+                                "width": "33",
+                                "class": "zpt-color-field zpt-color-tokens",
+                                "id": ""
+                            }
+                        }
+                    ]
+                },
+                {
+                    "key": "field_zpt_btn_var_hover",
+                    "label": "Farben Hover / Aktiv",
+                    "name": "hover",
+                    "type": "group",
+                    "layout": "block",
+                    "instructions": "Leer = 30 % dunkler als normal, Schriftfarbe = normal bzw. Kontrastfarbe, Rahmenfarbe = Hintergrundfarbe Hover.",
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    },
+                    "sub_fields": [
+                        {
+                            "key": "field_zpt_btn_var_hover_color",
+                            "label": "Schriftfarbe",
+                            "name": "color",
+                            "type": "text",
+                            "placeholder": "",
+                            "wrapper": {
+                                "width": "33",
+                                "class": "zpt-color-field zpt-color-tokens",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_zpt_btn_var_hover_background",
+                            "label": "Hintergrundfarbe",
+                            "name": "background",
+                            "type": "text",
+                            "placeholder": "",
+                            "wrapper": {
+                                "width": "33",
+                                "class": "zpt-color-field zpt-color-tokens",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_zpt_btn_var_hover_border",
+                            "label": "Rahmenfarbe",
+                            "name": "border",
+                            "type": "text",
+                            "placeholder": "",
+                            "wrapper": {
+                                "width": "33",
+                                "class": "zpt-color-field zpt-color-tokens",
+                                "id": ""
+                            }
+                        }
+                    ]
+                },
+                {
+                    "key": "field_zpt_btn_var_border_width",
+                    "label": "Rahmenbreite",
+                    "name": "border_width",
+                    "type": "text",
+                    "placeholder": "wie Template",
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    }
+                },
+                {
+                    "key": "field_zpt_btn_var_border_radius",
+                    "label": "Eckenradius",
+                    "name": "border_radius",
+                    "type": "text",
+                    "placeholder": "wie Template",
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    }
+                },
+                {
+                    "key": "field_zpt_btn_var_font_role",
+                    "label": "Schriftrolle",
+                    "name": "font_role",
+                    "type": "select",
+                    "choices": {},
+                    "default_value": "",
+                    "return_format": "value",
+                    "ui": 0,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    }
+                },
+                {
+                    "key": "field_zpt_btn_var_weight",
+                    "label": "Gewicht",
+                    "name": "weight",
+                    "type": "select",
+                    "choices": {},
+                    "default_value": "",
+                    "return_format": "value",
+                    "ui": 0,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    }
+                },
+                {
+                    "key": "field_zpt_btn_var_uppercase",
+                    "label": "Großbuchstaben",
+                    "name": "uppercase",
+                    "type": "select",
+                    "choices": {
+                        "": "wie Template",
+                        "1": "ja",
+                        "0": "nein"
+                    },
+                    "default_value": "",
+                    "return_format": "value",
+                    "ui": 0,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    }
+                },
+                {
+                    "key": "field_zpt_btn_var_sizes",
+                    "label": "Größen",
+                    "name": "sizes",
+                    "type": "repeater",
+                    "layout": "table",
+                    "instructions": "Je Größe. Leer = wie Template.",
+                    "min": 0,
+                    "max": 0,
+                    "button_label": "Größe hinzufügen",
+                    "collapsed": "",
+                    "rows_per_page": 20,
+                    "sub_fields": [
+                        {
+                            "key": "field_zpt_btn_var_size_size",
+                            "label": "Größe",
+                            "name": "size",
+                            "type": "select",
+                            "choices": {},
+                            "default_value": "md",
+                            "return_format": "value",
+                            "ui": 0,
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "wrapper": {
+                                "width": "16",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_zpt_btn_var_size_font_size",
+                            "label": "Schriftgröße",
+                            "name": "font_size",
+                            "type": "text",
+                            "placeholder": "1rem / copy-l",
+                            "wrapper": {
+                                "width": "17",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_zpt_btn_var_size_line_height",
+                            "label": "Zeilenhöhe",
+                            "name": "line_height",
+                            "type": "text",
+                            "placeholder": "1.5",
+                            "wrapper": {
+                                "width": "16",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_zpt_btn_var_size_letter_spacing",
+                            "label": "Laufweite",
+                            "name": "letter_spacing",
+                            "type": "text",
+                            "placeholder": "0.05em",
+                            "wrapper": {
+                                "width": "16",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_zpt_btn_var_size_padding_y",
+                            "label": "Innenabstand oben/unten",
+                            "name": "padding_y",
+                            "type": "text",
+                            "placeholder": "0.375rem",
+                            "wrapper": {
+                                "width": "17",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_zpt_btn_var_size_padding_x",
+                            "label": "Innenabstand links/rechts",
+                            "name": "padding_x",
+                            "type": "text",
+                            "placeholder": "0.75rem",
+                            "wrapper": {
+                                "width": "18",
+                                "class": "",
+                                "id": ""
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "zpt-buttons"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1791100895
+}

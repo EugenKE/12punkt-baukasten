@@ -1,0 +1,27 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 2,
+    "name": "zpt/icon",
+    "title": "Icon",
+    "description": "Icon aus den Icon-Sets (Baukasten → Icons) oder eigener SVG-Code, optional verlinkt.",
+    "category": "zpt",
+    "icon": "star-filled",
+    "keywords": [
+        "icon",
+        "svg",
+        "symbol"
+    ],
+    "textdomain": "12punkt-baukasten",
+    "ancestor": [
+        "zpt/column"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "render.php"
+    },
+    "supports": {
+        "anchor": true,
+        "align": false,
+        "html": false
+    }
+}

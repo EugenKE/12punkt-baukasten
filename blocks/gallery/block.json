@@ -1,0 +1,29 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 2,
+    "name": "zpt/gallery",
+    "title": "Galerie",
+    "description": "Bilder als Kacheln, Masonry oder Karussell, optional mit Photoswipe.",
+    "category": "zpt",
+    "icon": "format-gallery",
+    "keywords": [
+        "galerie",
+        "gallery",
+        "bilder",
+        "karussell",
+        "slider"
+    ],
+    "textdomain": "12punkt-baukasten",
+    "ancestor": [
+        "zpt/column"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "render.php"
+    },
+    "supports": {
+        "anchor": true,
+        "align": false,
+        "html": false
+    }
+}

@@ -1,0 +1,251 @@
+{
+    "key": "group_zpt_tpl_column",
+    "title": "ZPT Template: Spalte",
+    "fields": [
+        {
+            "key": "field_zpt_colw_col_widths",
+            "label": "Spaltenbreite",
+            "name": "col_widths",
+            "type": "group",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_zpt_colw_bp_xs",
+                    "label": "XS (Standard)",
+                    "name": "bp_xs",
+                    "type": "select",
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "col": "auto (gleich breit)",
+                        "col-1": "1",
+                        "col-2": "2",
+                        "col-3": "3",
+                        "col-4": "4",
+                        "col-5": "5",
+                        "col-6": "6",
+                        "col-7": "7",
+                        "col-8": "8",
+                        "col-9": "9",
+                        "col-10": "10",
+                        "col-11": "11",
+                        "col-12": "12"
+                    },
+                    "default_value": "col-12",
+                    "return_format": "value",
+                    "ui": 0,
+                    "allow_null": 0,
+                    "multiple": 0
+                },
+                {
+                    "key": "field_zpt_colw_bp_sm",
+                    "label": "SM",
+                    "name": "bp_sm",
+                    "type": "select",
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "none": "wie XS",
+                        "col-sm": "auto (gleich breit)",
+                        "col-sm-1": "1",
+                        "col-sm-2": "2",
+                        "col-sm-3": "3",
+                        "col-sm-4": "4",
+                        "col-sm-5": "5",
+                        "col-sm-6": "6",
+                        "col-sm-7": "7",
+                        "col-sm-8": "8",
+                        "col-sm-9": "9",
+                        "col-sm-10": "10",
+                        "col-sm-11": "11",
+                        "col-sm-12": "12"
+                    },
+                    "default_value": "none",
+                    "return_format": "value",
+                    "ui": 0,
+                    "allow_null": 0,
+                    "multiple": 0
+                },
+                {
+                    "key": "field_zpt_colw_bp_md",
+                    "label": "MD",
+                    "name": "bp_md",
+                    "type": "select",
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "none": "wie SM",
+                        "col-md": "auto (gleich breit)",
+                        "col-md-1": "1",
+                        "col-md-2": "2",
+                        "col-md-3": "3",
+                        "col-md-4": "4",
+                        "col-md-5": "5",
+                        "col-md-6": "6",
+                        "col-md-7": "7",
+                        "col-md-8": "8",
+                        "col-md-9": "9",
+                        "col-md-10": "10",
+                        "col-md-11": "11",
+                        "col-md-12": "12"
+                    },
+                    "default_value": "none",
+                    "return_format": "value",
+                    "ui": 0,
+                    "allow_null": 0,
+                    "multiple": 0
+                },
+                {
+                    "key": "field_zpt_colw_bp_lg",
+                    "label": "LG",
+                    "name": "bp_lg",
+                    "type": "select",
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "none": "wie MD",
+                        "col-lg": "auto (gleich breit)",
+                        "col-lg-1": "1",
+                        "col-lg-2": "2",
+                        "col-lg-3": "3",
+                        "col-lg-4": "4",
+                        "col-lg-5": "5",
+                        "col-lg-6": "6",
+                        "col-lg-7": "7",
+                        "col-lg-8": "8",
+                        "col-lg-9": "9",
+                        "col-lg-10": "10",
+                        "col-lg-11": "11",
+                        "col-lg-12": "12"
+                    },
+                    "default_value": "none",
+                    "return_format": "value",
+                    "ui": 0,
+                    "allow_null": 0,
+                    "multiple": 0
+                },
+                {
+                    "key": "field_zpt_colw_bp_xl",
+                    "label": "XL",
+                    "name": "bp_xl",
+                    "type": "select",
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "none": "wie LG",
+                        "col-xl": "auto (gleich breit)",
+                        "col-xl-1": "1",
+                        "col-xl-2": "2",
+                        "col-xl-3": "3",
+                        "col-xl-4": "4",
+                        "col-xl-5": "5",
+                        "col-xl-6": "6",
+                        "col-xl-7": "7",
+                        "col-xl-8": "8",
+                        "col-xl-9": "9",
+                        "col-xl-10": "10",
+                        "col-xl-11": "11",
+                        "col-xl-12": "12"
+                    },
+                    "default_value": "none",
+                    "return_format": "value",
+                    "ui": 0,
+                    "allow_null": 0,
+                    "multiple": 0
+                },
+                {
+                    "key": "field_zpt_colw_bp_xxl",
+                    "label": "XXL",
+                    "name": "bp_xxl",
+                    "type": "select",
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "none": "wie XL",
+                        "col-xxl": "auto (gleich breit)",
+                        "col-xxl-1": "1",
+                        "col-xxl-2": "2",
+                        "col-xxl-3": "3",
+                        "col-xxl-4": "4",
+                        "col-xxl-5": "5",
+                        "col-xxl-6": "6",
+                        "col-xxl-7": "7",
+                        "col-xxl-8": "8",
+                        "col-xxl-9": "9",
+                        "col-xxl-10": "10",
+                        "col-xxl-11": "11",
+                        "col-xxl-12": "12"
+                    },
+                    "default_value": "none",
+                    "return_format": "value",
+                    "ui": 0,
+                    "allow_null": 0,
+                    "multiple": 0
+                }
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "zpt-cols-2",
+                "id": ""
+            }
+        },
+        {
+            "key": "field_zpt_colw_col_classes",
+            "label": "Spalten Klassen",
+            "name": "col_classes",
+            "type": "text",
+            "instructions": "ohne „.“, trennen mit Leerzeichen",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "key": "field_zpt_colw_no_padding",
+            "label": "Randabfallend",
+            "name": "no_padding",
+            "type": "true_false",
+            "default_value": 0,
+            "ui": 1,
+            "instructions": "Entfernt das seitliche Padding der Spalte (px-0)."
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 100,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "Nur zum Klonen in Komponenten-Blocks.",
+    "show_in_rest": 0,
+    "modified": 1790953639
+}

@@ -1,0 +1,456 @@
+{
+    "key": "group_zpt_block_card",
+    "title": "ZPT Block: Card",
+    "fields": [
+        {
+            "key": "field_zpt_card_tab_content",
+            "label": "Inhalt",
+            "name": "",
+            "type": "accordion",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-panel",
+                "id": ""
+            },
+            "open": 1,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_zpt_card_source",
+            "label": "Quelle",
+            "name": "source",
+            "type": "select",
+            "instructions": "",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "manual": "eigener Inhalt",
+                "post": "Beitrag / Seite"
+            },
+            "default_value": "manual",
+            "return_format": "value",
+            "ui": 0,
+            "allow_null": 0,
+            "multiple": 0
+        },
+        {
+            "key": "field_zpt_card_post",
+            "label": "Beitrag / Seite",
+            "name": "post",
+            "type": "post_object",
+            "instructions": "Bild, Überschrift, Text und Link kommen aus dem Beitrag – eigene Angaben unten gehen vor.",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [],
+            "taxonomy": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_zpt_card_source",
+                        "operator": "==",
+                        "value": "post"
+                    }
+                ]
+            ]
+        },
+        {
+            "key": "field_zpt_card_image",
+            "label": "Bild",
+            "name": "image",
+            "type": "image",
+            "instructions": "",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_zpt_card_headline",
+            "label": "Überschrift",
+            "name": "headline",
+            "type": "text",
+            "instructions": "",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_zpt_card_headline_tag",
+            "label": "Überschrift-Tag",
+            "name": "headline_tag",
+            "type": "select",
+            "instructions": "",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "h2": "h2",
+                "h3": "h3",
+                "h4": "h4",
+                "h5": "h5",
+                "h6": "h6",
+                "p": "p"
+            },
+            "default_value": "h3",
+            "return_format": "value",
+            "ui": 0,
+            "allow_null": 0,
+            "multiple": 0
+        },
+        {
+            "key": "field_zpt_card_text",
+            "label": "Text",
+            "name": "text",
+            "type": "wysiwyg",
+            "instructions": "",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_zpt_card_link",
+            "label": "Link",
+            "name": "link",
+            "type": "link",
+            "instructions": "",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_zpt_card_tab_layout",
+            "label": "Aufbau",
+            "name": "",
+            "type": "accordion",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-panel",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_zpt_card_layout",
+            "label": "Anordnung",
+            "name": "layout",
+            "type": "select",
+            "instructions": "nebeneinander ab MD",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "vertical": "Bild oben",
+                "horizontal-50": "nebeneinander 50/50",
+                "horizontal-40": "nebeneinander 40/60"
+            },
+            "default_value": "vertical",
+            "return_format": "value",
+            "ui": 0,
+            "allow_null": 0,
+            "multiple": 0
+        },
+        {
+            "key": "field_zpt_card_order",
+            "label": "Reihenfolge",
+            "name": "order",
+            "type": "select",
+            "instructions": "",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "image-first": "Bild zuerst",
+                "text-first": "Text zuerst"
+            },
+            "default_value": "image-first",
+            "return_format": "value",
+            "ui": 0,
+            "allow_null": 0,
+            "multiple": 0
+        },
+        {
+            "key": "field_zpt_card_link_mode",
+            "label": "Link als",
+            "name": "link_mode",
+            "type": "select",
+            "instructions": "",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "button": "Button",
+                "card": "ganze Card klickbar",
+                "both": "Button, ganze Card klickbar"
+            },
+            "default_value": "button",
+            "return_format": "value",
+            "ui": 0,
+            "allow_null": 0,
+            "multiple": 0
+        },
+        {
+            "key": "field_zpt_card_button_style",
+            "label": "Button-Stil",
+            "name": "button_style",
+            "type": "select",
+            "instructions": "",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "btn-primary": "Button Primary"
+            },
+            "default_value": "btn-primary",
+            "return_format": "value",
+            "ui": 0,
+            "allow_null": 0,
+            "multiple": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_zpt_card_link_mode",
+                        "operator": "!=",
+                        "value": "card"
+                    }
+                ]
+            ]
+        },
+        {
+            "key": "field_zpt_card_ratio",
+            "label": "Bild-Seitenverhältnis",
+            "name": "ratio",
+            "type": "select",
+            "instructions": "",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "": "wie das Bild",
+                "1x1": "1:1",
+                "4x3": "4:3",
+                "3x2": "3:2",
+                "16x9": "16:9"
+            },
+            "default_value": "",
+            "return_format": "value",
+            "ui": 0,
+            "allow_null": 0,
+            "multiple": 0
+        },
+        {
+            "key": "field_zpt_card_border",
+            "label": "Rahmen (Bootstrap .card)",
+            "name": "border",
+            "type": "true_false",
+            "instructions": "",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Ja",
+            "ui_off_text": "Nein",
+            "message": ""
+        },
+        {
+            "key": "field_zpt_card_tab_font",
+            "label": "Schrift",
+            "name": "",
+            "type": "accordion",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-panel",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_zpt_card_font",
+            "label": "Schrift",
+            "name": "",
+            "type": "clone",
+            "clone": [
+                "field_zpt_props_group_font"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_zpt_card_tab_props",
+            "label": "Hintergrund",
+            "name": "",
+            "type": "accordion",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-panel",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_zpt_card_properties",
+            "label": "Hintergrund",
+            "name": "properties",
+            "type": "clone",
+            "clone": [
+                "field_zpt_props_group_colors"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_zpt_card_tab_css",
+            "label": "CSS",
+            "name": "",
+            "type": "accordion",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-panel",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_zpt_card_css_id",
+            "label": "CSS ID",
+            "name": "css_id",
+            "type": "text",
+            "instructions": "ohne „#“, ohne Leerzeichen; muss auf der Seite eindeutig sein",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "#",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_zpt_card_css_classes",
+            "label": "CSS Klassen",
+            "name": "css_classes",
+            "type": "text",
+            "instructions": "ohne „.“, trennen mit Leerzeichen",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_zpt_card_css_body",
+            "label": "CSS Text-Bereich",
+            "name": "css_body",
+            "type": "text",
+            "instructions": "ohne „.“, trennen mit Leerzeichen",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_zpt_card_accordion_end",
+            "label": "",
+            "name": "",
+            "type": "accordion",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-panel",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "zpt/card"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1791020530
+}

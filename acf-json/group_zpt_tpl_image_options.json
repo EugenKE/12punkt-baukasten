@@ -1,0 +1,128 @@
+{
+    "key": "group_zpt_tpl_image_options",
+    "title": "ZPT Template: Bild-Einstellungen",
+    "fields": [
+        {
+            "key": "field_zpt_imgopt_image_caption_source",
+            "label": "Bildunterschrift Quelle",
+            "name": "image_caption_source",
+            "type": "select",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "caption_none": "keine",
+                "caption_media": "aus Bild",
+                "caption_media_wysiwyg": "aus Bild WYSIWYG",
+                "caption_local": "Lokal überschreiben"
+            },
+            "default_value": "caption_none",
+            "return_format": "value",
+            "ui": 0,
+            "allow_null": 0,
+            "multiple": 0
+        },
+        {
+            "key": "field_zpt_imgopt_add_to_photoswipe",
+            "label": "Photoswipe",
+            "name": "add_to_photoswipe",
+            "type": "true_false",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_zpt_imgopt_caption_overwrite_local",
+            "label": "Bildunterschrift überschreiben",
+            "name": "caption_overwrite_local",
+            "type": "wysiwyg",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_zpt_imgopt_image_caption_source",
+                        "operator": "==",
+                        "value": "caption_local"
+                    }
+                ]
+            ]
+        },
+        {
+            "key": "field_zpt_imgopt_css_figure",
+            "label": "CSS Figure",
+            "name": "css_figure",
+            "type": "text",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "instructions": "ohne „.“, trennen mit Leerzeichen"
+        },
+        {
+            "key": "field_zpt_imgopt_css_image_container",
+            "label": "CSS Container",
+            "name": "css_image_container",
+            "type": "text",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "instructions": "ohne „.“, trennen mit Leerzeichen"
+        },
+        {
+            "key": "field_zpt_imgopt_css_image",
+            "label": "CSS Bild (Standard: img-fluid w-100)",
+            "name": "css_image",
+            "type": "text",
+            "placeholder": "img-fluid w-100",
+            "instructions": "ohne „.“, trennen mit Leerzeichen",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "key": "field_zpt_imgopt_css_image_caption",
+            "label": "CSS Bildunterschrift",
+            "name": "css_image_caption",
+            "type": "text",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "instructions": "ohne „.“, trennen mit Leerzeichen"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 100,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "Nur zum Klonen in Komponenten-Blocks.",
+    "show_in_rest": 0,
+    "modified": 1791111650
+}

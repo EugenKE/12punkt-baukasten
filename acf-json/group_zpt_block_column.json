@@ -1,0 +1,165 @@
+{
+    "key": "group_zpt_block_column",
+    "title": "ZPT Block: Spalte",
+    "fields": [
+        {
+            "key": "field_zpt_column_tab_column",
+            "label": "Breite",
+            "name": "",
+            "type": "accordion",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-panel",
+                "id": ""
+            },
+            "open": 1,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_zpt_column_column",
+            "label": "Spalte",
+            "name": "",
+            "type": "clone",
+            "clone": [
+                "field_zpt_colw_col_widths",
+                "field_zpt_colw_no_padding"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_zpt_column_tab_font",
+            "label": "Schrift",
+            "name": "",
+            "type": "accordion",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-panel",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_zpt_column_font",
+            "label": "Schrift",
+            "name": "",
+            "type": "clone",
+            "clone": [
+                "field_zpt_props_group_font"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_zpt_column_tab_props",
+            "label": "Hintergrund",
+            "name": "",
+            "type": "accordion",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-panel",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_zpt_column_properties",
+            "label": "Hintergrund",
+            "name": "properties",
+            "type": "clone",
+            "clone": [
+                "field_zpt_props_group_colors"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_zpt_column_tab_css",
+            "label": "CSS",
+            "name": "",
+            "type": "accordion",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-panel",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_zpt_column_css_id",
+            "label": "CSS ID",
+            "name": "css_id",
+            "type": "text",
+            "instructions": "ohne „#“, ohne Leerzeichen; muss auf der Seite eindeutig sein",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "#",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_zpt_column_css",
+            "label": "CSS",
+            "name": "",
+            "type": "clone",
+            "clone": [
+                "field_zpt_colw_col_classes"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_zpt_column_accordion_end",
+            "label": "",
+            "name": "",
+            "type": "accordion",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-panel",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "zpt/column"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1790953619
+}

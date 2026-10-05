@@ -1,0 +1,43 @@
+{
+    "key": "group_zpt_settings_icons_bootstrap",
+    "title": "Baukasten: Icons – Bootstrap Icons",
+    "display_title": "Bootstrap Icons",
+    "fields": [
+        {
+            "key": "field_zpt_icons_bootstrap",
+            "label": "Bootstrap Icons laden",
+            "name": "zpt_icons_bootstrap",
+            "type": "true_false",
+            "instructions": "Rund 2.000 Icons, Übersicht: <a href=\"https://icons.getbootstrap.com/\" target=\"_blank\">icons.getbootstrap.com</a>. Wird lokal aus dem Plugin geladen (ca. 130 KB).",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "zpt-icons"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1791020308
+}

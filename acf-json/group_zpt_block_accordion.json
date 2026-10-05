@@ -1,0 +1,304 @@
+{
+    "key": "group_zpt_block_accordion",
+    "title": "ZPT Block: Akkordeon",
+    "fields": [
+        {
+            "key": "field_zpt_accordion_tab_content",
+            "label": "Inhalt",
+            "name": "",
+            "type": "accordion",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-panel",
+                "id": ""
+            },
+            "open": 1,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_zpt_accordion_items",
+            "label": "Einträge",
+            "name": "items",
+            "type": "repeater",
+            "instructions": "",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "min": 1,
+            "max": 0,
+            "button_label": "Eintrag hinzufügen",
+            "collapsed": "field_zpt_accordion_item_title",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_zpt_accordion_item_title",
+                    "label": "Titel",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "",
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_zpt_accordion_item_text",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0
+                }
+            ]
+        },
+        {
+            "key": "field_zpt_accordion_tab_behaviour",
+            "label": "Verhalten",
+            "name": "",
+            "type": "accordion",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-panel",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_zpt_accordion_open",
+            "label": "Beim Laden offen",
+            "name": "open",
+            "type": "select",
+            "instructions": "",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "first": "erster Eintrag",
+                "none": "keiner",
+                "all": "alle"
+            },
+            "default_value": "first",
+            "return_format": "value",
+            "ui": 0,
+            "allow_null": 0,
+            "multiple": 0
+        },
+        {
+            "key": "field_zpt_accordion_multiple",
+            "label": "Mehrere gleichzeitig offen",
+            "name": "multiple",
+            "type": "true_false",
+            "instructions": "",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Ja",
+            "ui_off_text": "Nein",
+            "message": ""
+        },
+        {
+            "key": "field_zpt_accordion_flush",
+            "label": "Ohne Rahmen",
+            "name": "flush",
+            "type": "true_false",
+            "instructions": "Bootstrap .accordion-flush",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Ja",
+            "ui_off_text": "Nein",
+            "message": ""
+        },
+        {
+            "key": "field_zpt_accordion_title_tag",
+            "label": "Titel-Tag",
+            "name": "title_tag",
+            "type": "select",
+            "instructions": "",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "h2": "h2",
+                "h3": "h3",
+                "h4": "h4",
+                "h5": "h5",
+                "h6": "h6",
+                "div": "div"
+            },
+            "default_value": "h3",
+            "return_format": "value",
+            "ui": 0,
+            "allow_null": 0,
+            "multiple": 0
+        },
+        {
+            "key": "field_zpt_accordion_tab_font",
+            "label": "Schrift",
+            "name": "",
+            "type": "accordion",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-panel",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_zpt_accordion_font",
+            "label": "Schrift",
+            "name": "",
+            "type": "clone",
+            "clone": [
+                "field_zpt_props_group_font"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_zpt_accordion_tab_props",
+            "label": "Hintergrund",
+            "name": "",
+            "type": "accordion",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-panel",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_zpt_accordion_properties",
+            "label": "Hintergrund",
+            "name": "properties",
+            "type": "clone",
+            "clone": [
+                "field_zpt_props_group_colors"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_zpt_accordion_tab_css",
+            "label": "CSS",
+            "name": "",
+            "type": "accordion",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-panel",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_zpt_accordion_css_id",
+            "label": "CSS ID",
+            "name": "css_id",
+            "type": "text",
+            "instructions": "ohne „#“, ohne Leerzeichen; muss auf der Seite eindeutig sein",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "#",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_zpt_accordion_css_classes",
+            "label": "CSS Klassen",
+            "name": "css_classes",
+            "type": "text",
+            "instructions": "ohne „.“, trennen mit Leerzeichen",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_zpt_accordion_accordion_end",
+            "label": "",
+            "name": "",
+            "type": "accordion",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-panel",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "zpt/accordion"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1791020530
+}

@@ -1,0 +1,183 @@
+{
+    "key": "group_zpt_settings_icons_svg",
+    "title": "Baukasten: Icons – Eigenes SVG Icon Set",
+    "display_title": "Eigenes SVG Icon Set",
+    "fields": [
+        {
+            "key": "field_zpt_icons_svg",
+            "label": "Eigenes SVG Icon Set laden",
+            "name": "zpt_icons_svg",
+            "type": "true_false",
+            "instructions": "Eigene Icons als SVG – aus einem Ordner im Theme und/oder als Code. Die Icons werden direkt ins HTML geschrieben (bereinigt, ohne Skripte) und sind so groß wie die Schrift.",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_zpt_icons_svg_folder",
+            "label": "Ordner im Theme",
+            "name": "zpt_icons_svg_folder",
+            "type": "text",
+            "instructions": "Alle *.svg-Dateien darin, Name = Dateiname (z. B. kamera.svg → kamera). Child-Theme geht vor Eltern-Theme. Leer = kein Ordner",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "assets/icons",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_zpt_icons_svg",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ]
+        },
+        {
+            "key": "field_zpt_icons_svg_current_color",
+            "label": "Farbe = Textfarbe",
+            "name": "zpt_icons_svg_current_color",
+            "type": "true_false",
+            "instructions": "Füll- und Linienfarben der SVGs durch die Textfarbe ersetzen (currentColor) – Icons lassen sich dann über Schriftfarbe einfärben. Aus = Originalfarben.",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_zpt_icons_svg",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ]
+        },
+        {
+            "key": "field_zpt_icons_svg_icons",
+            "label": "Icons als Code",
+            "name": "zpt_icons_svg_icons",
+            "type": "repeater",
+            "instructions": "Zusätzlich oder statt Ordner. Bei gleichem Namen gilt das Icon hier.",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Icon hinzufügen",
+            "pagination": 0,
+            "rows_per_page": 20,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_zpt_icons_svg",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "sub_fields": [
+                {
+                    "key": "field_zpt_icons_svg_icon_name",
+                    "label": "Name",
+                    "name": "name",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "kamera",
+                    "parent_repeater": "field_zpt_icons_svg_icons"
+                },
+                {
+                    "key": "field_zpt_icons_svg_icon_svg",
+                    "label": "SVG-Code",
+                    "name": "svg",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 1,
+                    "wrapper": {
+                        "width": "75",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "<svg …>…</svg>",
+                    "rows": 3,
+                    "new_lines": "",
+                    "parent_repeater": "field_zpt_icons_svg_icons"
+                }
+            ]
+        },
+        {
+            "key": "field_zpt_icons_svg_preview",
+            "label": "Vorschau",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "new_lines": "",
+            "esc_html": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_zpt_icons_svg",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "zpt-icons"
+            }
+        ]
+    ],
+    "menu_order": 3,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1791020308
+}

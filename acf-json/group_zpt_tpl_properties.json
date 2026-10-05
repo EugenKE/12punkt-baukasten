@@ -1,0 +1,178 @@
+{
+    "key": "group_zpt_tpl_properties",
+    "title": "ZPT Template: Komponenten-Einstellungen",
+    "fields": [
+        {
+            "key": "field_zpt_props_group_font",
+            "label": "Schrift",
+            "name": "font",
+            "type": "group",
+            "instructions": "",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-group-plain",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_zpt_props_font",
+                    "label": "Schriftrolle",
+                    "name": "zpt_font_role",
+                    "type": "select",
+                    "instructions": "",
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "": "Standard"
+                    },
+                    "default_value": "",
+                    "return_format": "value",
+                    "ui": 0,
+                    "allow_null": 0,
+                    "multiple": 0
+                },
+                {
+                    "key": "field_zpt_props_font_size",
+                    "label": "Schriftgröße",
+                    "name": "zpt_font_size_class",
+                    "type": "select",
+                    "instructions": "",
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "": "Standard",
+                        "font-size-sm": "SM",
+                        "font-size-copy": "Copy",
+                        "font-size-copy-l": "Copy L",
+                        "font-size-l": "L",
+                        "font-size-xl": "XL",
+                        "font-size-xxl": "XXL",
+                        "font-size-xxxl": "XXXL"
+                    },
+                    "default_value": "",
+                    "return_format": "value",
+                    "ui": 0,
+                    "allow_null": 0,
+                    "multiple": 0
+                },
+                {
+                    "key": "field_zpt_props_font_weight",
+                    "label": "Gewicht",
+                    "name": "zpt_font_weight_class",
+                    "type": "select",
+                    "instructions": "",
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "": "Standard"
+                    },
+                    "default_value": "",
+                    "return_format": "value",
+                    "ui": 0,
+                    "allow_null": 0,
+                    "multiple": 0
+                },
+                {
+                    "key": "field_zpt_props_text_align",
+                    "label": "Textausrichtung",
+                    "name": "text_align",
+                    "type": "select",
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "none": "wie CSS",
+                        "text-start": "linksbündig",
+                        "text-center": "zentriert",
+                        "text-end": "rechtsbündig"
+                    },
+                    "default_value": "none",
+                    "return_format": "value",
+                    "ui": 0,
+                    "allow_null": 0,
+                    "multiple": 0
+                },
+                {
+                    "key": "field_zpt_props_color",
+                    "label": "Schriftfarbe",
+                    "name": "color",
+                    "type": "text",
+                    "wrapper": {
+                        "width": "",
+                        "class": "zpt-color-field zpt-color-tokens",
+                        "id": ""
+                    },
+                    "placeholder": "Standard",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "instructions": "Baukasten-Farbe (primary, primary-100 … -900), Farbname oder Hex",
+                    "default_value": ""
+                }
+            ]
+        },
+        {
+            "key": "field_zpt_props_group_colors",
+            "label": "Hintergrund",
+            "name": "colors",
+            "type": "group",
+            "instructions": "",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-group-plain",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_zpt_props_background_color",
+                    "label": "Hintergrundfarbe",
+                    "name": "background_color",
+                    "type": "text",
+                    "wrapper": {
+                        "width": "",
+                        "class": "zpt-color-field zpt-color-tokens",
+                        "id": ""
+                    },
+                    "placeholder": "Standard",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "instructions": "Baukasten-Farbe (primary, primary-100 … -900), Farbname oder Hex",
+                    "default_value": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 100,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "Nur zum Klonen in Komponenten-Blocks.",
+    "show_in_rest": 0,
+    "modified": 1790930457
+}

@@ -1,0 +1,28 @@
+// ---------------------------------------- photoswipe
+.pswp__icn-shadow {display: none;}
+.pswp__custom-caption {
+  background: rgba(0, 0, 0, 0.75);
+  font-size: 16px;
+  color: #fff;
+  width: calc(100% - 32px);
+  max-width: 400px;
+  padding: 0;
+  //border-radius: 4px;
+  position: absolute;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+}
+.pswp__custom-caption a {
+  color: #fff;
+  text-decoration: underline;
+}
+.caption-for-photoswipe {
+  display: none;
+}
+
+.pswp__button {
+    & svg {fill:white; 
+        filter: drop-shadow(0px 8px 8px rgb(0 0 0 / 0.8));
+    }
+}

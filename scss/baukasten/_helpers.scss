@@ -1,0 +1,165 @@
+
+
+video {width:100%; height: 100%; object-fit: contain;}
+/*img {width:100%; height:auto;}*/
+html, body {padding:0; margin:0;}
+html {height:100%;}
+// body nur min-height: mit fester Höhe endet ein sticky Header (.sticky-top) nach einer Fensterhöhe
+body {min-height:100%;}
+pre {color:silver; font-size:10px; line-height:1em;}
+figure {margin:0;}
+
+
+.font-white, .color-white {color:white;}
+.font-lime, .color-lime {color:lime;}
+.font-black, .color-black {color:rgb(30, 30, 30);}
+.font-magenta, .color-magenta {color:#FD3399;}
+
+.object-fit-contain {object-fit: contain !important;}
+.object-fit-cover {object-fit: cover !important;}
+
+.image-fluid-force, .img-fluid-force {
+    // --- bs 5 is only max-width:100% => doesn't over-size images
+    width:100%;
+    height:auto;
+}
+
+.object-position-left-top {object-position: left top;}
+.object-position-left-center {object-position: left center;}
+.object-position-left-bottom {object-position: left bottom;}
+.object-position-center-top {object-position: center top;}
+.object-position-center-center {object-position: center center;}
+.object-position-center-bottom {object-position: center bottom;}
+.object-position-right-top {object-position: right top;}
+.object-position-right-center {object-position: right center;}
+.object-position-right-bottom {object-position: right bottom;}
+
+ul.no-bullets {list-style: none outside !important;}
+
+.border-lime {border:3px solid lime;}
+.border-red {border:3px solid red;}
+.border-blue {border:3px solid blue;}
+.border-white {border:3px solid white;}
+.border-black {border:3px solid black;}
+
+.bg-magenta {background-color: magenta !important;}
+.bg-deeppink {background-color: deeppink !important;}
+.bg-crimson {background-color: crimson !important;}
+.bg-lime {background-color: lime !important;}
+.bg-red {background-color: red !important;}
+.bg-blue {background-color:blue;}
+
+.blow-up, .blow-up-hover:hover {transform: scale(1.03); transition: transform .3s;}
+.blow-down, .blow-down-hover:hover {transform: scale(1); transition: transform .3s;}
+
+.mix-blend-mode-exclusion {mix-blend-mode: exclusion;}
+.mix-blend-mode-difference {mix-blend-mode: difference;}
+
+
+.ratio-1-1 {
+    position: relative; overflow: hidden; width: 100%; height:0; padding-top: 100%;
+    > * {position: absolute; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%;}
+  }
+
+.ratio-16-9 {
+  position: relative; overflow: hidden; width: 100%; height:0; padding-top: 56.3%;
+  > * {position: absolute; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%;}
+}
+
+.ratio-15-11 {
+    // zb 300 / 220
+    position: relative; overflow: hidden; width: 100%; height:0; padding-top: 75%;
+    > * {position: absolute; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%;
+    }
+  }
+
+
+@keyframes bounceLeft {
+    0% {transform: translateX(0);}
+    10% {transform: translateX(2px);}
+    60% {transform: translateX(-5px);}
+    100% {transform: translateX(0);}
+ } 
+
+ @keyframes bounceRight {
+    0% {transform: translateX(0);}
+    10% {transform: translateX(-2px);}
+    60% {transform: translateX(5px);}
+    100% {transform: translateX(0);}
+ } 
+
+
+
+
+.darken-top-to-bottom {top:0; left:0; height:100%; width:100%; position: fixed; z-index:490;
+  background: -moz-linear-gradient(top, rgba(40,40,40,0.9) 50%, rgba(40,40,40,0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(40,40,40,0.9) 50%,rgba(40,40,40,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(40,40,40,0.9) 50%,rgba(40,40,40,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc282828', endColorstr='#00282828',GradientType=0 ); /* IE6-9 */
+}
+
+.darken-left-to-right-50 {
+  /*top:0; left:0; height:100%; width:100%; position: fixed; z-index:490;*/
+  background: -moz-linear-gradient(left, rgba(40,40,40,0.9) 0%, rgba(40,40,40,0) 50%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(40,40,40,0.9) 0%, rgba(40,40,40,0) 50%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right center, rgba(40,40,40,0.9) 0%, rgba(40,40,40,0) 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc282828', endColorstr='#00282828',GradientType=0 ); /* IE6-9 */
+}
+
+/* --- up md */
+@media (min-width: 768px) {
+  .darken-left-to-right-50-md {
+    /*top:0; left:0; height:100%; width:100%; position: fixed; z-index:490;*/
+    background: -moz-linear-gradient(left, rgba(10,10,10,0.9) 3%, rgba(40,40,40,0) 50%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(10,10,10,0.9) 3%, rgba(40,40,40,0) 50%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right center, rgba(10,10,10,0.9) 3%, rgba(40,40,40,0) 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc282828', endColorstr='#00282828',GradientType=0 ); /* IE6-9 */
+  }
+}
+
+
+.no-scroll {overflow:hidden;}
+.no-padding {padding:0;}
+.no-padding-left {padding-left:0;}
+.no-padding-right {padding-right:0;}
+.no-margin {margin:0;}
+
+/*
+.h-vh-10 {height:10vh;}
+.h-vh-20 {height:20vh;}
+.h-vh-30 {height:30vh;}
+.h-vh-40 {height:40vh;}
+.h-vh-50 {height:50vh;}
+.h-vh-60 {height:60vh;}
+.h-vh-70 {height:70vh;}
+.h-vh-80 {height:80vh;}
+.h-vh-90 {height:90vh;}
+.h-vh-100 {height:100vh;}
+*/
+
+.break-column-before {break-before: column;}
+.text-cols-2 {column-count: 2; column-gap: 20px;}
+.text-cols-3 {column-count: 3; column-gap: 20px;}
+.text-cols-4 {column-count: 4; column-gap: 20px;}
+
+
+/* --- up sm */
+@media (min-width: 576px) {
+  .text-cols-sm-2 {column-count: 2; column-gap: 20px;}
+  .text-cols-sm-3 {column-count: 3; column-gap: 20px;}
+  .text-cols-sm-4 {column-count: 4; column-gap: 20px;}
+}
+
+/* --- up md */
+@media (min-width: 768px) {
+  .text-cols-md-2 {column-count: 2; column-gap: 20px;}
+  .text-cols-md-3 {column-count: 3; column-gap: 20px;}
+  .text-cols-md-4 {column-count: 4; column-gap: 20px;}
+}
+
+/* --- up lg */
+@media (min-width: 992px) {
+  .text-cols-lg-2 {column-count: 2; column-gap: 20px;}
+  .text-cols-lg-3 {column-count: 3; column-gap: 20px;}
+  .text-cols-lg-4 {column-count: 4; column-gap: 20px;}
+}

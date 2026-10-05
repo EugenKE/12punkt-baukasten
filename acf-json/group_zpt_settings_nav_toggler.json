@@ -1,0 +1,103 @@
+{
+    "key": "group_zpt_settings_nav_toggler",
+    "title": "Baukasten: Navigation – Mobile Navigation",
+    "display_title": "Mobile Navigation",
+    "fields": [
+        {
+            "key": "field_zpt_nav_expand",
+            "label": "Umbruchpunkt",
+            "name": "zpt_nav_expand",
+            "type": "select",
+            "instructions": "Ab dieser Breite steht das Menü ausgeklappt in der Leiste, darunter erscheint der Button (.navbar-expand-{bp}).",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "lg": "LG"
+            },
+            "default_value": "lg",
+            "return_format": "value",
+            "ui": 0,
+            "allow_null": 0,
+            "multiple": 0
+        },
+        {
+            "key": "field_zpt_nav_toggler_open",
+            "label": "Icon „Menü öffnen“",
+            "name": "zpt_nav_toggler_open",
+            "type": "select",
+            "instructions": "Button, solange das Menü zu ist. Leer = Bootstrap-Standard (☰). Icons aus Baukasten → Icons.",
+            "wrapper": {
+                "width": "50",
+                "class": "zpt-icon-picker",
+                "id": ""
+            },
+            "choices": {},
+            "default_value": false,
+            "return_format": "value",
+            "ui": 1,
+            "ajax": 1,
+            "allow_null": 1,
+            "multiple": 0,
+            "placeholder": "Icon suchen …"
+        },
+        {
+            "key": "field_zpt_nav_toggler_close",
+            "label": "Icon „Menü schließen“",
+            "name": "zpt_nav_toggler_close",
+            "type": "select",
+            "instructions": "Button, solange das Menü offen ist. Leer = wie „Menü öffnen“.",
+            "wrapper": {
+                "width": "50",
+                "class": "zpt-icon-picker",
+                "id": ""
+            },
+            "choices": {},
+            "default_value": false,
+            "return_format": "value",
+            "ui": 1,
+            "ajax": 1,
+            "allow_null": 1,
+            "multiple": 0,
+            "placeholder": "Icon suchen …"
+        },
+        {
+            "key": "field_zpt_nav_toggler_size",
+            "label": "Icon-Größe",
+            "name": "zpt_nav_toggler_size",
+            "type": "text",
+            "instructions": "CSS-Wert, z. B. 28px oder 1.5rem. Leer = Bootstrap-Standard (1.25rem).",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "1.25rem",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "zpt-navigation"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1791117841
+}

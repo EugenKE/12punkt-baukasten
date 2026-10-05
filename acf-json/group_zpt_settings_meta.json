@@ -1,0 +1,42 @@
+{
+    "key": "group_zpt_settings_meta",
+    "title": "Baukasten: Globale Meta Infos",
+    "display_title": "Globale Meta Infos",
+    "fields": [
+        {
+            "key": "field_zpt_settings_meta_description",
+            "label": "Meta Description",
+            "name": "meta_description",
+            "type": "textarea",
+            "rows": 3,
+            "instructions": "Standard für alle Seiten. Leer = Untertitel der Website. Pro Seite überschreibbar (Seitenleiste „Meta Infos“)."
+        },
+        {
+            "key": "field_zpt_settings_meta_keywords",
+            "label": "Meta Keywords",
+            "name": "meta_keywords",
+            "type": "textarea",
+            "rows": 3,
+            "instructions": "Kommagetrennt. Pro Seite überschreibbar."
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "zpt-meta"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1790920170
+}

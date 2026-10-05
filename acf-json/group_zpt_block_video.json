@@ -1,0 +1,349 @@
+{
+    "key": "group_zpt_block_video",
+    "title": "ZPT Block: Video",
+    "fields": [
+        {
+            "key": "field_zpt_video_tab_content",
+            "label": "Inhalt",
+            "name": "",
+            "type": "accordion",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-panel",
+                "id": ""
+            },
+            "open": 1,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_zpt_video_source",
+            "label": "Quelle",
+            "name": "source",
+            "type": "select",
+            "instructions": "",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "youtube": "YouTube",
+                "vimeo": "Vimeo",
+                "file": "Datei (MP4)"
+            },
+            "default_value": "youtube",
+            "return_format": "value",
+            "ui": 0,
+            "allow_null": 0,
+            "multiple": 0
+        },
+        {
+            "key": "field_zpt_video_url",
+            "label": "Video-Adresse oder ID",
+            "name": "url",
+            "type": "text",
+            "instructions": "z. B. https://www.youtube.com/watch?v=… oder nur die ID",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_zpt_video_source",
+                        "operator": "!=",
+                        "value": "file"
+                    }
+                ]
+            ]
+        },
+        {
+            "key": "field_zpt_video_file",
+            "label": "Videodatei",
+            "name": "file",
+            "type": "file",
+            "instructions": "MP4",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "mime_types": "mp4,webm",
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_zpt_video_source",
+                        "operator": "==",
+                        "value": "file"
+                    }
+                ]
+            ]
+        },
+        {
+            "key": "field_zpt_video_title",
+            "label": "Titel",
+            "name": "title",
+            "type": "text",
+            "instructions": "für Screenreader und den Hinweis vor dem Laden",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_zpt_video_poster",
+            "label": "Vorschaubild",
+            "name": "poster",
+            "type": "image",
+            "instructions": "Bei YouTube/Vimeo wird das Video erst nach Klick geladen (Datenschutz) – bis dahin ist das Vorschaubild zu sehen.",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_zpt_video_tab_options",
+            "label": "Darstellung",
+            "name": "",
+            "type": "accordion",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-panel",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_zpt_video_ratio",
+            "label": "Seitenverhältnis",
+            "name": "ratio",
+            "type": "select",
+            "instructions": "",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "16x9": "16:9",
+                "4x3": "4:3",
+                "1x1": "1:1",
+                "21x9": "21:9",
+                "9x16": "9:16 (hochkant)"
+            },
+            "default_value": "16x9",
+            "return_format": "value",
+            "ui": 0,
+            "allow_null": 0,
+            "multiple": 0
+        },
+        {
+            "key": "field_zpt_video_controls",
+            "label": "Steuerung",
+            "name": "controls",
+            "type": "true_false",
+            "instructions": "",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Ja",
+            "ui_off_text": "Nein",
+            "message": "",
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_zpt_video_source",
+                        "operator": "==",
+                        "value": "file"
+                    }
+                ]
+            ]
+        },
+        {
+            "key": "field_zpt_video_autoplay",
+            "label": "Autoplay (stumm, Schleife)",
+            "name": "autoplay",
+            "type": "true_false",
+            "instructions": "z. B. als Stimmungsvideo",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Ja",
+            "ui_off_text": "Nein",
+            "message": "",
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_zpt_video_source",
+                        "operator": "==",
+                        "value": "file"
+                    }
+                ]
+            ]
+        },
+        {
+            "key": "field_zpt_video_tab_font",
+            "label": "Schrift",
+            "name": "",
+            "type": "accordion",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-panel",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_zpt_video_font",
+            "label": "Schrift",
+            "name": "",
+            "type": "clone",
+            "clone": [
+                "field_zpt_props_group_font"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_zpt_video_tab_props",
+            "label": "Hintergrund",
+            "name": "",
+            "type": "accordion",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-panel",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_zpt_video_properties",
+            "label": "Hintergrund",
+            "name": "properties",
+            "type": "clone",
+            "clone": [
+                "field_zpt_props_group_colors"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_zpt_video_tab_css",
+            "label": "CSS",
+            "name": "",
+            "type": "accordion",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-panel",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_zpt_video_css_id",
+            "label": "CSS ID",
+            "name": "css_id",
+            "type": "text",
+            "instructions": "ohne „#“, ohne Leerzeichen; muss auf der Seite eindeutig sein",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "#",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_zpt_video_css_classes",
+            "label": "CSS Klassen",
+            "name": "css_classes",
+            "type": "text",
+            "instructions": "ohne „.“, trennen mit Leerzeichen",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_zpt_video_accordion_end",
+            "label": "",
+            "name": "",
+            "type": "accordion",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-panel",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "zpt/video"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1791020530
+}

@@ -1,0 +1,27 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 2,
+    "name": "zpt/text",
+    "title": "Text",
+    "description": "Fließtext (WYSIWYG).",
+    "category": "zpt",
+    "icon": "editor-paragraph",
+    "keywords": [
+        "text",
+        "wysiwyg",
+        "inhalt"
+    ],
+    "textdomain": "12punkt-baukasten",
+    "ancestor": [
+        "zpt/column"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "render.php"
+    },
+    "supports": {
+        "anchor": true,
+        "align": false,
+        "html": false
+    }
+}

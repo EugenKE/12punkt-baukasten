@@ -1,0 +1,27 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 2,
+    "name": "zpt/button",
+    "title": "Button",
+    "description": "Ein oder mehrere Buttons bzw. Links nebeneinander.",
+    "category": "zpt",
+    "icon": "button",
+    "keywords": [
+        "button",
+        "link",
+        "schaltfläche"
+    ],
+    "textdomain": "12punkt-baukasten",
+    "ancestor": [
+        "zpt/column"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "render.php"
+    },
+    "supports": {
+        "anchor": true,
+        "align": false,
+        "html": false
+    }
+}

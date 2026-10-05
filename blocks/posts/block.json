@@ -1,0 +1,29 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 2,
+    "name": "zpt/posts",
+    "title": "Posts",
+    "description": "Beiträge oder Seiten als Kacheln, Liste oder Akkordeon – automatisch oder von Hand gewählt.",
+    "category": "zpt",
+    "icon": "admin-post",
+    "keywords": [
+        "posts",
+        "beiträge",
+        "news",
+        "blog",
+        "liste"
+    ],
+    "textdomain": "12punkt-baukasten",
+    "ancestor": [
+        "zpt/column"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "render.php"
+    },
+    "supports": {
+        "anchor": true,
+        "align": false,
+        "html": false
+    }
+}

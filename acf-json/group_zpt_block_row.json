@@ -1,0 +1,324 @@
+{
+    "key": "group_zpt_block_row",
+    "title": "ZPT Block: Row",
+    "fields": [
+        {
+            "key": "field_zpt_row_tab_layout",
+            "label": "Layout",
+            "name": "",
+            "type": "accordion",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-panel",
+                "id": ""
+            },
+            "open": 1,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_zpt_row_container_type",
+            "label": "Container",
+            "name": "container_type",
+            "type": "select",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "inherit": "wie Seite",
+                "container-fluid": "Fluid (volle Breite)",
+                "container": "Fest (zentriert)"
+            },
+            "default_value": "inherit",
+            "return_format": "value",
+            "ui": 0,
+            "allow_null": 0,
+            "multiple": 0
+        },
+        {
+            "key": "field_zpt_row_row_display",
+            "label": "Row Display",
+            "name": "row_display",
+            "type": "select",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "row": "Flex (.row)",
+                "grid-row": "Grid (.grid-row)"
+            },
+            "default_value": "row",
+            "return_format": "value",
+            "ui": 0,
+            "allow_null": 0,
+            "multiple": 0
+        },
+        {
+            "key": "field_zpt_row_row_masonry",
+            "label": "Row Masonry",
+            "name": "row_masonry",
+            "type": "true_false",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "ui": 1
+        },
+        {
+            "key": "field_zpt_row_sticky",
+            "label": "Oben anheften",
+            "name": "sticky",
+            "type": "true_false",
+            "instructions": "Die Row bleibt beim Scrollen am oberen Rand stehen (z. B. für eine Sprungmarken-Navigation). Hintergrundfarbe setzen, sonst scheint der Inhalt durch.",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "ui": 1
+        },
+        {
+            "key": "field_zpt_row_tab_font",
+            "label": "Schrift",
+            "name": "",
+            "type": "accordion",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-panel",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_zpt_row_font",
+            "label": "Schrift",
+            "name": "",
+            "type": "clone",
+            "clone": [
+                "field_zpt_props_group_font"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_zpt_row_tab_bg",
+            "label": "Hintergrund",
+            "name": "",
+            "type": "accordion",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-panel",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_zpt_row_wrapper_background_color",
+            "label": "Hintergrundfarbe",
+            "name": "wrapper_background_color",
+            "type": "text",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-color-field zpt-color-tokens",
+                "id": ""
+            },
+            "placeholder": "Standard",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "instructions": "Baukasten-Farbe (primary, primary-100 … -900), Farbname oder Hex",
+            "default_value": ""
+        },
+        {
+            "key": "field_zpt_row_image_bg",
+            "label": "Hintergrundbild",
+            "name": "image_bg",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_zpt_row_video_bg",
+            "label": "Hintergrundvideo",
+            "name": "video_bg",
+            "type": "group",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_zpt_row_video_mp4",
+                    "label": "Video MP4",
+                    "name": "video_mp4",
+                    "type": "file",
+                    "return_format": "array",
+                    "library": "all",
+                    "mime_types": "mp4",
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    }
+                },
+                {
+                    "key": "field_zpt_row_video_poster",
+                    "label": "Video Poster",
+                    "name": "video_poster",
+                    "type": "image",
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    }
+                },
+                {
+                    "key": "field_zpt_row_video_css_classes",
+                    "label": "CSS Klassen",
+                    "name": "css_classes",
+                    "type": "text",
+                    "instructions": "ohne „.“, trennen mit Leerzeichen"
+                }
+            ]
+        },
+        {
+            "key": "field_zpt_row_tab_css",
+            "label": "CSS",
+            "name": "",
+            "type": "accordion",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-panel",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_zpt_row_css_id",
+            "label": "Wrapper ID",
+            "name": "css_id",
+            "type": "text",
+            "instructions": "ohne „#“, ohne Leerzeichen; muss auf der Seite eindeutig sein",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "#",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_zpt_row_row_id",
+            "label": "Row ID",
+            "name": "row_id",
+            "type": "text",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "instructions": "ohne „#“, ohne Leerzeichen; muss auf der Seite eindeutig sein",
+            "prepend": "#"
+        },
+        {
+            "key": "field_zpt_row_wrapper_classes",
+            "label": "Wrapper Klassen",
+            "name": "wrapper_classes",
+            "type": "text",
+            "instructions": "ohne „.“, trennen mit Leerzeichen",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "key": "field_zpt_row_container_classes",
+            "label": "Container Klassen",
+            "name": "container_classes",
+            "type": "text",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "instructions": "ohne „.“, trennen mit Leerzeichen"
+        },
+        {
+            "key": "field_zpt_row_row_classes",
+            "label": "Row Klassen",
+            "name": "row_classes",
+            "type": "text",
+            "instructions": "ohne „.“, trennen mit Leerzeichen",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "key": "field_zpt_row_wrapper_inline_style",
+            "label": "Inline Style (Wrapper)",
+            "name": "wrapper_inline_style",
+            "type": "text",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "instructions": "CSS-Deklarationen, z. B. min-height: 50vh;"
+        },
+        {
+            "key": "field_zpt_row_accordion_end",
+            "label": "",
+            "name": "",
+            "type": "accordion",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-panel",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "zpt/row"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1791113402
+}

@@ -1,0 +1,44 @@
+{
+    "key": "group_zpt_page_styleguide",
+    "title": "Styleguide",
+    "fields": [
+        {
+            "key": "field_zpt_styleguide_section",
+            "label": "Bereich",
+            "name": "zpt_styleguide_section",
+            "type": "select",
+            "instructions": "Was diese Seite zeigt. Die Übersicht verlinkt die Unterseiten.",
+            "choices": {
+                "overview": "Übersicht",
+                "typography": "Typografie",
+                "colors": "Farben",
+                "spacing": "Abstände",
+                "buttons": "Buttons"
+            },
+            "default_value": "overview",
+            "return_format": "value",
+            "ui": 0,
+            "allow_null": 0,
+            "multiple": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "tmpl-styleguide.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1790881724
+}

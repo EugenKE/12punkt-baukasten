@@ -1,0 +1,226 @@
+{
+    "key": "group_zpt_settings_breakpoints",
+    "title": "Baukasten: Breakpoints",
+    "display_title": "Breakpoints",
+    "fields": [
+        {
+            "key": "field_zpt_breakpoints",
+            "label": "Breakpoints",
+            "name": "zpt_breakpoints",
+            "type": "group",
+            "layout": "block",
+            "instructions": "Standard: Bootstrap 5.3. „ab Breite“ = Mindestbreite des Breakpoints (Klassen wie .col-md-6, .mt-lg-40, .d-xl-none); „Container“ = maximale Breite von .container ab diesem Breakpoint. XS ist alles unterhalb von SM. Weichen die Werte von Bootstrap ab, erzeugt das Plugin eine angepasste Kopie der CSS (uploads/zpt-baukasten/).",
+            "sub_fields": [
+                {
+                    "key": "field_zpt_bp_sm",
+                    "label": "SM",
+                    "name": "sm",
+                    "type": "group",
+                    "layout": "block",
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "sub_fields": [
+                        {
+                            "key": "field_zpt_bp_sm_min",
+                            "label": "ab Breite",
+                            "name": "min",
+                            "type": "number",
+                            "default_value": 576,
+                            "placeholder": 576,
+                            "append": "px",
+                            "min": 200,
+                            "max": 4000,
+                            "step": 1
+                        },
+                        {
+                            "key": "field_zpt_bp_sm_container",
+                            "label": "Container",
+                            "name": "container",
+                            "type": "number",
+                            "default_value": 540,
+                            "placeholder": 540,
+                            "append": "px",
+                            "min": 100,
+                            "max": 4000,
+                            "step": 1
+                        }
+                    ]
+                },
+                {
+                    "key": "field_zpt_bp_md",
+                    "label": "MD",
+                    "name": "md",
+                    "type": "group",
+                    "layout": "block",
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "sub_fields": [
+                        {
+                            "key": "field_zpt_bp_md_min",
+                            "label": "ab Breite",
+                            "name": "min",
+                            "type": "number",
+                            "default_value": 768,
+                            "placeholder": 768,
+                            "append": "px",
+                            "min": 200,
+                            "max": 4000,
+                            "step": 1
+                        },
+                        {
+                            "key": "field_zpt_bp_md_container",
+                            "label": "Container",
+                            "name": "container",
+                            "type": "number",
+                            "default_value": 720,
+                            "placeholder": 720,
+                            "append": "px",
+                            "min": 100,
+                            "max": 4000,
+                            "step": 1
+                        }
+                    ]
+                },
+                {
+                    "key": "field_zpt_bp_lg",
+                    "label": "LG",
+                    "name": "lg",
+                    "type": "group",
+                    "layout": "block",
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "sub_fields": [
+                        {
+                            "key": "field_zpt_bp_lg_min",
+                            "label": "ab Breite",
+                            "name": "min",
+                            "type": "number",
+                            "default_value": 992,
+                            "placeholder": 992,
+                            "append": "px",
+                            "min": 200,
+                            "max": 4000,
+                            "step": 1
+                        },
+                        {
+                            "key": "field_zpt_bp_lg_container",
+                            "label": "Container",
+                            "name": "container",
+                            "type": "number",
+                            "default_value": 960,
+                            "placeholder": 960,
+                            "append": "px",
+                            "min": 100,
+                            "max": 4000,
+                            "step": 1
+                        }
+                    ]
+                },
+                {
+                    "key": "field_zpt_bp_xl",
+                    "label": "XL",
+                    "name": "xl",
+                    "type": "group",
+                    "layout": "block",
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "sub_fields": [
+                        {
+                            "key": "field_zpt_bp_xl_min",
+                            "label": "ab Breite",
+                            "name": "min",
+                            "type": "number",
+                            "default_value": 1200,
+                            "placeholder": 1200,
+                            "append": "px",
+                            "min": 200,
+                            "max": 4000,
+                            "step": 1
+                        },
+                        {
+                            "key": "field_zpt_bp_xl_container",
+                            "label": "Container",
+                            "name": "container",
+                            "type": "number",
+                            "default_value": 1140,
+                            "placeholder": 1140,
+                            "append": "px",
+                            "min": 100,
+                            "max": 4000,
+                            "step": 1
+                        }
+                    ]
+                },
+                {
+                    "key": "field_zpt_bp_xxl",
+                    "label": "XXL",
+                    "name": "xxl",
+                    "type": "group",
+                    "layout": "block",
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "sub_fields": [
+                        {
+                            "key": "field_zpt_bp_xxl_min",
+                            "label": "ab Breite",
+                            "name": "min",
+                            "type": "number",
+                            "default_value": 1400,
+                            "placeholder": 1400,
+                            "append": "px",
+                            "min": 200,
+                            "max": 4000,
+                            "step": 1
+                        },
+                        {
+                            "key": "field_zpt_bp_xxl_container",
+                            "label": "Container",
+                            "name": "container",
+                            "type": "number",
+                            "default_value": 1320,
+                            "placeholder": 1320,
+                            "append": "px",
+                            "min": 100,
+                            "max": 4000,
+                            "step": 1
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "zpt-layout"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1790920170
+}

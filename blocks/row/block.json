@@ -1,0 +1,22 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 2,
+    "name": "zpt/row",
+    "title": "Row",
+    "description": "Container mit Bootstrap-Row. Enthält Spalten, die Spalten enthalten die Komponenten.",
+    "category": "zpt",
+    "icon": "columns",
+    "keywords": ["row", "zeile", "container", "layout", "sektion"],
+    "textdomain": "12punkt-baukasten",
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "render.php"
+    },
+    "supports": {
+        "jsx": true,
+        "anchor": true,
+        "align": false,
+        "mode": false,
+        "html": false
+    }
+}

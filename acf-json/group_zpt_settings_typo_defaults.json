@@ -1,0 +1,150 @@
+{
+    "key": "group_zpt_settings_typo_defaults",
+    "title": "Baukasten: Schriftgrößen",
+    "display_title": "Schriftgrößen",
+    "fields": [
+        {
+            "key": "field_zpt_type_preset",
+            "label": "Vorlage",
+            "name": "zpt_type_preset",
+            "type": "select",
+            "instructions": "Lädt die Stufen der Vorlage in die Tabelle, danach anpassbar (wird dann zu „Eigene“). Nach dem Speichern haben die Schriften unter „Schriftschnitte & Maße“ die neuen Stufen.",
+            "required": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "12punkt": "12punkt (sm, copy, copy-l, l, xl, xxl, xxxl)",
+                "einfach": "Einfach (small, base, large, extra-large)",
+                "custom": "Eigene"
+            },
+            "default_value": "12punkt",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "parent": "group_zpt_settings_typo_defaults"
+        },
+        {
+            "key": "field_zpt_type_scale",
+            "label": "Stufen",
+            "name": "zpt_type_scale",
+            "type": "repeater",
+            "instructions": "Reihenfolge klein → groß. Name = Endung der Klassen und Variablen (.font-size-copy-l, .font-size-md-copy-l, --theme-font-size-copy-l). Größe und Zeilenhöhe gelten für alle Schriften ohne eigene Werte. Genau eine Stufe ist der Fließtext (body).",
+            "required": 0,
+            "wrapper": {
+                "width": "",
+                "class": "zpt-type-scale",
+                "id": ""
+            },
+            "layout": "table",
+            "min": 1,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Stufe hinzufügen",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_zpt_type_scale_name",
+                    "label": "Name",
+                    "name": "name",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "z. B. copy-l oder large",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": 20,
+                    "parent": "field_zpt_type_scale"
+                },
+                {
+                    "key": "field_zpt_type_scale_size",
+                    "label": "Größe",
+                    "name": "size",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "z. B. 16px oder 1rem",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent": "field_zpt_type_scale"
+                },
+                {
+                    "key": "field_zpt_type_scale_line_height",
+                    "label": "Zeilenhöhe",
+                    "name": "line_height",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "z. B. 1.4 oder 1.2em",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent": "field_zpt_type_scale"
+                },
+                {
+                    "key": "field_zpt_type_scale_base",
+                    "label": "Fließtext",
+                    "name": "base",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "parent": "field_zpt_type_scale"
+                }
+            ],
+            "parent": "group_zpt_settings_typo_defaults"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "zpt-typography"
+            }
+        ]
+    ],
+    "menu_order": 2,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Typografie: Schriftgrößen-Skala (Stufen mit Größe, Zeilenhöhe, Fließtext) mit Vorlagen.",
+    "show_in_rest": 0,
+    "modified": 1790929794
+}

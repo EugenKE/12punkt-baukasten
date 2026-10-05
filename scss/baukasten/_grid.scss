@@ -1,0 +1,39 @@
+// =============================================================================
+// Grid-Erweiterungen
+// .row / .col-* / .grid / .g-col-* kommen aus Bootstrap.
+// Hier: .grid-row (CSS-Grid mit Zeilen) und Klassen für Zeilen-Start/-Ende.
+// =============================================================================
+
+@if $enable-cssgrid {
+    .grid-row, .g-row {
+        display: grid;
+        // ------ das macht grid-rows gleich bzw. 1fr hoch
+        //grid-template-rows: repeat(var(--#{$prefix}rows, 1), 1fr);
+        grid-template-rows: repeat(var(--#{$prefix}rows, 1), minmax(10px, auto));
+        max-height: auto;
+        grid-template-columns: repeat(var(--#{$prefix}columns, #{$grid-columns}), 1fr);
+        gap: var(--#{$prefix}gap, #{$grid-gutter-width});
+
+        @include make-cssgrid();
+    }
+}
+
+// --- Grid Rows als responsive Klassen
+.g-row-start-auto {grid-row-start:auto;}
+.g-row-end-auto {grid-row-end:auto;}
+@for $i from 0 through 12 {
+    .g-row-start-#{$i} {grid-row-start: $i;}
+    .g-row-end-#{$i} {grid-row-end: $i;}
+}
+
+@each $bp in (sm, md, lg, xl) {
+    @include media-breakpoint-up($bp) {
+        .g-row-start-#{$bp}-auto {grid-row-start:auto;}
+        .g-row-end-#{$bp}-auto {grid-row-end:auto;}
+        @for $i from 0 through 12 {
+            .g-start-#{$bp}-#{$i} {grid-column-start: $i !important;}
+            .g-row-start-#{$bp}-#{$i} {grid-row-start: $i;}
+            .g-row-end-#{$bp}-#{$i} {grid-row-end: $i;}
+        }
+    }
+}

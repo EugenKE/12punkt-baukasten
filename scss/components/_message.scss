@@ -1,0 +1,56 @@
+// -----------------------------------------------------------------------------
+// Message über Bild / Galerie (zpt_message_html() in includes/helpers.php)
+//   .zpt-has-message > figure|.zpt-gallery + .zpt-message
+//   Position je Breakpoint: .zpt-msg-{pos}, .zpt-msg-{bp}-{pos}
+//     pos = top|middle|bottom - start|center|end, oder below (unter dem Bild, im Fluss)
+//   Breite je Breakpoint:   .zpt-msg-w-{100|75|66|50|33|25|auto}, .zpt-msg-w-{bp}-…
+//   Abstand zum Rand:       --zpt-msg-offset (Standard 20px)
+// -----------------------------------------------------------------------------
+
+.zpt-has-message {
+    position: relative;
+}
+
+.zpt-message {
+    --zpt-msg-offset: 20px;
+    position: absolute;
+    z-index: 2;
+    max-width: calc(100% - 2 * var(--zpt-msg-offset));
+
+    > :last-child { margin-bottom: 0; }
+}
+
+$zpt-msg-v: (top: (top: var(--zpt-msg-offset), bottom: auto, ty: 0), middle: (top: 50%, bottom: auto, ty: -50%), bottom: (top: auto, bottom: var(--zpt-msg-offset), ty: 0));
+$zpt-msg-h: (start: (left: var(--zpt-msg-offset), right: auto, tx: 0), center: (left: 50%, right: auto, tx: -50%), end: (left: auto, right: var(--zpt-msg-offset), tx: 0));
+$zpt-msg-widths: (100: 100%, 75: 75%, 66: 66.666667%, 50: 50%, 33: 33.333333%, 25: 25%, auto: auto);
+
+@mixin zpt-msg-classes($infix) {
+    @each $v, $vv in $zpt-msg-v {
+        @each $h, $hv in $zpt-msg-h {
+            .zpt-msg#{$infix}-#{$v}-#{$h} {
+                position: absolute;
+                top: map-get($vv, top);
+                bottom: map-get($vv, bottom);
+                left: map-get($hv, left);
+                right: map-get($hv, right);
+                max-width: calc(100% - 2 * var(--zpt-msg-offset));
+                transform: translate(map-get($hv, tx), map-get($vv, ty));
+            }
+        }
+    }
+    .zpt-msg#{$infix}-below {
+        position: static;
+        max-width: none;
+        transform: none;
+    }
+    @each $name, $width in $zpt-msg-widths {
+        .zpt-msg-w#{$infix}-#{$name} { width: $width; }
+    }
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+        @include zpt-msg-classes($infix);
+    }
+}

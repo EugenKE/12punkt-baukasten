@@ -1,0 +1,370 @@
+{
+    "key": "group_zpt_block_button",
+    "title": "ZPT Block: Button",
+    "fields": [
+        {
+            "key": "field_zpt_button_tab_content",
+            "label": "Inhalt",
+            "name": "",
+            "type": "accordion",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-panel",
+                "id": ""
+            },
+            "open": 1,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_zpt_button_buttons",
+            "label": "Buttons",
+            "name": "buttons",
+            "type": "repeater",
+            "layout": "block",
+            "instructions": "Mehrere Buttons stehen nebeneinander. Schrift, Größen und Rahmen: Baukasten → Buttons.",
+            "min": 1,
+            "max": 0,
+            "button_label": "Button hinzufügen",
+            "collapsed": "field_zpt_button_link",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_zpt_button_link",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "link",
+                    "return_format": "array",
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    }
+                },
+                {
+                    "key": "field_zpt_button_style",
+                    "label": "Stil",
+                    "name": "style",
+                    "type": "select",
+                    "choices": {},
+                    "default_value": "btn-primary",
+                    "return_format": "value",
+                    "ui": 0,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    }
+                },
+                {
+                    "key": "field_zpt_button_sizes",
+                    "label": "Größe",
+                    "name": "sizes",
+                    "type": "group",
+                    "instructions": "",
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_zpt_button_size_bp_xs",
+                            "label": "XS",
+                            "name": "bp_xs",
+                            "type": "select",
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "": "Standard"
+                            },
+                            "default_value": "",
+                            "return_format": "value",
+                            "ui": 0,
+                            "allow_null": 0,
+                            "multiple": 0
+                        },
+                        {
+                            "key": "field_zpt_button_size_bp_sm",
+                            "label": "SM",
+                            "name": "bp_sm",
+                            "type": "select",
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "": "wie kleiner"
+                            },
+                            "default_value": "",
+                            "return_format": "value",
+                            "ui": 0,
+                            "allow_null": 0,
+                            "multiple": 0
+                        },
+                        {
+                            "key": "field_zpt_button_size_bp_md",
+                            "label": "MD",
+                            "name": "bp_md",
+                            "type": "select",
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "": "wie kleiner"
+                            },
+                            "default_value": "",
+                            "return_format": "value",
+                            "ui": 0,
+                            "allow_null": 0,
+                            "multiple": 0
+                        },
+                        {
+                            "key": "field_zpt_button_size_bp_lg",
+                            "label": "LG",
+                            "name": "bp_lg",
+                            "type": "select",
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "": "wie kleiner"
+                            },
+                            "default_value": "",
+                            "return_format": "value",
+                            "ui": 0,
+                            "allow_null": 0,
+                            "multiple": 0
+                        },
+                        {
+                            "key": "field_zpt_button_size_bp_xl",
+                            "label": "XL",
+                            "name": "bp_xl",
+                            "type": "select",
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "": "wie kleiner"
+                            },
+                            "default_value": "",
+                            "return_format": "value",
+                            "ui": 0,
+                            "allow_null": 0,
+                            "multiple": 0
+                        },
+                        {
+                            "key": "field_zpt_button_size_bp_xxl",
+                            "label": "XXL",
+                            "name": "bp_xxl",
+                            "type": "select",
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "": "wie kleiner"
+                            },
+                            "default_value": "",
+                            "return_format": "value",
+                            "ui": 0,
+                            "allow_null": 0,
+                            "multiple": 0
+                        }
+                    ]
+                },
+                {
+                    "key": "field_zpt_button_icon",
+                    "label": "Icon",
+                    "name": "icon",
+                    "type": "select",
+                    "instructions": "Suche nach Name oder Begriff über alle Icon-Sets aus Baukasten → Icons.",
+                    "wrapper": {
+                        "width": "50",
+                        "class": "zpt-icon-picker",
+                        "id": ""
+                    },
+                    "choices": {},
+                    "default_value": false,
+                    "return_format": "value",
+                    "ui": 1,
+                    "ajax": 1,
+                    "allow_null": 1,
+                    "multiple": 0,
+                    "placeholder": "Icon suchen …"
+                },
+                {
+                    "key": "field_zpt_button_icon_position",
+                    "label": "Icon-Position",
+                    "name": "icon_position",
+                    "type": "select",
+                    "choices": {
+                        "before": "vor dem Text",
+                        "after": "nach dem Text"
+                    },
+                    "default_value": "before",
+                    "return_format": "value",
+                    "ui": 0,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    }
+                },
+                {
+                    "key": "field_zpt_button_css_classes",
+                    "label": "CSS Klassen (Button)",
+                    "name": "css_classes",
+                    "type": "text",
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "instructions": "ohne „.“, trennen mit Leerzeichen"
+                }
+            ]
+        },
+        {
+            "key": "field_zpt_button_tab_props",
+            "label": "Darstellung",
+            "name": "",
+            "type": "accordion",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-panel",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_zpt_button_align",
+            "label": "Ausrichtung",
+            "name": "align",
+            "type": "select",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "": "links (Standard)",
+                "center": "zentriert",
+                "end": "rechts",
+                "between": "verteilt"
+            },
+            "default_value": "",
+            "return_format": "value",
+            "ui": 0,
+            "allow_null": 0,
+            "multiple": 0
+        },
+        {
+            "key": "field_zpt_button_properties",
+            "label": "Hintergrund",
+            "name": "properties",
+            "type": "clone",
+            "clone": [
+                "field_zpt_props_group_colors"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_zpt_button_tab_css",
+            "label": "CSS",
+            "name": "",
+            "type": "accordion",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-panel",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_zpt_button_css_id",
+            "label": "CSS ID",
+            "name": "css_id",
+            "type": "text",
+            "instructions": "ohne „#“, ohne Leerzeichen; muss auf der Seite eindeutig sein",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "#",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_zpt_button_wrapper_css_classes",
+            "label": "CSS Klassen (Wrapper aller Buttons)",
+            "name": "css_classes",
+            "type": "text",
+            "instructions": "ohne „.“, trennen mit Leerzeichen",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "key": "field_zpt_button_accordion_end",
+            "label": "",
+            "name": "",
+            "type": "accordion",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-panel",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "zpt/button"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1791020317
+}

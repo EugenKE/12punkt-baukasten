@@ -1,0 +1,46 @@
+
+
+//@debug $colors;
+//@debug $utilities-colors;
+//@debug $utilities-text-colors;
+//@debug $theme-colors;
+
+@each $color_name, $color_value in $theme-colors {
+    .fill-#{$color_name} {
+        fill: var(--bs-#{$color_name});
+        & svg {
+            fill: var(--bs-#{$color_name});
+        }
+    }
+
+    .color-#{$color_name} {
+        color: var(--bs-#{$color_name});
+    }
+
+}
+
+
+// =============================================================================
+// Shades: Namen und Anteile stehen in den Einstellungen (Farben → Einstellungen), daher kommen
+// Variablen (--theme-primary-300 …) und Klassen (.bg-primary-300 …) vom Plugin
+// (includes/colors.php → zpt_color_classes_css(), includes/settings.php).
+// =============================================================================
+
+// Systemfarben: nicht angelegte Bootstrap-Farben behalten Bootstraps Wert (--theme-primary = --bs-primary).
+// Angelegte setzt das Plugin danach inline (includes/settings.php → zpt_colors_vars()).
+$zpt-bootstrap-basic-colors: ("black", "white", "gray") !default;   // wie ZPT_BOOTSTRAP_BASIC_COLORS
+
+:root {
+    @each $name in join(map-keys($theme-colors), $zpt-bootstrap-basic-colors) {
+        --theme-#{$name}: var(--bs-#{$name});
+    }
+}
+
+// Grundklassen für black/white/gray (.text-black, .bg-white usw. bringt Bootstrap mit, über --bs-*-rgb)
+@each $name in $zpt-bootstrap-basic-colors {
+    .color-#{$name} { color: var(--theme-#{$name}); }
+    .fill-#{$name}, .fill-#{$name} svg { fill: var(--theme-#{$name}); }
+}
+.text-gray   { color: var(--theme-gray) !important; }
+.bg-gray     { background-color: var(--theme-gray) !important; }
+.border-gray { border-color: var(--theme-gray) !important; }

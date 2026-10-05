@@ -1,0 +1,21 @@
+// =============================================================================
+// 12punkt Baukasten – Tools (erzeugt kein CSS)
+//
+// Für Themes mit eigenem Sass-Build: Variablen, Funktionen und Mixins von
+// Bootstrap + Baukasten, z. B. für media-breakpoint-up().
+//
+//   @import "config";   // ggf. vorher eigene $variablen setzen
+//   @import "tools";
+// =============================================================================
+
+@import "config";
+@import "theme-colors";
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+@include zpt-extend-theme-colors();
+@import "bootstrap/scss/maps";
+@include zpt-extend-theme-color-maps();
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+@import "utilities";

@@ -1,0 +1,167 @@
+// --------------------------------------- links & buttons
+
+// Spezifität wie „a“ (:where zählt nicht, :visited ist in „a“ enthalten) – sonst schlägt die Regel
+// die Einstellungen (Elemente: Link, Navigation) und besuchte Links nehmen die Primärfarbe an
+a:where(:not(.btn)) {
+    color: var(--theme-primary, $primary); 
+    &:hover {
+        transition: none !important;
+        color:var(--theme-primary-hover,  #{shade-color($primary, 30%)});
+    }
+      
+}
+
+
+.btn {
+    & i {
+        display:inline-block;
+    }
+}
+
+/*
+.btn-primary {
+    --bs-btn-bg: var(--theme-primary,  #{$primary});
+    --btn-border-color: var(--theme-primary,  #{$primary});
+}
+
+.btn-secondary {
+    --bs-btn-bg: var(--theme-secondary, #{$secondary});
+    --btn-border-color: var(--theme-secondary,  #{$secondary});
+}
+
+.btn-success {
+    --bs-btn-bg: var(--theme-success, #{$success});
+    --btn-border-color: var(--theme-secondary,  #{$secondary});
+}
+*/
+
+
+
+
+// --- Buttons folgen den Farben aus Baukasten → Einstellungen (--theme-*), Fallback: Sass-Wert
+@each $name, $default in $theme-colors {
+    $hover_default:    shade-color($default, 30%);
+    $contrast_default: color-contrast($default);
+
+    .btn-#{$name} {
+        --bs-btn-color: var(--theme-#{$name}-contrast, #{$contrast_default});
+        --bs-btn-bg: var(--theme-#{$name}, #{$default});
+        --bs-btn-border-color: var(--theme-#{$name}, #{$default});
+
+        --bs-btn-hover-color: var(--theme-#{$name}-contrast, #{$contrast_default});
+        --bs-btn-hover-bg: var(--theme-#{$name}-hover, #{$hover_default});
+        --bs-btn-hover-border-color: var(--theme-#{$name}-hover, #{$hover_default});
+
+        --bs-btn-active-color: var(--theme-#{$name}-contrast, #{$contrast_default});
+        --bs-btn-active-bg: var(--theme-#{$name}-hover, #{$hover_default});
+        --bs-btn-active-border-color: var(--theme-#{$name}-hover, #{$hover_default});
+
+        --bs-btn-disabled-color: var(--theme-#{$name}-contrast, #{$contrast_default});
+        --bs-btn-disabled-bg: var(--theme-#{$name}, #{$default});
+        --bs-btn-disabled-border-color: var(--theme-#{$name}, #{$default});
+    }
+
+    .btn-outline-#{$name} {
+        --bs-btn-color: var(--theme-#{$name}, #{$default});
+        --bs-btn-border-color: var(--theme-#{$name}, #{$default});
+
+        --bs-btn-hover-color: var(--theme-#{$name}-contrast, #{$contrast_default});
+        --bs-btn-hover-bg: var(--theme-#{$name}, #{$default});
+        --bs-btn-hover-border-color: var(--theme-#{$name}, #{$default});
+
+        --bs-btn-active-color: var(--theme-#{$name}-contrast, #{$contrast_default});
+        --bs-btn-active-bg: var(--theme-#{$name}, #{$default});
+        --bs-btn-active-border-color: var(--theme-#{$name}, #{$default});
+
+        --bs-btn-disabled-color: var(--theme-#{$name}, #{$default});
+        --bs-btn-disabled-border-color: var(--theme-#{$name}, #{$default});
+    }
+}
+
+
+
+
+
+
+/*
+.btn {
+    //border:0; 
+    transition: none !important; 
+    border:3px solid;
+    padding:.7em 2.3em .5em 2.35em; 
+    font-weight: bold;
+    & .icon {font-size:1.4em; margin-right:.2em; 
+        //top:.2em; position: relative;
+    }
+    &:hover {
+        transition: none !important;
+    }
+}
+*/
+
+
+/*
+.btn-default {background-color: var(--theme-gray, $default-gray);
+    &:hover {background-color: var(--theme-gray-dark, $default-gray-dark);}
+}
+*/
+
+
+/*
+.btn-primary {
+    background-color: var(--theme-primary, $default-primary); 
+    //color:black; 
+    color:white;
+    border-color:var(--theme-primary, $default-primary);     
+    &:hover, &:active:focus {
+        color: var(--theme-primary, $default-primary); 
+        background-color: black;
+        border-color:black;
+    }
+}
+*/
+
+/*
+.btn-secondary {
+    background-color: var(--theme-secondary, $default-secondary); 
+    //color:black; 
+    color:white;
+    border-color:var(--theme-secondary, $default-secondary);     
+    &:hover, &:active:focus {
+        color: var(--theme-secondary, $default-secondary); 
+        background-color: black;
+        border-color:black;
+    }
+}
+*/
+
+
+/*
+.btn-arrow-link {padding:0;display:inline-flex; justify-content: flex-start; line-height:1.2em;
+    &:hover {color:var(--theme-blue, $default-blue); svg {fill:var(--theme-blue, $default-blue)}}
+    & span {position: relative; top:-.1em; width:8px; margin-right:5px;
+        & svg {fill:var(--theme-blue-dark, $default-blue-dark);}
+    }
+}
+*/
+
+.btn-link-further, .link-further {
+    text-decoration:none;
+    border-bottom:1px solid var(--theme-primary);
+
+    // Pfeil = Bootstrap Icon arrow-right als Maske (unabhängig von geladenen Iconfonts), Farbe = Textfarbe
+    &:before {
+        content: "";
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        margin-right: .3em;
+        vertical-align: -0.125em;
+        background-color: currentColor;
+        mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8'/%3E%3C/svg%3E") no-repeat center / contain;
+    }
+
+
+}
+
+// .dropdown (Design der Navigation) → Theme: css/theme.css

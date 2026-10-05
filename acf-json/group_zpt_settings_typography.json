@@ -1,0 +1,125 @@
+{
+    "key": "group_zpt_settings_typography",
+    "title": "Baukasten: Schriftschnitte & Maße",
+    "display_title": "Schriftschnitte & Maße",
+    "fields": [
+        {
+            "key": "field_zpt_fonts",
+            "label": "",
+            "name": "zpt_fonts",
+            "type": "repeater",
+            "instructions": "Eine Zeile je Schrift. Geladen werden nur Schriften in dieser Liste. Klasse je Schrift: .ff-{name} (z. B. .ff-inter). Leere Felder: Werte aus „Schriftgrößen“.",
+            "layout": "block",
+            "button_label": "Schrift hinzufügen",
+            "collapsed": "field_zpt_fonts_font",
+            "min": 0,
+            "max": 0,
+            "pagination": 0,
+            "sub_fields": [
+                {
+                    "key": "field_zpt_fonts_font",
+                    "label": "Schrift",
+                    "name": "font",
+                    "type": "select",
+                    "choices": {},
+                    "default_value": "",
+                    "return_format": "value",
+                    "ui": 0,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "instructions": "Aus den Schriftquellen (WP-Schriften, Theme-Ordner, System-Standard)."
+                },
+                {
+                    "key": "field_zpt_fonts_sizes",
+                    "label": "Schriftgrößen",
+                    "name": "sizes",
+                    "type": "group",
+                    "layout": "block",
+                    "sub_fields": []
+                },
+                {
+                    "key": "field_zpt_fonts_line_heights",
+                    "label": "Zeilenhöhen",
+                    "name": "line_heights",
+                    "type": "group",
+                    "layout": "block",
+                    "sub_fields": []
+                },
+                {
+                    "key": "field_zpt_fonts_letter_spacing",
+                    "label": "Laufweiten",
+                    "name": "letter_spacing",
+                    "type": "repeater",
+                    "instructions": "Je Gewicht, z. B. 0.02em oder -0.01em (em skaliert mit der Schriftgröße). Zeilen für alle geladenen Gewichte werden beim Speichern angelegt.",
+                    "layout": "table",
+                    "button_label": "Gewicht hinzufügen",
+                    "min": 0,
+                    "max": 0,
+                    "pagination": 0,
+                    "sub_fields": [
+                        {
+                            "key": "field_zpt_fonts_ls_weight",
+                            "label": "Gewicht",
+                            "name": "weight",
+                            "type": "select",
+                            "choices": {
+                                "100": "100 Thin",
+                                "200": "200 ExtraLight",
+                                "300": "300 Light",
+                                "400": "400 Regular",
+                                "500": "500 Medium",
+                                "600": "600 SemiBold",
+                                "700": "700 Bold",
+                                "800": "800 ExtraBold",
+                                "900": "900 Black"
+                            },
+                            "default_value": "400",
+                            "return_format": "value",
+                            "ui": 0,
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "wrapper": {
+                                "width": "40",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_zpt_fonts_ls_value",
+                            "label": "Laufweite",
+                            "name": "value",
+                            "type": "text",
+                            "wrapper": {
+                                "width": "60",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placeholder": "normal",
+                            "default_value": ""
+                        }
+                    ]
+                }
+            ],
+            "parent": "group_zpt_settings_typography"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "zpt-typography"
+            }
+        ]
+    ],
+    "menu_order": 3,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Typografie: Schriften (Repeater) mit Größen, Zeilenhöhen und Laufweiten je Schrift.",
+    "show_in_rest": 0,
+    "modified": 1790929794
+}
