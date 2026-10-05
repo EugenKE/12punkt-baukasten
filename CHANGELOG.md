@@ -4,6 +4,11 @@ Neue Version: Version in `12punkt-baukasten.php` (Header + `ZPT_VERSION`) und `p
 hier eintragen, committen, Tag `vX.Y.Z` setzen und pushen – Sites mit Update-Checker zeigen dann das Update.
 Vermerken, wenn Inhalte/Einstellungen angepasst werden müssen.
 
+## 0.3.1 – 2026-10-05
+- Video-Komponente: Hinweistext „Video abspielen – dabei werden Daten an … übertragen.“ im Frontend
+  übersetzbar (Sprache der Website).
+- Übersetzungen EN/CZ vervollständigt (Logo & Bilder, Favicon, Bilder aus dem Theme).
+
 ## 0.3.0 – 2026-10-05
 - Updates über GitHub: WordPress zeigt neue Versionen (Git-Tags) unter Dashboard → Aktualisierungen.
   Privates Repo: `define('ZPT_GITHUB_TOKEN', '…');` in der wp-config.php. In Git-Checkouts aus.

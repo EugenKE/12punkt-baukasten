@@ -1,6 +1,6 @@
 {
   "name": "12punkt-baukasten",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "private": true,
   "description": "12punkt Baukasten – Bootstrap-basiertes Layout-System als ACF-Blocks",
   "scripts": {
