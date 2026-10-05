@@ -28,6 +28,7 @@ zpt_component('video', [
     'ratio'      => in_array(get_field('ratio'), ZPT_RATIOS, true) ? get_field('ratio') : '16x9',
     'controls'   => (bool) get_field('controls'),
     'autoplay'   => (bool) get_field('autoplay'),
+    'notice'     => (bool) (get_field('notice') ?? true),
     'attrs'      => zpt_block_attrs($block, ['zpt-video', get_field('css_classes')]),
     'is_preview' => $is_preview,
 ]);

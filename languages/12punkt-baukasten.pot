@@ -989,6 +989,10 @@ msgid "Datei (MP4)"
 msgstr ""
 
 #: acf-json/group_zpt_block_video.json
+msgid "Datenschutz-Hinweis anzeigen"
+msgstr ""
+
+#: acf-json/group_zpt_block_video.json
 msgid "MP4"
 msgstr ""
 
@@ -1030,6 +1034,10 @@ msgstr ""
 
 #: acf-json/group_zpt_block_video.json
 msgid "z. B. https://www.youtube.com/watch?v=… oder nur die ID"
+msgstr ""
+
+#: acf-json/group_zpt_block_video.json
+msgid "„Video abspielen – dabei werden Daten an … übertragen.“ Aus = nur für Screenreader. Das Video lädt in jedem Fall erst nach Klick."
 msgstr ""
 
 #: acf-json/group_zpt_meta.json
@@ -3553,13 +3561,13 @@ msgid "Inhalt der Seite"
 msgstr ""
 
 #. translators: %s: Anbieter, z. B. YouTube
-#: templates/components/video.php:51
+#: templates/components/video.php:52
 #, php-format
 msgid "%s-Video"
 msgstr ""
 
 #. translators: %s: Anbieter, z. B. YouTube
-#: templates/components/video.php:58
+#: templates/components/video.php:59
 #, php-format
 msgid "Video abspielen – dabei werden Daten an %s übertragen."
 msgstr ""

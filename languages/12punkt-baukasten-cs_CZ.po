@@ -920,6 +920,10 @@ msgid "Datei (MP4)"
 msgstr "Soubor (MP4)"
 
 #: acf-json/group_zpt_block_video.json
+msgid "Datenschutz-Hinweis anzeigen"
+msgstr "Zobrazit upozornění na ochranu údajů"
+
+#: acf-json/group_zpt_block_video.json
 msgid "MP4"
 msgstr "MP4"
 
@@ -962,6 +966,14 @@ msgstr "např. jako atmosférické video"
 #: acf-json/group_zpt_block_video.json
 msgid "z. B. https://www.youtube.com/watch?v=… oder nur die ID"
 msgstr "např. https://www.youtube.com/watch?v=… nebo jen ID"
+
+#: acf-json/group_zpt_block_video.json
+msgid ""
+"„Video abspielen – dabei werden Daten an … übertragen.“ Aus = nur für Screenreader. Das Video lädt in jedem Fall erst "
+"nach Klick."
+msgstr ""
+"„Přehrát video – přitom budou předána data službě ….“ Vypnuto = pouze pro čtečky obrazovky. Video se v každém případě "
+"načte až po kliknutí."
 
 #: acf-json/group_zpt_meta.json
 msgid "Leer = globale Meta Description (Baukasten → Einstellungen)."
@@ -3647,13 +3659,13 @@ msgid "Inhalt der Seite"
 msgstr "Obsah stránky"
 
 #. translators: %s: Anbieter, z. B. YouTube
-#: templates/components/video.php:51
+#: templates/components/video.php:52
 #, php-format
 msgid "%s-Video"
 msgstr "Video %s"
 
 #. translators: %s: Anbieter, z. B. YouTube
-#: templates/components/video.php:58
+#: templates/components/video.php:59
 #, php-format
 msgid "Video abspielen – dabei werden Daten an %s übertragen."
 msgstr "Přehrát video – přitom budou předána data službě %s."

@@ -15,6 +15,7 @@
  *     @type string $ratio      16x9, 4x3, 1x1, 21x9, 9x16
  *     @type bool   $controls   Datei: Steuerung.
  *     @type bool   $autoplay   Datei: stumm, Schleife, automatisch.
+ *     @type bool   $notice     YouTube/Vimeo: Datenschutz-Hinweis sichtbar (Standard), sonst nur für Screenreader.
  *     @type array  $attrs      ['id', 'class', 'style'] für zpt_html_attrs().
  *     @type bool   $is_preview true im Editor.
  * }
@@ -53,7 +54,7 @@ $attrs['class'] = zpt_class_list($attrs['class'] ?? [], 'ratio', 'ratio-' . ($ar
                 <?php echo wp_get_attachment_image($poster, 'large', false, ['class' => 'zpt-video-poster', 'alt' => '']); ?>
             <?php endif; ?>
             <span class="zpt-video-play" aria-hidden="true"><svg class="zpt-svg-icon" viewBox="0 0 16 16" fill="currentColor" focusable="false"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z"/></svg></span>
-            <span class="zpt-video-notice">
+            <span class="<?php echo ($args['notice'] ?? true) ? 'zpt-video-notice' : 'visually-hidden'; ?>">
                 <?php if ($title !== ''): ?><strong><?php echo esc_html($title); ?></strong><br><?php endif; ?>
                 <?php echo esc_html(sprintf(/* translators: %s: Anbieter, z. B. YouTube */ __('Video abspielen – dabei werden Daten an %s übertragen.', '12punkt-baukasten'), $provider)); ?>
             </span>

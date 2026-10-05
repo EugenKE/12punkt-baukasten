@@ -211,6 +211,32 @@
             ]
         },
         {
+            "key": "field_zpt_video_notice",
+            "label": "Datenschutz-Hinweis anzeigen",
+            "name": "notice",
+            "type": "true_false",
+            "instructions": "„Video abspielen – dabei werden Daten an … übertragen.“ Aus = nur für Screenreader. Das Video lädt in jedem Fall erst nach Klick.",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Ja",
+            "ui_off_text": "Nein",
+            "message": "",
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_zpt_video_source",
+                        "operator": "!=",
+                        "value": "file"
+                    }
+                ]
+            ]
+        },
+        {
             "key": "field_zpt_video_tab_font",
             "label": "Schrift",
             "name": "",
@@ -345,5 +371,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1791020530
+    "modified": 1791208566
 }
