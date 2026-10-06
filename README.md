@@ -84,6 +84,7 @@ Die Seitenleiste des Block-Editors ist 360px statt 280px breit (ab 782px Fenster
   `zpt/*`-Blocks gebaut. Container „wie Seite“ bezieht sich auf die Sektion selbst.
   Seitenleiste „Hintergrund“ (`group_zpt_section_bg.json`, Felder `zpt_bg_*`): Farbe, Bild (Mediathek/Theme),
   Wiederholen, Bildgröße in % – als Inline-Style an `<section>`, wie bei der Row (`zpt_background_style()`).
+  Im Editor zeigt `assets/js/editor-section-bg.js` ihn live am `.editor-styles-wrapper`.
   Direkt aufgerufen (`/section/{slug}/`, auch „Vorschau“ im Editor): wer die Sektion bearbeiten darf,
   sieht sie einzeln mit Header/Footer (`templates/single-section.php`, `noindex`, nicht in der Sitemap);
   alle anderen werden per 302 umgeleitet – auf die erste Seite, die sie im Feld „Sektionen“ hat

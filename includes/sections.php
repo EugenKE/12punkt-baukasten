@@ -132,6 +132,15 @@ add_action('enqueue_block_editor_assets', function () {
     wp_enqueue_script('zpt-editor-sections-page', ZPT_URL . 'assets/js/editor-sections-page.js', ['wp-data', 'wp-dom-ready', 'wp-editor', 'wp-edit-post'], filemtime(ZPT_PATH . 'assets/js/editor-sections-page.js'), true);
 });
 
+// Sektion bearbeiten: Hintergrund (Box „Hintergrund“) live im Editor zeigen
+add_action('enqueue_block_editor_assets', function () {
+    $screen = function_exists('get_current_screen') ? get_current_screen() : null;
+    if (!$screen || $screen->post_type !== 'section') {
+        return;
+    }
+    wp_enqueue_script('zpt-editor-section-bg', ZPT_URL . 'assets/js/editor-section-bg.js', ['jquery', 'acf-input', 'wp-data', 'wp-core-data'], filemtime(ZPT_PATH . 'assets/js/editor-section-bg.js'), true);
+});
+
 // ----------------------------------------------------------------- DIREKTAUFRUF
 // Redaktion (darf die Sektion bearbeiten): Sektion einzeln mit Header/Footer – auch „Vorschau“ im Editor.
 // Alle anderen: 302 auf die Verwendung (zpt_section_target_url()), da sich die Zuordnung ändern kann.
