@@ -76,10 +76,10 @@ const ZPT_ELEMENT_GROUPS = [
  * Neues Element / neues Feature: hier eintragen, dann `npm run build:acf` (Feldgruppe neu erzeugen).
  */
 const ZPT_ELEMENTS = [
-    // Struktur: Seitenbausteine (body = Grundwerte der ganzen Seite)
+    // Struktur: Seitenbausteine (body = Grundwerte der ganzen Seite). Kein <nav>: die Leiste im Kopf hat eigene
+    // Einstellungen (Gruppe navbar, Baukasten → Navigation) – sonst zwei Stellen für dieselbe Navi
     'body'    => ['label' => 'Seite (body)',      'group' => 'structure', 'selector' => 'body',    'features' => ['type', 'color', 'background', 'size']],
     'header'  => ['label' => 'Kopfbereich (header)', 'group' => 'structure', 'selector' => 'header', 'features' => ['type', 'color', 'background', 'size', 'margin', 'padding']],
-    'nav'     => ['label' => 'Navigation (nav)',  'group' => 'structure', 'selector' => 'nav',     'features' => ['type', 'color', 'background', 'size', 'margin', 'padding']],
     'section' => ['label' => 'Abschnitt (section)', 'group' => 'structure', 'selector' => 'section', 'features' => ['type', 'color', 'background', 'size', 'margin', 'padding']],
     'article' => ['label' => 'Artikel (article)', 'group' => 'structure', 'selector' => 'article', 'features' => ['type', 'color', 'background', 'size', 'margin', 'padding']],
     'footer'  => ['label' => 'Fußbereich (footer)', 'group' => 'structure', 'selector' => 'footer', 'features' => ['type', 'color', 'background', 'size', 'margin', 'padding']],

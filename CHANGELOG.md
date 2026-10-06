@@ -4,6 +4,20 @@ Neue Version: Version in `12punkt-baukasten.php` (Header + `ZPT_VERSION`) und `p
 hier eintragen, committen, Tag `vX.Y.Z` setzen und pushen – Sites mit Update-Checker zeigen dann das Update.
 Vermerken, wenn Inhalte/Einstellungen angepasst werden müssen.
 
+## 0.4.4 – 2026-10-06
+- Baukasten → Elemente: Element „Navigation (nav)“ entfernt – die Navigation wird nur noch unter
+  Baukasten → Navigation gestaltet (vorher zwei Stellen, `.zpt-navbar` überschrieb `nav`). Gesetzte Werte
+  am Element nav gelten nicht mehr: ggf. unter Navigation → Leiste eintragen.
+- Logo & Bilder → Logo: Tabs Logo / Größe. Größe des Logos in der Navigationsleiste: feste Höhe oder Breite je
+  Breakpoint oder „Höhe der Navigation“ (Logo so hoch wie die Menüpunkte, mobil wie der Menü-Button; misst
+  `assets/js/navbar-logo.js`). Standard wie bisher 40 px, ab LG 50 px.
+  **Theme anpassen:** in `header.php` am Logo `$zpt_navbar['logo_class'] ?? 'h-px-40 h-px-lg-50 w-auto'` statt der
+  festen Klassen – sonst gewinnen die Klassen (`!important`) gegen die Einstellung.
+- Block Navigation: Ausrichtung je Breakpoint (XS–XXL, leer = wie kleiner), „volle Breite“ jetzt auch responsive.
+  Feld `align` → Gruppe `aligns` (`bp_xs` …): alte Blocks gelten weiter (Wert = XS); Inhalte hier und auf Kokado
+  migriert (`aligns_bp_xs` ergänzt, `align` bleibt bis zum Neuspeichern).
+- Sektionen: Feld „CSS ID“ in der Seitenleiste (Anker für Links/Sprungmarken), leer = wie bisher `section-{slug}`.
+
 ## 0.4.3 – 2026-10-06
 - Sektionen: Hintergrund in der Seitenleiste (Farbe, Bild aus Mediathek oder Theme, Wiederholen, Bildgröße in %),
   gleiche Logik wie bei der Row (`zpt_background_style()`). Neue Felder – bestehende Sektionen unverändert.

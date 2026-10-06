@@ -212,7 +212,7 @@ function zpt_style_css(): string {
         $css .= $var . ':' . $value . ';';
     }
 
-    return ($css ? ':root{' . $css . '}' : '') . zpt_grid_css() . zpt_type_scale_css() . zpt_element_css() . zpt_font_classes_css() . zpt_buttons_css() . zpt_navbar_css() . zpt_color_classes_css();
+    return ($css ? ':root{' . $css . '}' : '') . zpt_grid_css() . zpt_type_scale_css() . zpt_element_css() . zpt_font_classes_css() . zpt_buttons_css() . zpt_navbar_css() . zpt_logo_css() . zpt_color_classes_css();
 }
 
 // ----------------------------------------------------------------- ZWISCHENSPEICHER

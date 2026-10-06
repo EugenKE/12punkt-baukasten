@@ -44,6 +44,22 @@ body {
 
 // --------------------------------------- Komponenten (allgemein)
 .yt-player {max-width:100%; background-color:gray;}
+
+// Navigation „volle Breite“ je Breakpoint (Bootstrap .nav-fill gibt es nur ohne Breakpoint);
+// .zpt-nav-nofill-{bp} hebt es ab einem größeren Breakpoint wieder auf (templates/components/navigation.php)
+@each $bp in map-keys($grid-breakpoints) {
+    $infix: breakpoint-infix($bp, $grid-breakpoints);
+    @include media-breakpoint-up($bp) {
+        .zpt-nav-fill#{$infix} {
+            & > .nav-item, & > .nav-link {flex: 1 1 auto; text-align: center;}
+            & .nav-item .nav-link {width: 100%;}
+        }
+        .zpt-nav-nofill#{$infix} {
+            & > .nav-item, & > .nav-link {flex: 0 1 auto; text-align: inherit;}
+            & .nav-item .nav-link {width: auto;}
+        }
+    }
+}
 .svg-wrapper {display: block;}
 
 .video-preview {

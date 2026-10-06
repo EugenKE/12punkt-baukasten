@@ -19,7 +19,7 @@ Bringt Bootstrap 5.3 (CSS + JS), Grid-Erweiterungen, Spacing-/Typo-Utilities, Ic
 | `zpt/icon`     | dto., Icon aus den Icon-Sets (Icon-Auswahl, s. Einstellungen → Icons) oder SVG-Code (bereinigt: nur SVG-Elemente, keine Skripte/Ereignisse – `zpt_sanitize_svg()`), optional verlinkt, Größe (sonst Schriftgröße), Beschriftung für Screenreader |
 | `zpt/video`    | dto., YouTube (`youtube-nocookie.com`) / Vimeo (`dnt=1`) – erst **nach Klick** geladen (Vorschaubild + Hinweis, `assets/js/video.js`), oder eigene Datei (Steuerung, Autoplay stumm/Schleife). Seitenverhältnis 16:9, 4:3, 1:1, 21:9, 9:16 |
 | `zpt/posts`    | dto., Beiträge/Seiten **automatisch** (Inhaltstyp, Anzahl, Kategorien, Sortierung; ohne den aktuellen Beitrag) oder **von Hand**, als Kacheln (Raster wie Galerie), Liste oder Akkordeon. Bild, Datum, Auszug, Link-Text (leer = ganze Kachel klickbar). Abfrage änderbar: Filter `zpt/posts/query` |
-| `zpt/navigation` | dto., WordPress-Menü: **Menü** oder **Menü-Position** des Themes („Position: Haupt-Navigation“ – folgt der Zuordnung unter Design → Menüs), Ebenen (nur oberste / mit Untermenüs), horizontal (Untermenüs als Bootstrap-Dropdown) oder vertikal (eingerückt), Stil Links / Pills / unterstrichen / schlichte Liste, Ausrichtung, Klassen je Link. Walker `ZPT_Nav_Walker` (`includes/navigation.php`). |
+| `zpt/navigation` | dto., WordPress-Menü: **Menü** oder **Menü-Position** des Themes („Position: Haupt-Navigation“ – folgt der Zuordnung unter Design → Menüs), Ebenen (nur oberste / mit Untermenüs), horizontal (Untermenüs als Bootstrap-Dropdown) oder vertikal (eingerückt), Stil Links / Pills / unterstrichen / schlichte Liste, **Ausrichtung je Breakpoint** (Gruppe `aligns`, leer = wie kleiner → `justify-content-md-end`, volle Breite → `.zpt-nav-fill-{bp}` / aufheben `.zpt-nav-nofill-{bp}`; `zpt_nav_align_classes()`; Blocks vor 0.4.4 mit `align` gelten als XS), Klassen je Link. Walker `ZPT_Nav_Walker` (`includes/navigation.php`). |
 | `zpt/anchors`  | dto., **Sprungmarken**: Links zu CSS IDs dieser Seite (Repeater Text + ID, z. B. Row-IDs), gleiches Markup wie `zpt/navigation` (Komponente `navigation`, Stil/Richtung/Ausrichtung wie dort, Standard „unterstrichen“). Optional aktiven Abschnitt markieren (Scrollspy, `assets/js/anchors.js`, `.active` + `aria-current`) und **nicht umbrechen** (horizontal wischbar, `overflow-x-auto`; mittig/rechts dann per Auto-Margin statt `justify-content`, sonst wäre der Anfang abgeschnitten). Als Leiste oben: Row „Oben anheften“ + Hintergrundfarbe |
 
 Aufbau: **Row → Spalte → Komponenten**. Spalte und Komponente werden getrennt eingestellt;
@@ -74,7 +74,8 @@ Die Seitenleiste des Block-Editors ist 360px statt 280px breit (ab 782px Fenster
 
 - **Block-Seite** (`tmpl-blocks.php`): Inhalt der Seite aus `zpt/row`-Blocks.
 - **Sektionen-Seite** (`tmpl-sections_page.php`): gibt die im Feld „Sektionen“ gewählten
-  Sektionen nacheinander aus (`<section id="section-{slug}" class="zpt-section">`).
+  Sektionen nacheinander aus (`<section id="section-{slug}" class="zpt-section">`; eigene ID: Feld „CSS ID“ der
+  Sektion, `zpt_css_id`, `zpt_section_id()`).
   Solche Seiten öffnen im **klassischen Editor** (Titel, Feld „Sektionen“, Seiten-Attribute; Inhaltsfeld
   ausgeblendet) – Filter `use_block_editor_for_post`, Gutenberg bleibt für alles andere aktiv. Wird im
   Block-Editor auf „Sektionen-Seite“ gewechselt, lädt die Seite nach dem Speichern klassisch neu
@@ -86,7 +87,7 @@ Die Seitenleiste des Block-Editors ist 360px statt 280px breit (ab 782px Fenster
   Direkt aufgerufen (`/section/{slug}/`, auch „Vorschau“ im Editor): wer die Sektion bearbeiten darf,
   sieht sie einzeln mit Header/Footer (`templates/single-section.php`, `noindex`, nicht in der Sitemap);
   alle anderen werden per 302 umgeleitet – auf die erste Seite, die sie im Feld „Sektionen“ hat
-  (`#section-{slug}`), bei der Footer-Sektion auf `/#footer`, sonst auf die Startseite
+  (`#` + ID der Sektion), bei der Footer-Sektion auf `/#footer`, sonst auf die Startseite
   (Filter `zpt/section/target_url`).
 - **Footer**: Das Plugin gibt eine Sektion als Footer aus (`<footer id="footer" class="zpt-footer">`,
   im `wp_footer`-Hook vor den Skripten, also nach `</main>`). Welche: Sektion mit Haken „Als Footer
@@ -177,7 +178,8 @@ Skala ändern (eigener Build): `$zpt-spacer-step`, `$zpt-spacer-count` bzw. `$sp
   Im Block-Editor: Bereich Schrift → Schriftrolle / Schriftgröße / Gewicht.
   Code: `includes/fonts.php` (Laden), `includes/typography.php` (Werte, Klassen).
 - **Elemente** (Tabs Struktur / Überschriften / Text / Auszeichnung / Forms / Klassen, je Element ein Akkordeon mit
-  Zusammenfassung der gesetzten Werte im Titel, darin Tabs Schrift / Farben / Margin / Padding; leere Tabs fallen weg): h1–h6, body, p, ul, ol, blockquote, small, figcaption,
+  Zusammenfassung der gesetzten Werte im Titel, darin Tabs Schrift / Farben / Margin / Padding; leere Tabs fallen weg): body, header,
+  section, article, footer; h1–h6, p, ul, ol, blockquote, small, figcaption,
   hr, strong, em, a; Forms: Feld-Label, Eingabefeld (`.form-control`, `.form-select` + Textfelder ohne
   Klasse), Platzhalter, Checkbox-/Radio-Label, Hilfetext, Fehlermeldung; Klassen: `.lead`,
   `.blockquote-footer`, `.zpt-sg-label` (Styleguide-Beschriftungen).
@@ -244,6 +246,12 @@ Skala ändern (eigener Build): `$zpt-spacer-step`, `$zpt-spacer-count` bzw. `$sp
     Ausgabe: `zpt_logo()`, `zpt_logo('weiss', ['class' => 'h-px-40 w-auto', 'inline' => true])` (SVG inline, bereinigt),
     Shortcode `[zpt_logo variant="weiss" class="…" inline="1"]`; Klassen `.zpt-logo .zpt-logo-{kürzel}`. Unbekannte
     Variante → Hauptlogo. Daten: `zpt_logos()`, `zpt_logo_id()`, Filter `zpt/logos`. Das Theme nimmt `zpt_logo()` im Header.
+    Tab **Größe** (Logo in der Navigationsleiste, `zpt_logo_size()` → `zpt_logo_css()`): *Feste Höhe* oder *Feste Breite*
+    je Breakpoint in px (andere Seite `auto`; leer = wie kleiner, alles leer = 40 px, ab LG 50 px) oder *Höhe der
+    Navigation*: `assets/js/navbar-logo.js` misst die Menüpunkte (eingeklappt den Menü-Button) und setzt
+    `--zpt-logo-height` an `.zpt-navbar.zpt-logo-fit` (minus Padding von `.navbar-brand`). Nur mit CSS geht das nicht:
+    die Breite des Logo-Links stünde fest, bevor die gestreckte Höhe bekannt ist. Theme: Klassen am Logo aus
+    `zpt_navbar()['logo_class']` (leer) – feste Klassen wie `h-px-40` (`!important`) würden die Einstellung überstimmen.
   - *Favicon*: Quelle (`zpt_favicon_source`) **Mediathek** oder **Ordner im Theme**.
     Mediathek: Bild (`zpt_favicon`, quadratisch, mind. 512 px) → erzeugt in `uploads/zpt-favicon/`: `favicon.ico`
     (16/32/48, PNG im ICO), `apple-touch-icon.png` (180, auf Hintergrundfarbe `zpt_favicon_background`, Standard weiß),

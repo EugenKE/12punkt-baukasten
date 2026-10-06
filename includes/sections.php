@@ -153,7 +153,7 @@ function zpt_section_target_url(WP_Post $section): string {
     ]);
 
     if ($pages) {
-        $url = get_permalink($pages[0]) . '#section-' . $section->post_name;
+        $url = get_permalink($pages[0]) . '#' . zpt_section_id($section);
     } elseif (($footer = zpt_footer_section()) && $footer->ID === $section->ID) {
         $url = home_url('/#footer');
     } else {
@@ -189,6 +189,21 @@ add_filter('wp_sitemaps_post_types', function ($types) {
 // ----------------------------------------------------------------- AUSGABE
 
 /**
+ * CSS ID einer Sektion: Feld „CSS ID“ (zpt_css_id), leer = section-{slug}.
+ */
+function zpt_section_id(WP_Post $section): string {
+    return zpt_css_id(get_post_meta($section->ID, 'zpt_css_id', true)) ?: 'section-' . $section->post_name;
+}
+
+// CSS ID: Buchstabe am Anfang, dann Buchstaben, Ziffern, - und _ (wie zpt_css_id())
+add_filter('acf/validate_value/key=field_zpt_section_css_id', function ($valid, $value) {
+    if ($valid === true && trim((string) $value) !== '' && zpt_css_id($value) === '') {
+        return __('Ungültige CSS ID: mit einem Buchstaben beginnen, dann nur Buchstaben, Ziffern, - und _.', '12punkt-baukasten');
+    }
+    return $valid;
+}, 10, 2);
+
+/**
  * Gibt eine Sektion aus: <section id="…" class="zpt-section …"> + Block-Inhalt.
  * Während der Ausgabe ist die Sektion der aktuelle Post (für die Blocks, z. B. Container „wie Seite“).
  */
@@ -214,7 +229,7 @@ function zpt_the_section(WP_Post|int $section): void {
         : get_field('zpt_bg_image', $section->ID);
 
     $attrs = [
-        'id'    => 'section-' . $section->post_name,
+        'id'    => zpt_section_id($section),
         'class' => ['zpt-section', 'zpt-section-' . $section->ID],
         'style' => zpt_background_style(
             (string) get_field('zpt_bg_color', $section->ID),

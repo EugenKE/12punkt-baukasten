@@ -4,6 +4,20 @@
     "display_title": "Logo",
     "fields": [
         {
+            "key": "field_zpt_logo_tab_logo",
+            "label": "Logo",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
             "key": "field_zpt_logo",
             "label": "Logo",
             "name": "zpt_logo",
@@ -123,6 +137,151 @@
                     "parent_repeater": "field_zpt_logo_variants"
                 }
             ]
+        },
+        {
+            "key": "field_zpt_logo_tab_size",
+            "label": "Größe",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "key": "field_zpt_logo_size_mode",
+            "label": "Größe in der Navigationsleiste",
+            "name": "zpt_logo_size_mode",
+            "type": "button_group",
+            "instructions": "Feste Höhe oder Breite: die andere Seite ergibt sich aus dem Bild. Höhe der Navigation: so hoch wie die Menüpunkte (inkl. Padding), mobil wie der Menü-Button – das Logo wächst und schrumpft mit der Navigation (Schrift, Abstände unter Baukasten → Navigation).",
+            "choices": {
+                "height": "Feste Höhe",
+                "width": "Feste Breite",
+                "nav": "Höhe der Navigation"
+            },
+            "default_value": "height",
+            "return_format": "value",
+            "allow_null": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_zpt_logo_size",
+            "label": "Größe je Breakpoint",
+            "name": "zpt_logo_size",
+            "type": "group",
+            "layout": "block",
+            "instructions": "Höhe bzw. Breite in px. Leer = Wert des kleineren Breakpoints; alles leer = 40 px, ab LG 50 px.",
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_zpt_logo_size_mode",
+                        "operator": "!=",
+                        "value": "nav"
+                    }
+                ]
+            ],
+            "sub_fields": [
+                {
+                    "key": "field_zpt_logo_size_xs",
+                    "label": "XS",
+                    "name": "xs",
+                    "type": "number",
+                    "wrapper": {
+                        "width": "16",
+                        "class": "",
+                        "id": ""
+                    },
+                    "append": "px",
+                    "min": 1,
+                    "max": 1000,
+                    "step": 1,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_zpt_logo_size_sm",
+                    "label": "SM",
+                    "name": "sm",
+                    "type": "number",
+                    "wrapper": {
+                        "width": "16",
+                        "class": "",
+                        "id": ""
+                    },
+                    "append": "px",
+                    "min": 1,
+                    "max": 1000,
+                    "step": 1,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_zpt_logo_size_md",
+                    "label": "MD",
+                    "name": "md",
+                    "type": "number",
+                    "wrapper": {
+                        "width": "16",
+                        "class": "",
+                        "id": ""
+                    },
+                    "append": "px",
+                    "min": 1,
+                    "max": 1000,
+                    "step": 1,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_zpt_logo_size_lg",
+                    "label": "LG",
+                    "name": "lg",
+                    "type": "number",
+                    "wrapper": {
+                        "width": "16",
+                        "class": "",
+                        "id": ""
+                    },
+                    "append": "px",
+                    "min": 1,
+                    "max": 1000,
+                    "step": 1,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_zpt_logo_size_xl",
+                    "label": "XL",
+                    "name": "xl",
+                    "type": "number",
+                    "wrapper": {
+                        "width": "16",
+                        "class": "",
+                        "id": ""
+                    },
+                    "append": "px",
+                    "min": 1,
+                    "max": 1000,
+                    "step": 1,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_zpt_logo_size_xxl",
+                    "label": "XXL",
+                    "name": "xxl",
+                    "type": "number",
+                    "wrapper": {
+                        "width": "16",
+                        "class": "",
+                        "id": ""
+                    },
+                    "append": "px",
+                    "min": 1,
+                    "max": 1000,
+                    "step": 1,
+                    "placeholder": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -143,5 +302,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1791101122
+    "modified": 1791307191
 }

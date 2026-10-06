@@ -16,7 +16,7 @@ zpt_component('navigation', [
     'depth'      => (int) (get_field('depth') ?: 2),
     'direction'  => get_field('direction') ?: 'horizontal',
     'style'      => get_field('style') ?: 'nav',
-    'align'      => (string) get_field('align'),
+    'align'      => zpt_navigation_block_aligns($block),
     'link_class' => (string) get_field('css_link'),
     'attrs'      => zpt_block_attrs($block, ['zpt-navigation', get_field('css_classes')]),
     'is_preview' => $is_preview,

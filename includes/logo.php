@@ -103,6 +103,72 @@ function zpt_logo(string $variant = '', array $args = []): string {
     return wp_get_attachment_image($id, $args['size'], false, ['class' => $class, 'alt' => $args['alt'], 'loading' => false]);
 }
 
+// ----------------------------------------------------------------- LOGO: GRÖSSE IN DER NAVIGATIONSLEISTE
+// Tab „Größe“: feste Höhe oder Breite je Breakpoint (andere Seite auto) oder „Höhe der Navigation“:
+// assets/js/navbar-logo.js misst Menüpunkte (mobil den Menü-Button) und setzt --zpt-logo-height.
+// Reines CSS geht dafür nicht: die Breite des Logo-Links stünde fest, bevor die gestreckte Höhe bekannt ist.
+
+// Standard ohne Einstellung – wie zuvor die Klassen im Theme (h-px-40 h-px-lg-50 w-auto)
+const ZPT_LOGO_SIZE_DEFAULT = ['xs' => 40, 'lg' => 50];
+
+/**
+ * Größe des Logos in der Navigationsleiste: ['mode' => 'height'|'width'|'nav', 'sizes' => ['xs' => 40, 'lg' => 50]].
+ * Rohwerte per get_option; nur gesetzte Breakpoints, leere erben im CSS vom kleineren.
+ */
+function zpt_logo_size(): array {
+    $mode = (string) get_option('options_zpt_logo_size_mode', 'height');
+    $mode = in_array($mode, ['height', 'width', 'nav'], true) ? $mode : 'height';
+
+    $sizes = [];
+    foreach (array_merge(['xs'], array_keys(ZPT_BOOTSTRAP_BREAKPOINTS)) as $bp) {
+        $value = get_option("options_zpt_logo_size_{$bp}", '');
+        if (is_numeric($value) && $value > 0) {
+            $sizes[$bp] = (int) $value;
+        }
+    }
+    if (!$sizes && $mode === 'height') {
+        $sizes = ZPT_LOGO_SIZE_DEFAULT;
+    }
+
+    return ['mode' => $mode, 'sizes' => $sizes];
+}
+
+/**
+ * CSS der Logo-Größe (Teil von zpt_style_css()).
+ */
+function zpt_logo_css(): string {
+    $sel  = '.zpt-navbar .navbar-brand > :is(img, svg)';
+    $size = zpt_logo_size();
+
+    if ($size['mode'] === 'nav') {
+        // Fallback bis zur ersten Messung: Standardhöhe
+        return "{$sel}{height:var(--zpt-logo-height," . ZPT_LOGO_SIZE_DEFAULT['xs'] . "px);width:auto;max-width:none}";
+    }
+
+    [$prop, $auto] = $size['mode'] === 'width' ? ['width', 'height'] : ['height', 'width'];
+    $min = ['xs' => 0] + zpt_breakpoint_min();
+    $css = '';
+    foreach ($size['sizes'] as $bp => $px) {
+        $rule = "{$sel}{{$prop}:{$px}px;{$auto}:auto;max-width:none}";
+        $css .= !empty($min[$bp]) ? "@media (min-width: {$min[$bp]}px){{$rule}}" : $rule;
+    }
+    return $css;
+}
+
+// Felder je Breakpoint: Mindestbreite als Hinweis (wie Baukasten → Layout)
+add_filter('acf/load_field/key=field_zpt_logo_size_xs', function ($field) {
+    $field['instructions'] = __('alle Breiten', '12punkt-baukasten');
+    return $field;
+});
+foreach (array_keys(ZPT_BOOTSTRAP_BREAKPOINTS) as $zpt_bp) {
+    add_filter("acf/load_field/key=field_zpt_logo_size_{$zpt_bp}", function ($field) use ($zpt_bp) {
+        /* translators: %s: Mindestbreite des Breakpoints in px */
+        $field['instructions'] = sprintf(__('ab %spx', '12punkt-baukasten'), zpt_breakpoint_min()[$zpt_bp]);
+        return $field;
+    });
+}
+unset($zpt_bp);
+
 add_shortcode('zpt_logo', function ($atts) {
     $atts = shortcode_atts(['variant' => '', 'class' => '', 'alt' => '', 'inline' => ''], $atts, 'zpt_logo');
     $args = ['class' => $atts['class'], 'inline' => filter_var($atts['inline'], FILTER_VALIDATE_BOOLEAN)];

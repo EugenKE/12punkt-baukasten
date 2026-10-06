@@ -116,28 +116,17 @@
             "multiple": 0
         },
         {
-            "key": "field_zpt_navigation_align",
+            "key": "field_zpt_navigation_aligns",
             "label": "Ausrichtung",
-            "name": "align",
-            "type": "select",
-            "instructions": "",
+            "name": "aligns",
+            "type": "group",
+            "instructions": "Je Breakpoint, leer = wie kleiner.",
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "": "links",
-                "center": "mittig",
-                "end": "rechts",
-                "between": "verteilt",
-                "fill": "volle Breite"
-            },
-            "default_value": "",
-            "return_format": "value",
-            "ui": 0,
-            "allow_null": 0,
-            "multiple": 0,
+            "layout": "block",
             "conditional_logic": [
                 [
                     {
@@ -146,6 +135,151 @@
                         "value": "horizontal"
                     }
                 ]
+            ],
+            "sub_fields": [
+                {
+                    "key": "field_zpt_navigation_align_bp_xs",
+                    "label": "XS",
+                    "name": "bp_xs",
+                    "type": "select",
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "": "links",
+                        "center": "mittig",
+                        "end": "rechts",
+                        "between": "verteilt",
+                        "fill": "volle Breite"
+                    },
+                    "default_value": "",
+                    "return_format": "value",
+                    "ui": 0,
+                    "allow_null": 0,
+                    "multiple": 0
+                },
+                {
+                    "key": "field_zpt_navigation_align_bp_sm",
+                    "label": "SM",
+                    "name": "bp_sm",
+                    "type": "select",
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "": "wie kleiner",
+                        "start": "links",
+                        "center": "mittig",
+                        "end": "rechts",
+                        "between": "verteilt",
+                        "fill": "volle Breite"
+                    },
+                    "default_value": "",
+                    "return_format": "value",
+                    "ui": 0,
+                    "allow_null": 0,
+                    "multiple": 0
+                },
+                {
+                    "key": "field_zpt_navigation_align_bp_md",
+                    "label": "MD",
+                    "name": "bp_md",
+                    "type": "select",
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "": "wie kleiner",
+                        "start": "links",
+                        "center": "mittig",
+                        "end": "rechts",
+                        "between": "verteilt",
+                        "fill": "volle Breite"
+                    },
+                    "default_value": "",
+                    "return_format": "value",
+                    "ui": 0,
+                    "allow_null": 0,
+                    "multiple": 0
+                },
+                {
+                    "key": "field_zpt_navigation_align_bp_lg",
+                    "label": "LG",
+                    "name": "bp_lg",
+                    "type": "select",
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "": "wie kleiner",
+                        "start": "links",
+                        "center": "mittig",
+                        "end": "rechts",
+                        "between": "verteilt",
+                        "fill": "volle Breite"
+                    },
+                    "default_value": "",
+                    "return_format": "value",
+                    "ui": 0,
+                    "allow_null": 0,
+                    "multiple": 0
+                },
+                {
+                    "key": "field_zpt_navigation_align_bp_xl",
+                    "label": "XL",
+                    "name": "bp_xl",
+                    "type": "select",
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "": "wie kleiner",
+                        "start": "links",
+                        "center": "mittig",
+                        "end": "rechts",
+                        "between": "verteilt",
+                        "fill": "volle Breite"
+                    },
+                    "default_value": "",
+                    "return_format": "value",
+                    "ui": 0,
+                    "allow_null": 0,
+                    "multiple": 0
+                },
+                {
+                    "key": "field_zpt_navigation_align_bp_xxl",
+                    "label": "XXL",
+                    "name": "bp_xxl",
+                    "type": "select",
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "": "wie kleiner",
+                        "start": "links",
+                        "center": "mittig",
+                        "end": "rechts",
+                        "between": "verteilt",
+                        "fill": "volle Breite"
+                    },
+                    "default_value": "",
+                    "return_format": "value",
+                    "ui": 0,
+                    "allow_null": 0,
+                    "multiple": 0
+                }
             ]
         },
         {
@@ -300,5 +434,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1791118477
+    "modified": 1791307494
 }

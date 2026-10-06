@@ -38,6 +38,7 @@ add_action('init', function () {
 
     // --- Sprungmarken (Navigation: aktiven Abschnitt markieren; angeheftete Rows: Abstand der Sprungziele)
     wp_register_script('zpt-anchors', ZPT_URL . 'assets/js/anchors.js', [], $ver('assets/js/anchors.js'), true);
+    wp_register_script('zpt-navbar-logo', ZPT_URL . 'assets/js/navbar-logo.js', [], $ver('assets/js/navbar-logo.js'), true);
 });
 
 // ----------------------------------------------------------------- FRONTEND
@@ -71,6 +72,9 @@ function zpt_enqueue(string $lib): void {
             break;
         case 'anchors':
             wp_enqueue_script('zpt-anchors');
+            break;
+        case 'navbar-logo':
+            wp_enqueue_script('zpt-navbar-logo');
             break;
     }
 }

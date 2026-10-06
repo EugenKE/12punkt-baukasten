@@ -43,6 +43,7 @@ function zpt_nav_anchors(array $rows): array {
  *   'navbar_class'    => 'navbar-expand-lg zpt-navbar', (an der <nav class="navbar …">; Umbruchpunkt)
  *   'container_class' => 'container' | 'container-fluid',
  *   'toggler_icon'    => HTML des Toggler-Inhalts (eigene Icons oder .navbar-toggler-icon),
+ *   'logo_class'      => '' (Klassen am Logo; Größe kommt aus Baukasten → Logo & Bilder → Größe, zpt_logo_css()),
  * ]
  * Rohwerte per get_option (kein get_field() – auch in acf/load_field nutzbar).
  */
@@ -60,11 +61,18 @@ function zpt_navbar(): array {
     // Sprungmarken: Scrollspy für Anker-Links im Menü, Abstand unter dem sticky Header (assets/js/anchors.js)
     zpt_enqueue('anchors');
 
+    // Logo so hoch wie die Navigation: misst die Menüpunkte (assets/js/navbar-logo.js)
+    $logo_fit = zpt_logo_size()['mode'] === 'nav';
+    if ($logo_fit) {
+        zpt_enqueue('navbar-logo');
+    }
+
     return apply_filters('zpt/navbar', [
         'header_class'    => get_option('options_zpt_nav_position') === 'sticky' ? 'sticky-top zpt-sticky-header' : '',
-        'navbar_class'    => trim(zpt_navbar_expand_class() . ' zpt-navbar'),
+        'navbar_class'    => trim(zpt_navbar_expand_class() . ' zpt-navbar' . ($logo_fit ? ' zpt-logo-fit' : '')),
         'container_class' => get_option('options_zpt_nav_container') === 'fixed' ? 'container' : 'container-fluid',
         'toggler_icon'    => $toggler,
+        'logo_class'      => '',
     ]);
 }
 
@@ -103,6 +111,51 @@ function zpt_navbar_css(): string {
         $css .= '--bs-navbar-toggler-font-size:' . $size . ';';
     }
     return $css ? '.zpt-navbar{' . $css . '}' : '';
+}
+
+/**
+ * Klassen der Ausrichtung je Breakpoint: ['xs' => 'center', 'md' => 'start', 'lg' => 'fill'] →
+ * justify-content-center justify-content-md-start zpt-nav-fill-lg. Leere Werte erben vom kleineren Breakpoint;
+ * nach „volle Breite“ hebt zpt-nav-nofill-{bp} sie wieder auf (scss/baukasten/_base.scss).
+ */
+function zpt_nav_align_classes(array $aligns): array {
+    $classes = [];
+    $fill    = false;
+    foreach (array_merge(['xs'], array_keys(ZPT_BOOTSTRAP_BREAKPOINTS)) as $bp) {
+        $value = (string) ($aligns[$bp] ?? '');
+        if ($value === '' || !in_array($value, ['start', 'center', 'end', 'between', 'fill'], true)) {
+            continue;
+        }
+        $infix = $bp === 'xs' ? '' : '-' . $bp;
+        if ($value === 'fill') {
+            $classes[] = 'zpt-nav-fill' . $infix;
+        } else {
+            if ($fill) {
+                $classes[] = 'zpt-nav-nofill' . $infix;
+            }
+            $classes[] = 'justify-content' . $infix . '-' . $value;
+        }
+        $fill = $value === 'fill';
+    }
+    return $classes;
+}
+
+/**
+ * Ausrichtung je Breakpoint (Gruppe „aligns“, bp_xs … bp_xxl). Blocks vor 0.4.4 haben nur „align“
+ * (ein Wert) – gilt als XS, bis der Block neu gespeichert wird.
+ */
+function zpt_navigation_block_aligns(array $block): array {
+    $aligns = [];
+    foreach ((array) (get_field('aligns') ?: []) as $key => $value) {
+        if ($value !== '' && $value !== null) {
+            $aligns[substr($key, 3)] = (string) $value;
+        }
+    }
+    $legacy = $block['data']['align'] ?? '';
+    if (!$aligns && is_string($legacy) && $legacy !== '') {
+        $aligns['xs'] = $legacy;
+    }
+    return $aligns;
 }
 
 // Auswahl: Menü-Positionen des Themes, dann alle Menüs

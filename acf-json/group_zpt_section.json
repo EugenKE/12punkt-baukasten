@@ -11,6 +11,16 @@
             "message": "Als Footer verwenden",
             "default_value": 0,
             "ui": 0
+        },
+        {
+            "key": "field_zpt_section_css_id",
+            "label": "CSS ID",
+            "name": "zpt_css_id",
+            "type": "text",
+            "instructions": "Anker der Sektion (Link #id, Sprungmarken). Ohne „#“, ohne Leerzeichen; muss auf der Seite eindeutig sein. Leer = section-{slug}.",
+            "prepend": "#",
+            "placeholder": "",
+            "default_value": ""
         }
     ],
     "location": [
@@ -31,5 +41,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1791043200
+    "modified": 1791307729
 }
