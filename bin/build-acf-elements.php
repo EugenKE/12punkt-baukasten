@@ -1,7 +1,7 @@
 <?php
 /**
  * Erzeugt aus ZPT_ELEMENTS (includes/config.php):
- * - acf-json/group_zpt_settings_elements.json     (Baukasten → Elemente, Tabs je Gruppe)
+ * - acf-json/group_zpt_settings_elements.json     (Baukasten → Elemente, Tabs je Gruppe, darin je Element)
  * - acf-json/group_zpt_settings_nav_elements.json (Baukasten → Navigation, Gruppe ZPT_NAV_ELEMENT_GROUP)
  * Nicht im ACF-Backend bearbeiten – Änderungen in config.php, dann:
  *
@@ -89,31 +89,17 @@ foreach (ZPT_TYPE_PRESETS['12punkt']['steps'] as [$step]) {
 $lists = ['' => 'Standard'] + ZPT_LIST_STYLES;
 
 /**
- * Obere Felder gleichmäßig aufteilen (mind. 4 Spalten à 25 %, Listen 5 à 20 %), darunter die Matrix-Zeilen;
- * die erste Matrix-Zeile trägt die Kopfzeile XS … XXL.
- */
-function zpt_build_element_layout(array $top, array $rows): array {
-    foreach ($top as &$field) {
-        $field['wrapper']['width'] = (string) floor(100 / max(4, count($top)));
-    }
-    unset($field);
-    if ($rows) {
-        $rows[0]['wrapper']['class'] .= ' zpt-bp-head';
-    }
-    return array_merge($top, $rows);
-}
-
-/**
- * Felder in Tabs: Schrift (Rolle, Gewicht, Liste, Optionen, Größe), Farben, Abstände (Margin, Padding).
+ * Felder in Tabs: Schrift (Rolle, Gewicht, Liste, Optionen, Größe), Farben, Margin, Padding
+ * (je 4 Zeilen oben/rechts/unten/links mit eigener Kopfzeile XS … XXL).
  * Leere Tabs fallen weg; bleibt nur einer, ohne Tabs.
  */
 function zpt_build_element_tabs(string $key, array $top, array $rows): array {
-    $tabs = ['font' => ['Schrift', [], []], 'colors' => ['Farben', [], []], 'spacing' => ['Abstände', [], []]];
+    $tabs = ['font' => ['Schrift', [], []], 'colors' => ['Farben', [], []], 'margin' => ['Margin', [], []], 'padding' => ['Padding', [], []]];
     foreach ($top as $field) {
         $tabs[in_array($field['name'], ['color', 'color_hover', 'background'], true) ? 'colors' : 'font'][1][] = $field;
     }
     foreach ($rows as $row) {
-        $tabs[$row['name'] === 'size' ? 'font' : 'spacing'][2][] = $row;
+        $tabs[$row['name'] === 'size' ? 'font' : strtok($row['name'], '_')][2][] = $row;
     }
     $tabs = array_filter($tabs, fn($tab) => $tab[1] || $tab[2]);
 
@@ -135,9 +121,9 @@ function zpt_build_element_tabs(string $key, array $top, array $rows): array {
 }
 
 /**
- * Akkordeon + Gruppe eines Elements (Felder je nach features), $tabs = in Tabs Schrift / Farben / Abstände.
+ * Akkordeon + Gruppe eines Elements (Felder je nach features), in Tabs Schrift / Farben / Margin / Padding.
  */
-function zpt_build_element(string $el, array $def, bool $tabs = false): array {
+function zpt_build_element(string $el, array $def): array {
     global $roles, $weights, $steps, $lists;
     $out = [];
     $f   = $def['features'];
@@ -181,23 +167,24 @@ function zpt_build_element(string $el, array $def, bool $tabs = false): array {
         ]);
     }
 
-    // --- Matrix: Größe, Margin, Padding je Breakpoint (Kopfzeile mit XS … XXL setzt zpt_build_element_layout())
+    // --- Matrix: Größe, Margin, Padding je Breakpoint (Kopfzeile mit XS … XXL setzt zpt_build_element_tabs())
     $rows = [];
     if (in_array('size', $f, true)) {
         $rows[] = zpt_build_bp_row("{$key}_size", 'size', 'Größe', $steps, false);
     }
     // Margin auch negativ (wie .mt-n20)
     $max = ZPT_SPACER_STEP * ZPT_SPACER_COUNT;
-    foreach (['margin' => ['Margin', -$max], 'padding' => ['Padding', 0]] as $prop => [$prop_label, $min]) {
+    foreach (['margin' => -$max, 'padding' => 0] as $prop => $min) {
         if (!in_array($prop, $f, true)) {
             continue;
         }
         foreach (ZPT_ELEMENT_SIDES as $side => [, $side_label]) {
-            $rows[] = zpt_build_bp_row("{$key}_{$prop}_{$side}", "{$prop}_{$side}", "{$prop_label} {$side_label}", null, false, $min);
+            // „Margin“/„Padding“ steht am Tab – Zeile nur mit der Seite
+            $rows[] = zpt_build_bp_row("{$key}_{$prop}_{$side}", "{$prop}_{$side}", ucfirst($side_label), null, false, $min);
         }
     }
 
-    $sub = $tabs ? zpt_build_element_tabs($key, $sub, $rows) : zpt_build_element_layout($sub, $rows);
+    $sub = zpt_build_element_tabs($key, $sub, $rows);
 
     $out[] = zpt_build_field("{$key}_accordion", '', $def['label'], 'accordion', [
         'wrapper'      => ['width' => '', 'class' => 'zpt-element-accordion', 'id' => ''],
@@ -279,7 +266,7 @@ $nav_fields = [[
 ]];
 foreach (ZPT_ELEMENTS as $el => $def) {
     if ($def['group'] === ZPT_NAV_ELEMENT_GROUP) {
-        array_push($nav_fields, ...zpt_build_element($el, $def, true));
+        array_push($nav_fields, ...zpt_build_element($el, $def));
     }
 }
 $nav_fields[] = zpt_build_field('field_zpt_nav_elements_end', '', '', 'accordion', ['endpoint' => 1]);

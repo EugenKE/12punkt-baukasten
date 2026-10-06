@@ -820,7 +820,7 @@ function zpt_button_size_classes($sizes): array {
     return $classes;
 }
 
-// Templates und Varianten als Akkordeon (ACF „collapsed“); btn default nicht löschbar (admin-buttons.js)
+// Templates und Varianten als Akkordeon (ACF „collapsed“, beim Laden zu), darin Tabs; btn default nicht löschbar (admin-buttons.js)
 add_action('acf/input/admin_enqueue_scripts', function () {
     $screen = function_exists('get_current_screen') ? get_current_screen() : null;
     if (!$screen || !str_ends_with($screen->id, 'zpt-buttons')) {
@@ -834,6 +834,7 @@ add_action('acf/input/admin_enqueue_scripts', function () {
         $css .= "
             {$repeater} > .acf-row > .acf-row-handle .acf-icon.-collapse {display: block;}
             {$repeater} > .acf-row.-collapsed > .acf-fields {background: #f6f7f7;}
+            {$repeater} > .acf-row.-collapsed > .acf-fields > .acf-tab-wrap {display: none;}
             {$repeater} > .acf-row:not(.-collapsed) > .acf-fields {box-shadow: inset 3px 0 0 #2271b1;}";
     }
     // gesperrte Zeile: keine Lösch-/Duplizier-Icons, Kürzel nur lesbar

@@ -1,0 +1,154 @@
+{
+    "key": "group_zpt_section_bg",
+    "title": "Hintergrund",
+    "fields": [
+        {
+            "key": "field_zpt_section_bg_color",
+            "label": "Hintergrundfarbe",
+            "name": "zpt_bg_color",
+            "type": "text",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-color-field zpt-color-tokens",
+                "id": ""
+            },
+            "placeholder": "Standard",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "instructions": "Baukasten-Farbe (primary, primary-100 … -900), Farbname oder Hex",
+            "default_value": ""
+        },
+        {
+            "key": "field_zpt_section_bg_image_source",
+            "label": "Quelle Hintergrundbild",
+            "name": "zpt_bg_image_source",
+            "type": "button_group",
+            "instructions": "Theme = Bild aus dem Bilder-Ordner des Themes (Illustrationen, Grafiken, die zum Theme gehören).",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "media": "Mediathek",
+                "theme": "Theme"
+            },
+            "default_value": "media",
+            "return_format": "value",
+            "allow_null": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_zpt_section_bg_image",
+            "label": "Hintergrundbild",
+            "name": "zpt_bg_image",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_zpt_section_bg_image_source",
+                        "operator": "!=",
+                        "value": "theme"
+                    }
+                ]
+            ]
+        },
+        {
+            "key": "field_zpt_section_bg_theme_image",
+            "label": "Hintergrundbild",
+            "name": "zpt_bg_theme_image",
+            "type": "select",
+            "instructions": "",
+            "wrapper": {
+                "width": "",
+                "class": "zpt-theme-image",
+                "id": ""
+            },
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_zpt_section_bg_image_source",
+                        "operator": "==",
+                        "value": "theme"
+                    }
+                ]
+            ],
+            "choices": {},
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 1,
+            "ui": 1,
+            "ajax": 0,
+            "placeholder": "Bild wählen …",
+            "allow_custom": 0,
+            "search_placeholder": ""
+        },
+        {
+            "key": "field_zpt_section_bg_repeat",
+            "label": "Wiederholen",
+            "name": "zpt_bg_repeat",
+            "type": "select",
+            "instructions": "",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "no-repeat": "Nicht wiederholen",
+                "repeat": "Wiederholen",
+                "repeat-x": "Horizontal wiederholen",
+                "repeat-y": "Vertikal wiederholen"
+            },
+            "default_value": "no-repeat",
+            "return_format": "value",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_zpt_section_bg_size",
+            "label": "Bildgröße",
+            "name": "zpt_bg_size",
+            "type": "number",
+            "instructions": "Bildbreite in % der Sektionsbreite. Leer = ohne Wiederholen füllend (cover), mit Wiederholen Originalgröße.",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "",
+            "append": "%",
+            "min": 1,
+            "max": 100,
+            "step": "",
+            "default_value": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "section"
+            }
+        ]
+    ],
+    "menu_order": 2,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Hintergrund der ganzen Sektion (<section class=\"zpt-section\">). Hintergründe einzelner Rows liegen darüber.",
+    "show_in_rest": 0,
+    "modified": 1791305980
+}

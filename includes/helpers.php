@@ -266,3 +266,31 @@ function zpt_image_data(int|string $image_id): array {
         'alt'     => $alt,
     ];
 }
+
+// ----------------------------------------------------------------- HINTERGRUND
+
+/**
+ * Inline-Styles für einen Hintergrund (Row, Sektion). Standard aus _base.scss: no-repeat, cover, center.
+ * $image:  Bilddaten (url) oder leer. $repeat: no-repeat|repeat|repeat-x|repeat-y.
+ * $size:   Bildbreite in % des Elements; leer = ohne Wiederholen cover, mit Wiederholen Originalgröße.
+ */
+function zpt_background_style(string $color, ?array $image, string $repeat = 'no-repeat', $size = ''): array {
+    $style = ['background-color' => zpt_color_value($color)];
+    if (empty($image['url'])) {
+        return $style;
+    }
+    $style['background-image'] = 'url(' . esc_url($image['url']) . ')';
+
+    $repeat = $repeat ?: 'no-repeat';
+    $size   = (float) $size;
+    if ($repeat !== 'no-repeat') {
+        $style['background-repeat'] = $repeat;
+    }
+    if ($size > 0) {
+        $style['background-size'] = $size . '% auto';
+    } elseif ($repeat !== 'no-repeat') {
+        $style['background-size'] = 'auto';
+    }
+
+    return $style;
+}

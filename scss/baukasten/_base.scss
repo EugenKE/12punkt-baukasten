@@ -21,6 +21,10 @@ body {
 // --------------------------------------- Baukasten-Struktur
 .zpt-row-block {
     position: relative;
+}
+
+// Hintergrundbild (zpt_background_style()): Standard füllend, Wiederholen/Größe per Inline-Style
+.zpt-row-block, .zpt-section {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

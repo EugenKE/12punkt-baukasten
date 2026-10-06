@@ -12,30 +12,16 @@ defined('ABSPATH') || exit;
 
 // --------------------- wrapper
 // Schrift (Rolle, Größe, Gewicht, Ausrichtung, Farbe) kommt über zpt_block_attrs() aus dem Bereich „Schrift“
-$style = [
-    'background-color' => zpt_color_value(get_field('wrapper_background_color')),
-];
-
-// Quelle „Theme“: Bild aus dem Theme (theme-files.php)
+// Hintergrund: Farbe, Bild (Quelle „Theme“: Bild aus dem Theme, theme-files.php), Wiederholen, Bildgröße
 $image_bg = get_field('image_bg_source') === 'theme'
     ? zpt_image_data((string) get_field('theme_image_bg') ?: 0)
     : get_field('image_bg');
-if (!empty($image_bg['url'])) {
-    $style['background-image'] = 'url(' . esc_url($image_bg['url']) . ')';
-
-    // Wiederholen + Bildbreite in % der Row (Standard aus _base.scss: no-repeat, cover);
-    // ohne Größe: wiederholt in Originalgröße, sonst cover
-    $bg_repeat = get_field('image_bg_repeat') ?: 'no-repeat';
-    $bg_size   = (float) get_field('image_bg_size');
-    if ($bg_repeat !== 'no-repeat') {
-        $style['background-repeat'] = $bg_repeat;
-    }
-    if ($bg_size > 0) {
-        $style['background-size'] = $bg_size . '% auto';
-    } elseif ($bg_repeat !== 'no-repeat') {
-        $style['background-size'] = 'auto';
-    }
-}
+$style = zpt_background_style(
+    (string) get_field('wrapper_background_color'),
+    is_array($image_bg) ? $image_bg : null,
+    (string) get_field('image_bg_repeat'),
+    get_field('image_bg_size')
+);
 
 if ($inline_style = get_field('wrapper_inline_style')) {
     $style[] = $inline_style;

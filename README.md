@@ -81,6 +81,8 @@ Die Seitenleiste des Block-Editors ist 360px statt 280px breit (ab 782px Fenster
   (`assets/js/editor-sections-page.js`); umgekehrt öffnet sie nach Wechsel auf ein anderes Template wieder im Block-Editor.
 - **Sektionen** (CPT `section`, Menü „Sektionen“): wiederverwendbare Bereiche, ebenfalls mit
   `zpt/*`-Blocks gebaut. Container „wie Seite“ bezieht sich auf die Sektion selbst.
+  Seitenleiste „Hintergrund“ (`group_zpt_section_bg.json`, Felder `zpt_bg_*`): Farbe, Bild (Mediathek/Theme),
+  Wiederholen, Bildgröße in % – als Inline-Style an `<section>`, wie bei der Row (`zpt_background_style()`).
   Direkt aufgerufen (`/section/{slug}/`, auch „Vorschau“ im Editor): wer die Sektion bearbeiten darf,
   sieht sie einzeln mit Header/Footer (`templates/single-section.php`, `noindex`, nicht in der Sitemap);
   alle anderen werden per 302 umgeleitet – auf die erste Seite, die sie im Feld „Sektionen“ hat
@@ -174,8 +176,8 @@ Skala ändern (eigener Build): `$zpt-spacer-step`, `$zpt-spacer-count` bzw. `$sp
   Laufweite greift über `.fw-100` … `.fw-900`, `.fw-bold`, `strong` usw. (`_typography.scss`).
   Im Block-Editor: Bereich Schrift → Schriftrolle / Schriftgröße / Gewicht.
   Code: `includes/fonts.php` (Laden), `includes/typography.php` (Werte, Klassen).
-- **Elemente** (Tabs Überschriften / Text / Auszeichnung / Forms / Klassen, je Element ein Akkordeon mit
-  Zusammenfassung der gesetzten Werte im Titel): h1–h6, body, p, ul, ol, blockquote, small, figcaption,
+- **Elemente** (Tabs Struktur / Überschriften / Text / Auszeichnung / Forms / Klassen, je Element ein Akkordeon mit
+  Zusammenfassung der gesetzten Werte im Titel, darin Tabs Schrift / Farben / Margin / Padding; leere Tabs fallen weg): h1–h6, body, p, ul, ol, blockquote, small, figcaption,
   hr, strong, em, a; Forms: Feld-Label, Eingabefeld (`.form-control`, `.form-select` + Textfelder ohne
   Klasse), Platzhalter, Checkbox-/Radio-Label, Hilfetext, Fehlermeldung; Klassen: `.lead`,
   `.blockquote-footer`, `.zpt-sg-label` (Styleguide-Beschriftungen).
@@ -183,7 +185,7 @@ Skala ändern (eigener Build): `$zpt-spacer-step`, `$zpt-spacer-count` bzw. `$sp
   Großbuchstaben, Farbe (Token wie `primary-700`), Aufzählungszeichen (ul/ol), Hover-Farbe und
   „nicht unterstrichen“ (a); als Matrix je Breakpoint XS–XXL: Größe (Typo-Stufe), Margin und Padding
   oben/rechts/unten/links in px (5er-Schritte, Margin auch negativ). Leer = wie umgebend bzw. „wie
-  kleiner“ (leere Felder zeigen den geerbten Wert) – nur XS ausgefüllt gilt also für alle Breiten. Ausgabe mit Element-Selektoren nach `zpt.css` → Klassen am Element
+  kleiner“ (leere Felder zeigen den geerbten Wert als „← 20“) – nur XS ausgefüllt gilt also für alle Breiten. Ausgabe mit Element-Selektoren nach `zpt.css` → Klassen am Element
   (`.mt-20`, `.font-size-xl` …) gewinnen. Werte: `options_zpt_element_{element}_{feld}`.
   **Felder werden erzeugt**: Elemente und ihre Einstellungen stehen in `ZPT_ELEMENTS`
   (`includes/config.php`), danach `npm run build:acf` → `acf-json/group_zpt_settings_elements.json`
@@ -194,7 +196,9 @@ Skala ändern (eigener Build): `$zpt-spacer-step`, `$zpt-spacer-count` bzw. `$sp
   Leere Werte werden nach dem Speichern aus `wp_options` gelöscht (`zpt_elements_cleanup()`), nur die
   Gruppen-Zeilen `options_zpt_element_{element}` bleiben (für `get_field()`).
   Alle Style-Variablen lassen sich per Filter `zpt/style/vars` ergänzen.
-- **Buttons** (Tabs Grundeinstellungen / Templates / Varianten), leer = Bootstrap-Standard:
+- **Buttons** (Tabs Grundeinstellungen / Templates / Varianten), leer = Bootstrap-Standard. Templates und Varianten
+  laden eingeklappt (Titel = Name bzw. Klasse) und haben je Eintrag Tabs (Templates: Schrift / Rahmen & Hintergrund /
+  Größen; Varianten: Farben / Rahmen / Schrift / Größen):
   - *Grundeinstellungen* – Repeater „Größen“ (vorbelegt mit Standard / Klein / Groß): nur Name und
     CSS-Klasse. `md` = Standard (`.btn` ohne Klasse), sonst `.btn-{klasse}` – eigene Größen wie `xl`
     stehen im Button-Block unter „Größe“ (je Breakpoint, `.btn-md-lg`).
@@ -272,7 +276,7 @@ Skala ändern (eigener Build): `$zpt-spacer-step`, `$zpt-spacer-count` bzw. `$sp
   - *Schrift, Farben, Größen*: wie Baukasten → Elemente (Schrift-Rolle, Gewicht, Großbuchstaben, Farbe/Hover,
     Hintergrund, Größe und Margin/Padding je Breakpoint) für Leiste (inkl. Hintergrund), Logo/Name, Menüpunkt, aktiven Menüpunkt,
     Untermenü, Untermenü-Eintrag und Menü-Button (Selektoren unter `.zpt-navbar`). Je Akkordeon Tabs Schrift / Farben /
-    Abstände (`zpt_build_element(…, tabs: true)`; leere Tabs fallen weg). Es sind Elemente der Gruppe
+    Margin / Padding wie unter Elemente (`zpt_build_element()`). Es sind Elemente der Gruppe
     `navbar` in `ZPT_ELEMENTS` (`ZPT_NAV_ELEMENT_GROUP`); `npm run build:acf` schreibt sie in
     `group_zpt_settings_nav_elements.json`. Hinweis: Den Bootstrap-Standard-Hamburger färbt „Farbe“ nicht (Hintergrundbild) –
     dafür ein Icon unter „Menü öffnen“ wählen.

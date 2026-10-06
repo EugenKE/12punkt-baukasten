@@ -4,6 +4,17 @@ Neue Version: Version in `12punkt-baukasten.php` (Header + `ZPT_VERSION`) und `p
 hier eintragen, committen, Tag `vX.Y.Z` setzen und pushen – Sites mit Update-Checker zeigen dann das Update.
 Vermerken, wenn Inhalte/Einstellungen angepasst werden müssen.
 
+## 0.4.3 – 2026-10-06
+- Sektionen: Hintergrund in der Seitenleiste (Farbe, Bild aus Mediathek oder Theme, Wiederholen, Bildgröße in %),
+  gleiche Logik wie bei der Row (`zpt_background_style()`). Neue Felder – bestehende Sektionen unverändert.
+- Baukasten → Elemente: je Element Tabs Schrift / Farben / Margin / Padding (wie bei der Navigation);
+  Margin und Padding je in eigenem Tab mit 4 Zeilen (oben/rechts/unten/links). Navigation: Tab „Abstände“
+  ebenso geteilt. Gespeicherte Werte unverändert (gleiche Feldnamen).
+- Elemente/Navigation: leere Breakpoint-Felder zeigen den geerbten Wert kurz („← 20“ statt abgeschnittenem
+  „wie kleiner (20)“).
+- Baukasten → Buttons: Templates und Varianten laden eingeklappt, je Eintrag Tabs (Templates: Schrift /
+  Rahmen & Hintergrund / Größen; Varianten: Farben / Rahmen / Schrift / Größen).
+
 ## 0.4.2 – 2026-10-06
 - Row: Hintergrundbild wiederholen (Auswahl: nicht / ja / horizontal / vertikal) und Bildgröße in % der Row-Breite
   (`background-repeat`, `background-size`). Neue Felder, Standard aus – bestehende Rows unverändert.

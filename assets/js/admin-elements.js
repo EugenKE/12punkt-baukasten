@@ -2,7 +2,7 @@
  * Baukasten → Elemente.
  * - Akkordeon-Titel: Zusammenfassung der gesetzten Werte („Sans-Serif · 700 · Größe XS xl, MD xxl · Margin“)
  * - Gewicht: nur Gewichte der Schrift der gewählten Rolle (leer = Grundschrift), Gewichte je Rolle: zptRoleWeights
- * - Matrix-Zeilen: leere Breakpoints zeigen den geerbten Wert („wie kleiner (20)“)
+ * - Matrix-Zeilen: leere Breakpoints zeigen den geerbten Wert („← 20“, kurz, damit er ins Feld passt)
  * - Felder eines Elements erst beim Aufklappen laden (Platzhalter .zpt-element.-lazy, siehe elements.php);
  *   bis dahin kommt die Zusammenfassung aus PHP (zptElements.summaries)
  */
@@ -51,7 +51,7 @@
         return $input.is('select') ? $input.find('option:selected').text() : $input.val();
     }
 
-    /** Leere Felder beschriften: XS „–“, ab SM „wie kleiner (geerbter Wert)“ */
+    /** Leere Felder beschriften: XS „–“, ab SM „← geerbter Wert“ bzw. „wie kleiner“, solange links nichts gesetzt ist */
     function zptSetEmptyText($input, text) {
         if ($input.is('select')) {
             $input.find('option[value=""]').text(text);
@@ -69,7 +69,7 @@
             if (bp === 'xs') {
                 zptSetEmptyText($input, '–');
             } else {
-                zptSetEmptyText($input, inherited ? 'wie kleiner (' + inherited + ')' : 'wie kleiner');
+                zptSetEmptyText($input, inherited ? '← ' + inherited : 'wie kleiner');
             }
             if ($input.val() !== '' && $input.val() !== null) {
                 inherited = zptValueText($input);

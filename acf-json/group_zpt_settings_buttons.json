@@ -103,6 +103,20 @@
                     "instructions": "Kleinbuchstaben, Ziffern, Bindestrich. „default“ = btn default (.btn)."
                 },
                 {
+                    "key": "field_zpt_btn_tpl_tab_font",
+                    "label": "Schrift",
+                    "name": "",
+                    "type": "tab",
+                    "placement": "top",
+                    "endpoint": 0,
+                    "selected": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    }
+                },
+                {
                     "key": "field_zpt_btn_tpl_font_role",
                     "label": "Schriftrolle",
                     "name": "font_role",
@@ -153,6 +167,20 @@
                     "multiple": 0,
                     "wrapper": {
                         "width": "33",
+                        "class": "",
+                        "id": ""
+                    }
+                },
+                {
+                    "key": "field_zpt_btn_tpl_tab_border",
+                    "label": "Rahmen & Hintergrund",
+                    "name": "",
+                    "type": "tab",
+                    "placement": "top",
+                    "endpoint": 0,
+                    "selected": 0,
+                    "wrapper": {
+                        "width": "",
                         "class": "",
                         "id": ""
                     }
@@ -210,6 +238,20 @@
                         "id": ""
                     },
                     "instructions": "Schrift in Rahmenfarbe."
+                },
+                {
+                    "key": "field_zpt_btn_tpl_tab_sizes",
+                    "label": "Größen",
+                    "name": "",
+                    "type": "tab",
+                    "placement": "top",
+                    "endpoint": 0,
+                    "selected": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    }
                 },
                 {
                     "key": "field_zpt_btn_tpl_sizes",
@@ -385,6 +427,20 @@
                     ]
                 },
                 {
+                    "key": "field_zpt_btn_var_tab_colors",
+                    "label": "Farben",
+                    "name": "",
+                    "type": "tab",
+                    "placement": "top",
+                    "endpoint": 0,
+                    "selected": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    }
+                },
+                {
                     "key": "field_zpt_btn_var_normal",
                     "label": "Farben normal",
                     "name": "normal",
@@ -487,6 +543,20 @@
                     ]
                 },
                 {
+                    "key": "field_zpt_btn_var_tab_border",
+                    "label": "Rahmen",
+                    "name": "",
+                    "type": "tab",
+                    "placement": "top",
+                    "endpoint": 0,
+                    "selected": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    }
+                },
+                {
                     "key": "field_zpt_btn_var_border_width",
                     "label": "Rahmenbreite",
                     "name": "border_width",
@@ -506,6 +576,20 @@
                     "placeholder": "wie Template",
                     "wrapper": {
                         "width": "50",
+                        "class": "",
+                        "id": ""
+                    }
+                },
+                {
+                    "key": "field_zpt_btn_var_tab_font",
+                    "label": "Schrift",
+                    "name": "",
+                    "type": "tab",
+                    "placement": "top",
+                    "endpoint": 0,
+                    "selected": 0,
+                    "wrapper": {
+                        "width": "",
                         "class": "",
                         "id": ""
                     }
@@ -561,6 +645,20 @@
                     "multiple": 0,
                     "wrapper": {
                         "width": "33",
+                        "class": "",
+                        "id": ""
+                    }
+                },
+                {
+                    "key": "field_zpt_btn_var_tab_sizes",
+                    "label": "Größen",
+                    "name": "",
+                    "type": "tab",
+                    "placement": "top",
+                    "endpoint": 0,
+                    "selected": 0,
+                    "wrapper": {
+                        "width": "",
                         "class": "",
                         "id": ""
                     }
@@ -678,5 +776,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1791100895
+    "modified": 1791306408
 }

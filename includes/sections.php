@@ -208,9 +208,20 @@ function zpt_the_section(WP_Post|int $section): void {
     $post = $section;
     setup_postdata($post);
 
+    // Hintergrund (Feldgruppe „Hintergrund“, acf-json/group_zpt_section_bg.json)
+    $image_bg = get_field('zpt_bg_image_source', $section->ID) === 'theme'
+        ? zpt_image_data((string) get_field('zpt_bg_theme_image', $section->ID) ?: 0)
+        : get_field('zpt_bg_image', $section->ID);
+
     $attrs = [
         'id'    => 'section-' . $section->post_name,
         'class' => ['zpt-section', 'zpt-section-' . $section->ID],
+        'style' => zpt_background_style(
+            (string) get_field('zpt_bg_color', $section->ID),
+            is_array($image_bg) ? $image_bg : null,
+            (string) get_field('zpt_bg_repeat', $section->ID),
+            get_field('zpt_bg_size', $section->ID)
+        ),
     ];
     echo '<section' . zpt_html_attrs(apply_filters('zpt/section/attrs', $attrs, $section)) . '>';
     echo apply_filters('the_content', $section->post_content);
