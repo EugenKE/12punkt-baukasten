@@ -104,7 +104,7 @@ function zpt_logo(string $variant = '', array $args = []): string {
 }
 
 // ----------------------------------------------------------------- LOGO: GRÖSSE IN DER NAVIGATIONSLEISTE
-// Tab „Größe“: feste Höhe oder Breite je Breakpoint (andere Seite auto) oder „Höhe der Navigation“:
+// Baukasten → Navigation → Logo (acf-json/group_zpt_settings_nav_logo.json): feste Höhe oder Breite je Breakpoint (andere Seite auto) oder „Höhe der Navigation“:
 // assets/js/navbar-logo.js misst Menüpunkte (mobil den Menü-Button) und setzt --zpt-logo-height.
 // Reines CSS geht dafür nicht: die Breite des Logo-Links stünde fest, bevor die gestreckte Höhe bekannt ist.
 

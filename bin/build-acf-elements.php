@@ -277,7 +277,7 @@ $nav_group = array_merge($group, [
     'display_title' => 'Schrift, Farben, Größen',
     'fields'        => $nav_fields,
     'location'      => [[['param' => 'options_page', 'operator' => '==', 'value' => 'zpt-navigation']]],
-    'menu_order'    => 2,
+    'menu_order'    => 3,
 ]);
 $file = dirname(__DIR__) . '/acf-json/group_zpt_settings_nav_elements.json';
 file_put_contents($file, json_encode($nav_group, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) . "\n");

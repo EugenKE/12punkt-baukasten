@@ -4,6 +4,10 @@ Neue Version: Version in `12punkt-baukasten.php` (Header + `ZPT_VERSION`) und `p
 hier eintragen, committen, Tag `vX.Y.Z` setzen und pushen – Sites mit Update-Checker zeigen dann das Update.
 Vermerken, wenn Inhalte/Einstellungen angepasst werden müssen.
 
+## 0.4.6 – 2026-10-06
+- Logo-Größe von Logo & Bilder (Tab „Größe“) nach Baukasten → Navigation → Box „Logo“ verschoben.
+  Gleiche Feldnamen – gesetzte Werte bleiben erhalten. Wird jetzt mit der Seite Navigation exportiert.
+
 ## 0.4.5 – 2026-10-06
 - Sektionen: Hintergrund (Box „Hintergrund“) auch im Editor sichtbar und live beim Ändern
   (`assets/js/editor-section-bg.js`, am `.editor-styles-wrapper`).

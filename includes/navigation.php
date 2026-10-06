@@ -43,7 +43,7 @@ function zpt_nav_anchors(array $rows): array {
  *   'navbar_class'    => 'navbar-expand-lg zpt-navbar', (an der <nav class="navbar …">; Umbruchpunkt)
  *   'container_class' => 'container' | 'container-fluid',
  *   'toggler_icon'    => HTML des Toggler-Inhalts (eigene Icons oder .navbar-toggler-icon),
- *   'logo_class'      => '' (Klassen am Logo; Größe kommt aus Baukasten → Logo & Bilder → Größe, zpt_logo_css()),
+ *   'logo_class'      => '' (Klassen am Logo; Größe kommt aus Baukasten → Navigation → Logo, zpt_logo_css()),
  * ]
  * Rohwerte per get_option (kein get_field() – auch in acf/load_field nutzbar).
  */
