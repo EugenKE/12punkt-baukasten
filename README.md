@@ -278,7 +278,7 @@ Skala ändern (eigener Build): `$zpt-spacer-step`, `$zpt-spacer-count` bzw. `$sp
     leer = Bootstrap-Hamburger bzw. wie „öffnen“), Icon-Größe (`--bs-navbar-toggler-font-size`). Umschalten per CSS
     über `aria-expanded` (`.zpt-toggler-open` / `.zpt-toggler-close`). Code: `includes/navigation.php`.
   - *Schrift, Farben, Größen*: wie Baukasten → Elemente (Schrift-Rolle, Gewicht, Großbuchstaben, Farbe/Hover,
-    Hintergrund, Größe und Margin/Padding je Breakpoint) für Leiste (inkl. Hintergrund), Logo/Name, Menüpunkt, aktiven Menüpunkt,
+    Hintergrund, Größe und Margin/Padding je Breakpoint) für Leiste (inkl. Hintergrund), Logo/Name, Menü-Bereich (`.navbar-collapse`), Menüpunkt, aktiven Menüpunkt,
     Untermenü, Untermenü-Eintrag und Menü-Button (Selektoren unter `.zpt-navbar`). Je Akkordeon Tabs Schrift / Farben /
     Margin / Padding wie unter Elemente (`zpt_build_element()`). Es sind Elemente der Gruppe
     `navbar` in `ZPT_ELEMENTS` (`ZPT_NAV_ELEMENT_GROUP`); `npm run build:acf` schreibt sie in

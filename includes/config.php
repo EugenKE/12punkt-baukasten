@@ -120,6 +120,8 @@ const ZPT_ELEMENTS = [
     'navbar'          => ['label' => 'Leiste (.navbar)',                     'group' => 'navbar', 'selector' => '.zpt-navbar',                 'features' => ['type', 'color', 'background', 'padding']],
     // logo = Tab „Logo“ (Größe und Ausrichtung des Logos, zpt_logo_size() / zpt_logo_align_class() in logo.php)
     'navbar_brand'    => ['label' => 'Logo / Name (.navbar-brand)',          'group' => 'navbar', 'selector' => '.zpt-navbar .navbar-brand',   'features' => ['logo', 'type', 'color', 'size', 'margin', 'padding']],
+    // Bereich mit dem Menü (mobil der aufklappende Teil unter Logo und Button, ausgeklappt rechts neben dem Logo)
+    'navbar_collapse' => ['label' => 'Menü-Bereich (.navbar-collapse)',      'group' => 'navbar', 'selector' => '.zpt-navbar .navbar-collapse', 'features' => ['type', 'color', 'background', 'margin', 'padding']],
     // Menüpunkte mit .navbar-nav: so spezifisch wie Bootstraps .navbar-expand-lg .navbar-nav .nav-link (Padding)
     // bzw. .navbar-nav .nav-link.active – die Einstellungen kommen nach zpt.css und gewinnen
     'nav_link'        => ['label' => 'Menüpunkt (.nav-link)',                'group' => 'navbar', 'selector' => '.zpt-navbar .navbar-nav .nav-link', 'features' => ['type', 'color', 'link', 'background', 'size', 'margin', 'padding']],

@@ -4,6 +4,10 @@ Neue Version: Version in `12punkt-baukasten.php` (Header + `ZPT_VERSION`) und `p
 hier eintragen, committen, Tag `vX.Y.Z` setzen und pushen – Sites mit Update-Checker zeigen dann das Update.
 Vermerken, wenn Inhalte/Einstellungen angepasst werden müssen.
 
+## 0.4.9 – 2026-10-06
+- Navigation → Schrift, Farben, Größen: neues Element **Menü-Bereich (.navbar-collapse)** – Schrift, Farbe,
+  Hintergrund, Margin und Padding je Breakpoint (z. B. Hintergrund und Abstand des aufgeklappten Mobilmenüs).
+
 ## 0.4.8 – 2026-10-06
 - Navigation → Logo / Name: Tab „Logo-Größe“ heißt „Logo“ und hat die neue Einstellung *Ausrichtung*: oben / mittig /
   unten auf der Grundlinie der Menüschrift (mobil des Menü-Buttons).
