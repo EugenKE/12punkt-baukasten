@@ -247,7 +247,7 @@ Skala ändern (eigener Build): `$zpt-spacer-step`, `$zpt-spacer-count` bzw. `$sp
     Ausgabe: `zpt_logo()`, `zpt_logo('weiss', ['class' => 'h-px-40 w-auto', 'inline' => true])` (SVG inline, bereinigt),
     Shortcode `[zpt_logo variant="weiss" class="…" inline="1"]`; Klassen `.zpt-logo .zpt-logo-{kürzel}`. Unbekannte
     Variante → Hauptlogo. Daten: `zpt_logos()`, `zpt_logo_id()`, Filter `zpt/logos`. Das Theme nimmt `zpt_logo()` im Header.
-    Größe des Logos in der Leiste: Baukasten → Navigation → *Logo*.
+    Größe des Logos in der Leiste: Baukasten → Navigation → Schrift, Farben, Größen → Logo / Name → *Logo-Größe*.
   - *Favicon*: Quelle (`zpt_favicon_source`) **Mediathek** oder **Ordner im Theme**.
     Mediathek: Bild (`zpt_favicon`, quadratisch, mind. 512 px) → erzeugt in `uploads/zpt-favicon/`: `favicon.ico`
     (16/32/48, PNG im ICO), `apple-touch-icon.png` (180, auf Hintergrundfarbe `zpt_favicon_background`, Standard weiß),
@@ -277,12 +277,6 @@ Skala ändern (eigener Build): `$zpt-spacer-step`, `$zpt-spacer-count` bzw. `$sp
     Standard LG; „nie“ = immer Button, „immer ausgeklappt“ = `.navbar-expand`; Breakpoints aus Baukasten → Layout), Icons „Menü öffnen“ / „Menü schließen“ für den Toggler (Icon-Auswahl wie im Icon-Block;
     leer = Bootstrap-Hamburger bzw. wie „öffnen“), Icon-Größe (`--bs-navbar-toggler-font-size`). Umschalten per CSS
     über `aria-expanded` (`.zpt-toggler-open` / `.zpt-toggler-close`). Code: `includes/navigation.php`.
-  - *Logo* (`group_zpt_settings_nav_logo.json`, Größe des Logos in der Leiste, `zpt_logo_size()` → `zpt_logo_css()`): *Feste Höhe* oder *Feste Breite*
-    je Breakpoint in px (andere Seite `auto`; leer = wie kleiner, alles leer = 40 px, ab LG 50 px) oder *Höhe der
-    Navigation*: `assets/js/navbar-logo.js` misst die Menüpunkte (eingeklappt den Menü-Button) und setzt
-    `--zpt-logo-height` an `.zpt-navbar.zpt-logo-fit` (minus Padding von `.navbar-brand`). Nur mit CSS geht das nicht:
-    die Breite des Logo-Links stünde fest, bevor die gestreckte Höhe bekannt ist. Theme: Klassen am Logo aus
-    `zpt_navbar()['logo_class']` (leer) – feste Klassen wie `h-px-40` (`!important`) würden die Einstellung überstimmen.
   - *Schrift, Farben, Größen*: wie Baukasten → Elemente (Schrift-Rolle, Gewicht, Großbuchstaben, Farbe/Hover,
     Hintergrund, Größe und Margin/Padding je Breakpoint) für Leiste (inkl. Hintergrund), Logo/Name, Menüpunkt, aktiven Menüpunkt,
     Untermenü, Untermenü-Eintrag und Menü-Button (Selektoren unter `.zpt-navbar`). Je Akkordeon Tabs Schrift / Farben /
@@ -290,6 +284,13 @@ Skala ändern (eigener Build): `$zpt-spacer-step`, `$zpt-spacer-count` bzw. `$sp
     `navbar` in `ZPT_ELEMENTS` (`ZPT_NAV_ELEMENT_GROUP`); `npm run build:acf` schreibt sie in
     `group_zpt_settings_nav_elements.json`. Hinweis: Den Bootstrap-Standard-Hamburger färbt „Farbe“ nicht (Hintergrundbild) –
     dafür ein Icon unter „Menü öffnen“ wählen.
+    **Logo / Name** hat zusätzlich den Tab *Logo-Größe* (Feature `logo`, Felder `logo_size_mode`, `logo_size_{bp}`;
+    Größe des Logos in der Leiste, `zpt_logo_size()` → `zpt_logo_css()`): *Feste Höhe* oder *Feste Breite*
+    je Breakpoint in px (andere Seite `auto`; leer = wie kleiner, alles leer = 40 px, ab LG 50 px) oder *Höhe der
+    Navigation*: `assets/js/navbar-logo.js` misst die Menüpunkte (eingeklappt den Menü-Button) und setzt
+    `--zpt-logo-height` an `.zpt-navbar.zpt-logo-fit` (minus Padding von `.navbar-brand`). Nur mit CSS geht das nicht:
+    die Breite des Logo-Links stünde fest, bevor die gestreckte Höhe bekannt ist. Theme: Klassen am Logo aus
+    `zpt_navbar()['logo_class']` (leer) – feste Klassen wie `h-px-40` (`!important`) würden die Einstellung überstimmen.
   - *Sprungmarken im Menü*: Ziel = **CSS ID** einer Row (Bereich CSS), im Menü (Design → Menüs) ein individueller Link
     `#kontakt` bzw. `/#kontakt` (funktioniert auch von Unterseiten). `assets/js/anchors.js`: Abstand unter dem sticky
     Header (`scroll-padding-top`, `.zpt-sticky-header`), Scrollspy in `.zpt-navbar` (nur der Link zum sichtbaren Abschnitt

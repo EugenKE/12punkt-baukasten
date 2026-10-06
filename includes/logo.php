@@ -104,7 +104,8 @@ function zpt_logo(string $variant = '', array $args = []): string {
 }
 
 // ----------------------------------------------------------------- LOGO: GRÖSSE IN DER NAVIGATIONSLEISTE
-// Baukasten → Navigation → Logo (acf-json/group_zpt_settings_nav_logo.json): feste Höhe oder Breite je Breakpoint (andere Seite auto) oder „Höhe der Navigation“:
+// Baukasten → Navigation → Schrift, Farben, Größen → Logo / Name → Tab „Logo-Größe“ (Element navbar_brand,
+// Feature logo, ZPT_ELEMENTS): feste Höhe oder Breite je Breakpoint (andere Seite auto) oder „Höhe der Navigation“:
 // assets/js/navbar-logo.js misst Menüpunkte (mobil den Menü-Button) und setzt --zpt-logo-height.
 // Reines CSS geht dafür nicht: die Breite des Logo-Links stünde fest, bevor die gestreckte Höhe bekannt ist.
 
@@ -116,12 +117,11 @@ const ZPT_LOGO_SIZE_DEFAULT = ['xs' => 40, 'lg' => 50];
  * Rohwerte per get_option; nur gesetzte Breakpoints, leere erben im CSS vom kleineren.
  */
 function zpt_logo_size(): array {
-    $mode = (string) get_option('options_zpt_logo_size_mode', 'height');
+    $mode = (string) zpt_element_value('navbar_brand', 'logo_size_mode');
     $mode = in_array($mode, ['height', 'width', 'nav'], true) ? $mode : 'height';
 
     $sizes = [];
-    foreach (array_merge(['xs'], array_keys(ZPT_BOOTSTRAP_BREAKPOINTS)) as $bp) {
-        $value = get_option("options_zpt_logo_size_{$bp}", '');
+    foreach (zpt_element_row('navbar_brand', 'logo_size') as $bp => $value) {
         if (is_numeric($value) && $value > 0) {
             $sizes[$bp] = (int) $value;
         }
@@ -154,20 +154,6 @@ function zpt_logo_css(): string {
     }
     return $css;
 }
-
-// Felder je Breakpoint: Mindestbreite als Hinweis (wie Baukasten → Layout)
-add_filter('acf/load_field/key=field_zpt_logo_size_xs', function ($field) {
-    $field['instructions'] = __('alle Breiten', '12punkt-baukasten');
-    return $field;
-});
-foreach (array_keys(ZPT_BOOTSTRAP_BREAKPOINTS) as $zpt_bp) {
-    add_filter("acf/load_field/key=field_zpt_logo_size_{$zpt_bp}", function ($field) use ($zpt_bp) {
-        /* translators: %s: Mindestbreite des Breakpoints in px */
-        $field['instructions'] = sprintf(__('ab %spx', '12punkt-baukasten'), zpt_breakpoint_min()[$zpt_bp]);
-        return $field;
-    });
-}
-unset($zpt_bp);
 
 add_shortcode('zpt_logo', function ($atts) {
     $atts = shortcode_atts(['variant' => '', 'class' => '', 'alt' => '', 'inline' => ''], $atts, 'zpt_logo');

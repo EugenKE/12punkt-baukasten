@@ -4,6 +4,11 @@ Neue Version: Version in `12punkt-baukasten.php` (Header + `ZPT_VERSION`) und `p
 hier eintragen, committen, Tag `vX.Y.Z` setzen und pushen – Sites mit Update-Checker zeigen dann das Update.
 Vermerken, wenn Inhalte/Einstellungen angepasst werden müssen.
 
+## 0.4.7 – 2026-10-06
+- Logo-Größe als Tab „Logo-Größe“ im Akkordeon Logo / Name (Navigation → Schrift, Farben, Größen) statt eigener
+  Box; Zusammenfassung im Titel („Logo-Höhe 40, LG 50“ / „Logo: Höhe der Navigation“). Neue Feldnamen
+  (`zpt_element_navbar_brand_logo_size_*`) – in 0.4.4–0.4.6 gesetzte Werte neu eintragen (hier und auf Kokado war nichts gesetzt).
+
 ## 0.4.6 – 2026-10-06
 - Logo-Größe von Logo & Bilder (Tab „Größe“) nach Baukasten → Navigation → Box „Logo“ verschoben.
   Gleiche Feldnamen – gesetzte Werte bleiben erhalten. Wird jetzt mit der Seite Navigation exportiert.

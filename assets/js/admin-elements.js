@@ -98,6 +98,18 @@
 
     function zptSummary($group) {
         var parts = [];
+        // Logo-Größe (nur Logo / Name): Art als Button-Gruppe, Werte als Matrix-Zeile
+        var logoMode = $group.find('.acf-field[data-name="logo_size_mode"] input:checked').val();
+        if (logoMode === 'nav') {
+            parts.push(__('Logo: Höhe der Navigation', '12punkt-baukasten'));
+        } else if (logoMode) {
+            var logo = zptMatrixValues($group, 'logo_size').map(function (v) {
+                return v.replace(/^XS /, '');
+            });
+            if (logo.length) {
+                parts.push(sprintf(/* translators: %s: Werte je Breakpoint */ logoMode === 'width' ? __('Logo-Breite %s', '12punkt-baukasten') : __('Logo-Höhe %s', '12punkt-baukasten'), logo.join(', ')));
+            }
+        }
         var role = zptOptionText($group, 'role');
         var weight = zptFieldValue($group, 'font_weight');
         var color = zptFieldValue($group, 'color');

@@ -274,6 +274,19 @@ function zpt_element_summary(string $el): string {
     $features = ZPT_ELEMENTS[$el]['features'];
     $parts    = [];
 
+    // Logo-Größe: „Logo: Höhe der Navigation“ / „Logo-Höhe 40, LG 50“ (nur gesetzte Werte)
+    if (in_array('logo', $features, true)) {
+        $mode  = (string) zpt_element_value($el, 'logo_size_mode');
+        $sizes = zpt_element_row($el, 'logo_size');
+        if ($mode === 'nav') {
+            $parts[] = __('Logo: Höhe der Navigation', '12punkt-baukasten');
+        } elseif ($sizes) {
+            $list = implode(', ', array_map(fn($bp, $px) => ($bp === 'xs' ? '' : strtoupper($bp) . ' ') . $px, array_keys($sizes), $sizes));
+            /* translators: %s: Werte je Breakpoint, z. B. „40, LG 50“ */
+            $parts[] = sprintf($mode === 'width' ? __('Logo-Breite %s', '12punkt-baukasten') : __('Logo-Höhe %s', '12punkt-baukasten'), $list);
+        }
+    }
+
     $role = (string) zpt_element_value($el, 'role');
     if (isset(ZPT_FONT_ROLES[$role])) {
         $parts[] = __(ZPT_FONT_ROLES[$role]['label'], '12punkt-baukasten');

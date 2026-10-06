@@ -118,7 +118,8 @@ const ZPT_ELEMENTS = [
 
     // Navigationsleiste im Theme-Kopf (.zpt-navbar) – Felder auf der Seite Baukasten → Navigation (ZPT_NAV_ELEMENT_GROUP)
     'navbar'          => ['label' => 'Leiste (.navbar)',                     'group' => 'navbar', 'selector' => '.zpt-navbar',                 'features' => ['type', 'color', 'background', 'padding']],
-    'navbar_brand'    => ['label' => 'Logo / Name (.navbar-brand)',          'group' => 'navbar', 'selector' => '.zpt-navbar .navbar-brand',   'features' => ['type', 'color', 'size', 'margin', 'padding']],
+    // logo = Tab „Logo-Größe“ (Höhe/Breite des Logos, zpt_logo_size() in logo.php)
+    'navbar_brand'    => ['label' => 'Logo / Name (.navbar-brand)',          'group' => 'navbar', 'selector' => '.zpt-navbar .navbar-brand',   'features' => ['logo', 'type', 'color', 'size', 'margin', 'padding']],
     'nav_link'        => ['label' => 'Menüpunkt (.nav-link)',                'group' => 'navbar', 'selector' => '.zpt-navbar .nav-link',       'features' => ['type', 'color', 'link', 'background', 'size', 'margin', 'padding']],
     'nav_link_active' => ['label' => 'Aktiver Menüpunkt (.nav-link.active)', 'group' => 'navbar', 'selector' => '.zpt-navbar .nav-link.active, .zpt-navbar .nav-link.show', 'features' => ['type', 'color', 'background']],
     'nav_dropdown'    => ['label' => 'Untermenü (.dropdown-menu)',           'group' => 'navbar', 'selector' => '.zpt-navbar .dropdown-menu',  'features' => ['background', 'margin', 'padding']],

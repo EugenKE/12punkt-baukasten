@@ -45,7 +45,7 @@ function zpt_build_color(string $key, string $name, string $label): array {
  * Leer ab SM = wie kleiner, d. h. nur XS ausgefüllt gilt für alle Breiten.
  * Darstellung: elements.php (CSS), admin-elements.js.
  */
-function zpt_build_bp_row(string $key, string $name, string $label, ?array $choices, bool $head, int $min = 0): array {
+function zpt_build_bp_row(string $key, string $name, string $label, ?array $choices, bool $head, int $min = 0, ?int $max = null, ?int $step = null): array {
     $sub = [];
     foreach (ZPT_ELEMENT_BREAKPOINTS as $bp => $bp_label) {
         $empty = $bp === 'xs' ? '–' : 'wie kleiner';
@@ -56,8 +56,8 @@ function zpt_build_bp_row(string $key, string $name, string $label, ?array $choi
                 'wrapper'     => ['width' => '16.66', 'class' => '', 'id' => ''],
                 'placeholder' => $empty,
                 'min'         => $min,
-                'max'         => ZPT_SPACER_STEP * ZPT_SPACER_COUNT,
-                'step'        => ZPT_SPACER_STEP,
+                'max'         => $max ?? ZPT_SPACER_STEP * ZPT_SPACER_COUNT,
+                'step'        => $step ?? ZPT_SPACER_STEP,
             ]);
     }
     return zpt_build_field($key, $name, $label, 'group', [
@@ -89,17 +89,18 @@ foreach (ZPT_TYPE_PRESETS['12punkt']['steps'] as [$step]) {
 $lists = ['' => 'Standard'] + ZPT_LIST_STYLES;
 
 /**
- * Felder in Tabs: Schrift (Rolle, Gewicht, Liste, Optionen, Größe), Farben, Margin, Padding
+ * Felder in Tabs: Logo-Größe (nur navbar_brand), Schrift (Rolle, Gewicht, Liste, Optionen, Größe), Farben, Margin, Padding
  * (je 4 Zeilen oben/rechts/unten/links mit eigener Kopfzeile XS … XXL).
  * Leere Tabs fallen weg; bleibt nur einer, ohne Tabs.
  */
 function zpt_build_element_tabs(string $key, array $top, array $rows): array {
-    $tabs = ['font' => ['Schrift', [], []], 'colors' => ['Farben', [], []], 'margin' => ['Margin', [], []], 'padding' => ['Padding', [], []]];
+    $tabs = ['logo' => ['Logo-Größe', [], []], 'font' => ['Schrift', [], []], 'colors' => ['Farben', [], []], 'margin' => ['Margin', [], []], 'padding' => ['Padding', [], []]];
     foreach ($top as $field) {
-        $tabs[in_array($field['name'], ['color', 'color_hover', 'background'], true) ? 'colors' : 'font'][1][] = $field;
+        $tab = $field['name'] === 'logo_size_mode' ? 'logo' : (in_array($field['name'], ['color', 'color_hover', 'background'], true) ? 'colors' : 'font');
+        $tabs[$tab][1][] = $field;
     }
     foreach ($rows as $row) {
-        $tabs[$row['name'] === 'size' ? 'font' : strtok($row['name'], '_')][2][] = $row;
+        $tabs[$row['name'] === 'size' ? 'font' : ($row['name'] === 'logo_size' ? 'logo' : strtok($row['name'], '_'))][2][] = $row;
     }
     $tabs = array_filter($tabs, fn($tab) => $tab[1] || $tab[2]);
 
@@ -109,7 +110,7 @@ function zpt_build_element_tabs(string $key, array $top, array $rows): array {
             $sub[] = zpt_build_field("{$key}_tab_{$tab}", '', $label, 'tab', ['placement' => 'top', 'endpoint' => 0]);
         }
         foreach ($tab_top as &$field) {
-            $field['wrapper']['width'] = (string) floor(100 / max(3, count($tab_top)));
+            $field['wrapper']['width'] = $tab === 'logo' ? '' : (string) floor(100 / max(3, count($tab_top)));
         }
         unset($field);
         if ($tab_rows) {
@@ -129,6 +130,18 @@ function zpt_build_element(string $el, array $def): array {
     $f   = $def['features'];
     $key = "field_zpt_element_{$el}";
     $sub = [];
+
+    // --- Logo-Größe (Logo in der Navigationsleiste): Art + Matrix in px, die bei „Höhe der Navigation“ ausgeblendet ist
+    if (in_array('logo', $f, true)) {
+        $sub[] = zpt_build_field("{$key}_logo_size_mode", 'logo_size_mode', 'Logo', 'button_group', [
+            'instructions'  => 'Feste Höhe oder Breite: die andere Seite ergibt sich aus dem Bild. Höhe der Navigation: so hoch wie die Menüpunkte (inkl. Padding), mobil wie der Menü-Button – das Logo wächst und schrumpft mit der Navigation. Feste Größe: alles leer = 40 px, ab LG 50 px.',
+            'choices'       => ['height' => 'Feste Höhe', 'width' => 'Feste Breite', 'nav' => 'Höhe der Navigation'],
+            'default_value' => 'height',
+            'return_format' => 'value',
+            'allow_null'    => 0,
+            'layout'        => 'horizontal',
+        ]);
+    }
 
     // --- Zeile oben: Schrift, Farbe, Liste
     if (in_array('type', $f, true)) {
@@ -169,6 +182,11 @@ function zpt_build_element(string $el, array $def): array {
 
     // --- Matrix: Größe, Margin, Padding je Breakpoint (Kopfzeile mit XS … XXL setzt zpt_build_element_tabs())
     $rows = [];
+    if (in_array('logo', $f, true)) {
+        // Höhe bzw. Breite in px; alles leer = ZPT_LOGO_SIZE_DEFAULT (40, ab LG 50)
+        $rows[] = zpt_build_bp_row("{$key}_logo_size", 'logo_size', 'Höhe / Breite (px)', null, false, 1, 1000, 1)
+            + ['conditional_logic' => [[['field' => "{$key}_logo_size_mode", 'operator' => '!=', 'value' => 'nav']]]];
+    }
     if (in_array('size', $f, true)) {
         $rows[] = zpt_build_bp_row("{$key}_size", 'size', 'Größe', $steps, false);
     }
@@ -277,7 +295,7 @@ $nav_group = array_merge($group, [
     'display_title' => 'Schrift, Farben, Größen',
     'fields'        => $nav_fields,
     'location'      => [[['param' => 'options_page', 'operator' => '==', 'value' => 'zpt-navigation']]],
-    'menu_order'    => 3,
+    'menu_order'    => 2,
 ]);
 $file = dirname(__DIR__) . '/acf-json/group_zpt_settings_nav_elements.json';
 file_put_contents($file, json_encode($nav_group, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) . "\n");
