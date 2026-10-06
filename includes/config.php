@@ -118,10 +118,12 @@ const ZPT_ELEMENTS = [
 
     // Navigationsleiste im Theme-Kopf (.zpt-navbar) – Felder auf der Seite Baukasten → Navigation (ZPT_NAV_ELEMENT_GROUP)
     'navbar'          => ['label' => 'Leiste (.navbar)',                     'group' => 'navbar', 'selector' => '.zpt-navbar',                 'features' => ['type', 'color', 'background', 'padding']],
-    // logo = Tab „Logo-Größe“ (Höhe/Breite des Logos, zpt_logo_size() in logo.php)
+    // logo = Tab „Logo“ (Größe und Ausrichtung des Logos, zpt_logo_size() / zpt_logo_align_class() in logo.php)
     'navbar_brand'    => ['label' => 'Logo / Name (.navbar-brand)',          'group' => 'navbar', 'selector' => '.zpt-navbar .navbar-brand',   'features' => ['logo', 'type', 'color', 'size', 'margin', 'padding']],
-    'nav_link'        => ['label' => 'Menüpunkt (.nav-link)',                'group' => 'navbar', 'selector' => '.zpt-navbar .nav-link',       'features' => ['type', 'color', 'link', 'background', 'size', 'margin', 'padding']],
-    'nav_link_active' => ['label' => 'Aktiver Menüpunkt (.nav-link.active)', 'group' => 'navbar', 'selector' => '.zpt-navbar .nav-link.active, .zpt-navbar .nav-link.show', 'features' => ['type', 'color', 'background']],
+    // Menüpunkte mit .navbar-nav: so spezifisch wie Bootstraps .navbar-expand-lg .navbar-nav .nav-link (Padding)
+    // bzw. .navbar-nav .nav-link.active – die Einstellungen kommen nach zpt.css und gewinnen
+    'nav_link'        => ['label' => 'Menüpunkt (.nav-link)',                'group' => 'navbar', 'selector' => '.zpt-navbar .navbar-nav .nav-link', 'features' => ['type', 'color', 'link', 'background', 'size', 'margin', 'padding']],
+    'nav_link_active' => ['label' => 'Aktiver Menüpunkt (.nav-link.active)', 'group' => 'navbar', 'selector' => '.zpt-navbar .navbar-nav .nav-link.active, .zpt-navbar .navbar-nav .nav-link.show', 'features' => ['type', 'color', 'background']],
     'nav_dropdown'    => ['label' => 'Untermenü (.dropdown-menu)',           'group' => 'navbar', 'selector' => '.zpt-navbar .dropdown-menu',  'features' => ['background', 'margin', 'padding']],
     'nav_dropdown_item' => ['label' => 'Untermenü-Eintrag (.dropdown-item)', 'group' => 'navbar', 'selector' => '.zpt-navbar .dropdown-item',  'features' => ['type', 'color', 'link', 'background', 'size', 'padding']],
     'nav_toggler'     => ['label' => 'Menü-Button mobil (.navbar-toggler)',  'group' => 'navbar', 'selector' => '.zpt-navbar .navbar-toggler', 'features' => ['color', 'background', 'padding']],

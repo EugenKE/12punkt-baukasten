@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       12punkt Baukasten
  * Description:       Layout-Baukasten (Rows, Komponenten, Sektionen) als ACF-Blocks für Gutenberg, mit Style-Einstellungen und Seiten-Templates. Benötigt ACF Pro.
- * Version:           0.4.7
+ * Version:           0.4.8
  * Requires at least: 6.5
  * Requires PHP:      8.0
  * Author:            12punkt
@@ -13,7 +13,7 @@
 
 defined('ABSPATH') || exit;
 
-define('ZPT_VERSION', '0.4.7');
+define('ZPT_VERSION', '0.4.8');
 define('ZPT_PATH', plugin_dir_path(__FILE__));
 define('ZPT_URL', plugin_dir_url(__FILE__));
 

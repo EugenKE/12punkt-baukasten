@@ -274,7 +274,7 @@ function zpt_element_summary(string $el): string {
     $features = ZPT_ELEMENTS[$el]['features'];
     $parts    = [];
 
-    // Logo-Größe: „Logo: Höhe der Navigation“ / „Logo-Höhe 40, LG 50“ (nur gesetzte Werte)
+    // Logo: „Logo: Höhe der Navigation“ / „Logo-Höhe 40, LG 50“, „Logo oben“ (nur gesetzte Werte)
     if (in_array('logo', $features, true)) {
         $mode  = (string) zpt_element_value($el, 'logo_size_mode');
         $sizes = zpt_element_row($el, 'logo_size');
@@ -284,6 +284,12 @@ function zpt_element_summary(string $el): string {
             $list = implode(', ', array_map(fn($bp, $px) => ($bp === 'xs' ? '' : strtoupper($bp) . ' ') . $px, array_keys($sizes), $sizes));
             /* translators: %s: Werte je Breakpoint, z. B. „40, LG 50“ */
             $parts[] = sprintf($mode === 'width' ? __('Logo-Breite %s', '12punkt-baukasten') : __('Logo-Höhe %s', '12punkt-baukasten'), $list);
+        }
+        $align = (string) zpt_element_value($el, 'logo_align');
+        if ($align === 'top') {
+            $parts[] = __('Logo oben', '12punkt-baukasten');
+        } elseif ($align === 'baseline') {
+            $parts[] = __('Logo auf Grundlinie', '12punkt-baukasten');
         }
     }
 

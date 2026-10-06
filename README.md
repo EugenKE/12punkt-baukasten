@@ -247,7 +247,7 @@ Skala ändern (eigener Build): `$zpt-spacer-step`, `$zpt-spacer-count` bzw. `$sp
     Ausgabe: `zpt_logo()`, `zpt_logo('weiss', ['class' => 'h-px-40 w-auto', 'inline' => true])` (SVG inline, bereinigt),
     Shortcode `[zpt_logo variant="weiss" class="…" inline="1"]`; Klassen `.zpt-logo .zpt-logo-{kürzel}`. Unbekannte
     Variante → Hauptlogo. Daten: `zpt_logos()`, `zpt_logo_id()`, Filter `zpt/logos`. Das Theme nimmt `zpt_logo()` im Header.
-    Größe des Logos in der Leiste: Baukasten → Navigation → Schrift, Farben, Größen → Logo / Name → *Logo-Größe*.
+    Größe des Logos in der Leiste: Baukasten → Navigation → Schrift, Farben, Größen → Logo / Name → Tab *Logo*.
   - *Favicon*: Quelle (`zpt_favicon_source`) **Mediathek** oder **Ordner im Theme**.
     Mediathek: Bild (`zpt_favicon`, quadratisch, mind. 512 px) → erzeugt in `uploads/zpt-favicon/`: `favicon.ico`
     (16/32/48, PNG im ICO), `apple-touch-icon.png` (180, auf Hintergrundfarbe `zpt_favicon_background`, Standard weiß),
@@ -284,7 +284,11 @@ Skala ändern (eigener Build): `$zpt-spacer-step`, `$zpt-spacer-count` bzw. `$sp
     `navbar` in `ZPT_ELEMENTS` (`ZPT_NAV_ELEMENT_GROUP`); `npm run build:acf` schreibt sie in
     `group_zpt_settings_nav_elements.json`. Hinweis: Den Bootstrap-Standard-Hamburger färbt „Farbe“ nicht (Hintergrundbild) –
     dafür ein Icon unter „Menü öffnen“ wählen.
-    **Logo / Name** hat zusätzlich den Tab *Logo-Größe* (Feature `logo`, Felder `logo_size_mode`, `logo_size_{bp}`;
+    **Logo / Name** hat zusätzlich den Tab *Logo* (Feature `logo`). *Ausrichtung* (`logo_align`): oben / mittig / unten
+    auf der Grundlinie der Menüschrift (mobil des Menü-Buttons) → `.zpt-logo-align-top|baseline` an der Leiste
+    (`zpt_logo_align_class()`). Das Logo ist `display: block`, Bootstrap-Padding von `.navbar`, `.navbar-brand` und `.nav-link`
+    ist 0 (`--bs-navbar-padding-y`, `--bs-navbar-brand-padding-y`, `--bs-navbar-nav-link-padding-x`, `--bs-nav-link-padding-y`)
+    – nur eingetragenes Padding gilt. *Größe* (Felder `logo_size_mode`, `logo_size_{bp}`;
     Größe des Logos in der Leiste, `zpt_logo_size()` → `zpt_logo_css()`): *Feste Höhe* oder *Feste Breite*
     je Breakpoint in px (andere Seite `auto`; leer = wie kleiner, alles leer = 40 px, ab LG 50 px) oder *Höhe der
     Navigation*: `assets/js/navbar-logo.js` misst die Menüpunkte (eingeklappt den Menü-Button) und setzt

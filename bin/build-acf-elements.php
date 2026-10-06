@@ -89,14 +89,14 @@ foreach (ZPT_TYPE_PRESETS['12punkt']['steps'] as [$step]) {
 $lists = ['' => 'Standard'] + ZPT_LIST_STYLES;
 
 /**
- * Felder in Tabs: Logo-Größe (nur navbar_brand), Schrift (Rolle, Gewicht, Liste, Optionen, Größe), Farben, Margin, Padding
+ * Felder in Tabs: Logo (Größe, Ausrichtung; nur navbar_brand), Schrift (Rolle, Gewicht, Liste, Optionen, Größe), Farben, Margin, Padding
  * (je 4 Zeilen oben/rechts/unten/links mit eigener Kopfzeile XS … XXL).
  * Leere Tabs fallen weg; bleibt nur einer, ohne Tabs.
  */
 function zpt_build_element_tabs(string $key, array $top, array $rows): array {
-    $tabs = ['logo' => ['Logo-Größe', [], []], 'font' => ['Schrift', [], []], 'colors' => ['Farben', [], []], 'margin' => ['Margin', [], []], 'padding' => ['Padding', [], []]];
+    $tabs = ['logo' => ['Logo', [], []], 'font' => ['Schrift', [], []], 'colors' => ['Farben', [], []], 'margin' => ['Margin', [], []], 'padding' => ['Padding', [], []]];
     foreach ($top as $field) {
-        $tab = $field['name'] === 'logo_size_mode' ? 'logo' : (in_array($field['name'], ['color', 'color_hover', 'background'], true) ? 'colors' : 'font');
+        $tab = in_array($field['name'], ['logo_size_mode', 'logo_align'], true) ? 'logo' : (in_array($field['name'], ['color', 'color_hover', 'background'], true) ? 'colors' : 'font');
         $tabs[$tab][1][] = $field;
     }
     foreach ($rows as $row) {
@@ -110,7 +110,7 @@ function zpt_build_element_tabs(string $key, array $top, array $rows): array {
             $sub[] = zpt_build_field("{$key}_tab_{$tab}", '', $label, 'tab', ['placement' => 'top', 'endpoint' => 0]);
         }
         foreach ($tab_top as &$field) {
-            $field['wrapper']['width'] = $tab === 'logo' ? '' : (string) floor(100 / max(3, count($tab_top)));
+            $field['wrapper']['width'] = (string) floor(100 / max($tab === 'logo' ? 1 : 3, count($tab_top)));
         }
         unset($field);
         if ($tab_rows) {
@@ -131,12 +131,20 @@ function zpt_build_element(string $el, array $def): array {
     $key = "field_zpt_element_{$el}";
     $sub = [];
 
-    // --- Logo-Größe (Logo in der Navigationsleiste): Art + Matrix in px, die bei „Höhe der Navigation“ ausgeblendet ist
+    // --- Logo in der Navigationsleiste: Größe (Art + Matrix in px, bei „Höhe der Navigation“ ausgeblendet), Ausrichtung
     if (in_array('logo', $f, true)) {
-        $sub[] = zpt_build_field("{$key}_logo_size_mode", 'logo_size_mode', 'Logo', 'button_group', [
+        $sub[] = zpt_build_field("{$key}_logo_size_mode", 'logo_size_mode', 'Größe', 'button_group', [
             'instructions'  => 'Feste Höhe oder Breite: die andere Seite ergibt sich aus dem Bild. Höhe der Navigation: so hoch wie die Menüpunkte (inkl. Padding), mobil wie der Menü-Button – das Logo wächst und schrumpft mit der Navigation. Feste Größe: alles leer = 40 px, ab LG 50 px.',
             'choices'       => ['height' => 'Feste Höhe', 'width' => 'Feste Breite', 'nav' => 'Höhe der Navigation'],
             'default_value' => 'height',
+            'return_format' => 'value',
+            'allow_null'    => 0,
+            'layout'        => 'horizontal',
+        ]);
+        $sub[] = zpt_build_field("{$key}_logo_align", 'logo_align', 'Ausrichtung', 'button_group', [
+            'instructions'  => 'Senkrecht in der Leiste: oben, mittig oder unten auf der Grundlinie der Menüschrift (mobil des Menü-Buttons).',
+            'choices'       => ['top' => 'oben', 'center' => 'mittig', 'baseline' => 'unten (Grundlinie Menü)'],
+            'default_value' => 'center',
             'return_format' => 'value',
             'allow_null'    => 0,
             'layout'        => 'horizontal',

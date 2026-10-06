@@ -71,6 +71,30 @@
     }
 }
 
+// Leiste, Logo / Name und Menüpunkte: kein Bootstrap-Padding – nur was unter Navigation → Leiste, Logo / Name
+// bzw. Menüpunkt → Padding steht (padding-x der Leiste ist bei Bootstrap ohnehin 0)
+.zpt-navbar {
+    --bs-navbar-padding-y: 0;
+    --bs-navbar-brand-padding-y: 0;
+    --bs-navbar-nav-link-padding-x: 0; // links/rechts bei ausgeklapptem Menü
+    .navbar-nav {
+        --bs-nav-link-padding-y: 0;    // .navbar-nav setzt es selbst, daher hier
+    }
+}
+// Logo als Block: Link so hoch wie das Bild (keine Textzeile drumherum); bei „unten“ gilt seine Unterkante als Grundlinie
+.zpt-navbar .navbar-brand > :is(img, svg) {
+    display: block;
+}
+
+// Ausrichtung des Logos (Navigation → Logo / Name → Logo, Klasse an der Leiste aus zpt_navbar());
+// mittig = Bootstrap-Standard. Unten: Logo-Unterkante auf der Grundlinie der Menüschrift (bzw. des Menü-Buttons)
+.zpt-navbar.zpt-logo-align-top .navbar-brand {
+    align-self: flex-start;
+}
+.zpt-navbar.zpt-logo-align-baseline > :is(.container, .container-fluid) {
+    align-items: baseline;
+}
+
 // --- Video: Vorschaubild mit Hinweis, bis per Klick geladen wird
 .zpt-video-consent {
     display: flex;

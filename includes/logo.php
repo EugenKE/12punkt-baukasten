@@ -104,7 +104,7 @@ function zpt_logo(string $variant = '', array $args = []): string {
 }
 
 // ----------------------------------------------------------------- LOGO: GRÖSSE IN DER NAVIGATIONSLEISTE
-// Baukasten → Navigation → Schrift, Farben, Größen → Logo / Name → Tab „Logo-Größe“ (Element navbar_brand,
+// Baukasten → Navigation → Schrift, Farben, Größen → Logo / Name → Tab „Logo“ (Element navbar_brand,
 // Feature logo, ZPT_ELEMENTS): feste Höhe oder Breite je Breakpoint (andere Seite auto) oder „Höhe der Navigation“:
 // assets/js/navbar-logo.js misst Menüpunkte (mobil den Menü-Button) und setzt --zpt-logo-height.
 // Reines CSS geht dafür nicht: die Breite des Logo-Links stünde fest, bevor die gestreckte Höhe bekannt ist.
@@ -131,6 +131,15 @@ function zpt_logo_size(): array {
     }
 
     return ['mode' => $mode, 'sizes' => $sizes];
+}
+
+/**
+ * Ausrichtung des Logos in der Leiste als Klasse (mit Leerzeichen davor): ' zpt-logo-align-top' / '-baseline',
+ * mittig = '' (Bootstrap-Standard). CSS: scss/components/_components.scss.
+ */
+function zpt_logo_align_class(): string {
+    $align = (string) zpt_element_value('navbar_brand', 'logo_align');
+    return in_array($align, ['top', 'baseline'], true) ? ' zpt-logo-align-' . $align : '';
 }
 
 /**

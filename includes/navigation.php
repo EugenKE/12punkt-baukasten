@@ -43,7 +43,7 @@ function zpt_nav_anchors(array $rows): array {
  *   'navbar_class'    => 'navbar-expand-lg zpt-navbar', (an der <nav class="navbar …">; Umbruchpunkt)
  *   'container_class' => 'container' | 'container-fluid',
  *   'toggler_icon'    => HTML des Toggler-Inhalts (eigene Icons oder .navbar-toggler-icon),
- *   'logo_class'      => '' (Klassen am Logo; Größe: Baukasten → Navigation → Schrift, Farben, Größen → Logo / Name → Logo-Größe, zpt_logo_css()),
+ *   'logo_class'      => '' (Klassen am Logo; Größe: Baukasten → Navigation → Schrift, Farben, Größen → Logo / Name → Tab Logo, zpt_logo_css()),
  * ]
  * Rohwerte per get_option (kein get_field() – auch in acf/load_field nutzbar).
  */
@@ -69,7 +69,7 @@ function zpt_navbar(): array {
 
     return apply_filters('zpt/navbar', [
         'header_class'    => get_option('options_zpt_nav_position') === 'sticky' ? 'sticky-top zpt-sticky-header' : '',
-        'navbar_class'    => trim(zpt_navbar_expand_class() . ' zpt-navbar' . ($logo_fit ? ' zpt-logo-fit' : '')),
+        'navbar_class'    => trim(zpt_navbar_expand_class() . ' zpt-navbar' . ($logo_fit ? ' zpt-logo-fit' : '') . zpt_logo_align_class()),
         'container_class' => get_option('options_zpt_nav_container') === 'fixed' ? 'container' : 'container-fluid',
         'toggler_icon'    => $toggler,
         'logo_class'      => '',

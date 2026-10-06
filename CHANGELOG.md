@@ -4,6 +4,15 @@ Neue Version: Version in `12punkt-baukasten.php` (Header + `ZPT_VERSION`) und `p
 hier eintragen, committen, Tag `vX.Y.Z` setzen und pushen – Sites mit Update-Checker zeigen dann das Update.
 Vermerken, wenn Inhalte/Einstellungen angepasst werden müssen.
 
+## 0.4.8 – 2026-10-06
+- Navigation → Logo / Name: Tab „Logo-Größe“ heißt „Logo“ und hat die neue Einstellung *Ausrichtung*: oben / mittig /
+  unten auf der Grundlinie der Menüschrift (mobil des Menü-Buttons).
+- Leiste (`.navbar`, vorher 0.5rem oben/unten), Logo / Name (vorher 0.3125rem oben/unten) und Menüpunkte (vorher
+  0.5rem rundum) ohne Bootstrap-Padding – nur eingetragenes Padding gilt. Das Logo ist `display: block` (keine
+  Textzeile mehr um das Bild). Leiste und Menü werden dadurch niedriger bzw. enger, wo kein Padding eingetragen ist.
+- Menüpunkt / aktiver Menüpunkt: Selektor `.zpt-navbar .navbar-nav .nav-link` – Padding links/rechts aus den
+  Einstellungen wurde bei ausgeklapptem Menü von Bootstrap überstimmt und greift jetzt.
+
 ## 0.4.7 – 2026-10-06
 - Logo-Größe als Tab „Logo-Größe“ im Akkordeon Logo / Name (Navigation → Schrift, Farben, Größen) statt eigener
   Box; Zusammenfassung im Titel („Logo-Höhe 40, LG 50“ / „Logo: Höhe der Navigation“). Neue Feldnamen

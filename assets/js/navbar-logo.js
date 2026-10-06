@@ -1,5 +1,5 @@
 /**
- * 12punkt Baukasten – Logo so hoch wie die Navigation (Baukasten → Navigation → Schrift, Farben, Größen → Logo / Name → Logo-Größe: „Höhe der Navigation“)
+ * 12punkt Baukasten – Logo so hoch wie die Navigation (Baukasten → Navigation → Schrift, Farben, Größen → Logo / Name → Tab Logo: „Höhe der Navigation“)
  * Misst die Menüpunkte (.navbar-nav), bei eingeklapptem Menü den Menü-Button, und setzt --zpt-logo-height
  * an der Leiste (abzüglich Padding oben/unten von .navbar-brand). CSS: zpt_logo_css() in includes/logo.php.
  */
