@@ -22,6 +22,19 @@ $image_bg = get_field('image_bg_source') === 'theme'
     : get_field('image_bg');
 if (!empty($image_bg['url'])) {
     $style['background-image'] = 'url(' . esc_url($image_bg['url']) . ')';
+
+    // Wiederholen + Bildbreite in % der Row (Standard aus _base.scss: no-repeat, cover);
+    // ohne Größe: wiederholt in Originalgröße, sonst cover
+    $bg_repeat = get_field('image_bg_repeat') ?: 'no-repeat';
+    $bg_size   = (float) get_field('image_bg_size');
+    if ($bg_repeat !== 'no-repeat') {
+        $style['background-repeat'] = $bg_repeat;
+    }
+    if ($bg_size > 0) {
+        $style['background-size'] = $bg_size . '% auto';
+    } elseif ($bg_repeat !== 'no-repeat') {
+        $style['background-size'] = 'auto';
+    }
 }
 
 if ($inline_style = get_field('wrapper_inline_style')) {

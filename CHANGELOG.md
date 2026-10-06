@@ -4,6 +4,10 @@ Neue Version: Version in `12punkt-baukasten.php` (Header + `ZPT_VERSION`) und `p
 hier eintragen, committen, Tag `vX.Y.Z` setzen und pushen – Sites mit Update-Checker zeigen dann das Update.
 Vermerken, wenn Inhalte/Einstellungen angepasst werden müssen.
 
+## 0.4.2 – 2026-10-06
+- Row: Hintergrundbild wiederholen (Auswahl: nicht / ja / horizontal / vertikal) und Bildgröße in % der Row-Breite
+  (`background-repeat`, `background-size`). Neue Felder, Standard aus – bestehende Rows unverändert.
+
 ## 0.4.1 – 2026-10-05
 - Video-Block ohne Datenschutz-Hinweis: Vorschaubild des Anbieters (YouTube/Vimeo), wenn kein eigenes gesetzt ist –
   einmalig vom Server geholt und in `uploads/zpt-video/` gespeichert, Besucher laden es von der eigenen Site.

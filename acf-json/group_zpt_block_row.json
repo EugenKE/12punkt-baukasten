@@ -212,6 +212,49 @@
             "search_placeholder": ""
         },
         {
+            "key": "field_zpt_row_image_bg_repeat",
+            "label": "Wiederholen",
+            "name": "image_bg_repeat",
+            "type": "select",
+            "instructions": "",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "no-repeat": "Nicht wiederholen",
+                "repeat": "Wiederholen",
+                "repeat-x": "Horizontal wiederholen",
+                "repeat-y": "Vertikal wiederholen"
+            },
+            "default_value": "no-repeat",
+            "return_format": "value",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_zpt_row_image_bg_size",
+            "label": "Bildgröße",
+            "name": "image_bg_size",
+            "type": "number",
+            "instructions": "Bildbreite in % der Row-Breite. Leer = ohne Wiederholen füllend (cover), mit Wiederholen Originalgröße.",
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "",
+            "append": "%",
+            "min": 1,
+            "max": 100,
+            "step": "",
+            "default_value": ""
+        },
+        {
             "key": "field_zpt_row_video_bg",
             "label": "Hintergrundvideo",
             "name": "video_bg",
@@ -380,5 +423,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1791195067
+    "modified": 1791275569
 }

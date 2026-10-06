@@ -7,7 +7,7 @@ Bringt Bootstrap 5.3 (CSS + JS), Grid-Erweiterungen, Spacing-/Typo-Utilities, Ic
 
 | Block          | Inhalt                                                                  |
 |----------------|-------------------------------------------------------------------------|
-| `zpt/row`      | Wrapper → `.container(-fluid)` → `.row`. Schrift (am Wrapper), Hintergrund (Farbe, Bild, Video), Masonry, **oben anheften** (`sticky-top position-sticky`, nur Frontend; `assets/js/anchors.js` setzt `scroll-padding-top` = Höhe, damit Sprungziele nicht darunter liegen). Enthält nur Spalten (neue Row startet mit einer Spalte) |
+| `zpt/row`      | Wrapper → `.container(-fluid)` → `.row`. Schrift (am Wrapper), Hintergrund (Farbe, Bild – wiederholen, Breite in % –, Video), Masonry, **oben anheften** (`sticky-top position-sticky`, nur Frontend; `assets/js/anchors.js` setzt `scroll-padding-top` = Höhe, damit Sprungziele nicht darunter liegen). Enthält nur Spalten (neue Row startet mit einer Spalte) |
 | `zpt/column`   | Spalte `.zpt-col col-*`: Breite pro Breakpoint, Klassen, randabfallend, Schrift (Rolle, Größe, Gewicht, Ausrichtung, Farbe), Hintergrund. Enthält eine oder mehrere Komponenten |
 | `zpt/headline` | Komponente (nur in einer Spalte)                                        |
 | `zpt/text`     | dto.                                                                    |
